@@ -4,22 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeButton = document.querySelector('#close-btn');
   const sideMenu = document.querySelector('#side-menu');
   const header = document.querySelector('.header');
+  const body = document.body;
+
+  function openMenu() {
+    sideMenu.classList.add('open');
+    body.classList.add('no-scroll');
+  }
+
+  function closeMenu() {
+    sideMenu.classList.remove('open');
+    body.classList.remove('no-scroll');
+  }
 
   // Abrir menu
-  menuButton.addEventListener('click', () => {
-    sideMenu.classList.add('open');
-  });
+  menuButton.addEventListener('click', openMenu);
 
   // Fechar menu
-  closeButton.addEventListener('click', () => {
-    sideMenu.classList.remove('open');
-  });
+  closeButton.addEventListener('click', closeMenu);
 
   // Fechar ao clicar em um link (para navegação na página)
   sideMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      sideMenu.classList.remove('open');
-    });
+    link.addEventListener('click', closeMenu);
   });
 
   // Fechar ao clicar fora do menu
@@ -28,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isClickOnMenuButton = menuButton.contains(event.target);
 
     if (!isClickInsideMenu && !isClickOnMenuButton && sideMenu.classList.contains('open')) {
-      sideMenu.classList.remove('open');
+      closeMenu();
     }
   });
 
@@ -45,21 +50,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const cars = [
     {
       mainImage: 'assets/images/v13_16.png',
-      bgText: 'assets/images/v13_21.png',
+      bgText: 'assets/images/urus_nome.png',
+      textWidth: "100px",
       alt: 'Lamborghini Urus'
     },
     {
       mainImage: 'assets/images/v14_22.png',
-      bgText: 'https://via.placeholder.com/800x200/000000/000000?text=CHIRON', // Placeholder
+      bgText: 'assets/images/chiron_nome.png',
+      textWidth: "100px",
       alt: 'Bugatti Chiron'
     },
     {
       mainImage: 'assets/images/v15_23.png',
-      bgText: 'https://via.placeholder.com/800x200/000000/000000?text=PORSCHE', // Placeholder
+      bgText: 'assets/images/911_nome.png',
+      textWidth: "100px",
       alt: 'Porsche 911'
     }
   ];
 
+  const carImagesContainer = document.querySelector('.car-images-container');
   const mainCarEl = document.querySelector('.main-car');
   const leftCarEl = document.querySelector('.side-car.left');
   const rightCarEl = document.querySelector('.side-car.right');
@@ -68,61 +77,78 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextButton = document.querySelector('.slider-button.next');
 
   let currentIndex = 0;
+  let isAnimating = false;
+  const animationDuration = 600; // ms, deve ser igual à transição do CSS
 
-  function updateCarousel(transitionClass = '') {
+  function updateCarouselSources() {
     const totalCars = cars.length;
     const prevIndex = (currentIndex - 1 + totalCars) % totalCars;
     const nextIndex = (currentIndex + 1) % totalCars;
 
-    // Adiciona classes de transição para efeito de fade
-    if (transitionClass) {
-      mainCarEl.classList.add(transitionClass);
-      leftCarEl.classList.add(transitionClass);
-      rightCarEl.classList.add(transitionClass);
-      bgTextContainer.classList.add(transitionClass);
+    // Atualiza as imagens dos carros
+    mainCarEl.src = cars[currentIndex].mainImage;
+    mainCarEl.alt = cars[currentIndex].alt;
+    leftCarEl.src = cars[prevIndex].mainImage;
+    leftCarEl.alt = cars[prevIndex].alt;
+    rightCarEl.src = cars[nextIndex].mainImage;
+    rightCarEl.alt = cars[nextIndex].alt;
+
+    // Atualiza o texto de fundo
+    bgTextContainer.style.opacity = '0';
+    setTimeout(() => {
+      bgTextContainer.innerHTML = `<img src="${cars[currentIndex].bgText}" alt="${cars[currentIndex].alt} text">`;
+      bgTextContainer.style.opacity = '0.45';
+    }, animationDuration / 2);
+  }
+
+  function slide(direction) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    // Determina o próximo índice ANTES da animação
+    const totalCars = cars.length;
+    let nextIndex;
+    
+    if (direction === 'next') {
+      nextIndex = (currentIndex + 1) % totalCars;
+      // Prepara o próximo carro à direita
+      rightCarEl.style.display = 'block';
+      leftCarEl.style.display = 'none';
+      rightCarEl.src = cars[nextIndex].mainImage;
+      rightCarEl.alt = cars[nextIndex].alt;
+    } else {
+      nextIndex = (currentIndex - 1 + totalCars) % totalCars;
+      // Prepara o carro anterior à esquerda
+      leftCarEl.style.display = 'block';
+      rightCarEl.style.display = 'none';
+      leftCarEl.src = cars[nextIndex].mainImage;
+      leftCarEl.alt = cars[nextIndex].alt;
     }
 
-    // Espera a transição de fade-out antes de trocar as imagens
+    // Adiciona a classe de animação
+    carImagesContainer.classList.add(`slide-${direction}`);
+
+    // Após a animação, atualiza o estado
     setTimeout(() => {
-      mainCarEl.src = cars[currentIndex].mainImage;
-      mainCarEl.alt = cars[currentIndex].alt;
-      leftCarEl.src = cars[prevIndex].mainImage;
-      rightCarEl.src = cars[nextIndex].mainImage;
+      // Atualiza o índice atual
+      currentIndex = nextIndex;
       
-      bgTextContainer.innerHTML = `<img src="${cars[currentIndex].bgText}" alt="${cars[currentIndex].alt} text">`;
+      // Atualiza as imagens para o novo estado
+      updateCarouselSources();
       
-      // Remove as classes de transição
-      if (transitionClass) {
-        mainCarEl.classList.remove(transitionClass);
-        leftCarEl.classList.remove(transitionClass);
-        rightCarEl.classList.remove(transitionClass);
-        bgTextContainer.classList.remove(transitionClass);
-      }
-    }, 300); // Metade da duração da transição do CSS
+      // Remove a classe de animação
+      carImagesContainer.classList.remove(`slide-${direction}`);
+      
+      // Reseta os estilos
+      leftCarEl.style.display = '';
+      rightCarEl.style.display = '';
+      
+      isAnimating = false;
+    }, animationDuration);
   }
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % cars.length;
-    updateCarousel('fade-out');
-  }
+  prevButton.addEventListener('click', () => slide('prev'));
+  nextButton.addEventListener('click', () => slide('next'));
 
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + cars.length) % cars.length;
-    updateCarousel('fade-out');
-  }
-
-  prevButton.addEventListener('click', prevSlide);
-  nextButton.addEventListener('click', nextSlide);
-
-  updateCarousel(); // Inicia o carrossel
-});
-
-// Adicionar um pouco de CSS para o efeito de fade no global.css seria bom,
-// mas vou adicionar aqui para simplificar.
-const style = document.createElement('style');
-style.innerHTML = `
-  .fade-out {
-    opacity: 0 !important;
-  }
-`;
-document.head.appendChild(style); 
+  updateCarouselSources(); // Inicia o carrossel
+}); 
