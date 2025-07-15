@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>Herculion</title>
   </head>
   <body>
@@ -22,11 +23,13 @@
           </nav>
           <h1 class="brand-name"><a href="#">Herculion</a></h1>
           <nav id="side-menu" class="side-menu">
+            <div class="menu-watermark">Herculion</div>
             <button id="close-btn" class="close-btn">&times;</button>
             <ul>
               <li><a href="#hero">Início</a></li>
               <li><a href="#showcase">Modelos</a></li>
               <li><a href="#experience">Experiências</a></li>
+              <li><a href="quem-somos.html">Quem Somos</a></li>
               <li><a href="#contact">Contato</a></li>
             </ul>
           </nav>
@@ -37,18 +40,18 @@
           </video>
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <h2 class="hero-title">Novo carro disponível</h2>
-            <h3 class="car-model">
+            <h2 class="hero-title reveal">Novo carro disponível</h2>
+            <h3 class="car-model reveal">
               <span class="brand">Bugatti</span>
               <span class="model">Tourbillon</span>
             </h3>
-            <a href="#" class="cta-button">Saiba mais</a>
+            <a href="#" class="cta-button reveal">Saiba mais</a>
           </div>
         </section>
         <section class="tagline-section">
-          <h2 class="tagline">Todo tipo de carro para você.</h2>
+          <h2 class="tagline reveal">Todo tipo de carro para você.</h2>
         </section>
-        <section id="showcase" class="car-showcase">
+        <section id="showcase" class="car-showcase reveal">
           <div class="car-slider-wrapper">
             <div class="car-background-text-container">
               <!-- O nome do carro (ex: URUS) aparecerá aqui -->
@@ -70,17 +73,17 @@
           </div>
         </section>
 
-        <section id="experience" class="experience-section">
+        <section id="experience" class="experience-section reveal">
           <div class="experience-content">
             <div class="experience-text">
-              <h2>Gerando <br />Experiências</h2>
-              <p>
+              <h2 class="reveal">Gerando <br />Experiências</h2>
+              <p class="reveal">
                 Sempre criando momentos únicos para nossos clientes, com eventos
                 exclusivos e test drives personalizados.
               </p>
-              <a href="#" class="cta-button">Explore Eventos</a>
+              <a href="#" class="cta-button reveal">Explore Eventos</a>
             </div>
-            <div class="experience-image">
+            <div class="experience-image reveal">
               <img
                 src="assets/images/v25_4.png"
                 alt="Imagem de uma experiência exclusiva Herculion"
@@ -88,10 +91,10 @@
             </div>
           </div>
         </section>
-        <section id="highlights" class="highlights-section">
-          <h2 class="section-title">Em Destaque</h2>
+        <section id="highlights" class="highlights-section reveal">
+          <h2 class="section-title reveal">Em Destaque</h2>
           <div class="highlights-grid">
-            <div class="highlight-item">
+            <div class="highlight-item reveal">
               <img
                 src="assets/images/personalized.png"
                 alt="Serviço Exclusivo"
@@ -103,7 +106,7 @@
                 de vida.
               </p>
             </div>
-            <div class="highlight-item">
+            <div class="highlight-item reveal">
               <img
                 src="assets/images/tecnology.png"
                 alt="Tecnologia de Ponta"
@@ -114,38 +117,42 @@
                 engenharia automotiva, combinando performance e inovação.
               </p>
             </div>
-            <div class="highlight-item">
+            <div class="highlight-item reveal">
               <img
-                src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=Garantia+Herculion"
-                alt="Garantia Herculion"
+                src="assets/images/historia.png"
+                alt="Nossa História"
               />
-              <h3>Garantia e Pós-venda</h3>
+              <h3>Nossa História</h3>
               <p>
-                Oferecemos um programa de garantia robusto e um serviço de
-                pós-venda que assegura sua total tranquilidade e satisfação.
+                Desde a fundação, a Herculion se dedica a transformar o mercado automotivo de luxo, unindo tradição, inovação e paixão por carros exclusivos.
               </p>
             </div>
           </div>
         </section>
-        <footer id="contact" class="footer">
+        <footer id="contact" class="footer reveal">
           <div class="footer-content">
-            <div class="footer-brand">
+            <div class="footer-brand reveal">
               <h2 class="brand-name">Herculion</h2>
               <p>A experiência definitiva em automóveis de luxo.</p>
             </div>
-            <div class="footer-links">
+            <div class="footer-links reveal">
               <h4>Navegação</h4>
               <ul>
                 <li><a href="#hero">Início</a></li>
                 <li><a href="#showcase">Modelos</a></li>
                 <li><a href="#experience">Experiências</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
               </ul>
             </div>
-            <div class="footer-social">
+            <div class="footer-social reveal">
               <h4>Siga-nos</h4>
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
-              <a href="#">YouTube</a>
+              <div class="social-icons">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              </div>
             </div>
           </div>
           <div class="footer-bottom">

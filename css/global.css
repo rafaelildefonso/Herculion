@@ -12,11 +12,34 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
-* {
+body {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+body, button, a, img, input, textarea, select, .side-menu, .main-car, .side-car {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Configurações para scroll suave */
+html, body {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Suavizar scroll em todos os elementos */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Classe para quando está scrollando */
+body.is-scrolling {
+  transition: none;
 }
 
 html,
