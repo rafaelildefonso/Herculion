@@ -1,5 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400&family=Island+Moments&family=IM+FELL+Double+Pica+SC&family=Inconsolata&family=Ephesis&family=Instrument+Serif&family=IBM+Plex+Serif&family=IM+FELL+Great+Primer&family=IBM+Plex+Mono&family=Jim+Nightshade&family=Jura&family=Gabriela&family=Sankofa+Display&family=Festive&family=Nova+Oval&family=Amarante&family=Ruge+Boogie&family=Wendy+One&family=Judson&family=League+Gothic&family=Kodchasan:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Inria+Sans:wght@300;400;700&family=Island+Moments&family=Judson&family=Playfair+Display:wght@700&family=Instrument+Serif&family=IM+FELL+Double+Pica+SC&display=swap");
 
 :root {
   --primary-color: #121212;

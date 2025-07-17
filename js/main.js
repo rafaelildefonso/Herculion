@@ -174,68 +174,79 @@ document.addEventListener('DOMContentLoaded', () => {
   // );
 
   // --- Lógica do Carrossel ---
-  const cars = [
+  // Dados dos carros do carrossel (carousel-cars.json)
+  let cars = [
     {
-      mainImage: 'assets/images/v13_16.png',
-      bgText: 'assets/images/urus_nome.png',
+      id: "lamborghini-urus",
+      mainImage: "assets/images/v13_16.png",
+      bgText: "assets/images/urus_nome.png",
       textWidth: "100px",
-      alt: 'Lamborghini Urus',
+      alt: "Lamborghini Urus",
+      brand: "Lamborghini",
+      model: "Urus",
+      year: 2024,
+      price: "R$ 2.5M",
+      description: "O SUV mais rápido do mundo",
       size: {
-        car: { width: 'auto', height: '50%', maxHeight: '400px' },
-        text: { 
-          width: '100%', 
-          maxWidth: '100%', 
-          height: '700px', 
-          maxHeight: '700px',
-          position: {
-            top: '10%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)'
-          }
+        car: { width: "auto", height: "50%", maxHeight: "400px" },
+        text: {
+          width: "100%", maxWidth: "100%", height: "700px", maxHeight: "700px",
+          position: { top: "10%", left: "50%", transform: "translate(-50%, -50%)" }
         }
       }
     },
     {
-      mainImage: 'assets/images/v14_22.png',
-      bgText: 'assets/images/chiron_nome.png',
+      id: "bugatti-chiron",
+      mainImage: "assets/images/v14_22.png",
+      bgText: "assets/images/chiron_nome.png",
       textWidth: "100px",
-      alt: 'Bugatti Chiron',
+      alt: "Bugatti Chiron",
+      brand: "Bugatti",
+      model: "Chiron",
+      year: 2024,
+      price: "R$ 15M",
+      description: "A velocidade redefinida",
       size: {
-        car: { width: 'auto', height: '75%', maxHeight: '450px' },
-        text: { 
-          width: '100%', 
-          maxWidth: '700px',
-          height: 'auto',
-          maxHeight: '800px',
-          position: {
-            top: '15%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)'
-          }
+        car: { width: "auto", height: "75%", maxHeight: "450px" },
+        text: {
+          width: "100%", maxWidth: "700px", height: "auto", maxHeight: "800px",
+          position: { top: "15%", left: "50%", transform: "translate(-50%, -50%)" }
         }
       }
     },
     {
-      mainImage: 'assets/images/v15_23.png',
-      bgText: 'assets/images/911_nome.png',
+      id: "porsche-911",
+      mainImage: "assets/images/v15_23.png",
+      bgText: "assets/images/911_nome.png",
       textWidth: "100px",
-      alt: 'Porsche 911',
+      alt: "Porsche 911",
+      brand: "Porsche",
+      model: "911",
+      year: 2024,
+      price: "R$ 1.2M",
+      description: "O esportivo definitivo",
       size: {
-        car: { width: 'auto', height: '65%', maxHeight: '380px' },
-        text: { 
-          width: '100%', 
-          maxWidth: '350px',
-          height: 'auto',
-          maxHeight: '300px',
-          position: {
-            top: '40%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)'
-          }
+        car: { width: "auto", height: "65%", maxHeight: "380px" },
+        text: {
+          width: "100%", maxWidth: "350px", height: "auto", maxHeight: "300px",
+          position: { top: "40%", left: "50%", transform: "translate(-50%, -50%)" }
         }
       }
     }
   ];
+
+  // Função para carregar carros vendidos (estoque)
+  async function loadVendidos() {
+    try {
+      const response = await fetch('json/vendidos.json');
+      if (!response.ok) throw new Error('Erro ao carregar estoque de carros');
+      const vendidos = await response.json();
+      return vendidos;
+    } catch (e) {
+      console.error(e);
+      return [];
+    }
+  }
 
   const carImagesContainer = document.querySelector('.car-images-container');
   const mainCarEl = document.querySelector('.main-car');
@@ -423,7 +434,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  updateCarouselSources(); // Inicia o carrossel
+  // Substituir loadCarouselCars() por updateCarouselSources() na inicialização
+  updateCarouselSources();
 }); 
 
 // === EFEITOS DE SCROLL (index + quem somos) ===
