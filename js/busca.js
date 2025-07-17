@@ -11,7 +11,7 @@ const todosCarros = [
     "preco": "R$ 15M",
     "cor": "Preto",
     "potencia": "1.500 HP",
-    "imagem": "assets/images/v14_22.png",
+    "imagem": "assets/images/bugatti_chiron.png",
     "destaque": true,
     "novo": true,
     "descricao": "A velocidade redefinida. Luxo, exclusividade e performance incomparável."
@@ -25,7 +25,7 @@ const todosCarros = [
     "preco": "R$ 2.5M",
     "cor": "Branco",
     "potencia": "650 HP",
-    "imagem": "assets/images/v13_16.png",
+    "imagem": "assets/images/lamborghini_urus.png",
     "destaque": false,
     "novo": false,
     "descricao": "O SUV mais rápido do mundo, unindo esportividade e luxo."
@@ -39,24 +39,24 @@ const todosCarros = [
     "preco": "R$ 1.2M",
     "cor": "Prata",
     "potencia": "650 HP",
-    "imagem": "assets/images/v15_23.png",
+    "imagem": "assets/images/porsche_911.png",
     "destaque": false,
     "novo": false,
     "descricao": "O esportivo definitivo, tradição e inovação em cada detalhe."
   },
   {
-    "id": "ferrari-sf90",
-    "nome": "Ferrari SF90 Stradale",
+    "id": "ferrari-roma",
+    "nome": "Ferrari Roma",
     "marca": "Ferrari",
-    "modelo": "SF90 Stradale",
+    "modelo": "Roma",
     "ano": 2022,
-    "preco": "R$ 6M",
+    "preco": "R$ 3.9M",
     "cor": "Vermelho",
-    "potencia": "1.000 HP",
-    "imagem": "assets/images/v30_26.png",
+    "potencia": "611 HP",
+    "imagem": "assets/images/ferrari_roma.png",
     "destaque": true,
     "novo": false,
-    "descricao": "Híbrido, inovador e extremamente rápido. Ferrari em sua essência."
+    "descricao": "Cupê, esportivo que combina elegância clássica com tecnologia de ponta. Ferrari em sua essência."
   },
   {
     "id": "mclaren-720s",
@@ -67,7 +67,7 @@ const todosCarros = [
     "preco": "R$ 3.8M",
     "cor": "Laranja",
     "potencia": "720 HP",
-    "imagem": "assets/images/v26_12.png",
+    "imagem": "assets/images/mclaren_720s.png",
     "destaque": false,
     "novo": false,
     "descricao": "Design arrojado, leveza e potência britânica."

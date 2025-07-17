@@ -458,12 +458,12 @@ h6::-moz-selection,
 .car-images-container {
   position: relative;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  min-height: 500px; /* Altura mínima para evitar saltos */
+  z-index: 2;
+  /* overflow: hidden; */
 }
 
 /* === HEADER & NAVIGATION === */
@@ -799,7 +799,7 @@ h6::-moz-selection,
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   height: auto;
   z-index: 1;
   opacity: 0.6;
@@ -838,11 +838,12 @@ h6::-moz-selection,
   max-height: 400px;
   width: auto;
   object-fit: contain;
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 2;
-  opacity: 1;
-  transform: scale(1);
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  opacity: 0.5;
+  filter: blur(1.5px) grayscale(0.4) brightness(0.7);
+  transform: scale(0.8);
+  pointer-events: none;
 }
 
 .main-car {
@@ -850,46 +851,80 @@ h6::-moz-selection,
   z-index: 3;
   transform: translateX(0) scale(1);
   opacity: 1;
-}
-
-.side-car {
-  opacity: 0;
-  z-index: 1;
-  transform: scale(0.8);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) brightness(1.1) grayscale(0) blur(0);
+  pointer-events: auto;
 }
 
 .side-car.right {
-  transform: translateX(100%) scale(0.8);
   left: 0;
+  transform: translateX(200%) scale(0.8);
 }
 
 .side-car.left {
-  transform: translateX(-100%) scale(0.8);
   right: 0;
+  transform: translateX(-200%) scale(0.8);
 }
 
-.slide-next .main-car {
-  opacity: 0;
-  z-index: 2;
-  transform: translateX(-100%) scale(0.8);
+/* Animação única de slide */
+.car-images-container.animating-next .main-car {
+  animation: slideOutLeft 0.6s forwards;
+}
+.car-images-container.animating-next .side-car.right {
+  animation: slideInFromRight 0.6s forwards;
+}
+.car-images-container.animating-prev .main-car {
+  animation: slideOutRight 0.6s forwards;
+}
+.car-images-container.animating-prev .side-car.left {
+  animation: slideInFromLeft 0.6s forwards;
 }
 
-.slide-next .side-car.right {
-  transform: translateX(0) scale(1);
-  opacity: 1;
-  z-index: 3;
+@keyframes slideOutLeft {
+  100% {
+    transform: translateX(-200%) scale(0.8);
+    opacity: 0.5;
+    filter: blur(1.5px) grayscale(0.4) brightness(0.7);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-120%) scale(0.8);
+    opacity: 0.5;
+    filter: blur(1.5px) grayscale(0.4) brightness(0.7);
+  }
+  100% {
+    transform: translateX(50%) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) brightness(1.1) grayscale(0) blur(0);
+  }
+}
+@keyframes slideOutRight {
+  100% {
+    transform: translateX(200%) scale(0.8);
+    opacity: 0.5;
+    filter: blur(1.5px) grayscale(0.4) brightness(0.7);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(120%) scale(0.8);
+    opacity: 0.5;
+    filter: blur(1.5px) grayscale(0.4) brightness(0.7);
+  }
+  100% {
+    transform: translateX(50%) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) brightness(1.1) grayscale(0) blur(0);
+  }
 }
 
-.slide-prev .main-car {
-  opacity: 0;
-  z-index: 2;
-  transform: translateX(100%) scale(0.8);
-}
-
+/* Remove as antigas classes de slide para evitar conflito */
+.slide-next .main-car,
+.slide-next .side-car.right,
+.slide-prev .main-car,
 .slide-prev .side-car.left {
-  transform: translateX(0) scale(1);
-  opacity: 1;
-  z-index: 3;
+  animation: none !important;
+  transition: none !important;
 }
 
 .slider-controls {
@@ -901,7 +936,7 @@ h6::-moz-selection,
   align-items: center;
   gap: 60px;
   margin-top: 60px;
-  z-index: 5;
+  z-index: 99;
 }
 
 .slider-button {
@@ -941,18 +976,18 @@ h6::-moz-selection,
   display: inline-block;
   transition: color 0.3s;
   padding: 15px 35px;
-  border: 1px solid var(--text-color);
   border-radius: 30px;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
   text-decoration: none;
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 99;
 }
 
 .learn-more-link:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-3px);
-  border-color: var(--accent-color);
-  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
 }
 
 /* === HIGHLIGHTS SECTION === */
@@ -2412,7 +2447,7 @@ button:hover, .slider-button:hover, .cta-button:hover, .footer-links a:hover, .f
 }
 
 .resultado-item:hover .resultado-imagem img {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 .resultado-badge {
@@ -2605,5 +2640,60 @@ button:hover, .slider-button:hover, .cta-button:hover, .footer-links a:hover, .f
   .resultado-detalhes {
     flex-direction: column;
     gap: 0.5rem;
+  }
+}
+
+.main-car.animating-out {
+  z-index: 2;
+  animation: slideOutLeft 0.6s forwards;
+}
+.side-car.right.animating-in {
+  z-index: 3;
+  animation: slideInFromRightToCenter 0.6s forwards;
+}
+.main-car.animating-out.animating-prev {
+  animation: slideOutRight 0.6s forwards;
+}
+.side-car.left.animating-in {
+  z-index: 3;
+  animation: slideInFromLeftToCenter 0.6s forwards;
+}
+
+@keyframes slideInFromRightToCenter {
+  0% {
+    transform: translateX(120%) scale(0.8);
+    opacity: 0.5;
+    filter: blur(1.5px) grayscale(0.4) brightness(0.7);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) brightness(1.1) grayscale(0) blur(0);
+  }
+}
+@keyframes slideInFromLeftToCenter {
+  0% {
+    transform: translateX(-120%) scale(0.8);
+    opacity: 0.5;
+    filter: blur(1.5px) grayscale(0.4) brightness(0.7);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) brightness(1.1) grayscale(0) blur(0);
+  }
+}
+@keyframes slideOutLeft {
+  100% {
+    transform: translateX(-120%) scale(0.8);
+    opacity: 0.5;
+    filter: blur(1.5px) grayscale(0.4) brightness(0.7);
+  }
+}
+@keyframes slideOutRight {
+  100% {
+    transform: translateX(120%) scale(0.8);
+    opacity: 0.5;
+    filter: blur(1.5px) grayscale(0.4) brightness(0.7);
   }
 }

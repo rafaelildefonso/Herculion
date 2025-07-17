@@ -3,11 +3,13 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="/favicon.png" type="image/png">
-    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/swiper-styles.css" />
     <title>Herculion</title>
   </head>
   <body>
@@ -60,9 +62,11 @@
               <!-- O nome do carro (ex: URUS) aparecerá aqui -->
             </div>
             <div class="car-images-container">
-              <img class="side-car left" src="" alt="Carro anterior" />
-              <img class="main-car" src="" alt="Carro principal" />
-              <img class="side-car right" src="" alt="Próximo carro" />
+              <div class="swiper car-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Os slides serão adicionados aqui pelo JavaScript -->
+                </div>
+              </div>
             </div>
             <div class="slider-controls">
               <button class="slider-button prev" aria-label="Previous car">
@@ -166,6 +170,7 @@
         </footer>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
