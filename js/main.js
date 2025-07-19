@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cars = [
     {
       id: "lamborghini-urus",
-      mainImage: "assets/images/lamborghini_urus.png",
+      mainImage: "assets/images/carros/lamborghini_urus.png",
       bgText: "assets/images/urus_nome.png",
       alt: "Lamborghini Urus",
       size: {
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "bugatti-chiron",
-      mainImage: "assets/images/bugatti_chiron.png",
+      mainImage: "assets/images/carros/bugatti_chiron.png",
       bgText: "assets/images/chiron_nome.png",
       alt: "Bugatti Chiron",
       size: {
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "porsche-911",
-      mainImage: "assets/images/porsche_911.png",
+      mainImage: "assets/images/carros/porsche_911.png",
       bgText: "assets/images/911_nome.png",
       alt: "Porsche 911",
       size: {
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "ferrari-roma",
-      mainImage: "assets/images/ferrari_roma.png",
+      mainImage: "assets/images/carros/ferrari_roma.png",
       bgText: "assets/images/roma_nome.png",
       alt: "Ferrari Roma",
       size: {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "mclaren-720s",
-      mainImage: "assets/images/mclaren_720s.png",
+      mainImage: "assets/images/carros/mclaren_720s.png",
       bgText: "assets/images/720s_nome.png",
       alt: "Mclaren 720s",
       size: {

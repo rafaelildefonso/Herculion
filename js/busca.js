@@ -3,19 +3,198 @@
 // Dados dos carros (vendidos.json)
 const todosCarros = [
   {
+    "id": "bugatti-tourbillon",
+    "nome": "Bugatti Tourbillon",
+    "marca": "Bugatti",
+    "modelo": "Tourbillon",
+    "ano": 2025,
+    "preco": "R$ 50M",
+    "cor": "Preto e Azul",
+    "potencia": "1800 HP",
+    "imagem": "../assets/images/carros/bugatti_tourbillon.png",
+    "destaque": true,
+    "novo": true,
+    "descricao": "O Bugatti Tourbillon é o mais novo hipercarro da marca, combinando um motor V16 híbrido com tecnologia de ponta e design inovador.",
+    "route": "carros/bugatti-tourbillon.html",
+    "categoria": "esportivo"
+  },
+  {
+    "id": "lamborghini-revuelto",
+    "nome": "Lamborghini Revuelto",
+    "marca": "Lamborghini",
+    "modelo": "Revuelto",
+    "ano": 2024,
+    "preco": "R$ 6.2M",
+    "cor": "Laranja",
+    "potencia": "1015 HP", 
+    "imagem": "../assets/images/carros/lamborghini_revuelto.png",
+    "destaque": true,
+    "novo": true,
+    "descricao": "O Revuelto é o primeiro superesportivo V12 híbrido plug-in da Lamborghini, estabelecendo um novo paradigma em performance e design.",
+    "route": "carros/lamborghini-revuelto.html",
+    "categoria": "esportivo"
+  },
+  {
+    "id": "mclaren-720s",
+    "nome": "McLaren 720S",
+    "marca": "McLaren",
+    "modelo": "720S",
+    "ano": 2023,
+    "preco": "R$ 3.6M",
+    "cor": "Azul",
+    "potencia": "720 HP", 
+    "imagem": "../assets/images/carros/mclaren_720s.png",
+    "destaque": false,
+    "novo": false,
+    "descricao": "O McLaren 720S é uma obra-prima da engenharia, com um chassi de fibra de carbono e um design aerodinâmico impressionante.",
+    "route": "carros/mclaren-720s.html",
+    "categoria": "esportivo"
+  },
+  {
     "id": "bugatti-chiron",
     "nome": "Bugatti Chiron",
     "marca": "Bugatti",
     "modelo": "Chiron",
+    "ano": 2023,
+    "preco": "R$ 25M",
+    "cor": "Preto e Azul",
+    "potencia": "1500 HP", 
+    "imagem": "../assets/images/carros/bugatti_chiron.png",
+    "destaque": false,
+    "novo": false,
+    "descricao": "O Bugatti Chiron é um ícone de hipercarros, conhecido por sua velocidade máxima alucinante e luxo incomparável.",
+    "route": "carros/bugatti-chiron.html",
+    "categoria": "esportivo"
+  },
+  {
+    "id": "koenigsegg-jesko",
+    "nome": "Koenigsegg Jesko",
+    "marca": "Koenigsegg",
+    "modelo": "Jesko",
+    "ano": 2023,
+    "preco": "R$ 30M",
+    "cor": "Branco",
+    "potencia": "1600 HP", 
+    "imagem": "../assets/images/carros/koenigsegg_jesko.png",
+    "destaque": false,
+    "novo": false,
+    "descricao": "O Koenigsegg Jesko é uma máquina de pista homologada para as ruas, projetada para ser o carro mais rápido do mundo em um circuito.",
+    "route": "carros/koenigsegg-jesko.html",
+    "categoria": "esportivo"
+  },
+  {
+    "id": "aston-martin-valkyrie",
+    "nome": "Aston Martin Valkyrie",
+    "marca": "Aston Martin",
+    "modelo": "Valkyrie",
+    "ano": 2023,
+    "preco": "R$ 20M",
+    "cor": "Verde",
+    "potencia": "1160 HP", 
+    "imagem": "../assets/images/carros/aston_martin_valkyrie.png",
+    "destaque": false,
+    "novo": false,
+    "descricao": "O Aston Martin Valkyrie é um hipercarro com tecnologia de Fórmula 1, oferecendo uma experiência de condução extrema e sem precedentes.",
+    "route": "carros/aston-martin-valkyrie.html",
+    "categoria": "esportivo"
+  },
+  {
+    "id": "pagani-huayra",
+    "nome": "Pagani Huayra",
+    "marca": "Pagani",
+    "modelo": "Huayra",
+    "ano": 2022,
+    "preco": "R$ 18M",
+    "cor": "Fibra de Carbono",
+    "potencia": "730 HP", 
+    "imagem": "../assets/images/carros/pagani_huayra.png",
+    "destaque": false,
+    "novo": false,
+    "descricao": "O Pagani Huayra é uma obra de arte sobre rodas, combinando um design deslumbrante com um desempenho de tirar o fôlego.",
+    "route": "carros/pagani-huayra.html",
+    "categoria": "esportivo"
+  },
+  {
+    "id": "rimac-nevera",
+    "nome": "Rimac Nevera",
+    "marca": "Rimac",
+    "modelo": "Nevera",
     "ano": 2024,
     "preco": "R$ 15M",
-    "cor": "Preto",
-    "potencia": "1.500 HP",
-    "imagem": "assets/images/bugatti_chiron.png",
+    "cor": "Azul Elétrico",
+    "potencia": "1914 HP", 
+    "imagem": "../assets/images/carros/rimac_nevera.png",
     "destaque": true,
     "novo": true,
-    "descricao": "A velocidade redefinida. Luxo, exclusividade e performance incomparável."
+    "descricao": "O Rimac Nevera é um hipercarro totalmente elétrico que redefine os limites da aceleração e da tecnologia automotiva.",
+    "route": "carros/rimac-nevera.html",
+    "categoria": "esportivo"
   },
+  {
+    "id": "lexus-lfa",
+    "nome": "Lexus LFA",
+    "marca": "Lexus",
+    "modelo": "LFA",
+    "ano": 2012,
+    "preco": "R$ 5M",
+    "cor": "Branco Pérola",
+    "potencia": "560 HP", 
+    "imagem": "../assets/images/carros/lexus_lfa.png",
+    "destaque": false,
+    "novo": false,
+    "descricao": "O Lexus LFA é um supercarro japonês lendário, famoso por seu motor V10 de alta rotação e som inconfundível.",
+    "route": "carros/lexus-lfa.html",
+    "categoria": "esportivo"
+  },
+  {
+    "id": "nissan-gt-r-nismo",
+    "nome": "Nissan GT-R Nismo",
+    "marca": "Nissan",
+    "modelo": "GT-R Nismo",
+    "ano": 2024,
+    "preco": "R$ 1.5M",
+    "cor": "Cinza",
+    "potencia": "600 HP", 
+    "imagem": "../assets/images/carros/nissan_gt_r_nismo.png",
+    "destaque": false,
+    "novo": true,
+    "descricao": "O Nissan GT-R Nismo, também conhecido como 'Godzilla', é um ícone de performance com tração integral e tecnologia de ponta.",
+    "route": "carros/nissan-gt-r-nismo.html",
+    "categoria": "esportivo"
+  },
+  {
+    "id": "audi-r8",
+    "nome": "Audi R8",
+    "marca": "Audi",
+    "modelo": "R8",
+    "ano": 2023,
+    "preco": "R$ 1.8M",
+    "cor": "Amarelo",
+    "potencia": "602 HP", 
+    "imagem": "../assets/images/carros/audi_r8.png",
+    "destaque": false,
+    "novo": false,
+    "descricao": "Superesportivo conversível com motor V10 e design agressivo, pura emoção ao dirigir.",
+    "route": "carros/audi-r8.html",
+    "categoria": "conversível"
+  },
+  {
+    "id": "rolls-royce-cullinan",
+    "nome": "Rolls-Royce Cullinan",
+    "marca": "Rolls-Royce",
+    "modelo": "Cullinan",
+    "ano": 2024,
+    "preco": "R$ 7M",
+    "cor": "Preto",
+    "potencia": "563 HP", 
+    "imagem": "../assets/images/carros/rolls_royce_cullinan.png",
+    "destaque": true,
+    "novo": true,
+    "descricao": "O SUV de ultra-luxo, combinando a opulência e o conforto inigualáveis da Rolls-Royce com a versatilidade de um SUV.",
+    "route": "carros/rolls-royce-cullinan.html",
+    "categoria": "suv"
+  },
+
   {
     "id": "lamborghini-urus",
     "nome": "Lamborghini Urus",
@@ -25,24 +204,28 @@ const todosCarros = [
     "preco": "R$ 2.5M",
     "cor": "Branco",
     "potencia": "650 HP",
-    "imagem": "assets/images/lamborghini_urus.png",
+    "imagem": "assets/images/carros/lamborghini_urus.png",
     "destaque": false,
     "novo": false,
-    "descricao": "O SUV mais rápido do mundo, unindo esportividade e luxo."
+    "descricao": "O SUV mais rápido do mundo, unindo esportividade e luxo.",
+    "route": "carros/lamborghini-urus.html",
+    "categoria": "suv"
   },
   {
     "id": "porsche-911",
-    "nome": "Porsche 911 Turbo S",
+    "nome": "Porsche 911",
     "marca": "Porsche",
-    "modelo": "911 Turbo S",
+    "modelo": "911",
     "ano": 2023,
     "preco": "R$ 1.2M",
     "cor": "Prata",
     "potencia": "650 HP",
-    "imagem": "assets/images/porsche_911.png",
+    "imagem": "assets/images/carros/porsche_911.png",
     "destaque": false,
     "novo": false,
-    "descricao": "O esportivo definitivo, tradição e inovação em cada detalhe."
+    "descricao": "O Porsche 911 é um ícone dos esportivos, combinando desempenho, elegância e tecnologia de ponta.",
+    "route": "carros/porsche-911.html",
+    "categoria": "esportivo"
   },
   {
     "id": "ferrari-roma",
@@ -53,24 +236,45 @@ const todosCarros = [
     "preco": "R$ 3.9M",
     "cor": "Vermelho",
     "potencia": "611 HP",
-    "imagem": "assets/images/ferrari_roma.png",
+    "imagem": "assets/images/carros/ferrari_roma.png",
     "destaque": true,
     "novo": false,
-    "descricao": "Cupê, esportivo que combina elegância clássica com tecnologia de ponta. Ferrari em sua essência."
+    "descricao": "Cupê, esportivo que combina elegância clássica com tecnologia de ponta. Ferrari em sua essência.",
+    "route": "carros/ferrari-roma.html",
+    "categoria": "esportivo"
+  },
+
+  {
+    "id": "mercedes-benz-sl",
+    "nome": "Mercedes-Benz SL",
+    "marca": "Mercedes-Benz",
+    "modelo": "SL",
+    "ano": 2024,
+    "preco": "R$ 1.5M",
+    "cor": "Cinza",
+    "potencia": "577 HP", 
+    "imagem": "assets/images/carros/mercedes_benz_sl.png",
+    "destaque": false,
+    "novo": true,
+    "descricao": "Roadster de luxo, conversível com performance e conforto inigualáveis.",
+    "route": "carros/mercedes-benz-sl.html",
+    "categoria": "conversível"
   },
   {
-    "id": "mclaren-720s",
-    "nome": "McLaren 720S",
-    "marca": "McLaren",
-    "modelo": "720S",
-    "ano": 2021,
-    "preco": "R$ 3.8M",
-    "cor": "Laranja",
-    "potencia": "720 HP",
-    "imagem": "assets/images/mclaren_720s.png",
-    "destaque": false,
+    "id": "cadillac-escalade",
+    "nome": "Cadillac Escalade",
+    "marca": "Cadillac",
+    "modelo": "Escalade",
+    "ano": 2024,
+    "preco": "R$ 950K",
+    "cor": "Preto",
+    "potencia": "420 HP", 
+    "imagem": "assets/images/carros/cadillac_escalade.png",
+    "destaque": true,
     "novo": false,
-    "descricao": "Design arrojado, leveza e potência britânica."
+    "descricao": "SUV icônico que oferece luxo, espaço e tecnologia de ponta.",
+    "route": "carros/cadillac-escalade.html",
+    "categoria": "suv"
   }
 ];
 
@@ -91,6 +295,7 @@ function aplicarFiltros() {
   const preco = document.querySelectorAll('.filtro-select')[1].value;
   const ano = document.querySelectorAll('.filtro-select')[2].value;
   const cor = document.querySelectorAll('.filtro-select')[3].value;
+  const categoriaAtiva = document.querySelector('.filtro-tag.active')?.textContent.toLowerCase();
 
   carrosFiltrados = todosCarros.filter(carro => {
     let matchTexto = true;
@@ -113,7 +318,8 @@ function aplicarFiltros() {
     }
     let matchAno = !ano || carro.ano == ano;
     let matchCor = !cor || carro.cor.toLowerCase() === cor;
-    return matchTexto && matchMarca && matchPreco && matchAno && matchCor;
+    let matchCategoria = !categoriaAtiva || categoriaAtiva === 'todos' || carro.categoria === categoriaAtiva;
+    return matchTexto && matchMarca && matchPreco && matchAno && matchCor && matchCategoria;
   });
   paginaAtual = 1;
   renderResultados();
@@ -133,7 +339,7 @@ function renderResultados() {
   const fim = inicio + porPagina;
   carrosFiltrados.slice(inicio, fim).forEach(carro => {
     grid.innerHTML += `
-      <div class="resultado-item reveal reveal-visible">
+      <a href="${carro.route}" class="resultado-item reveal reveal-visible">
         <div class="resultado-imagem">
           <img src="${carro.imagem}" alt="${carro.nome}" />
           ${carro.novo ? '<div class="resultado-badge">Novo</div>' : ''}
@@ -151,7 +357,7 @@ function renderResultados() {
           </div>
           <button class="btn-detalhes">Ver Detalhes</button>
         </div>
-      </div>
+      </a>
     `;
   });
 }
@@ -184,7 +390,21 @@ function atualizarPaginacao() {
   btnNext.disabled = paginaAtual === totalPaginas || totalPaginas === 0;
   btnNext.onclick = () => { if (paginaAtual < totalPaginas) { paginaAtual++; renderResultados(); atualizarPaginacao(); } };
   paginacao.appendChild(btnNext);
+
+  scrollParaResultados();
 }
+
+// Adiciona evento de clique para os filtros de categoria
+document.querySelectorAll('.filtro-tag').forEach(tag => {
+  tag.addEventListener('click', () => {
+    // Remove a classe 'active' de todas as tags
+    document.querySelectorAll('.filtro-tag').forEach(t => t.classList.remove('active'));
+    // Adiciona a classe 'active' apenas na tag clicada
+    tag.classList.add('active');
+    // Aplica os filtros
+    aplicarFiltros();
+  });
+});
 
 window.addEventListener('DOMContentLoaded', () => {
   renderResultados();
@@ -205,6 +425,8 @@ window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.filtro-select').forEach(sel => sel.addEventListener('change', aplicarFiltros));
   document.querySelector('.btn-aplicar').addEventListener('click', e => { aplicarFiltros(); scrollParaResultados(); });
   document.querySelector('.btn-limpar').addEventListener('click', () => {
+    document.querySelectorAll('.filtro-tag').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filtro-tag').item(0).classList.add('active');
     document.querySelector('.busca-input').value = '';
     document.querySelectorAll('.filtro-select').forEach(sel => sel.value = '');
     aplicarFiltros();

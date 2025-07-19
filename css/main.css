@@ -269,7 +269,7 @@ h6::-moz-selection,
 .footer-links a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   padding: 8px 0;
@@ -290,7 +290,6 @@ h6::-moz-selection,
 
 .footer-links a:hover {
   color: #ffffff;
-  padding-left: 15px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
@@ -527,7 +526,7 @@ h6::-moz-selection,
   right: -100vw;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(120deg, #181818 80%, #232323 100%);
+  background: linear-gradient(120deg, #181818 60%, #232323 80%);
   opacity: 0.98;
   box-shadow: -10px 0 40px rgba(0,0,0,0.7), 0 0 0 100vw rgba(0,0,0,0.3);
   z-index: 1001;
@@ -1289,7 +1288,7 @@ h6::-moz-selection,
 .footer-links a,
 .footer-social a {
   color: var(--text-light);
-  transition: color 0.3s ease, padding-left 0.3s ease;
+  transition: all 0.3s ease, padding-left 0.3s ease;
   display: block;
   position: relative;
   padding-left: 0;
@@ -2437,6 +2436,7 @@ button:hover, .slider-button:hover, .cta-button:hover, .footer-links a:hover, .f
   position: relative;
   height: 250px;
   overflow: hidden;
+  padding: 0 20px;
 }
 
 .resultado-imagem img {
