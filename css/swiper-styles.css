@@ -45,6 +45,10 @@
   transition: all 0.5s ease;
 }
 
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
+
 /* Estilos para os botões de navegação */
 .slider-controls {
   position: absolute;

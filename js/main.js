@@ -126,7 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
       size: {
         car: { width: "auto", height: "75%", maxHeight: "400px" },
         text: { width: "55%", maxWidth: "55%", height: "100%", position: { top: "0%", left: "0", transform: "translate(0%, -10%)" } }
-      }
+      },
+      route: "carros/lamborghini-urus.html",
     },
     {
       id: "bugatti-chiron",
@@ -136,7 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
       size: {
         car: { width: "auto", height: "85%", maxHeight: "350px" },
         text: { width: "50%", maxWidth: "40%", height: "40%", position: { top: "0", left: "0", transform: "translate(0%, 30%)" } }
-      }
+      },
+      route: "carros/bugatti-chiron.html",
     },
     {
       id: "porsche-911",
@@ -146,7 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
       size: {
         car: { width: "auto", height: "65%", maxHeight: "380px" },
         text: { width: "25%", maxWidth: "25%", height: "auto", position: { top: "40%", left: "0%", transform: "translate(0%, 80%)" } }
-      }
+      },
+      route: "carros/porsche-911.html",
     },
     {
       id: "ferrari-roma",
@@ -156,7 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
       size: {
         car: { width: "auto", height: "65%", maxHeight: "380px" },
         text: { width: "25%", maxWidth: "25%", height: "auto", position: { top: "40%", left: "0%", transform: "translate(0%, 10%)" } }
-      }
+      },
+      route: "carros/ferrari-roma.html",
     },
     {
       id: "mclaren-720s",
@@ -166,7 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
       size: {
         car: { width: "auto", height: "65%", maxHeight: "380px" },
         text: { width: "40%", maxWidth: "40%", height: "auto", position: { top: "40%", left: "0%", transform: "translate(0, 35%)" } }
-      }
+      },
+      route: "carros/mclaren-720s.html",
     },
   ];
 
@@ -257,8 +262,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Adiciona os slides dos carros
     cars.forEach(car => {
-      const slide = document.createElement('div');
+      const slide = document.createElement('a');
       slide.className = 'swiper-slide';
+      slide.href = car.route;
       slide.innerHTML = `
         <div class="slide-content">
           <img src="${car.mainImage}" alt="${car.alt}">
