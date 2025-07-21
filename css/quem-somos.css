@@ -188,19 +188,25 @@
   z-index: 1;
 }
 
-.image-placeholder {
+.image {
   width: 100%;
   height: 500px;
   background: rgba(255, 255, 255, 0.02);
-  border: 2px dashed rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-.image-placeholder:hover {
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover ;
+}
+
+.image:hover {
   border-color: var(--secondary-color);
   background: rgba(255, 255, 255, 0.05);
 }
@@ -351,20 +357,25 @@
   border-color: var(--secondary-color);
 }
 
-.membro-foto-placeholder {
+.membro-foto {
   width: 120px;
   height: 120px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px dashed rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-.membro-equipe:hover .membro-foto-placeholder {
+.membro-foto img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.membro-equipe:hover .membro-foto {
   border-color: var(--secondary-color);
   background: rgba(255, 255, 255, 0.1);
 }
