@@ -757,7 +757,7 @@ h6::-moz-selection,
 
 /* === CAR SHOWCASE SECTION === */
 .car-showcase {
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
   overflow: hidden;
   background:
@@ -1156,9 +1156,10 @@ h6::-moz-selection,
   position: absolute;
   bottom: -10px;
   left: 0;
-  width: 80px;
+  width: 100%;
   height: 3px;
   background-color: var(--accent-color);
+  box-shadow: -1px -25px 35px 5px #ffffff80;
 }
 
 .experience-text p {

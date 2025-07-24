@@ -4,7 +4,7 @@
   height: 100%;
   position: relative;
   overflow: hidden;
-  padding: 40px 0;
+  /* padding: 40px 0; */
   z-index: 50;
 }
 
@@ -28,6 +28,7 @@
   filter: blur(2px);
   transform: scale(0.9);
   z-index: 50;
+  padding-bottom: 50px;
 }
 
 .swiper-slide-active {
@@ -45,7 +46,7 @@
   transition: all 0.5s ease;
 }
 
-.swiper-slide img:hover {
+.swiper-slide-active img:hover {
   transform: scale(1.05);
 }
 
@@ -56,7 +57,7 @@
   display: flex;
   /* justify-content: space-between; */
   /* align-items: center; */
-  padding: 0 20px;
+  padding: 5px 20px;
   z-index: 10;
   pointer-events: none;
 }
