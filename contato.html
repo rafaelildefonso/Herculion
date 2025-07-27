@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Contato - Herculion</title>
+  </head>
+  <body>
+    <div class="desktop">
+      <main class="main-content">
+        <header class="header">
+          <nav class="navigation">
+            <button class="menu-button" aria-label="Menu">
+              <img
+                class="svgviewer-png-output-2"
+                src="assets/images/v11_2.png"
+                alt="Menu icon"
+              />
+            </button>
+          </nav>
+          <h1 class="brand-name"><a href="index.html">Herculion</a></h1>
+          <nav id="side-menu" class="side-menu">
+            <button id="close-btn" class="close-btn">&times;</button>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="grade-carros.html">Modelos</a></li>
+              <li><a href="index.html#experience">Experiências</a></li>
+              <li><a href="busca.html">Busca</a></li>
+              <li><a href="quem-somos.html">Quem Somos</a></li>
+              <li><a href="contato.html">Contato</a></li>
+              <li><a href="cadastro.html">Cadastre-se</a></li>
+              <li><a href="pedidos.html">Meus Pedidos</a></li>
+            </ul>
+            <div class="menu-watermark">Herculion</div>
+          </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section contato-hero">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h2
+              class="hero-title reveal-gold reveal-line"
+              style="font-size: 70px"
+            >
+              Contato
+            </h2>
+            <h3 class="hero-subtitle reveal-gold" style="font-size: 30px">
+              <span class="brand">Fale com a Herculion</span>
+              <span class="subtitle">Estamos prontos para te atender</span>
+            </h3>
+            <p class="hero-description reveal">
+              Tire suas dúvidas, agende uma visita ou envie sua mensagem. Nossa
+              equipe terá prazer em responder.
+            </p>
+          </div>
+        </section>
+
+        <!-- Formulário de Contato -->
+        <section id="formulario-contato" class="contato-section reveal">
+          <div class="contato-content">
+            <div class="contato-form-container">
+              <h2 class="section-title reveal-gold reveal-line">
+                Envie sua Mensagem
+              </h2>
+              <form class="contato-form">
+                <div class="form-group reveal">
+                  <label for="nome">Nome</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+                <div class="form-group reveal">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seu@email.com"
+                    required
+                  />
+                </div>
+                <div class="form-group reveal">
+                  <label for="telefone"
+                    >Telefone
+                    <span style="color: #838383; font-size: 0.9em"
+                      >(opcional)</span
+                    ></label
+                  >
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(99) 99999-9999"
+                  />
+                </div>
+                <div class="form-group reveal">
+                  <label for="mensagem">Mensagem</label>
+                  <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    placeholder="Digite sua mensagem"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="cta-button reveal">Enviar</button>
+              </form>
+            </div>
+            <div class="contato-info-container reveal-zoom">
+              <h2 class="section-title reveal-gold reveal-line">Informações</h2>
+              <ul class="contato-info-list">
+                <li>
+                  <i class="fas fa-map-marker-alt"></i> Av. Raja Gabáglia, 4343
+                  - Santa Lúcia, Belo Horizonte
+                </li>
+                <li><i class="fas fa-phone"></i> (31) 98657-4385</li>
+                <li><i class="fas fa-envelope"></i> contato@herculion.com</li>
+                <li><i class="fab fa-whatsapp"></i> (31) 98657-4385</li>
+              </ul>
+              <div class="contato-social">
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="X (Twitter)"
+                  ><i class="fab fa-x-twitter"></i
+                ></a>
+                <a href="#" aria-label="YouTube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mapa e Localização -->
+        <section id="mapa" class="mapa-section reveal">
+          <h2 class="section-title reveal-gold reveal-line">
+            Nossa Localização
+          </h2>
+          <div class="mapa">
+            <iframe
+              src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=Av.%20Raja%20Gab%C3%A1glia,%204343%20-%20Santa%20L%C3%BAcia,%20Belo%20Horizonte%20-%20MG,%2030350-577+(Herculion)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              style="border: 0"
+              allowfullscreen=""
+            ></iframe>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer reveal">
+          <div class="footer-content">
+            <div class="footer-brand reveal">
+              <h2 class="brand-name">Herculion</h2>
+              <p>A experiência definitiva em automóveis de luxo.</p>
+            </div>
+            <div class="footer-links reveal">
+              <h4>Navegação</h4>
+              <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="grade-carros.html">Modelos</a></li>
+                <li><a href="index.html#experience">Experiências</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+                <li><a href="pedidos.html">Meus Pedidos</a></li>
+              </ul>
+            </div>
+            <div class="footer-social reveal">
+              <h4>Siga-nos</h4>
+              <div class="social-icons">
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="X (Twitter)"
+                  ><i class="fab fa-x-twitter"></i
+                ></a>
+                <a href="#" aria-label="YouTube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Herculion. Todos os direitos reservados.</p>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

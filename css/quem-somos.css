@@ -1,0 +1,750 @@
+/* === QUEM SOMOS PAGE STYLES === */
+
+/* Hero Section Modifications */
+.quem-somos-hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.placeholder-text {
+  display: block;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.placeholder-subtitle {
+  display: block;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.hero-subtitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-subtitle .brand {
+  font-size: 4rem;
+  color: var(--secondary-color);
+}
+
+.hero-subtitle .subtitle {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* História Section */
+.historia-section {
+  padding: 120px 50px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.historia-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.01"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.historia-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.historia-text {
+  z-index: 1;
+}
+
+.historia-timeline {
+  margin-top: 3rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 3rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--secondary-color), transparent);
+}
+
+.timeline-item:last-child::before {
+  height: 0;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
+}
+
+.timeline-year {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.timeline-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.historia-image {
+  position: relative;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover ;
+}
+
+.image:hover {
+  border-color: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Valores Section */
+.valores-section {
+  padding: 120px 50px;
+  background: var(--primary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.valores-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.valor-item {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.valor-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--secondary-color);
+}
+
+.valor-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.valor-item:hover::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.valor-icon-placeholder {
+  width: 80px;
+  height: 80px;
+  background: rgba(215, 215, 215, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  transition: all 0.3s ease;
+}
+
+.valor-item:hover .valor-icon-placeholder {
+  background: rgba(215, 215, 215, 0.2);
+  transform: scale(1.1);
+}
+
+.valor-icon-placeholder .placeholder-text {
+  font-size: 2.5rem;
+}
+
+.valor-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+  font-family: "Playfair Display", serif;
+}
+
+.valor-item p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Equipe Section */
+.equipe-section {
+  padding: 120px 50px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.equipe-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.01"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.equipe-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.equipe-intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 2rem auto 4rem;
+}
+
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.membro-equipe {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.membro-equipe:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--secondary-color);
+}
+
+.membro-foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.membro-foto img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.membro-equipe:hover .membro-foto {
+  border-color: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.membro-equipe h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-family: "Playfair Display", serif;
+}
+
+.membro-equipe .cargo {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.membro-equipe .descricao {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Missão e Visão Section */
+.missao-visao-section {
+  padding: 120px 50px;
+  background: var(--primary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.missao-visao-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.missao-card,
+.visao-card {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.missao-card:hover,
+.visao-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--secondary-color);
+}
+
+.missao-card::before,
+.visao-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.missao-card:hover::before,
+.visao-card:hover::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.missao-card h2,
+.visao-card h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+  font-family: "Playfair Display", serif;
+}
+
+.missao-card p,
+.visao-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Números Section */
+.numeros-section {
+  padding: 120px 50px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.numeros-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.01"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.numeros-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.numeros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.numero-item {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.numero-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--secondary-color);
+}
+
+.numero-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.numero-item:hover::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.numero {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+  text-shadow: 0 0 20px rgba(215, 215, 215, 0.3);
+}
+
+.numero-item p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 120px 50px;
+  background: var(--primary-color);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+  font-family: "Playfair Display", serif;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+}
+
+.cta-button.secondary:hover {
+  background: var(--text-color);
+  color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .historia-content,
+  .missao-visao-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .historia-text {
+    order: 1;
+  }
+
+  .historia-image {
+    order: 2;
+  }
+
+  .hero-subtitle .brand {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .historia-section,
+  .valores-section,
+  .equipe-section,
+  .missao-visao-section,
+  .numeros-section,
+  .cta-section {
+    padding: 80px 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle .brand {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .numero {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .historia-section,
+  .valores-section,
+  .equipe-section,
+  .missao-visao-section,
+  .numeros-section,
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle .brand {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle .subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
+  .valores-grid,
+  .equipe-grid,
+  .numeros-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .missao-card,
+  .visao-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .numero {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .historia-section,
+  .valores-section,
+  .equipe-section,
+  .missao-visao-section,
+  .numeros-section,
+  .cta-section {
+    padding: 50px 15px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle .brand {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-year {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content p {
+    font-size: 1rem;
+  }
+
+  .valor-item,
+  .membro-equipe,
+  .numero-item {
+    padding: 2rem 1.5rem;
+  }
+
+  .missao-card h2,
+  .visao-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .missao-card p,
+  .visao-card p {
+    font-size: 1rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .numero {
+    font-size: 2rem;
+  }
+} 

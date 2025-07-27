@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelos - Herculion</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/car-grid.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <style>
+    /* Estilos específicos para a página de grade de carros */
+    .page-hero {
+      position: relative;
+      height: 60vh;
+      min-height: 500px;
+      overflow: hidden;
+      margin-top: 90px;
+    }
+
+    .hero-video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(10, 10, 10, 0.2) 0%,
+        rgba(10, 10, 10, 0.8) 100%
+      );
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      color: #fff;
+      margin: 0 0 1.5rem;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out 0.3s forwards;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out 0.5s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Ajustes para dispositivos móveis */
+    @media (max-width: 768px) {
+      .page-hero {
+        height: 50vh;
+        min-height: 400px;
+      }
+
+      .hero-title {
+        font-size: 2.8rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="desktop">
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <nav class="navigation">
+          <button class="menu-button" aria-label="Menu">
+            <img class="svgviewer-png-output-2" src="assets/images/v11_2.png" alt="Menu icon" />
+          </button>
+        </nav>
+        <h1 class="brand-name"><a href="index.html">Herculion</a></h1>
+        <nav id="side-menu" class="side-menu">
+          <div class="menu-watermark">Herculion</div>
+          <button id="close-btn" class="close-btn">&times;</button>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="grade-carros.html">Modelos</a></li>
+            <li><a href="index.html#experience">Experiências</a></li>
+            <li><a href="busca.html">Busca</a></li>
+            <li><a href="quem-somos.html">Quem Somos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="cadastro.html">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="page-hero">
+        <div class="hero-video-container">
+          <video autoplay muted loop class="hero-video">
+            <source src="assets/videos/luxury-cars.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <h1 class="hero-title">Nossa Exclusiva Coleção</h1>
+            <p class="hero-subtitle">Descubra os veículos mais cobiçados do mundo, cada um representando o pináculo da engenharia automotiva e do design de luxo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Car Grid Section -->
+      <section class="car-grid-section">
+        <div class="section-header">
+          <h2 class="section-title">Veículos em Destaque</h2>
+          <p class="section-subtitle">Cada modelo é uma obra-prima da engenharia automotiva, projetado para oferecer desempenho excepcional e elegância inigualável.</p>
+        </div>
+        
+        <div class="car-grid" id="carGrid">
+          <!-- Os carros serão inseridos aqui via JavaScript -->
+          <div class="car-card-skeleton">
+            <div class="skeleton-image"></div>
+            <div class="skeleton-content">
+              <div class="skeleton-line" style="width: 70%; height: 30px; margin-bottom: 15px;"></div>
+              <div class="skeleton-line" style="width: 50%; height: 20px; margin-bottom: 10px;"></div>
+              <div class="skeleton-line" style="width: 80%; height: 15px; margin-bottom: 20px;"></div>
+              <div class="skeleton-line" style="width: 60%; height: 25px; margin-bottom: 15px;"></div>
+              <div class="skeleton-line" style="width: 100%; height: 15px; margin-bottom: 10px;"></div>
+              <div class="skeleton-line" style="width: 100%; height: 15px; margin-bottom: 10px;"></div>
+              <div class="skeleton-line" style="width: 40%; height: 40px; margin-top: 20px; border-radius: 20px;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2 class="brand-name">Herculion</h2>
+          <p>A experiência definitiva em automóveis de luxo.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="grade-carros.html">Modelos</a></li>
+            <li><a href="index.html#experience">Experiências</a></li>
+            <li><a href="busca.html">Busca</a></li>
+            <li><a href="quem-somos.html">Quem Somos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="cadastro.html">Cadastre-se</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Siga-nos</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Herculion. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/grade-carros.js"></script>
+  
+  <script>
+    // Adiciona a classe 'page-loaded' ao body quando a página é carregada
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('page-loaded');
+    });
+
+    // Inicializa o menu mobile
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.querySelector('.menu-button');
+      const closeButton = document.querySelector('.close-btn');
+      const sideMenu = document.getElementById('side-menu');
+      
+      if (menuButton && sideMenu) {
+        menuButton.addEventListener('click', function() {
+          sideMenu.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      }
+      
+      if (closeButton && sideMenu) {
+        closeButton.addEventListener('click', function() {
+          sideMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+      
+      // Fecha o menu ao clicar em um link
+      const menuLinks = document.querySelectorAll('.side-menu a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          sideMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Busca - Herculion</title>
+  </head>
+  <body>
+    <div class="desktop">
+      <main class="main-content">
+        <header class="header">
+          <nav class="navigation">
+            <button class="menu-button" aria-label="Menu">
+              <img class="svgviewer-png-output-2" src="assets/images/v11_2.png" alt="Menu icon" />
+            </button>
+          </nav>
+          <h1 class="brand-name"><a href="index.html">Herculion</a></h1>
+          <nav id="side-menu" class="side-menu">
+            <div class="menu-watermark">Herculion</div>
+            <button id="close-btn" class="close-btn">&times;</button>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="grade-carros.html">Modelos</a></li>
+              <li><a href="index.html#experience">Experiências</a></li>
+              <li><a href="busca.html" class="active">Busca</a></li>
+              <li><a href="quem-somos.html">Quem Somos</a></li>
+              <li><a href="contato.html">Contato</a></li>
+              <li><a href="cadastro.html">Cadastre-se</a></li>
+              <li><a href="pedidos.html">Meus Pedidos</a></li>
+            </ul>
+          </nav>
+        </header>
+        <section class="busca-hero-section">
+          <div class="busca-hero-overlay"></div>
+          <div class="busca-hero-content">
+            <h2 class="busca-title reveal">Encontre seu Carro dos Sonhos</h2>
+            <p class="busca-subtitle reveal">Descubra nossa coleção exclusiva de veículos de luxo</p>
+            <div class="busca-container reveal">
+              <div class="busca-input-group">
+                <input type="text" class="busca-input" placeholder="Digite o modelo, marca ou características..." />
+                <button class="busca-button">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <div class="filtros-rapidos reveal">
+              <button class="filtro-tag active">Todos</button>
+              <button class="filtro-tag">Esportivo</button>
+              <button class="filtro-tag">SUV</button>
+              <button class="filtro-tag">Conversível</button>
+            </div>
+          </div>
+        </section>
+        <section class="filtros-section reveal">
+          <div class="filtros-content">
+            <h3 class="filtros-title">Filtros Avançados</h3>
+            <div class="filtros-grid">
+              <div class="filtro-grupo">
+                <label>Marca</label>
+                <select class="filtro-select">
+                  <option value="">Todas as marcas</option>
+                  <option value="bugatti">Bugatti</option>
+                  <option value="ferrari">Ferrari</option>
+                  <option value="lamborghini">Lamborghini</option>
+                  <option value="porsche">Porsche</option>
+                  <option value="mclaren">McLaren</option>
+                </select>
+              </div>
+              <div class="filtro-grupo">
+                <label>Preço</label>
+                <select class="filtro-select">
+                  <option value="">Qualquer preço</option>
+                  <option value="1-5">R$ 1M - R$ 5M</option>
+                  <option value="5-10">R$ 5M - R$ 10M</option>
+                  <option value="10+">Acima de R$ 10M</option>
+                </select>
+              </div>
+              <div class="filtro-grupo">
+                <label>Ano</label>
+                <select class="filtro-select">
+                  <option value="">Qualquer ano</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                </select>
+              </div>
+              <div class="filtro-grupo">
+                <label>Cor</label>
+                <select class="filtro-select">
+                  <option value="">Qualquer cor</option>
+                  <option value="preto">Preto</option>
+                  <option value="branco">Branco</option>
+                  <option value="vermelho">Vermelho</option>
+                  <option value="azul">Azul</option>
+                  <option value="prata">Prata</option>
+                </select>
+              </div>
+            </div>
+            <div class="filtros-acoes">
+              <button class="btn-limpar">Limpar Filtros</button>
+              <button class="btn-aplicar">Aplicar Filtros</button>
+            </div>
+          </div>
+        </section>
+        <section class="resultados-section reveal">
+          <div class="resultados-header">
+            <h3 class="resultados-title">Resultados da Busca</h3>
+            <div class="resultados-info">
+              <span class="resultados-count">6 veículos encontrados</span>
+              <div class="ordenacao">
+                <label>Ordenar por:</label>
+                <select class="ordenacao-select">
+                  <option value="relevancia">Relevância</option>
+                  <option value="preco-menor">Menor Preço</option>
+                  <option value="preco-maior">Maior Preço</option>
+                  <option value="ano-recente">Ano Mais Recente</option>
+                  <option value="nome">Nome A-Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="resultados-grid">
+            <!-- Os carros serão carregados dinamicamente via JavaScript -->
+          </div>
+          <div class="paginacao reveal">
+            <button class="pagina-btn prev" disabled>
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="pagina-btn active">1</button>
+            <button class="pagina-btn">2</button>
+            <button class="pagina-btn">3</button>
+            <button class="pagina-btn next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+        <footer id="contact" class="footer reveal">
+          <div class="footer-content">
+            <div class="footer-brand reveal">
+              <h2 class="brand-name">Herculion</h2>
+              <p>A experiência definitiva em automóveis de luxo.</p>
+            </div>
+            <div class="footer-links reveal">
+              <h4>Navegação</h4>
+              <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="grade-carros.html">Modelos</a></li>
+                <li><a href="index.html#experience">Experiências</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+                <li><a href="pedidos.html">Meus Pedidos</a></li>
+              </ul>
+            </div>
+            <div class="footer-social reveal">
+              <h4>Siga-nos</h4>
+              <div class="social-icons">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Herculion. Todos os direitos reservados.</p>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/busca.js"></script>
+    <script src="js/car-request.js"></script>
+  </body>
+</html>

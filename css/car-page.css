@@ -1,0 +1,108 @@
+/* Estilos para a página de detalhes do carro */
+.car-page-main {
+    padding-top: 80px; /* Ajuste para o header fixo */
+    color: #fff;
+}
+
+.car-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(145deg, #111, #333);
+}
+
+.car-image-container {
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+
+.car-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.car-intro-details {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+.car-intro-details h1 {
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.car-intro-details .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.car-intro-details .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c8a02b;
+}
+
+.car-details-section, .car-gallery-section, .car-video-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.car-details-section h2, .car-gallery-section h2, .car-video-section h2 {
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 2rem;
+}
+
+.specs-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.specs-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+    font-size: 1.1rem;
+}
+
+.specs-table tr:last-child td {
+    border-bottom: none;
+}
+
+.specs-table td:first-child {
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.gallery-placeholder, .video-placeholder {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    border-radius: 10px;
+    border: 2px dashed #444;
+}

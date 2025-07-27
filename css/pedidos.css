@@ -1,0 +1,267 @@
+/* Estilos para a página de Veículos */
+
+:root {
+  --gold-color: #d4af37;
+  --dark-bg: #121212;
+  --text-color: #f0f0f0;
+  --border-color: rgba(212, 175, 55, 0.3);
+  --card-bg: #1e1e1e;
+  --card-hover: #2a2a2a;
+}
+
+.orders-section {
+  padding: 100px 20px;
+  background-color: var(--dark-bg);
+  min-height: 100vh;
+}
+
+.orders-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.orders-title {
+  font-size: 3.5rem;
+  color: var(--gold-color);
+  margin-bottom: 15px;
+}
+
+.orders-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.orders-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.orders-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: var(--gold-color);
+  color: var(--dark-bg);
+  border-color: var(--gold-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.order-card {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+  background-color: var(--card-hover);
+}
+
+.order-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.order-card-image {
+  height: 220px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.order-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.order-card:hover .order-card-image img {
+  transform: scale(1.05);
+}
+
+.order-card-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.order-car-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.order-status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.available {
+  background-color: rgba(82, 196, 26, 0.2);
+  color: #52c41a;
+  border: 1px solid #52c41a;
+}
+
+.reserved {
+  background-color: rgba(250, 173, 20, 0.2);
+  color: #faad14;
+  border: 1px solid #faad14;
+}
+
+.order-card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-card-content h3 {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.order-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.detail i {
+  margin-right: 8px;
+  color: var(--gold-color);
+  width: 20px;
+  text-align: center;
+}
+
+.order-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold-color);
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--gold-color);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #e6c04d;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.order-details p {
+  margin: 5px 0;
+}
+
+.order-card-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  padding-top: 15px;
+  text-align: center;
+}
+
+.details-btn {
+  color: var(--gold-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: letter-spacing 0.3s ease;
+}
+
+.details-btn:hover {
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orders-title {
+    font-size: 2.5rem;
+  }
+}

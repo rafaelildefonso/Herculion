@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Herculion</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <!-- GSAP e ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+</head>
+<body>
+  <!-- Cursor personalizado -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <div class="desktop">
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header header-static">
+        <nav class="navigation">
+          <button class="menu-button" aria-label="Menu">
+            <img class="svgviewer-png-output-2" src="assets/images/v11_2.png" alt="Menu icon" />
+          </button>
+        </nav>
+        <h1 class="brand-name"><a href="index.html">Herculion</a></h1>
+        <nav id="side-menu" class="side-menu">
+          <div class="menu-watermark">Herculion</div>
+          <button id="close-btn" class="close-btn">&times;</button>
+          <ul>
+            <li><a href="index.html" class="nav-link">Início</a></li>
+            <li><a href="grade-carros.html" class="nav-link">Modelos</a></li>
+            <li><a href="index.html#experience" class="nav-link">Experiências</a></li>
+            <li><a href="busca.html" class="nav-link">Busca</a></li>
+            <li><a href="quem-somos.html" class="nav-link">Quem Somos</a></li>
+            <li><a href="contato.html" class="nav-link">Contato</a></li>
+            <li><a href="cadastro.html" class="nav-link active">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Seção de Cadastro -->
+      <section class="registration-section">
+        <div class="registration-container">
+          <div class="registration-form-wrapper">
+            <div class="form-header">
+              <h2 class="form-title split-text">Crie Sua Conta Exclusiva</h2>
+              <p class="form-subtitle">Acesse um mundo de luxo e benefícios exclusivos.</p>
+            </div>
+            <form id="registrationForm" class="registration-form" novalidate>
+              <div class="form-group">
+                <input type="text" id="fullName" name="fullName" required>
+                <label for="fullName">Nome Completo</label>
+                <span class="input-border"></span>
+                <div class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">E-mail</label>
+                <span class="input-border"></span>
+                <div class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <input type="password" id="password" name="password" required minlength="8">
+                <label for="password">Senha</label>
+                <span class="input-border"></span>
+                <div class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <label for="confirmPassword">Confirmar Senha</label>
+                <span class="input-border"></span>
+                <div class="error-message"></div>
+              </div>
+              <div class="form-group-checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">Eu aceito os <a href="#">Termos de Serviço</a> e a <a href="#">Política de Privacidade</a>.</label>
+                <div class="error-message"></div>
+              </div>
+              <button type="submit" class="cta-button">Criar Conta</button>
+            </form>
+            <div class="form-footer">
+              <p>Já tem uma conta? <a href="#">Faça Login</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer id="contact" class="footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h2 class="brand-name">Herculion</h2>
+            <p>A experiência definitiva em automóveis de luxo.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="grade-carros.html">Modelos</a></li>
+              <li><a href="index.html#experience">Experiências</a></li>
+              <li><a href="busca.html">Busca</a></li>
+              <li><a href="quem-somos.html">Quem Somos</a></li>
+              <li><a href="contato.html">Contato</a></li>
+              <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h4>Siga-nos</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Herculion. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/scroll-effects.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>
