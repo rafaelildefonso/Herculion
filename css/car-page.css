@@ -1,108 +1,549 @@
-/* Estilos para a página de detalhes do carro */
+/* === CAR PAGE STYLES === */
+
 .car-page-main {
-    padding-top: 80px; /* Ajuste para o header fixo */
-    color: #fff;
+  margin-top: var(--header-height);
+  min-height: 100vh;
 }
 
+/* === HERO SECTION === */
 .car-hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 4rem 2rem;
-    background: linear-gradient(145deg, #111, #333);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #232323 100%);
+  overflow: hidden;
+}
+
+.car-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .car-image-container {
-    flex: 1 1 500px;
-    max-width: 600px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
 }
 
 .car-image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.car-image-container:hover img {
+  transform: scale(1.02);
+}
+
+.car-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.badge-text {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.badge-model {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 0.2rem;
 }
 
 .car-intro-details {
-    flex: 1 1 400px;
-    max-width: 500px;
+  flex: 1;
+  padding: 4rem 3rem;
+  color: #fff;
+  position: relative;
+  z-index: 2;
 }
 
-.car-intro-details h1 {
-    font-size: 3rem;
-    color: #d4af37;
-    margin-bottom: 1rem;
+.brand-logo {
+  margin-bottom: 2rem;
 }
 
-.car-intro-details .price {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 1rem;
+.model-logo {
+  max-width: 200px;
+  height: auto;
+  filter: brightness(0) invert(1);
 }
 
-.car-intro-details .description {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+.car-title {
+  font-family: "IM FELL Double Pica SC", serif;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  letter-spacing: 2px;
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: #d4af37;
-    color: #000;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.car-tagline {
+  font-family: "Ephesis", cursive;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  font-style: italic;
 }
 
-.cta-button:hover {
-    background-color: #c8a02b;
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
-.car-details-section, .car-gallery-section, .car-video-section {
-    padding: 4rem 2rem;
-    text-align: center;
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  max-width: 600px;
 }
 
-.car-details-section h2, .car-gallery-section h2, .car-video-section h2 {
-    font-size: 2.5rem;
-    color: #d4af37;
-    margin-bottom: 2rem;
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-button.primary {
+  background: var(--accent-color);
+  color: #000;
+  border: 2px solid var(--accent-color);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-button.primary:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* === OVERVIEW SECTION === */
+.car-overview {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #232323 100%);
+  color: #fff;
+}
+
+.overview-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.overview-text h2 {
+  font-family: "IM FELL Double Pica SC", serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+.overview-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.overview-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === SPECIFICATIONS SECTION === */
+.car-details-section {
+  padding: 6rem 2rem;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.car-details-section h2 {
+  text-align: center;
+  font-family: "IM FELL Double Pica SC", serif;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: var(--accent-color);
+}
+
+.specs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.specs-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
 }
 
 .specs-table {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .specs-table td {
-    padding: 1rem;
-    border-bottom: 1px solid #444;
-    font-size: 1.1rem;
-}
-
-.specs-table tr:last-child td {
-    border-bottom: none;
+  padding: 1rem 0;
+  font-size: 1rem;
 }
 
 .specs-table td:first-child {
-    font-weight: bold;
-    color: #d4af37;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  width: 60%;
 }
 
-.gallery-placeholder, .video-placeholder {
-    min-height: 300px;
-    display: flex;
-    align-items: center;
+.specs-table td:last-child {
+  color: #fff;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* === FEATURES SECTION === */
+.car-features-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #232323 100%);
+  color: #fff;
+}
+
+.car-features-section h2 {
+  text-align: center;
+  font-family: "IM FELL Double Pica SC", serif;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: var(--accent-color);
+}
+
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.feature-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* === HISTORY SECTION === */
+.car-history-section {
+  padding: 6rem 2rem;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.history-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.history-text h2 {
+  font-family: "IM FELL Double Pica SC", serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+.history-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.history-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: brightness(0.8);
+}
+
+/* === GALLERY SECTION === */
+.car-gallery-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #232323 100%);
+  color: #fff;
+}
+
+.car-gallery-section h2 {
+  text-align: center;
+  font-family: "IM FELL Double Pica SC", serif;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: var(--accent-color);
+}
+
+.gallery-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item.main {
+  grid-row: 1 / 3;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-note {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+/* === CONTACT CTA === */
+.contact-cta {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-family: "IM FELL Double Pica SC", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1200px) {
+  .overview-content,
+  .history-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .gallery-item.main {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .car-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .car-intro-details {
+    padding: 2rem 1rem;
+  }
+  
+  .car-title {
+    font-size: 2.5rem;
+  }
+  
+  .price {
+    font-size: 2rem;
+  }
+  
+  .hero-actions {
     justify-content: center;
-    background-color: #222;
-    border-radius: 10px;
-    border: 2px dashed #444;
+  }
+  
+  .overview-stats {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .specs-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .car-title {
+    font-size: 2rem;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+  }
+  
+  .overview-stats {
+    flex-direction: column;
+  }
+  
+  .car-badge {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .badge-text {
+    font-size: 0.6rem;
+  }
+  
+  .badge-model {
+    font-size: 1rem;
+  }
 }
