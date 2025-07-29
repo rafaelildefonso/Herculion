@@ -3,21 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nissan GT-R Nismo - Herculion</title>
+  <title>Nissan GT-R Nismo - Herculion | Godzilla japonês</title>
+  <meta name="description" content="Descubra o Nissan GT-R Nismo na Herculion. O superesportivo japonês com tração integral, motor biturbo e tecnologia de ponta. Agende sua visita.">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/car-page.css">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  <style>
+    /* === NISSAN GT-R NISMO - DESIGN EXCLUSIVO === */
+    .gtr-page {
+      background: #16181b;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .gtr-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg, #16181b 0%, #b1b5bb 70%, #23252a 100%);
+      overflow: hidden;
+    }
+    .gtr-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(177,181,187,0.08) 0%, transparent 70%),
+                  radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .gtr-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+    .gtr-text-section {
+      position: relative;
+      z-index: 2;
+    }
+    .gtr-brand {
+      font-family: "Ephesis", cursive;
+      font-size: 1.8rem;
+      color: #b1b5bb;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .gtr-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(177,181,187,0.18);
+    }
+    .gtr-tagline {
+      font-family: "Ephesis", cursive;
+      font-size: 2.2rem;
+      color: #b1b5bb;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .gtr-price {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(177,181,187,0.18);
+    }
+    .gtr-description {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+    .gtr-cta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .gtr-btn {
+      padding: 1.5rem 3rem;
+      border-radius: 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      border: 2px solid #b1b5bb;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    .gtr-btn:hover {
+      background: #b1b5bb;
+      color: #16181b;
+      border-color: #b1b5bb;
+    }
+    .gtr-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .gtr-image-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .gtr-hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 4rem;
+      }
+      .gtr-title { font-size: 3.5rem; }
+    }
+  </style>
 </head>
-<body>
+<body class="gtr-page">
   <header class="header">
     <nav class="navigation">
       <button class="menu-button" aria-label="Menu">
-        <img
-          class="svgviewer-png-output-2"
-          src="../assets/images/v11_2.png"
-          alt="Menu icon"
-        />
+        <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
       </button>
     </nav>
     <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
@@ -34,68 +152,96 @@
       </ul>
     </nav>
   </header>
-
-  <main class="car-page-main">
-    <section class="car-hero">
-      <div class="car-image-container">
-        <img src="../assets/images/carros/nissan_gt_r_nismo.png" alt="Nissan GT-R Nismo">
-      </div>
-      <div class="car-intro-details">
-        <h1>Nissan GT-R Nismo</h1>
-        <p class="price">R$ 1.5M</p>
-        <p class="description">O Nissan GT-R Nismo, também conhecido como 'Godzilla', é um ícone de performance com tração integral e tecnologia de ponta.</p>
-        <a href="../contato.html?car=Nissan+GT-R+Nismo" class="cta-button">Tenho Interesse</a>
+  <main>
+    <!-- Hero Section -->
+    <section class="gtr-hero">
+      <div class="gtr-hero-content">
+        <div class="gtr-text-section">
+          <div class="gtr-brand">Nissan</div>
+          <div class="gtr-title">GT-R Nismo</div>
+          <div class="gtr-tagline">O Godzilla japonês</div>
+          <div class="gtr-price">R$ 1.500.000</div>
+          <div class="gtr-description">
+            O Nissan GT-R Nismo é o ápice da engenharia japonesa: motor V6 3.8 biturbo de 600 HP, tração integral, aerodinâmica avançada e desempenho lendário nas pistas.
+          </div>
+          <div class="gtr-cta">
+            <a href="../contato.html?car=Nissan+GT-R+Nismo" class="gtr-btn">Tenho Interesse</a>
+            <a href="#specs" class="gtr-btn">Ver Especificações</a>
+          </div>
+        </div>
+        <div class="gtr-image-section">
+          <img src="../assets/images/carros/nissan_gt_r_nismo.png" alt="Nissan GT-R Nismo">
+        </div>
       </div>
     </section>
-
-    <section class="car-details-section">
+    <!-- Especificações Técnicas -->
+    <section id="specs" class="car-details-section">
       <h2>Especificações Técnicas</h2>
-      <table class="specs-table">
-        <tr>
-          <td>Marca</td>
-          <td>Nissan</td>
-        </tr>
-        <tr>
-          <td>Modelo</td>
-          <td>GT-R Nismo</td>
-        </tr>
-        <tr>
-          <td>Ano</td>
-          <td>2024</td>
-        </tr>
-        <tr>
-          <td>Potência</td>
-          <td>600 HP</td>
-        </tr>
-        <tr>
-          <td>Cor</td>
-          <td>Cinza</td>
-        </tr>
-      </table>
-    </section>
-
-    <section class="car-gallery-section">
-      <h2>Galeria de Fotos</h2>
-      <div class="gallery-placeholder">
-        <p>Em breve: mais fotos deslumbrantes do Nissan GT-R Nismo.</p>
+      <div class="specs-container">
+        <div class="specs-category">
+          <h3>Motor e Performance</h3>
+          <ul>
+            <li>Motor V6 3.8L biturbo</li>
+            <li>Potência: 600 HP</li>
+            <li>Torque: 652 Nm</li>
+            <li>0-100 km/h: 2,7 s</li>
+            <li>Velocidade máxima: 315 km/h</li>
+            <li>Câmbio de dupla embreagem de 6 marchas</li>
+            <li>Tração integral (AWD)</li>
+          </ul>
+        </div>
+        <div class="specs-category">
+          <h3>Dimensões & Peso</h3>
+          <ul>
+            <li>Peso: 1.720 kg</li>
+            <li>Comprimento: 4,71 m</li>
+            <li>Largura: 1,89 m</li>
+            <li>Altura: 1,37 m</li>
+            <li>Entre-eixos: 2,78 m</li>
+          </ul>
+        </div>
+        <div class="specs-category">
+          <h3>Outros Destaques</h3>
+          <ul>
+            <li>Aerofólio em fibra de carbono</li>
+            <li>Freios Brembo em cerâmica</li>
+            <li>Bancos Recaro esportivos</li>
+            <li>Painel digital multifuncional</li>
+            <li>Escape em titânio</li>
+          </ul>
+        </div>
       </div>
     </section>
-
-    <section class="car-video-section">
-      <h2>Vídeo</h2>
-      <div class="video-placeholder">
-        <p>Em breve: um vídeo mostrando o Nissan GT-R Nismo em ação.</p>
+    <!-- História do Modelo -->
+    <section class="car-history-section">
+      <div class="history-content">
+        <div class="history-text">
+          <h2>A História do Nissan GT-R Nismo</h2>
+          <p>
+            O GT-R é uma lenda desde os anos 1970. A versão Nismo representa o máximo em performance, tecnologia e tradição japonesa, conquistando fãs e recordes em Nürburgring.
+          </p>
+        </div>
+        <div class="history-image">
+          <img src="../assets/images/carros/nissan_gt_r_nismo_historia.jpg" alt="História Nissan GT-R Nismo">
+        </div>
+      </div>
+    </section>
+    <!-- Galeria de Imagens -->
+    <section class="car-gallery-section">
+      <h2>Galeria</h2>
+      <div class="car-gallery">
+        <img src="../assets/images/carros/nissan_gt_r_nismo_1.jpg" alt="GT-R lateral">
+        <img src="../assets/images/carros/nissan_gt_r_nismo_2.jpg" alt="GT-R traseira">
+        <img src="../assets/images/carros/nissan_gt_r_nismo_3.jpg" alt="GT-R interior">
       </div>
     </section>
   </main>
-
   <footer class="main-footer">
     <div class="footer-content">
         <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
         <p>O melhor de um importado, é ter um Herculion.</p>
     </div>
   </footer>
-
   <script src="../js/main.js"></script>
 </body>
 </html>

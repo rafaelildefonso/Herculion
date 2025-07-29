@@ -9,8 +9,129 @@
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/car-page.css">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  <style>
+    /* === PORSCHE 911 - DESIGN EXCLUSIVO === */
+    .porsche911-page {
+      background: #0e1012;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .porsche911-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg, #0e1012 0%, #bcbcbc 70%, #23252a 100%);
+      overflow: hidden;
+    }
+    .porsche911-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(188,188,188,0.10) 0%, transparent 70%),
+                  radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .porsche911-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+    .porsche911-text-section {
+      position: relative;
+      z-index: 2;
+    }
+    .porsche911-brand {
+      font-family: "Ephesis", cursive;
+      font-size: 1.8rem;
+      color: #bcbcbc;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .porsche911-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(188,188,188,0.18);
+    }
+    .porsche911-tagline {
+      font-family: "Ephesis", cursive;
+      font-size: 2.2rem;
+      color: #bcbcbc;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .porsche911-price {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(188,188,188,0.18);
+    }
+    .porsche911-description {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+    .porsche911-cta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .porsche911-btn {
+      padding: 1.5rem 3rem;
+      border-radius: 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      border: 2px solid #bcbcbc;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    .porsche911-btn:hover {
+      background: #bcbcbc;
+      color: #0e1012;
+      border-color: #bcbcbc;
+    }
+    .porsche911-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .porsche911-image-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .porsche911-hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 4rem;
+      }
+      .porsche911-title { font-size: 3.5rem; }
+    }
+  </style>
 </head>
-<body>
+<body class="porsche911-page">
   <header class="header">
     <nav class="navigation">
       <button class="menu-button" aria-label="Menu">
@@ -38,263 +159,91 @@
 
   <main class="car-page-main">
     <!-- Hero Section -->
-    <section class="car-hero porsche-hero">
-      <div class="hero-background"></div>
-      <div class="car-image-container">
-        <img src="../assets/images/carros/porsche_911.png" alt="Porsche 911 - O Ícone Atemporal">
-        <div class="car-badge">
-          <span class="badge-text">PORSCHE</span>
-          <span class="badge-model">911</span>
-        </div>
+    <section class="porsche911-hero">
+  <div class="porsche911-hero-content">
+    <div class="porsche911-text-section">
+      <div class="porsche911-brand">Porsche</div>
+      <div class="porsche911-title">911</div>
+      <div class="porsche911-tagline">O Ícone Atemporal</div>
+      <div class="porsche911-price">R$ 2.800.000</div>
+      <div class="porsche911-description">
+        A Porsche 911 é a síntese da esportividade clássica: motor boxer traseiro, 450 HP, aceleração de 0 a 100 km/h em 3,4 s e design atemporal.
       </div>
-      <div class="car-intro-details">
-        <div class="brand-logo">
-          <img src="../assets/images/911_nome.png" alt="Porsche 911" class="model-logo">
-        </div>
-        <h1 class="car-title">Porsche 911</h1>
-        <p class="car-tagline">"O Ícone Atemporal"</p>
-        <p class="price">R$ 2.800.000</p>
-        <p class="description">
-          A Porsche 911 é mais que um carro - é uma lenda sobre rodas. Com mais de 60 anos de história, 
-          ela mantém o design inconfundível e a filosofia de engenharia que a tornou o esportivo 
-          mais bem-sucedido da história automotiva.
-        </p>
-        <div class="hero-actions">
-          <a href="../contato.html?car=Porsche+911" class="cta-button primary">Tenho Interesse</a>
-          <a href="#specs" class="cta-button secondary">Ver Especificações</a>
-        </div>
+      <div class="porsche911-cta">
+        <a href="../contato.html?car=Porsche+911" class="porsche911-btn">Tenho Interesse</a>
+        <a href="#specs" class="porsche911-btn">Ver Especificações</a>
       </div>
-    </section>
-
+    </div>
+    <div class="porsche911-image-section">
+      <img src="../assets/images/carros/porsche_911.png" alt="Porsche 911">
+    </div>
+  </div>
+</section>
+      
     <!-- Car Overview -->
-    <section class="car-overview">
-      <div class="overview-content">
-        <div class="overview-text">
-          <h2>A Perfeição em Evolução</h2>
-          <p>
-            A Porsche 911 representa a perfeição em evolução constante. Desde 1964, ela mantém 
-            a essência do design original de Ferry Porsche, enquanto incorpora as mais avançadas 
-            tecnologias de cada geração. O motor boxer traseiro, a tração traseira e as linhas 
-            inconfundíveis continuam sendo o coração desta lenda.
-          </p>
-          <p>
-            Com 450 cavalos de potência, aceleração de 0 a 100 km/h em 3.4 segundos e uma 
-            velocidade máxima de 308 km/h, a 911 oferece performance excepcional mantendo 
-            a usabilidade diária que a tornou famosa. Cada detalhe foi refinado ao longo 
-            de décadas para criar a experiência de condução perfeita.
-          </p>
-        </div>
-        <div class="overview-stats">
-          <div class="stat-item">
-            <span class="stat-number">450</span>
-            <span class="stat-label">HP</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">3.4</span>
-            <span class="stat-label">0-100 km/h</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">308</span>
-            <span class="stat-label">Vel. Máx</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Especificações Técnicas -->
+<section id="specs" class="car-details-section">
+  <h2>Especificações Técnicas</h2>
+  <div class="specs-container">
+    <div class="specs-category">
+      <h3>Motor e Performance</h3>
+      <ul>
+        <li>Motor 3.0L boxer biturbo</li>
+        <li>Potência: 450 HP</li>
+        <li>Torque: 530 Nm</li>
+        <li>0-100 km/h: 3,4 s</li>
+        <li>Velocidade máxima: 308 km/h</li>
+        <li>Câmbio PDK de 8 marchas</li>
+        <li>Tração traseira</li>
+      </ul>
+    </div>
+    <div class="specs-category">
+      <h3>Dimensões & Peso</h3>
+      <ul>
+        <li>Peso: 1.505 kg</li>
+        <li>Comprimento: 4,52 m</li>
+        <li>Largura: 1,85 m</li>
+        <li>Altura: 1,30 m</li>
+        <li>Entre-eixos: 2,45 m</li>
+      </ul>
+    </div>
+    <div class="specs-category">
+      <h3>Outros Destaques</h3>
+      <ul>
+        <li>Farois Matrix LED</li>
+        <li>Interior em couro e Alcantara</li>
+        <li>Central multimídia Porsche Communication Management</li>
+        <li>Freios em cerâmica</li>
+        <li>Bancos esportivos elétricos</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- História do Modelo -->
+<section class="car-history-section">
+  <div class="history-content">
+    <div class="history-text">
+      <h2>A História da Porsche 911</h2>
+      <p>
+        Desde 1964, a 911 é símbolo de esportividade e inovação. Evoluiu sem perder sua essência, tornando-se referência mundial em desempenho, design e prazer ao dirigir.
+      </p>
+    </div>
+    <div class="history-image">
+      <img src="../assets/images/carros/porsche_911_historia.jpg" alt="História Porsche 911">
+    </div>
+  </div>
+</section>
+<!-- Galeria de Imagens -->
+<section class="car-gallery-section">
+  <h2>Galeria</h2>
+  <div class="car-gallery">
+    <img src="../assets/images/carros/porsche_911_1.jpg" alt="911 lateral">
+    <img src="../assets/images/carros/porsche_911_2.jpg" alt="911 traseira">
+    <img src="../assets/images/carros/porsche_911_3.jpg" alt="911 interior">
+  </div>
+</section>
+      
 
-    <!-- Specifications Section -->
-    <section id="specs" class="car-details-section">
-      <h2>Especificações Técnicas</h2>
-      <div class="specs-container">
-        <div class="specs-category">
-          <h3>Motor e Performance</h3>
-          <table class="specs-table">
-            <tr>
-              <td>Motor</td>
-              <td>Boxer 6 Turbo</td>
-            </tr>
-            <tr>
-              <td>Potência</td>
-              <td>450 HP @ 6.500 rpm</td>
-            </tr>
-            <tr>
-              <td>Torque</td>
-              <td>530 Nm @ 2.300 rpm</td>
-            </tr>
-            <tr>
-              <td>Cilindrada</td>
-              <td>2.981 cc</td>
-            </tr>
-            <tr>
-              <td>Aceleração 0-100 km/h</td>
-              <td>3.4 segundos</td>
-            </tr>
-            <tr>
-              <td>Velocidade Máxima</td>
-              <td>308 km/h</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="specs-category">
-          <h3>Dimensões e Peso</h3>
-          <table class="specs-table">
-            <tr>
-              <td>Comprimento</td>
-              <td>4.519 mm</td>
-            </tr>
-            <tr>
-              <td>Largura</td>
-              <td>1.852 mm</td>
-            </tr>
-            <tr>
-              <td>Altura</td>
-              <td>1.298 mm</td>
-            </tr>
-            <tr>
-              <td>Entre-eixos</td>
-              <td>2.450 mm</td>
-            </tr>
-            <tr>
-              <td>Peso</td>
-              <td>1.535 kg</td>
-            </tr>
-            <tr>
-              <td>Porta-malas</td>
-              <td>132 litros</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="specs-category">
-          <h3>Transmissão e Chassi</h3>
-          <table class="specs-table">
-            <tr>
-              <td>Transmissão</td>
-              <td>8 velocidades PDK</td>
-            </tr>
-            <tr>
-              <td>Tração</td>
-              <td>Traseira</td>
-            </tr>
-            <tr>
-              <td>Suspensão Dianteira</td>
-              <td>MacPherson</td>
-            </tr>
-            <tr>
-              <td>Suspensão Traseira</td>
-              <td>Multilink</td>
-            </tr>
-            <tr>
-              <td>Freios Dianteiros</td>
-              <td>Ventilados 350mm</td>
-            </tr>
-            <tr>
-              <td>Freios Traseiros</td>
-              <td>Ventilados 330mm</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="car-features-section">
-      <h2>Características Exclusivas</h2>
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-icon">🏆</div>
-          <h3>Legado Inigualável</h3>
-          <p>Mais de 60 anos de história e evolução constante, mantendo a essência do design original de Ferry Porsche.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">⚡</div>
-          <h3>Performance Refinada</h3>
-          <p>Motor boxer traseiro de 450 HP que oferece performance excepcional com usabilidade diária.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🎯</div>
-          <h3>Precisão Alemã</h3>
-          <p>Engenharia de precisão alemã que garante qualidade, confiabilidade e durabilidade incomparáveis.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🛣️</div>
-          <h3>Versatilidade Única</h3>
-          <p>Capaz de ir do conforto diário às pistas de corrida, oferecendo a versatilidade perfeita.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🔧</div>
-          <h3>Tecnologia Avançada</h3>
-          <p>Sistemas eletrônicos de última geração, incluindo controle de tração, estabilidade e modos de condução.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">💎</div>
-          <h3>Valorização Constante</h3>
-          <p>Histórico de valorização ao longo do tempo, mantendo seu valor como investimento automotivo.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- History Section -->
-    <section class="car-history-section">
-      <div class="history-content">
-        <div class="history-text">
-          <h2>A História da Porsche 911</h2>
-          <p>
-            A Porsche 911 nasceu em 1964, quando Ferry Porsche decidiu criar um sucessor para 
-            o 356. O design revolucionário de Alexander Porsche, filho de Ferry, estabeleceu 
-            as linhas inconfundíveis que continuam até hoje: faróis redondos, silhueta característica 
-            e motor boxer traseiro.
-          </p>
-          <p>
-            Ao longo de mais de 60 anos, a 911 evoluiu constantemente, incorporando as mais 
-            avançadas tecnologias de cada época. Desde as primeiras versões com 130 HP até 
-            os modelos atuais com mais de 700 HP, a 911 sempre manteve sua essência: ser 
-            o esportivo mais versátil e confiável do mundo.
-          </p>
-          <p>
-            A 911 não é apenas um carro - é uma filosofia. Ela representa a busca pela 
-            perfeição através da evolução constante, mantendo sempre o que funciona e 
-            melhorando o que pode ser aprimorado. Esta filosofia fez da 911 o esportivo 
-            mais bem-sucedido da história automotiva.
-          </p>
-        </div>
-        <div class="history-image">
-          <img src="../assets/images/historia.png" alt="História Porsche 911">
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="car-gallery-section">
-      <h2>Galeria de Fotos</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item main">
-          <img src="../assets/images/carros/porsche_911.png" alt="Porsche 911 - Vista Frontal">
-        </div>
-        <div class="gallery-item">
-          <img src="../assets/images/carros/porsche_911.png" alt="Porsche 911 - Interior">
-        </div>
-        <div class="gallery-item">
-          <img src="../assets/images/carros/porsche_911.png" alt="Porsche 911 - Motor Boxer">
-        </div>
-        <div class="gallery-item">
-          <img src="../assets/images/carros/porsche_911.png" alt="Porsche 911 - Detalhes">
-        </div>
-      </div>
-      <p class="gallery-note">* Fotos adicionais serão disponibilizadas em breve</p>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-      <div class="cta-content">
-        <h2>Interessado na Porsche 911?</h2>
-        <p>Entre em contato conosco para agendar uma visita e conhecer este ícone atemporal da indústria automotiva.</p>
-        <div class="cta-actions">
-          <a href="../contato.html?car=Porsche+911" class="cta-button primary">Agendar Visita</a>
-          <a href="tel:+5511999999999" class="cta-button secondary">Ligar Agora</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="main-footer">

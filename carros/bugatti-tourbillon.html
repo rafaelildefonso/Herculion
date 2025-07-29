@@ -3,21 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bugatti Tourbillon - Herculion</title>
+  <title>Bugatti Tourbillon - Herculion | O Futuro dos Hipercarros</title>
+  <meta name="description" content="Descubra o Bugatti Tourbillon na Herculion. Hipercarro V16 híbrido, 1.800 HP e design revolucionário. Agende sua visita.">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/car-page.css">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  <style>
+    /* === BUGATTI TOURBILLON - DESIGN EXCLUSIVO === */
+    .tourbillon-page {
+      background: #0a0a12;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .tourbillon-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg, #0a0a12 0%, #142a3a 70%, #1d1e22 100%);
+      overflow: hidden;
+    }
+    .tourbillon-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(0,180,255,0.08) 0%, transparent 70%),
+                  radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .tourbillon-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+    .tourbillon-text-section {
+      position: relative;
+      z-index: 2;
+    }
+    .tourbillon-brand {
+      font-family: "Ephesis", cursive;
+      font-size: 1.8rem;
+      color: #00b4ff;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .tourbillon-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(0,180,255,0.2);
+    }
+    .tourbillon-tagline {
+      font-family: "Ephesis", cursive;
+      font-size: 2.2rem;
+      color: #00b4ff;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .tourbillon-price {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(0,180,255,0.25);
+    }
+    .tourbillon-description {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+    .tourbillon-cta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .tourbillon-btn {
+      padding: 1.5rem 3rem;
+      border-radius: 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      border: 2px solid #00b4ff;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    .tourbillon-btn:hover {
+      background: #00b4ff;
+      color: #0a0a12;
+      border-color: #00b4ff;
+    }
+    .tourbillon-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .tourbillon-image-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .tourbillon-hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 4rem;
+      }
+      .tourbillon-title { font-size: 3.5rem; }
+    }
+  </style>
 </head>
-<body>
+<body class="tourbillon-page">
   <header class="header">
     <nav class="navigation">
       <button class="menu-button" aria-label="Menu">
-        <img
-          class="svgviewer-png-output-2"
-          src="../assets/images/v11_2.png"
-          alt="Menu icon"
-        />
+        <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
       </button>
     </nav>
     <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
@@ -34,68 +152,96 @@
       </ul>
     </nav>
   </header>
-
-  <main class="car-page-main">
-    <section class="car-hero">
-      <div class="car-image-container">
-        <img src="../assets/images/carros/bugatti_tourbillon.png" alt="Bugatti Tourbillon">
-      </div>
-      <div class="car-intro-details">
-        <h1>Bugatti Tourbillon</h1>
-        <p class="price">R$ 50M</p>
-        <p class="description">O Bugatti Tourbillon é o mais novo hipercarro da marca, combinando um motor V16 híbrido com tecnologia de ponta e design inovador.</p>
-        <a href="../contato.html?car=Bugatti+Tourbillon" class="cta-button">Tenho Interesse</a>
+  <main>
+    <!-- Hero Section -->
+    <section class="tourbillon-hero">
+      <div class="tourbillon-hero-content">
+        <div class="tourbillon-text-section">
+          <div class="tourbillon-brand">Bugatti</div>
+          <div class="tourbillon-title">Tourbillon</div>
+          <div class="tourbillon-tagline">O futuro dos hipercarros</div>
+          <div class="tourbillon-price">R$ 50.000.000</div>
+          <div class="tourbillon-description">
+            O Bugatti Tourbillon representa a nova era dos hipercarros, combinando um inédito motor V16 híbrido com design futurista e tecnologia de ponta. Exclusividade, luxo e desempenho sem igual.
+          </div>
+          <div class="tourbillon-cta">
+            <a href="../contato.html?car=Bugatti+Tourbillon" class="tourbillon-btn">Tenho Interesse</a>
+            <a href="#specs" class="tourbillon-btn">Ver Especificações</a>
+          </div>
+        </div>
+        <div class="tourbillon-image-section">
+          <img src="../assets/images/carros/bugatti_tourbillon.png" alt="Bugatti Tourbillon">
+        </div>
       </div>
     </section>
-
-    <section class="car-details-section">
+    <!-- Especificações Técnicas -->
+    <section id="specs" class="car-details-section">
       <h2>Especificações Técnicas</h2>
-      <table class="specs-table">
-        <tr>
-          <td>Marca</td>
-          <td>Bugatti</td>
-        </tr>
-        <tr>
-          <td>Modelo</td>
-          <td>Tourbillon</td>
-        </tr>
-        <tr>
-          <td>Ano</td>
-          <td>2025</td>
-        </tr>
-        <tr>
-          <td>Potência</td>
-          <td>1800 HP</td>
-        </tr>
-        <tr>
-          <td>Cor</td>
-          <td>Preto e Azul</td>
-        </tr>
-      </table>
-    </section>
-
-    <section class="car-gallery-section">
-      <h2>Galeria de Fotos</h2>
-      <div class="gallery-placeholder">
-        <p>Em breve: mais fotos deslumbrantes do Bugatti Tourbillon.</p>
+      <div class="specs-container">
+        <div class="specs-category">
+          <h3>Motor e Performance</h3>
+          <ul>
+            <li>Motor V16 8.3L híbrido</li>
+            <li>Potência combinada: 1.800 HP</li>
+            <li>Torque: 2.000 Nm</li>
+            <li>0-100 km/h: 2,0 s</li>
+            <li>Velocidade máxima: 445 km/h</li>
+            <li>Tração integral</li>
+            <li>Câmbio automatizado de dupla embreagem</li>
+          </ul>
+        </div>
+        <div class="specs-category">
+          <h3>Dimensões & Peso</h3>
+          <ul>
+            <li>Peso: 1.950 kg</li>
+            <li>Comprimento: 4,65 m</li>
+            <li>Largura: 2,05 m</li>
+            <li>Altura: 1,21 m</li>
+            <li>Entre-eixos: 2,80 m</li>
+          </ul>
+        </div>
+        <div class="specs-category">
+          <h3>Outros Destaques</h3>
+          <ul>
+            <li>Produção limitada: 250 unidades</li>
+            <li>Chassi monocoque em carbono</li>
+            <li>Interior artesanal com relógio Tourbillon</li>
+            <li>Painel digital de última geração</li>
+            <li>Assinatura luminosa Bugatti</li>
+          </ul>
+        </div>
       </div>
     </section>
-
-    <section class="car-video-section">
-      <h2>Vídeo</h2>
-      <div class="video-placeholder">
-        <p>Em breve: um vídeo mostrando o Bugatti Tourbillon em ação.</p>
+    <!-- História do Modelo -->
+    <section class="car-history-section">
+      <div class="history-content">
+        <div class="history-text">
+          <h2>A História do Bugatti Tourbillon</h2>
+          <p>
+            O Tourbillon marca a entrada da Bugatti em uma nova era. Combinando tradição e inovação, o modelo foi batizado em homenagem ao sofisticado mecanismo de relógios suíços, refletindo precisão, luxo e exclusividade. Desenvolvido para superar todos os limites, o Tourbillon é o hipercarro mais avançado já produzido pela marca.
+          </p>
+        </div>
+        <div class="history-image">
+          <img src="../assets/images/carros/bugatti_tourbillon_historia.jpg" alt="História Bugatti Tourbillon">
+        </div>
+      </div>
+    </section>
+    <!-- Galeria de Imagens -->
+    <section class="car-gallery-section">
+      <h2>Galeria</h2>
+      <div class="car-gallery">
+        <img src="../assets/images/carros/bugatti_tourbillon_1.jpg" alt="Tourbillon lateral">
+        <img src="../assets/images/carros/bugatti_tourbillon_2.jpg" alt="Tourbillon traseira">
+        <img src="../assets/images/carros/bugatti_tourbillon_3.jpg" alt="Tourbillon interior">
       </div>
     </section>
   </main>
-
   <footer class="main-footer">
     <div class="footer-content">
         <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
         <p>O melhor de um importado, é ter um Herculion.</p>
     </div>
   </footer>
-
   <script src="../js/main.js"></script>
 </body>
 </html>

@@ -10,452 +10,128 @@
   <link rel="stylesheet" href="../css/car-page.css">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
   <style>
-    /* === BUGATTI CHIRON - DESIGN COMPLETAMENTE ÚNICO === */
-    
-    .bugatti-page {
-      background: #000;
+    /* === BUGATTI CHIRON - DESIGN EXCLUSIVO === */
+    .chiron-page {
+      background: #16181a;
       color: #fff;
       overflow-x: hidden;
     }
-    
-    /* Hero Section - Estilo Tecnológico */
-    .bugatti-hero {
+    .chiron-hero {
       position: relative;
       min-height: 100vh;
-      background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #2d2d2d 100%);
       display: flex;
       align-items: center;
+      background: linear-gradient(120deg, #16181a 0%, #0082c8 70%, #23252a 100%);
       overflow: hidden;
     }
-    
-    .bugatti-hero::before {
+    .chiron-hero::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 30% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(0,130,200,0.10) 0%, transparent 70%),
+                  radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 70%);
       pointer-events: none;
     }
-    
-    .bugatti-hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.03) 50%, transparent 70%);
-      animation: bugattiScan 3s ease-in-out infinite;
-    }
-    
-    @keyframes bugattiScan {
-      0%, 100% { transform: translateX(-100%); }
-      50% { transform: translateX(100%); }
-    }
-    
-    .bugatti-hero-content {
-      position: relative;
-      z-index: 2;
-      width: 100%;
+    .chiron-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 2rem;
-      text-align: center;
-    }
-    
-    .bugatti-logo-section {
-      margin-bottom: 3rem;
-    }
-    
-    .bugatti-logo {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 2rem;
-      color: var(--accent-color);
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
+      align-items: center;
+      gap: 4rem;
       position: relative;
-      display: inline-block;
+      z-index: 2;
     }
-    
-    .bugatti-logo::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--accent-color);
-      transform: scaleX(0);
-      animation: logoLine 2s ease-in-out infinite;
+    .chiron-text-section {
+      position: relative;
+      z-index: 2;
     }
-    
-    @keyframes logoLine {
-      0%, 100% { transform: scaleX(0); }
-      50% { transform: scaleX(1); }
+    .chiron-brand {
+      font-family: "Ephesis", cursive;
+      font-size: 1.8rem;
+      color: #0082c8;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
-    
-    .bugatti-title {
+    .chiron-title {
       font-family: "IM FELL Double Pica SC", serif;
-      font-size: 8rem;
+      font-size: 6rem;
       color: #fff;
       margin-bottom: 1rem;
-      text-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
-      line-height: 0.8;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(0,130,200,0.18);
     }
-    
-    .bugatti-subtitle {
+    .chiron-tagline {
       font-family: "Ephesis", cursive;
-      font-size: 2.5rem;
-      color: var(--accent-color);
-      margin-bottom: 3rem;
+      font-size: 2.2rem;
+      color: #0082c8;
+      margin-bottom: 2rem;
       font-style: italic;
     }
-    
-    .bugatti-image-container {
-      position: relative;
-      margin: 4rem 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .bugatti-image {
-      max-width: 80%;
-      max-height: 60vh;
-      object-fit: contain;
-      filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.9));
-      animation: bugattiFloat 8s ease-in-out infinite;
-    }
-    
-    @keyframes bugattiFloat {
-      0%, 100% { 
-        transform: translateY(0) scale(1);
-        filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.9)) brightness(1);
-      }
-      50% { 
-        transform: translateY(-20px) scale(1.02);
-        filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.9)) brightness(1.1);
-      }
-    }
-    
-    .bugatti-stats-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .bugatti-stat {
-      background: rgba(0, 0, 0, 0.8);
-      border: 1px solid rgba(255, 215, 0, 0.3);
-      border-radius: 10px;
-      padding: 1.5rem 2rem;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-    
-    .bugatti-stat:hover {
-      border-color: var(--accent-color);
-      transform: scale(1.1);
-      background: rgba(255, 215, 0, 0.1);
-    }
-    
-    .bugatti-stat-value {
-      font-size: 2.5rem;
+    .chiron-price {
+      font-size: 3.2rem;
       font-weight: bold;
-      color: var(--accent-color);
-      display: block;
-      text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(0,130,200,0.18);
     }
-    
-    .bugatti-stat-label {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.8);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 0.5rem;
-    }
-    
-    .bugatti-price {
-      font-size: 5rem;
-      font-weight: bold;
-      color: var(--accent-color);
-      margin: 3rem 0;
-      text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
-    }
-    
-    .bugatti-description {
-      font-size: 1.5rem;
+    .chiron-description {
+      font-size: 1.4rem;
       line-height: 1.8;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 4rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 3rem;
+      max-width: 500px;
     }
-    
-    .bugatti-cta {
+    .chiron-cta {
       display: flex;
-      justify-content: center;
       gap: 2rem;
       flex-wrap: wrap;
     }
-    
-    .bugatti-btn {
-      padding: 1.5rem 4rem;
-      border-radius: 50px;
+    .chiron-btn {
+      padding: 1.5rem 3rem;
+      border-radius: 0;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.2rem;
       transition: all 0.3s ease;
-      border: 2px solid transparent;
+      border: 2px solid #0082c8;
+      background: transparent;
+      color: #fff;
       text-transform: uppercase;
       letter-spacing: 2px;
       position: relative;
       overflow: hidden;
     }
-    
-    .bugatti-btn.primary {
-      background: var(--accent-color);
-      color: #000;
-      border-color: var(--accent-color);
+    .chiron-btn:hover {
+      background: #0082c8;
+      color: #16181a;
+      border-color: #0082c8;
     }
-    
-    .bugatti-btn.primary::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
+    .chiron-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .chiron-image-section img {
       width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-      transition: left 0.6s;
+      max-width: 600px;
+      border-radius: 18px;
     }
-    
-    .bugatti-btn.primary:hover::before {
-      left: 100%;
-    }
-    
-    .bugatti-btn.primary:hover {
-      background: #fff;
-      color: #000;
-      transform: translateY(-3px);
-      box-shadow: 0 20px 40px rgba(255, 215, 0, 0.4);
-    }
-    
-    .bugatti-btn.secondary {
-      background: transparent;
-      color: #fff;
-      border-color: rgba(255, 255, 255, 0.3);
-    }
-    
-    .bugatti-btn.secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: #fff;
-      transform: translateY(-3px);
-    }
-    
-    /* Seção de Especificações - Estilo Holográfico */
-    .bugatti-specs {
-      padding: 8rem 2rem;
-      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .bugatti-specs::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
-      pointer-events: none;
-    }
-    
-    .specs-container {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .specs-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 4rem;
-      text-align: center;
-      color: var(--accent-color);
-      margin-bottom: 5rem;
-      text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-    }
-    
-    .specs-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
-    }
-    
-    .spec-card {
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(255, 215, 0, 0.2);
-      border-radius: 15px;
-      padding: 3rem 2rem;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .spec-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.05), transparent);
-      transform: translateX(-100%);
-      transition: transform 0.5s ease;
-    }
-    
-    .spec-card:hover::before {
-      transform: translateX(100%);
-    }
-    
-    .spec-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
-    }
-    
-    .spec-card h3 {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 2rem;
-      color: var(--accent-color);
-      margin-bottom: 2rem;
-    }
-    
-    .spec-value {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-    }
-    
-    .spec-detail {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.7);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    /* Seção de História - Estilo Futurista */
-    .bugatti-history {
-      padding: 8rem 2rem;
-      background: #000;
-      position: relative;
-    }
-    
-    .history-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    .history-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 3.5rem;
-      color: var(--accent-color);
-      margin-bottom: 4rem;
-      text-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
-    }
-    
-    .history-text {
-      font-size: 1.4rem;
-      line-height: 1.9;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 3rem;
-    }
-    
-    .history-highlight {
-      font-family: "Ephesis", cursive;
-      font-size: 2rem;
-      color: var(--accent-color);
-      margin: 3rem 0;
-      font-style: italic;
-      position: relative;
-    }
-    
-    .history-highlight::before,
-    .history-highlight::after {
-      content: '◆';
-      color: rgba(255, 215, 0, 0.5);
-      margin: 0 1rem;
-    }
-    
-    /* Responsivo */
-    @media (max-width: 1200px) {
-      .bugatti-title {
-        font-size: 5rem;
-      }
-      
-      .specs-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .bugatti-stats-overlay {
-        position: static;
-        transform: none;
-        margin-top: 2rem;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .bugatti-title {
-        font-size: 3rem;
-      }
-      
-      .bugatti-subtitle {
-        font-size: 1.8rem;
-      }
-      
-      .bugatti-price {
-        font-size: 3rem;
-      }
-      
-      .specs-grid {
+    /* Responsive */
+    @media (max-width: 900px) {
+      .chiron-hero-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 4rem;
       }
-      
-      .bugatti-cta {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .bugatti-stats-overlay {
-        flex-direction: column;
-        align-items: center;
-      }
+      .chiron-title { font-size: 3.5rem; }
     }
   </style>
 </head>
-<body class="bugatti-page">
+<body class="chiron-page">
   <header class="header">
     <nav class="navigation">
       <button class="menu-button" aria-label="Menu">
@@ -473,7 +149,7 @@
       <ul>
         <li><a href="../index.html">Início</a></li>
         <li><a href="../grade-carros.html">Modelos</a></li>
-        <li><a href="../experience.html">Experiências</a></li>
+        <li><a href="../index.html#experience">Experiências</a></li>
         <li><a href="../busca.html">Busca</a></li>
         <li><a href="../quem-somos.html">Quem Somos</a></li>
         <li><a href="../contato.html">Contato</a></li>
@@ -481,120 +157,88 @@
     </nav>
   </header>
 
-  <main>
-    <!-- Hero Section - Estilo Tecnológico -->
-    <section class="bugatti-hero">
-      <div class="bugatti-hero-content">
-        <div class="bugatti-logo-section">
-          <div class="bugatti-logo">Bugatti</div>
-        </div>
-        
-        <h1 class="bugatti-title">Chiron</h1>
-        <p class="bugatti-subtitle">"O Supercar Definitivo"</p>
-        
-        <div class="bugatti-image-container">
-          <img src="../assets/images/carros/bugatti_chiron.png" alt="Bugatti Chiron - O Supercar Definitivo" class="bugatti-image">
-          
-          <div class="bugatti-stats-overlay">
-            <div class="bugatti-stat">
-              <span class="bugatti-stat-value">1.500</span>
-              <span class="bugatti-stat-label">HP</span>
-            </div>
-            <div class="bugatti-stat">
-              <span class="bugatti-stat-value">2.4</span>
-              <span class="bugatti-stat-label">0-100</span>
-            </div>
-            <div class="bugatti-stat">
-              <span class="bugatti-stat-value">420</span>
-              <span class="bugatti-stat-label">KM/H</span>
-            </div>
+  <main class="car-page-main">
+    <!-- Hero Section -->
+    <section class="chiron-hero">
+      <div class="chiron-hero-content">
+        <div class="chiron-text-section">
+          <div class="chiron-brand">Bugatti</div>
+          <div class="chiron-title">Chiron</div>
+          <div class="chiron-tagline">O Supercar Definitivo</div>
+          <div class="chiron-price">R$ 15.000.000</div>
+          <div class="chiron-description">
+            A Bugatti Chiron é o ápice da engenharia automotiva: motor W16 quad-turbo, 1.500 HP, aceleração de 0 a 100 km/h em 2,4 s e velocidade máxima de 420 km/h.
+          </div>
+          <div class="chiron-cta">
+            <a href="../contato.html?car=Bugatti+Chiron" class="chiron-btn">Tenho Interesse</a>
+            <a href="#specs" class="chiron-btn">Ver Especificações</a>
           </div>
         </div>
-        
-        <p class="bugatti-price">R$ 15.000.000</p>
-        <p class="bugatti-description">
-          A Bugatti Chiron representa o ápice da engenharia automotiva. Com 1.500 cavalos de potência 
-          e velocidade máxima de 420 km/h, este supercar redefine os limites do que é possível 
-          em um veículo de produção.
-        </p>
-        
-        <div class="bugatti-cta">
-          <a href="../contato.html?car=Bugatti+Chiron" class="bugatti-btn primary">Tenho Interesse</a>
-          <a href="#specs" class="bugatti-btn secondary">Ver Especificações</a>
+        <div class="chiron-image-section">
+          <img src="../assets/images/carros/bugatti_chiron.png" alt="Bugatti Chiron">
         </div>
       </div>
     </section>
 
-    <!-- Especificações - Estilo Holográfico -->
-    <section id="specs" class="bugatti-specs">
+    <!-- Especificações Técnicas -->
+    <section id="specs" class="car-details-section">
+      <h2>Especificações Técnicas</h2>
       <div class="specs-container">
-        <h2 class="specs-title">Especificações Técnicas</h2>
-        <div class="specs-grid">
-          <div class="spec-card">
-            <h3>Motor</h3>
-            <div class="spec-value">W16</div>
-            <div class="spec-detail">Quad-Turbo</div>
-          </div>
-          <div class="spec-card">
-            <h3>Potência</h3>
-            <div class="spec-value">1.500 HP</div>
-            <div class="spec-detail">@ 6.700 rpm</div>
-          </div>
-          <div class="spec-card">
-            <h3>Torque</h3>
-            <div class="spec-value">1.600 Nm</div>
-            <div class="spec-detail">@ 2.000 rpm</div>
-          </div>
-          <div class="spec-card">
-            <h3>Aceleração</h3>
-            <div class="spec-value">2.4s</div>
-            <div class="spec-detail">0-100 km/h</div>
-          </div>
-          <div class="spec-card">
-            <h3>Velocidade</h3>
-            <div class="spec-value">420 km/h</div>
-            <div class="spec-detail">Máxima</div>
-          </div>
-          <div class="spec-card">
-            <h3>Peso</h3>
-            <div class="spec-value">1.995 kg</div>
-            <div class="spec-detail">Distribuição ideal</div>
-          </div>
+        <div class="specs-category">
+          <h3>Motor e Performance</h3>
+          <ul>
+            <li>Motor W16 8.0L quad-turbo</li>
+            <li>Potência: 1.500 HP</li>
+            <li>Torque: 1.600 Nm</li>
+            <li>0-100 km/h: 2,4 s</li>
+            <li>Velocidade máxima: 420 km/h</li>
+            <li>Câmbio automatizado de 7 marchas</li>
+            <li>Tração integral</li>
+          </ul>
+        </div>
+        <div class="specs-category">
+          <h3>Dimensões & Peso</h3>
+          <ul>
+            <li>Peso: 1.995 kg</li>
+            <li>Comprimento: 4,54 m</li>
+            <li>Largura: 2,04 m</li>
+            <li>Altura: 1,21 m</li>
+            <li>Entre-eixos: 2,71 m</li>
+          </ul>
+        </div>
+        <div class="specs-category">
+          <h3>Outros Destaques</h3>
+          <ul>
+            <li>Chassi monocoque em carbono</li>
+            <li>Painel digital personalizável</li>
+            <li>Bancos esportivos em couro</li>
+            <li>Freios em cerâmica</li>
+            <li>Produção limitada</li>
+          </ul>
         </div>
       </div>
     </section>
-
-    <!-- História - Estilo Futurista -->
-    <section class="bugatti-history">
-      <div class="history-container">
-        <h2 class="history-title">A História da Bugatti Chiron</h2>
-        <p class="history-text">
-          A Bugatti Chiron foi apresentada ao mundo em 2016, sucedendo a lendária Veyron como 
-          o supercar mais poderoso da marca. Nomeada em homenagem ao piloto monegasco Louis Chiron, 
-          que conquistou inúmeras vitórias para a Bugatti nos anos 1920 e 1930.
-        </p>
-        
-        <div class="history-highlight">
-          O Supercar Definitivo
+    <!-- História do Modelo -->
+    <section class="car-history-section">
+      <div class="history-content">
+        <div class="history-text">
+          <h2>A História da Bugatti Chiron</h2>
+          <p>
+            Lançada em 2016, a Chiron elevou o patamar dos hipercarros ao substituir a lendária Veyron. Nomeada em homenagem ao piloto Louis Chiron, ela representa a busca incessante da Bugatti por desempenho, luxo e exclusividade.
+          </p>
         </div>
-        
-        <p class="history-text">
-          O desenvolvimento da Chiron levou mais de 4 anos e envolveu centenas de engenheiros, 
-          designers e técnicos. Cada componente foi desenvolvido do zero para suportar as forças 
-          extremas geradas pelo motor W16 de 1.500 HP, criando um veículo que redefine os limites 
-          da engenharia automotiva.
-        </p>
-        
-        <p class="history-text">
-          A Chiron não é apenas um carro - é uma declaração de que não há limites para a excelência 
-          humana. Ela representa o compromisso da Bugatti em criar veículos que não apenas quebram 
-          recordes, mas estabelecem novos padrões para o que é possível em um automóvel.
-        </p>
-        
-        <div class="bugatti-cta">
-          <a href="../contato.html?car=Bugatti+Chiron" class="bugatti-btn primary">Agendar Visita</a>
-          <a href="tel:+5511999999999" class="bugatti-btn secondary">Ligar Agora</a>
+        <div class="history-image">
+          <img src="../assets/images/carros/bugatti_chiron_historia.jpg" alt="História Bugatti Chiron">
         </div>
+      </div>
+    </section>
+    <!-- Galeria de Imagens -->
+    <section class="car-gallery-section">
+      <h2>Galeria</h2>
+      <div class="car-gallery">
+        <img src="../assets/images/carros/bugatti_chiron_1.jpg" alt="Chiron lateral">
+        <img src="../assets/images/carros/bugatti_chiron_2.jpg" alt="Chiron traseira">
+        <img src="../assets/images/carros/bugatti_chiron_3.jpg" alt="Chiron interior">
       </div>
     </section>
   </main>
@@ -605,7 +249,5 @@
         <p>O melhor de um importado, é ter um Herculion.</p>
     </div>
   </footer>
-
-  <script src="../js/main.js"></script>
 </body>
 </html>

@@ -9,8 +9,128 @@
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/car-page.css">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
-</head>
-<body>
+  <style>
+    /* === LAMBORGHINI REVUELTO - DESIGN EXCLUSIVO === */
+    .revuelto-page {
+      background: #181a1c;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .revuelto-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg, #181a1c 0%, #f7d900 70%, #23201a 100%);
+      overflow: hidden;
+    }
+    .revuelto-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(247,217,0,0.08) 0%, transparent 70%),
+                  radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .revuelto-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+    .revuelto-text-section {
+      position: relative;
+      z-index: 2;
+    }
+    .revuelto-brand {
+      font-family: "Ephesis", cursive;
+      font-size: 1.8rem;
+      color: #f7d900;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .revuelto-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(247,217,0,0.18);
+    }
+    .revuelto-tagline {
+      font-family: "Ephesis", cursive;
+      font-size: 2.2rem;
+      color: #f7d900;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .revuelto-price {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(247,217,0,0.18);
+    }
+    .revuelto-description {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+    .revuelto-cta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .revuelto-btn {
+      padding: 1.5rem 3rem;
+      border-radius: 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      border: 2px solid #f7d900;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    .revuelto-btn:hover {
+      background: #f7d900;
+      color: #181a1c;
+      border-color: #f7d900;
+    }
+    .revuelto-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .revuelto-image-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .revuelto-hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 4rem;
+      }
+      .revuelto-title { font-size: 3.5rem; }
+    }
+  </style>
+<body class="revuelto-page">
   <header class="header">
     <nav class="navigation">
       <button class="menu-button" aria-label="Menu">
@@ -38,262 +158,90 @@
 
   <main class="car-page-main">
     <!-- Hero Section -->
-    <section class="car-hero lamborghini-hero">
-      <div class="hero-background"></div>
-      <div class="car-image-container">
-        <img src="../assets/images/carros/lamborghini_revuelto.png" alt="Lamborghini Revuelto - O Futuro dos Supercars">
-        <div class="car-badge">
-          <span class="badge-text">LAMBORGHINI</span>
-          <span class="badge-model">REVUELTO</span>
-        </div>
+    <section class="revuelto-hero">
+  <div class="revuelto-hero-content">
+    <div class="revuelto-text-section">
+      <div class="revuelto-brand">Lamborghini</div>
+      <div class="revuelto-title">Revuelto</div>
+      <div class="revuelto-tagline">O Futuro dos Supercars</div>
+      <div class="revuelto-price">R$ 8.500.000</div>
+      <div class="revuelto-description">
+        A Lamborghini Revuelto é o primeiro supercarro híbrido plug-in da marca, combinando um V12 aspirado com três motores elétricos, totalizando 1.001 HP, aceleração de 0 a 100 km/h em 2,8 s e visual futurista.
       </div>
-      <div class="car-intro-details">
-        <div class="brand-logo">
-          <img src="../assets/images/tecnology.png" alt="Lamborghini Revuelto" class="model-logo">
-        </div>
-        <h1 class="car-title">Lamborghini Revuelto</h1>
-        <p class="car-tagline">"O Futuro dos Supercars"</p>
-        <p class="price">R$ 8.500.000</p>
-        <p class="description">
-          A Lamborghini Revuelto representa a revolução dos supercars. Como o primeiro modelo híbrido 
-          da marca, ela combina um motor V12 naturalmente aspirado com três motores elétricos, 
-          totalizando 1.001 HP de potência pura.
-        </p>
-        <div class="hero-actions">
-          <a href="../contato.html?car=Lamborghini+Revuelto" class="cta-button primary">Tenho Interesse</a>
-          <a href="#specs" class="cta-button secondary">Ver Especificações</a>
-        </div>
+      <div class="revuelto-cta">
+        <a href="../contato.html?car=Lamborghini+Revuelto" class="revuelto-btn">Tenho Interesse</a>
+        <a href="#specs" class="revuelto-btn">Ver Especificações</a>
       </div>
-    </section>
-
+    </div>
+    <div class="revuelto-image-section">
+      <img src="../assets/images/carros/lamborghini_revuelto.png" alt="Lamborghini Revuelto">
+    </div>
+  </div>
+</section>
+      
     <!-- Car Overview -->
-    <section class="car-overview">
-      <div class="overview-content">
-        <div class="overview-text">
-          <h2>A Revolução Híbrida</h2>
-          <p>
-            A Lamborghini Revuelto marca o início de uma nova era para a marca italiana. Como o 
-            primeiro supercar híbrido da Lamborghini, ela representa a perfeita fusão entre 
-            tradição e inovação, mantendo a essência selvagem dos motores V12 enquanto abraça 
-            a tecnologia do futuro.
-          </p>
-          <p>
-            Com seu sistema híbrido revolucionário, a Revuelto oferece 1.001 HP combinados, 
-            aceleração de 0 a 100 km/h em apenas 2.8 segundos e uma velocidade máxima de 
-            350 km/h. O design futurista e as linhas agressivas mantêm a identidade 
-            inconfundível da Lamborghini.
-          </p>
-        </div>
-        <div class="overview-stats">
-          <div class="stat-item">
-            <span class="stat-number">1.001</span>
-            <span class="stat-label">HP</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">2.8</span>
-            <span class="stat-label">0-100 km/h</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">350</span>
-            <span class="stat-label">Vel. Máx</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Especificações Técnicas -->
+<section id="specs" class="car-details-section">
+  <h2>Especificações Técnicas</h2>
+  <div class="specs-container">
+    <div class="specs-category">
+      <h3>Motor e Performance</h3>
+      <ul>
+        <li>Motor V12 6.5L aspirado + 3 motores elétricos</li>
+        <li>Potência combinada: 1.001 HP</li>
+        <li>Torque: 1.075 Nm</li>
+        <li>0-100 km/h: 2,8 s</li>
+        <li>Velocidade máxima: 350 km/h</li>
+        <li>Câmbio automatizado de 8 marchas</li>
+        <li>Tração integral híbrida</li>
+      </ul>
+    </div>
+    <div class="specs-category">
+      <h3>Dimensões & Peso</h3>
+      <ul>
+        <li>Peso: 1.772 kg</li>
+        <li>Comprimento: 4,95 m</li>
+        <li>Largura: 2,03 m</li>
+        <li>Altura: 1,16 m</li>
+        <li>Entre-eixos: 2,77 m</li>
+      </ul>
+    </div>
+    <div class="specs-category">
+      <h3>Outros Destaques</h3>
+      <ul>
+        <li>Chassi monocoque em carbono</li>
+        <li>Painel digital personalizável</li>
+        <li>Portas tipo tesoura</li>
+        <li>Modo de condução elétrica pura</li>
+        <li>Produção limitada</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- História do Modelo -->
+<section class="car-history-section">
+  <div class="history-content">
+    <div class="history-text">
+      <h2>A História da Lamborghini Revuelto</h2>
+      <p>
+        Lançada em 2023, a Revuelto inaugura uma nova era eletrificada para a Lamborghini, mantendo o DNA de supercarro italiano e inovando em tecnologia, design e sustentabilidade.
+      </p>
+    </div>
+    <div class="history-image">
+      <img src="../assets/images/carros/lamborghini_revuelto_historia.jpg" alt="História Lamborghini Revuelto">
+    </div>
+  </div>
+</section>
+<!-- Galeria de Imagens -->
+<section class="car-gallery-section">
+  <h2>Galeria</h2>
+  <div class="car-gallery">
+    <img src="../assets/images/carros/lamborghini_revuelto_1.jpg" alt="Revuelto lateral">
+    <img src="../assets/images/carros/lamborghini_revuelto_2.jpg" alt="Revuelto traseira">
+    <img src="../assets/images/carros/lamborghini_revuelto_3.jpg" alt="Revuelto interior">
+  </div>
+</section>
 
-    <!-- Specifications Section -->
-    <section id="specs" class="car-details-section">
-      <h2>Especificações Técnicas</h2>
-      <div class="specs-container">
-        <div class="specs-category">
-          <h3>Motor e Performance</h3>
-          <table class="specs-table">
-            <tr>
-              <td>Motor</td>
-              <td>V12 + 3 Motores Elétricos</td>
-            </tr>
-            <tr>
-              <td>Potência Total</td>
-              <td>1.001 HP</td>
-            </tr>
-            <tr>
-              <td>Motor V12</td>
-              <td>814 HP @ 9.250 rpm</td>
-            </tr>
-            <tr>
-              <td>Motores Elétricos</td>
-              <td>187 HP</td>
-            </tr>
-            <tr>
-              <td>Torque</td>
-              <td>725 Nm @ 6.750 rpm</td>
-            </tr>
-            <tr>
-              <td>Aceleração 0-100 km/h</td>
-              <td>2.8 segundos</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="specs-category">
-          <h3>Dimensões e Peso</h3>
-          <table class="specs-table">
-            <tr>
-              <td>Comprimento</td>
-              <td>4.947 mm</td>
-            </tr>
-            <tr>
-              <td>Largura</td>
-              <td>2.033 mm</td>
-            </tr>
-            <tr>
-              <td>Altura</td>
-              <td>1.160 mm</td>
-            </tr>
-            <tr>
-              <td>Entre-eixos</td>
-              <td>2.779 mm</td>
-            </tr>
-            <tr>
-              <td>Peso</td>
-              <td>1.772 kg</td>
-            </tr>
-            <tr>
-              <td>Bateria</td>
-              <td>3.8 kWh</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="specs-category">
-          <h3>Transmissão e Chassi</h3>
-          <table class="specs-table">
-            <tr>
-              <td>Transmissão</td>
-              <td>8 velocidades DCT</td>
-            </tr>
-            <tr>
-              <td>Tração</td>
-              <td>Integral (AWD)</td>
-            </tr>
-            <tr>
-              <td>Suspensão</td>
-              <td>Adaptativa Magneto-Reológica</td>
-            </tr>
-            <tr>
-              <td>Direção</td>
-              <td>Elétrica</td>
-            </tr>
-            <tr>
-              <td>Freios Dianteiros</td>
-              <td>Carbono-Cerâmico 410mm</td>
-            </tr>
-            <tr>
-              <td>Freios Traseiros</td>
-              <td>Carbono-Cerâmico 390mm</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="car-features-section">
-      <h2>Características Exclusivas</h2>
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-icon">⚡</div>
-          <h3>Sistema Híbrido Revolucionário</h3>
-          <p>Primeiro supercar híbrido da Lamborghini com motor V12 naturalmente aspirado combinado com três motores elétricos.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🎯</div>
-          <h3>Performance Extrema</h3>
-          <p>1.001 HP de potência combinada que oferece aceleração brutal e velocidade máxima de 350 km/h.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🔋</div>
-          <h3>Tecnologia Verde</h3>
-          <p>Sistema híbrido que permite condução 100% elétrica por até 10 km, reduzindo emissões sem comprometer performance.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🎮</div>
-          <h3>Modos de Condução</h3>
-          <p>13 modos de condução diferentes, incluindo Strada, Sport, Corsa e três modos híbridos personalizáveis.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🛡️</div>
-          <h3>Aerodinâmica Ativa</h3>
-          <p>Sistema de aerodinâmica ativa com asas traseiras móveis que se adaptam automaticamente às condições de condução.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🌟</div>
-          <h3>Design Futurista</h3>
-          <p>Linhas agressivas e design aerodinâmico que mantêm a identidade Lamborghini enquanto olham para o futuro.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- History Section -->
-    <section class="car-history-section">
-      <div class="history-content">
-        <div class="history-text">
-          <h2>A História da Lamborghini Revuelto</h2>
-          <p>
-            A Lamborghini Revuelto foi apresentada ao mundo em 2023, marcando o início de uma nova 
-            era para a marca italiana. O nome "Revuelto" significa "revolto" em espanhol, uma 
-            referência ao touro que inspirou o design e simboliza a revolução tecnológica que 
-            este modelo representa.
-          </p>
-          <p>
-            Após mais de 60 anos de tradição com motores V12 naturalmente aspirados, a Lamborghini 
-            decidiu abraçar o futuro com seu primeiro sistema híbrido. O desenvolvimento levou mais 
-            de 5 anos e envolveu centenas de engenheiros trabalhando para criar a perfeita harmonia 
-            entre o ronco característico do V12 e a eficiência dos motores elétricos.
-          </p>
-          <p>
-            A Revuelto não é apenas um carro - é uma declaração de intenções. Ela prova que é 
-            possível manter a essência selvagem e emocionante dos supercars Lamborghini enquanto 
-            se adapta às demandas do futuro, criando uma experiência de condução única e sustentável.
-          </p>
-        </div>
-        <div class="history-image">
-          <img src="../assets/images/historia.png" alt="História Lamborghini Revuelto">
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="car-gallery-section">
-      <h2>Galeria de Fotos</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item main">
-          <img src="../assets/images/carros/lamborghini_revuelto.png" alt="Lamborghini Revuelto - Vista Frontal">
-        </div>
-        <div class="gallery-item">
-          <img src="../assets/images/carros/lamborghini_revuelto.png" alt="Lamborghini Revuelto - Interior">
-        </div>
-        <div class="gallery-item">
-          <img src="../assets/images/carros/lamborghini_revuelto.png" alt="Lamborghini Revuelto - Motor V12">
-        </div>
-        <div class="gallery-item">
-          <img src="../assets/images/carros/lamborghini_revuelto.png" alt="Lamborghini Revuelto - Detalhes">
-        </div>
-      </div>
-      <p class="gallery-note">* Fotos adicionais serão disponibilizadas em breve</p>
-    </section>
-
-    <!-- Contact CTA -->
-    <section class="contact-cta">
-      <div class="cta-content">
-        <h2>Interessado na Lamborghini Revuelto?</h2>
-        <p>Entre em contato conosco para agendar uma visita e conhecer este exemplar revolucionário do futuro dos supercars.</p>
-        <div class="cta-actions">
-          <a href="../contato.html?car=Lamborghini+Revuelto" class="cta-button primary">Agendar Visita</a>
-          <a href="tel:+5511999999999" class="cta-button secondary">Ligar Agora</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="main-footer">

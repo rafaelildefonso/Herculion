@@ -1,7 +1,7 @@
 /* === CAR PAGE STYLES === */
 
 .car-page-main {
-  margin-top: var(--header-height);
+  /* margin-top: var(--header-height); */
   min-height: 100vh;
 }
 

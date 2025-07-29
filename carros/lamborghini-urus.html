@@ -3,21 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lamborghini Urus - Herculion</title>
+  <title>Lamborghini Urus - Herculion | O Super SUV</title>
+  <meta name="description" content="Descubra o Lamborghini Urus na Herculion. O Super SUV italiano: V8 biturbo, luxo, esportividade e espaço para toda a família. Agende sua visita.">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/car-page.css">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  <style>
+    /* === LAMBORGHINI URUS - DESIGN EXCLUSIVO === */
+    .urus-page {
+      background: #181312;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .urus-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg, #181312 0%, #ffd600 70%, #23201a 100%);
+      overflow: hidden;
+    }
+    .urus-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(255,214,0,0.08) 0%, transparent 70%),
+                  radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .urus-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+    .urus-text-section {
+      position: relative;
+      z-index: 2;
+    }
+    .urus-brand {
+      font-family: "Ephesis", cursive;
+      font-size: 1.8rem;
+      color: #ffd600;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .urus-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(255,214,0,0.18);
+    }
+    .urus-tagline {
+      font-family: "Ephesis", cursive;
+      font-size: 2.2rem;
+      color: #ffd600;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .urus-price {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(255,214,0,0.18);
+    }
+    .urus-description {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+    .urus-cta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .urus-btn {
+      padding: 1.5rem 3rem;
+      border-radius: 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      border: 2px solid #ffd600;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    .urus-btn:hover {
+      background: #ffd600;
+      color: #181312;
+      border-color: #ffd600;
+    }
+    .urus-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .urus-image-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .urus-hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 4rem;
+      }
+      .urus-title { font-size: 3.5rem; }
+    }
+  </style>
 </head>
-<body>
+<body class="urus-page">
   <header class="header">
     <nav class="navigation">
       <button class="menu-button" aria-label="Menu">
-        <img
-          class="svgviewer-png-output-2"
-          src="../assets/images/v11_2.png"
-          alt="Menu icon"
-        />
+        <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
       </button>
     </nav>
     <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
@@ -34,68 +152,96 @@
       </ul>
     </nav>
   </header>
-
-  <main class="car-page-main">
-    <section class="car-hero">
-      <div class="car-image-container">
-        <img src="../assets/images/carros/lamborghini_urus.png" alt="Lamborghini Urus">
-      </div>
-      <div class="car-intro-details">
-        <h1>Lamborghini Urus</h1>
-        <p class="price">R$ 2.4M</p>
-        <p class="description">O Lamborghini Urus é o primeiro Super SUV do mundo, combinando a alma de um supercarro com a funcionalidade de um SUV.</p>
-        <a href="../contato.html?car=Lamborghini+Urus" class="cta-button">Tenho Interesse</a>
+  <main>
+    <!-- Hero Section -->
+    <section class="urus-hero">
+      <div class="urus-hero-content">
+        <div class="urus-text-section">
+          <div class="urus-brand">Lamborghini</div>
+          <div class="urus-title">Urus</div>
+          <div class="urus-tagline">O Super SUV italiano</div>
+          <div class="urus-price">R$ 2.400.000</div>
+          <div class="urus-description">
+            O Lamborghini Urus é o primeiro Super SUV do mundo: motor V8 biturbo de 650 HP, aceleração brutal, luxo italiano e espaço para toda a família. Um ícone de esportividade e versatilidade.
+          </div>
+          <div class="urus-cta">
+            <a href="../contato.html?car=Lamborghini+Urus" class="urus-btn">Tenho Interesse</a>
+            <a href="#specs" class="urus-btn">Ver Especificações</a>
+          </div>
+        </div>
+        <div class="urus-image-section">
+          <img src="../assets/images/carros/lamborghini_urus.png" alt="Lamborghini Urus">
+        </div>
       </div>
     </section>
-
-    <section class="car-details-section">
+    <!-- Especificações Técnicas -->
+    <section id="specs" class="car-details-section">
       <h2>Especificações Técnicas</h2>
-      <table class="specs-table">
-        <tr>
-          <td>Marca</td>
-          <td>Lamborghini</td>
-        </tr>
-        <tr>
-          <td>Modelo</td>
-          <td>Urus</td>
-        </tr>
-        <tr>
-          <td>Ano</td>
-          <td>2023</td>
-        </tr>
-        <tr>
-          <td>Potência</td>
-          <td>650 HP</td>
-        </tr>
-        <tr>
-          <td>Cor</td>
-          <td>Amarelo</td>
-        </tr>
-      </table>
-    </section>
-
-    <section class="car-gallery-section">
-      <h2>Galeria de Fotos</h2>
-      <div class="gallery-placeholder">
-        <p>Em breve: mais fotos deslumbrantes do Lamborghini Urus.</p>
+      <div class="specs-container">
+        <div class="specs-category">
+          <h3>Motor e Performance</h3>
+          <ul>
+            <li>Motor V8 4.0L biturbo</li>
+            <li>Potência: 650 HP</li>
+            <li>Torque: 850 Nm</li>
+            <li>0-100 km/h: 3,6 s</li>
+            <li>Velocidade máxima: 305 km/h</li>
+            <li>Tração integral (AWD)</li>
+            <li>Câmbio automático de 8 marchas</li>
+          </ul>
+        </div>
+        <div class="specs-category">
+          <h3>Dimensões & Peso</h3>
+          <ul>
+            <li>Peso: 2.200 kg</li>
+            <li>Comprimento: 5,11 m</li>
+            <li>Largura: 2,02 m</li>
+            <li>Altura: 1,64 m</li>
+            <li>Entre-eixos: 3,00 m</li>
+          </ul>
+        </div>
+        <div class="specs-category">
+          <h3>Outros Destaques</h3>
+          <ul>
+            <li>Capacidade para 5 ocupantes</li>
+            <li>Interior em couro Alcantara</li>
+            <li>Central multimídia Touchscreen</li>
+            <li>Freios carbocerâmicos</li>
+            <li>Suspensão adaptativa</li>
+          </ul>
+        </div>
       </div>
     </section>
-
-    <section class="car-video-section">
-      <h2>Vídeo</h2>
-      <div class="video-placeholder">
-        <p>Em breve: um vídeo mostrando o Lamborghini Urus em ação.</p>
+    <!-- História do Modelo -->
+    <section class="car-history-section">
+      <div class="history-content">
+        <div class="history-text">
+          <h2>A História do Lamborghini Urus</h2>
+          <p>
+            Lançado em 2018, o Urus revolucionou o segmento ao unir a esportividade da Lamborghini à praticidade de um SUV de luxo. Com design agressivo e tecnologia de ponta, tornou-se referência mundial em performance e exclusividade entre utilitários esportivos.
+          </p>
+        </div>
+        <div class="history-image">
+          <img src="../assets/images/carros/lamborghini_urus_historia.jpg" alt="História Lamborghini Urus">
+        </div>
+      </div>
+    </section>
+    <!-- Galeria de Imagens -->
+    <section class="car-gallery-section">
+      <h2>Galeria</h2>
+      <div class="car-gallery">
+        <img src="../assets/images/carros/lamborghini_urus_1.jpg" alt="Urus lateral">
+        <img src="../assets/images/carros/lamborghini_urus_2.jpg" alt="Urus traseira">
+        <img src="../assets/images/carros/lamborghini_urus_3.jpg" alt="Urus interior">
       </div>
     </section>
   </main>
-
   <footer class="main-footer">
     <div class="footer-content">
         <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
         <p>O melhor de um importado, é ter um Herculion.</p>
     </div>
   </footer>
-
   <script src="../js/main.js"></script>
 </body>
 </html>
