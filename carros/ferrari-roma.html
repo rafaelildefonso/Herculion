@@ -4,44 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ferrari Roma - Herculion | La Nuova Dolce Vita</title>
-  <meta name="description" content="Descubra a Ferrari Roma na Herculion. A "La Nuova Dolce Vita" com 620 HP de potência e design atemporal. Agende sua visita.">
+  <meta name="description" content="Descubra a Ferrari Roma na Herculion. A 'La Nuova Dolce Vita' com 620 HP de potência e design atemporal. Agende sua visita.">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/car-page.css">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
   <style>
-    /* === FERRARI ROMA - DESIGN COMPLETAMENTE ÚNICO === */
-    
-    .ferrari-page {
-      background: #0a0a0a;
+    /* === FERRARI ROMA - DESIGN EXCLUSIVO === */
+    .roma-page {
+      background: #19171a;
       color: #fff;
       overflow-x: hidden;
     }
-    
-    /* Hero Section - Estilo Magazine Italiano */
-    .ferrari-hero {
+    .roma-hero {
       position: relative;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(45deg, #1a0a0a 0%, #2d1b1b 50%, #3d2a2a 100%);
+      background: linear-gradient(120deg, #19171a 0%, #e23b3b 70%, #23201a 100%);
       overflow: hidden;
     }
-    
-    .ferrari-hero::before {
+    .roma-hero::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.08) 0%, transparent 60%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(226,181,59,0.08) 0%, transparent 70%),
+                  radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 70%);
       pointer-events: none;
     }
-    
-    .ferrari-hero-content {
+    .roma-hero-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
       max-width: 1400px;
@@ -49,62 +40,56 @@
       padding: 0 2rem;
       align-items: center;
       gap: 4rem;
-    }
-    
-    .ferrari-text-section {
       position: relative;
       z-index: 2;
     }
-    
-    .ferrari-brand {
+    .roma-text-section {
+      position: relative;
+      z-index: 2;
+    }
+    .roma-brand {
       font-family: "Ephesis", cursive;
       font-size: 1.8rem;
-      color: var(--accent-color);
+      color: #e23b3b;
       margin-bottom: 1rem;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
-    
-    .ferrari-title {
+    .roma-title {
       font-family: "IM FELL Double Pica SC", serif;
       font-size: 6rem;
       color: #fff;
       margin-bottom: 1rem;
       line-height: 0.9;
-      text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      text-shadow: 0 0 30px rgba(226, 70, 59, 0.3);
     }
-    
-    .ferrari-tagline {
+    .roma-tagline {
       font-family: "Ephesis", cursive;
       font-size: 2.5rem;
-      color: var(--accent-color);
+      color: #e23b3b;
       margin-bottom: 2rem;
       font-style: italic;
     }
-    
-    .ferrari-price {
+    .roma-price {
       font-size: 4rem;
       font-weight: bold;
       color: #fff;
       margin-bottom: 2rem;
-      text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+      text-shadow: 0 0 20px rgba(226,181,59, 0.4);
     }
-    
-    .ferrari-description {
+    .roma-description {
       font-size: 1.4rem;
       line-height: 1.8;
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 3rem;
       max-width: 500px;
     }
-    
-    .ferrari-cta {
+    .roma-cta {
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
     }
-    
-    .ferrari-btn {
+    .roma-btn {
       padding: 1.5rem 3rem;
       border-radius: 0;
       text-decoration: none;
@@ -117,14 +102,12 @@
       position: relative;
       overflow: hidden;
     }
-    
-    .ferrari-btn.primary {
-      background: var(--accent-color);
-      color: #000;
-      border-color: var(--accent-color);
+    .roma-btn.primary {
+      background: #e23b3b;
+      color: #19171a;
+      border-color: #e23b3b;
     }
-    
-    .ferrari-btn.primary::before {
+    .roma-btn.primary::before {
       content: '';
       position: absolute;
       top: 0;
@@ -134,281 +117,213 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
       transition: left 0.5s;
     }
-    
-    .ferrari-btn.primary:hover::before {
+    .roma-btn.primary:hover::before {
       left: 100%;
     }
-    
-    .ferrari-btn.primary:hover {
+    .roma-btn.primary:hover {
       background: #fff;
-      color: #000;
+      color: #19171a;
       transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3);
+      box-shadow: 0 15px 30px rgba(226, 70, 59, 0.3);
     }
-    
-    .ferrari-btn.secondary {
+    .roma-btn.secondary {
       background: transparent;
       color: #fff;
       border-color: rgba(255, 255, 255, 0.3);
     }
-    
-    .ferrari-btn.secondary:hover {
+    .roma-btn.secondary:hover {
       background: rgba(255, 255, 255, 0.1);
       border-color: #fff;
       transform: translateY(-3px);
     }
-    
-    .ferrari-image-section {
+    .roma-image-section {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    
-    .ferrari-image-container {
+    .roma-image-container {
       position: relative;
-      transform: perspective(1000px) rotateY(-15deg);
       transition: transform 0.5s ease;
     }
-    
-    .ferrari-image-container:hover {
-      transform: perspective(1000px) rotateY(-5deg) scale(1.05);
-    }
-    
-    .ferrari-image-container img {
+    .roma-image-container img {
       max-width: 100%;
       max-height: 70vh;
       object-fit: contain;
       filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.8));
     }
-    
-    .ferrari-badge {
-      position: absolute;
-      top: -2rem;
-      right: -2rem;
-      background: rgba(255, 215, 0, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 215, 0, 0.3);
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      animation: badgeRotate 10s linear infinite;
+    /* Especificações Técnicas */
+    .roma-specs {
+      padding: 8rem 2rem 4rem 2rem;
+      background: linear-gradient(135deg, #19171a 0%, #23201a 100%);
     }
-    
-    @keyframes badgeRotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    .ferrari-badge .badge-text {
-      font-size: 0.8rem;
-      color: var(--accent-color);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    .ferrari-badge .badge-model {
-      font-size: 1.2rem;
-      color: #fff;
-      font-weight: bold;
-    }
-    
-    /* Seção de Performance - Estilo Dashboard */
-    .ferrari-performance {
-      padding: 8rem 2rem;
-      background: linear-gradient(135deg, #1a0a0a 0%, #2d1b1b 100%);
-    }
-    
-    .performance-container {
+    .roma-specs-container {
       max-width: 1200px;
       margin: 0 auto;
     }
-    
-    .performance-title {
+    .roma-specs-title {
       font-family: "IM FELL Double Pica SC", serif;
-      font-size: 4rem;
+      font-size: 3.5rem;
       text-align: center;
-      color: var(--accent-color);
-      margin-bottom: 5rem;
-      text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      color: #e23b3b;
+      margin-bottom: 3rem;
+      text-shadow: 0 0 25px rgba(226, 70, 59, 0.3);
     }
-    
-    .performance-grid {
+    .roma-specs-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
-    
-    .performance-card {
+    .roma-specs-card {
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 215, 0, 0.1);
+      border: 1px solid rgba(226,181,59, 0.1);
       border-radius: 0;
-      padding: 3rem 2rem;
+      padding: 2.5rem 1.5rem;
       text-align: center;
       position: relative;
       overflow: hidden;
       transition: all 0.3s ease;
     }
-    
-    .performance-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--accent-color);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    
-    .performance-card:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .performance-card:hover {
-      border-color: var(--accent-color);
+    .roma-specs-card:hover {
+      border-color: #e23b3b;
       transform: translateY(-10px);
-      background: rgba(255, 215, 0, 0.05);
+      background: rgba(226,181,59, 0.05);
     }
-    
-    .performance-value {
-      font-size: 3.5rem;
-      font-weight: bold;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-      text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-    }
-    
-    .performance-label {
-      font-size: 1.2rem;
+    .roma-specs-label {
+      font-size: 1.1rem;
       color: rgba(255, 255, 255, 0.8);
       text-transform: uppercase;
       letter-spacing: 2px;
+      margin-bottom: 0.5rem;
     }
-    
-    .performance-detail {
-      font-size: 0.9rem;
+    .roma-specs-value {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #e23b3b;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 15px rgba(226, 70, 59, 0.3);
+    }
+    .roma-specs-detail {
+      font-size: 0.95rem;
       color: rgba(255, 255, 255, 0.6);
-      margin-top: 0.5rem;
     }
-    
-    /* Seção de História - Estilo Editorial */
-    .ferrari-story {
+    /* História */
+    .roma-history {
       padding: 8rem 2rem;
-      background: #0a0a0a;
+      background: #19171a;
     }
-    
-    .story-container {
-      max-width: 1000px;
+    .roma-history-container {
+      max-width: 1100px;
       margin: 0 auto;
-      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
     }
-    
-    .story-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 3.5rem;
-      color: var(--accent-color);
-      margin-bottom: 4rem;
-      text-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
-    }
-    
-    .story-text {
-      font-size: 1.6rem;
+    .roma-history-text {
+      font-size: 1.35rem;
       line-height: 2;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 3rem;
+      color: rgba(255, 255, 255, 0.92);
+      margin-bottom: 2rem;
       font-style: italic;
     }
-    
-    .story-quote {
-      font-family: "Ephesis", cursive;
+    .roma-history-title {
+      font-family: "IM FELL Double Pica SC", serif;
       font-size: 2.5rem;
-      color: var(--accent-color);
-      margin: 4rem 0;
-      font-style: italic;
-      position: relative;
+      color: #e23b3b;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 18px rgba(226, 70, 59, 0.3);
     }
-    
-    .story-quote::before,
-    .story-quote::after {
-      content: '"';
-      font-size: 4rem;
-      color: rgba(255, 215, 0, 0.3);
-      position: absolute;
-      top: -1rem;
+    .roma-history-img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      object-fit: cover;
+      max-height: 340px;
     }
-    
-    .story-quote::before {
-      left: -3rem;
+    /* Galeria */
+    .roma-gallery {
+      padding: 6rem 2rem 8rem 2rem;
+      background: linear-gradient(120deg, #23201a 0%, #19171a 100%);
     }
-    
-    .story-quote::after {
-      right: -3rem;
+    .roma-gallery-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 2.5rem;
+      color: #e23b3b;
+      text-align: center;
+      margin-bottom: 3rem;
+      text-shadow: 0 0 12px rgba(226, 70, 59, 0.3);
     }
-    
+    .roma-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .roma-gallery-img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+      object-fit: cover;
+      max-height: 220px;
+      background: #222;
+    }
     /* Responsivo */
     @media (max-width: 1200px) {
-      .ferrari-hero-content {
+      .roma-hero-content {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
       }
-      
-      .performance-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .roma-specs-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .roma-history-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .roma-gallery-grid {
+        grid-template-columns: 1fr 1fr;
       }
     }
-    
     @media (max-width: 768px) {
-      .ferrari-title {
+      .roma-title {
         font-size: 3.5rem;
       }
-      
-      .ferrari-tagline {
+      .roma-tagline {
         font-size: 1.8rem;
       }
-      
-      .ferrari-price {
+      .roma-price {
         font-size: 2.5rem;
       }
-      
-      .performance-grid {
+      .roma-specs-grid {
         grid-template-columns: 1fr;
       }
-      
-      .ferrari-cta {
+      .roma-cta {
         flex-direction: column;
         align-items: center;
       }
-      
-      .ferrari-image-container {
+      .roma-image-container {
         transform: none;
       }
-      
-      .ferrari-badge {
+      .roma-badge {
         width: 80px;
         height: 80px;
         top: -1rem;
         right: -1rem;
       }
+      .roma-gallery-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
-<body class="ferrari-page">
+<body class="roma-page">
   <header class="header">
     <nav class="navigation">
       <button class="menu-button" aria-label="Menu">
-        <img
-          class="svgviewer-png-output-2"
-          src="../assets/images/v11_2.png"
-          alt="Menu icon"
-        />
+        <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
       </button>
     </nav>
     <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
@@ -425,111 +340,104 @@
       </ul>
     </nav>
   </header>
-
   <main>
-    <!-- Hero Section - Estilo Magazine Italiano -->
-    <section class="ferrari-hero">
-      <div class="ferrari-hero-content">
-        <div class="ferrari-text-section">
-          <div class="ferrari-brand">Ferrari</div>
-          <h1 class="ferrari-title">Roma</h1>
-          <p class="ferrari-tagline">"La Nuova Dolce Vita"</p>
-          <p class="ferrari-price">R$ 3.300.000</p>
-          <p class="ferrari-description">
-            A Ferrari Roma representa a essência da "La Nuova Dolce Vita" - A Nova Doce Vida. 
-            Com seu design atemporal inspirado na elegância dos anos 1950 e 1960, 
+    <!-- Hero Section -->
+    <section class="roma-hero">
+      <div class="roma-hero-content">
+        <div class="roma-text-section">
+          <div class="roma-brand">Ferrari</div>
+          <h1 class="roma-title">Roma</h1>
+          <p class="roma-tagline">"La Nuova Dolce Vita"</p>
+          <p class="roma-price">R$ 3.300.000</p>
+          <p class="roma-description">
+            A Ferrari Roma representa a essência da "La Nuova Dolce Vita" - A Nova Doce Vida.
+            Com seu design atemporal inspirado na elegância dos anos 1950 e 1960,
             este grand tourer combina sofisticação italiana com tecnologia de ponta.
           </p>
-          <div class="ferrari-cta">
-            <a href="../contato.html?car=Ferrari+Roma" class="ferrari-btn primary">Tenho Interesse</a>
-            <a href="#performance" class="ferrari-btn secondary">Ver Performance</a>
+          <div class="roma-cta">
+            <a href="../contato.html?car=Ferrari+Roma" class="roma-btn primary">Tenho Interesse</a>
+            <a href="#specs" class="roma-btn secondary">Ver Especificações</a>
           </div>
         </div>
-        
-        <div class="ferrari-image-section">
-          <div class="ferrari-image-container">
+        <div class="roma-image-section">
+          <div class="roma-image-container">
             <img src="../assets/images/carros/ferrari_roma.png" alt="Ferrari Roma - La Nuova Dolce Vita">
-            <div class="ferrari-badge">
-              <div class="badge-text">Ferrari</div>
-              <div class="badge-model">Roma</div>
-            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Performance Section - Estilo Dashboard -->
-    <section id="performance" class="ferrari-performance">
-      <div class="performance-container">
-        <h2 class="performance-title">Performance</h2>
-        <div class="performance-grid">
-          <div class="performance-card">
-            <div class="performance-value">620</div>
-            <div class="performance-label">Cavalos</div>
-            <div class="performance-detail">Potência Máxima</div>
+    <!-- Especificações Técnicas -->
+    <section id="specs" class="roma-specs">
+      <div class="roma-specs-container">
+        <h2 class="roma-specs-title">Especificações Técnicas</h2>
+        <div class="roma-specs-grid">
+          <div class="roma-specs-card">
+            <div class="roma-specs-label">Motor</div>
+            <div class="roma-specs-value">3.9 V8 Biturbo</div>
+            <div class="roma-specs-detail">Potência Máxima: 620 cv</div>
           </div>
-          <div class="performance-card">
-            <div class="performance-value">3.4</div>
-            <div class="performance-label">Segundos</div>
-            <div class="performance-detail">0-100 km/h</div>
+          <div class="roma-specs-card">
+            <div class="roma-specs-label">0-100 km/h</div>
+            <div class="roma-specs-value">3,4 s</div>
+            <div class="roma-specs-detail">Aceleração</div>
           </div>
-          <div class="performance-card">
-            <div class="performance-value">320</div>
-            <div class="performance-label">Km/h</div>
-            <div class="performance-detail">Velocidade Máxima</div>
+          <div class="roma-specs-card">
+            <div class="roma-specs-label">Velocidade Máxima</div>
+            <div class="roma-specs-value">320 km/h</div>
+            <div class="roma-specs-detail">Dados de fábrica</div>
           </div>
-          <div class="performance-card">
-            <div class="performance-value">760</div>
-            <div class="performance-label">Nm</div>
-            <div class="performance-detail">Torque Máximo</div>
+          <div class="roma-specs-card">
+            <div class="roma-specs-label">Torque</div>
+            <div class="roma-specs-value">760 Nm</div>
+            <div class="roma-specs-detail">Entre 3.000-5.750 rpm</div>
+          </div>
+          <div class="roma-specs-card">
+            <div class="roma-specs-label">Peso</div>
+            <div class="roma-specs-value">1.570 kg</div>
+            <div class="roma-specs-detail">Distribuição 50:50</div>
+          </div>
+          <div class="roma-specs-card">
+            <div class="roma-specs-label">Transmissão</div>
+            <div class="roma-specs-value">DCT 8 marchas</div>
+            <div class="roma-specs-detail">Dupla embreagem</div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- História Section - Estilo Editorial -->
-    <section class="ferrari-story">
-      <div class="story-container">
-        <h2 class="story-title">A História da Ferrari Roma</h2>
-        <p class="story-text">
-          A Ferrari Roma foi apresentada ao mundo em 2019, representando uma nova 
-          abordagem da Ferrari para o segmento de grand tourers. O nome "Roma" 
-          homenageia a capital italiana e evoca a "Dolce Vita" dos anos 1960, 
-          uma época de elegância, sofisticação e liberdade.
-        </p>
-        
-        <div class="story-quote">
-          La Nuova Dolce Vita
+    <!-- História -->
+    <section class="roma-history">
+      <div class="roma-history-container">
+        <div>
+          <h2 class="roma-history-title">A História da Ferrari Roma</h2>
+          <p class="roma-history-text">
+            A Ferrari Roma foi apresentada ao mundo em 2019, representando uma nova abordagem da Ferrari para o segmento de grand tourers. O nome "Roma" homenageia a capital italiana e evoca a "Dolce Vita" dos anos 1960, uma época de elegância, sofisticação e liberdade.
+          </p>
+          <p class="roma-history-text">
+            O design da Roma foi inspirado nos carros Ferrari dos anos 1950 e 1960, especialmente no 250 GT Lusso e no 250 GT 2+2. As linhas suaves e elegantes contrastam com a tecnologia de ponta que equipa o veículo, criando uma combinação perfeita entre tradição e inovação.
+          </p>
+          <p class="roma-history-text">
+            A Roma não é apenas um carro - é uma experiência de vida. Ela representa a filosofia Ferrari de criar veículos que não apenas transportam, mas transformam cada viagem em uma aventura inesquecível.
+          </p>
         </div>
-        
-        <p class="story-text">
-          O design da Roma foi inspirado nos carros Ferrari dos anos 1950 e 1960, 
-          especialmente no 250 GT Lusso e no 250 GT 2+2. As linhas suaves e 
-          elegantes contrastam com a tecnologia de ponta que equipa o veículo, 
-          criando uma combinação perfeita entre tradição e inovação.
-        </p>
-        
-        <p class="story-text">
-          A Roma não é apenas um carro - é uma experiência de vida. Ela representa 
-          a filosofia Ferrari de criar veículos que não apenas transportam, mas 
-          transformam cada viagem em uma aventura inesquecível.
-        </p>
-        
-        <div class="ferrari-cta">
-          <a href="../contato.html?car=Ferrari+Roma" class="ferrari-btn primary">Agendar Visita</a>
-          <a href="tel:+5511999999999" class="ferrari-btn secondary">Ligar Agora</a>
-        </div>
+        <img src="../assets/images/carros/ferrari_roma/ferrari_roma_historia.avif" alt="Ferrari Roma História" class="roma-history-img">
+      </div>
+    </section>
+    <!-- Galeria -->
+    <section class="roma-gallery">
+      <h2 class="roma-gallery-title">Galeria</h2>
+      <div class="roma-gallery-grid">
+        <img src="../assets/images/carros/ferrari_roma/ferrari_roma_1.webp" alt="Ferrari Roma 1" class="roma-gallery-img">
+        <img src="../assets/images/carros/ferrari_roma/ferrari_roma_2.webp" alt="Ferrari Roma 2" class="roma-gallery-img">
+        <img src="../assets/images/carros/ferrari_roma/ferrari_roma_3.webp" alt="Ferrari Roma 3" class="roma-gallery-img">
       </div>
     </section>
   </main>
-
   <footer class="main-footer">
     <div class="footer-content">
-        <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
-        <p>O melhor de um importado, é ter um Herculion.</p>
+      <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
+      <p>O melhor de um importado, é ter um Herculion.</p>
     </div>
   </footer>
-
   <script src="../js/main.js"></script>
 </body>
 </html>
