@@ -11,10 +11,10 @@ class SmoothScroll {
   }
 
   setupSmoothLinks() {
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', (e) => {
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", (e) => {
         e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
+        const target = document.querySelector(link.getAttribute("href"));
         if (target) {
           const targetPosition = target.offsetTop - 100;
           this.smoothScrollTo(targetPosition);
@@ -24,11 +24,11 @@ class SmoothScroll {
   }
 
   setupKeyboardScroll() {
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown" || e.key === "PageDown") {
         e.preventDefault();
         this.smoothScrollBy(200);
-      } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      } else if (e.key === "ArrowUp" || e.key === "PageUp") {
         e.preventDefault();
         this.smoothScrollBy(-200);
       }
@@ -38,15 +38,15 @@ class SmoothScroll {
   setupMouseScroll() {
     let isScrolling = false;
     let scrollTimeout;
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (!isScrolling) {
         isScrolling = true;
-        document.body.classList.add('is-scrolling');
+        document.body.classList.add("is-scrolling");
       }
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         isScrolling = false;
-        document.body.classList.remove('is-scrolling');
+        document.body.classList.remove("is-scrolling");
       }, 150);
     });
   }
@@ -74,46 +74,50 @@ class SmoothScroll {
 
   easeInOutCubic(t, b, c, d) {
     t /= d / 2;
-    if (t < 1) return c / 2 * t * t * t + b;
+    if (t < 1) return (c / 2) * t * t * t + b;
     t -= 2;
-    return c / 2 * (t * t * t + 2) + b;
+    return (c / 2) * (t * t * t + 2) + b;
   }
 }
 
 // Arquivo para interatividade do site Herculion
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   new SmoothScroll();
 
-  const menuButton = document.querySelector('.menu-button');
-  const closeButton = document.querySelector('#close-btn');
-  const sideMenu = document.querySelector('#side-menu');
-  const header = document.querySelector('.header');
+  const menuButton = document.querySelector(".menu-button");
+  const closeButton = document.querySelector("#close-btn");
+  const sideMenu = document.querySelector("#side-menu");
+  const header = document.querySelector(".header");
   const body = document.body;
 
   function openMenu() {
-    sideMenu.classList.add('open');
-    body.classList.add('no-scroll');
+    sideMenu.classList.add("open");
+    body.classList.add("no-scroll");
   }
 
   function closeMenu() {
-    sideMenu.classList.remove('open');
-    body.classList.remove('no-scroll');
+    sideMenu.classList.remove("open");
+    body.classList.remove("no-scroll");
   }
 
-  menuButton.addEventListener('click', openMenu);
-  closeButton.addEventListener('click', closeMenu);
-  sideMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
+  menuButton.addEventListener("click", openMenu);
+  closeButton.addEventListener("click", closeMenu);
+  sideMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 
-  document.addEventListener('click', (event) => {
-    if (!sideMenu.contains(event.target) && !menuButton.contains(event.target) && sideMenu.classList.contains('open')) {
+  document.addEventListener("click", (event) => {
+    if (
+      !sideMenu.contains(event.target) &&
+      !menuButton.contains(event.target) &&
+      sideMenu.classList.contains("open")
+    ) {
       closeMenu();
     }
   });
 
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 50);
   });
 
   // --- Lógica do Carrossel com Swiper.js ---
@@ -125,7 +129,12 @@ document.addEventListener('DOMContentLoaded', () => {
       alt: "Lamborghini Urus",
       size: {
         car: { width: "auto", height: "75%", maxHeight: "400px" },
-        text: { width: "55%", maxWidth: "55%", height: "100%", position: { top: "0%", left: "0", transform: "translate(0%, -10%)" } }
+        text: {
+          width: "55%",
+          maxWidth: "55%",
+          height: "100%",
+          position: { top: "0%", left: "0", transform: "translate(0%, -10%)" },
+        },
       },
       route: "carros/lamborghini-urus.html",
     },
@@ -136,7 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
       alt: "Bugatti Chiron",
       size: {
         car: { width: "auto", height: "85%", maxHeight: "350px" },
-        text: { width: "50%", maxWidth: "40%", height: "40%", position: { top: "0", left: "0", transform: "translate(0%, 30%)" } }
+        text: {
+          width: "50%",
+          maxWidth: "40%",
+          height: "40%",
+          position: { top: "0", left: "0", transform: "translate(0%, 30%)" },
+        },
       },
       route: "carros/bugatti-chiron.html",
     },
@@ -147,7 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
       alt: "Porsche 911",
       size: {
         car: { width: "auto", height: "65%", maxHeight: "380px" },
-        text: { width: "25%", maxWidth: "25%", height: "auto", position: { top: "40%", left: "0%", transform: "translate(0%, 80%)" } }
+        text: {
+          width: "25%",
+          maxWidth: "25%",
+          height: "auto",
+          position: { top: "40%", left: "0%", transform: "translate(0%, 80%)" },
+        },
       },
       route: "carros/porsche-911.html",
     },
@@ -158,7 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
       alt: "Ferrari Roma",
       size: {
         car: { width: "auto", height: "65%", maxHeight: "380px" },
-        text: { width: "25%", maxWidth: "25%", height: "auto", position: { top: "40%", left: "0%", transform: "translate(0%, 10%)" } }
+        text: {
+          width: "25%",
+          maxWidth: "25%",
+          height: "auto",
+          position: { top: "40%", left: "0%", transform: "translate(0%, 10%)" },
+        },
       },
       route: "carros/ferrari-roma.html",
     },
@@ -169,7 +193,12 @@ document.addEventListener('DOMContentLoaded', () => {
       alt: "Mclaren 720s",
       size: {
         car: { width: "auto", height: "65%", maxHeight: "380px" },
-        text: { width: "40%", maxWidth: "40%", height: "auto", position: { top: "40%", left: "0%", transform: "translate(0, 35%)" } }
+        text: {
+          width: "40%",
+          maxWidth: "40%",
+          height: "auto",
+          position: { top: "40%", left: "0%", transform: "translate(0, 35%)" },
+        },
       },
       route: "carros/mclaren-720s.html",
     },
@@ -181,89 +210,121 @@ document.addEventListener('DOMContentLoaded', () => {
     let adjustments = {};
 
     if (screenWidth <= 480) {
-        adjustments = type === 'car' ? { maxHeight: '200px' } : { maxWidth: '300px', maxHeight: '400px', position: { ...sizeConfig.position, top: '25%' } };
+      adjustments =
+        type === "car"
+          ? { maxHeight: "200px" }
+          : {
+              maxWidth: "300px",
+              maxHeight: "400px",
+              position: { ...sizeConfig.position, top: "25%" },
+            };
     } else if (screenWidth <= 768) {
-        adjustments = type === 'car' ? { maxHeight: '250px' } : { maxWidth: '450px', maxHeight: '500px', position: { ...sizeConfig.position, top: '20%' } };
+      adjustments =
+        type === "car"
+          ? { maxHeight: "250px" }
+          : {
+              maxWidth: "450px",
+              maxHeight: "500px",
+              position: { ...sizeConfig.position, top: "20%" },
+            };
     } else if (screenWidth <= 992) {
-        adjustments = type === 'car' ? { maxHeight: '300px' } : { maxWidth: '600px', maxHeight: '600px', position: { ...sizeConfig.position, top: '18%' } };
+      adjustments =
+        type === "car"
+          ? { maxHeight: "300px" }
+          : {
+              maxWidth: "600px",
+              maxHeight: "600px",
+              position: { ...sizeConfig.position, top: "18%" },
+            };
     } else if (screenWidth <= 1200) {
-        adjustments = type === 'car' ? { maxHeight: '350px' } : { maxWidth: '750px', maxHeight: '700px', position: { ...sizeConfig.position, top: '15%' } };
+      adjustments =
+        type === "car"
+          ? { maxHeight: "350px" }
+          : {
+              maxWidth: "750px",
+              maxHeight: "700px",
+              position: { ...sizeConfig.position, top: "15%" },
+            };
     }
 
     const finalConfig = { ...sizeConfig, ...adjustments };
     const { position, ...styles } = finalConfig;
     Object.assign(element.style, styles);
-    if (position && type === 'text') {
+    if (position && type === "text") {
       Object.assign(element.style, position);
     }
   }
 
   function updateCarDetails(swiper) {
     const currentCar = cars[swiper.realIndex];
-    const bgTextContainer = document.querySelector('.car-background-text-container');
-    
+    const bgTextContainer = document.querySelector(
+      ".car-background-text-container"
+    );
+
     // Limpa o container de fundo
-    bgTextContainer.innerHTML = '';
-    
+    bgTextContainer.innerHTML = "";
+
     // Adiciona a imagem de fundo do título do carro atual
     if (currentCar.bgText) {
-      const bgImage = document.createElement('img');
+      const bgImage = document.createElement("img");
       bgImage.src = currentCar.bgText;
-      bgImage.alt = currentCar.alt + ' background text';
-      bgImage.className = 'car-bg-text';
-      
+      bgImage.alt = currentCar.alt + " background text";
+      bgImage.className = "car-bg-text";
+
       // Aplica estilos específicos para cada carro, se definidos
       if (currentCar.size && currentCar.size.text) {
         const textStyle = currentCar.size.text;
         Object.assign(bgImage.style, {
-          width: textStyle.width || 'auto',
-          height: textStyle.height || 'auto',
-          maxWidth: textStyle.maxWidth || 'none',
-          maxHeight: textStyle.maxHeight || 'none',
-          top: textStyle.position?.top || '50%',
-          left: textStyle.position?.left || '50%',
-          transform: textStyle.position?.transform || 'translate(-50%, -50%)',
-          opacity: '0.7'
+          width: textStyle.width || "auto",
+          height: textStyle.height || "auto",
+          maxWidth: textStyle.maxWidth || "none",
+          maxHeight: textStyle.maxHeight || "none",
+          top: textStyle.position?.top || "50%",
+          left: textStyle.position?.left || "50%",
+          transform: textStyle.position?.transform || "translate(-50%, -50%)",
+          opacity: "0.7",
         });
       }
-      
+
       bgTextContainer.appendChild(bgImage);
     }
 
     const activeSlide = swiper.slides[swiper.activeIndex];
-    const mainCarEl = activeSlide.querySelector('img');
-    if (mainCarEl) applyResponsiveSizes(currentCar, mainCarEl, 'car');
+    const mainCarEl = activeSlide.querySelector("img");
+    if (mainCarEl) applyResponsiveSizes(currentCar, mainCarEl, "car");
 
-    const currentBgText = bgTextContainer.querySelector('img');
+    const currentBgText = bgTextContainer.querySelector("img");
     if (currentBgText) {
-      currentBgText.style.opacity = '0';
+      currentBgText.style.opacity = "0";
       setTimeout(() => {
         bgTextContainer.innerHTML = `<img src="${currentCar.bgText}" alt="${currentCar.alt} text" style="opacity: 0;">`;
-        const newBgText = bgTextContainer.querySelector('img');
+        const newBgText = bgTextContainer.querySelector("img");
         if (newBgText) {
-          applyResponsiveSizes(currentCar, newBgText, 'text');
-          newBgText.onload = () => { newBgText.style.opacity = '1'; };
-          if (newBgText.complete) newBgText.style.opacity = '1';
+          applyResponsiveSizes(currentCar, newBgText, "text");
+          newBgText.onload = () => {
+            newBgText.style.opacity = "1";
+          };
+          if (newBgText.complete) newBgText.style.opacity = "1";
         }
       }, 300);
     } else {
       bgTextContainer.innerHTML = `<img src="${currentCar.bgText}" alt="${currentCar.alt} text">`;
-      const newBgText = bgTextContainer.querySelector('img');
-      if (newBgText) applyResponsiveSizes(currentCar, newBgText, 'text');
+      const newBgText = bgTextContainer.querySelector("img");
+      if (newBgText) applyResponsiveSizes(currentCar, newBgText, "text");
     }
   }
 
   function initCarousel() {
-    const swiperWrapper = document.querySelector('.swiper-wrapper');
+    const swiperWrapper = document.querySelector(".swiper-wrapper");
     if (!swiperWrapper) return;
 
     // Limpa o wrapper antes de adicionar novos slides
-    swiperWrapper.innerHTML = '';
-    
+    swiperWrapper.innerHTML = "";
+
     // Adiciona os slides dos carros
-    cars.forEach(car => {
-      const slide = document.createElement('a');
-      slide.className = 'swiper-slide';
+    cars.forEach((car) => {
+      const slide = document.createElement("a");
+      slide.className = "swiper-slide";
       slide.href = car.route;
       slide.innerHTML = `
         <div class="slide-content">
@@ -274,11 +335,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Inicializa o Swiper
-    const swiper = new Swiper('.car-swiper', {
-      effect: 'coverflow',
+    const swiper = new Swiper(".car-swiper", {
+      effect: "coverflow",
       grabCursor: false,
       centeredSlides: true,
-      slidesPerView: 'auto',
+      slidesPerView: "auto",
       loop: true,
       speed: 800,
       coverflowEffect: {
@@ -289,8 +350,8 @@ document.addEventListener('DOMContentLoaded', () => {
         slideShadows: false,
       },
       navigation: {
-        nextEl: '.slider-button.next',
-        prevEl: '.slider-button.prev',
+        nextEl: ".slider-button.next",
+        prevEl: ".slider-button.prev",
       },
       on: {
         init: function () {
@@ -303,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Atualiza os tamanhos ao redimensionar a janela
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       swiper.update();
       updateCarDetails(swiper);
     });
@@ -313,37 +374,51 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // === EFEITOS DE SCROLL (index + quem somos) ===
-document.addEventListener('DOMContentLoaded', () => {
-  const revealSelectors = ['.reveal', '.reveal-gold', '.reveal-line', '.reveal-zoom', '.reveal-count'];
-  const reveals = document.querySelectorAll(revealSelectors.join(','));
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal-visible');
-        if (entry.target.classList.contains('reveal-count')) {
-          animateCount(entry.target);
+document.addEventListener("DOMContentLoaded", () => {
+  const revealSelectors = [
+    ".reveal",
+    ".reveal-gold",
+    ".reveal-line",
+    ".reveal-zoom",
+    ".reveal-count",
+  ];
+  const reveals = document.querySelectorAll(revealSelectors.join(","));
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-visible");
+          if (entry.target.classList.contains("reveal-count")) {
+            animateCount(entry.target);
+          }
+          observer.unobserve(entry.target);
         }
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  reveals.forEach(el => observer.observe(el));
+      });
+    },
+    { threshold: 0.15 }
+  );
+  reveals.forEach((el) => observer.observe(el));
 
-  const carShowcase = document.querySelector('.car-showcase');
+  const carShowcase = document.querySelector(".car-showcase");
   if (carShowcase) {
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       const rect = carShowcase.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       if (rect.top < windowHeight && rect.bottom > 0) {
-        const scrollPercent = (windowHeight - rect.top) / (windowHeight + rect.height);
-        carShowcase.style.backgroundPosition = `center ${40 + scrollPercent * 20}%`;
+        const scrollPercent =
+          (windowHeight - rect.top) / (windowHeight + rect.height);
+        carShowcase.style.backgroundPosition = `center ${
+          40 + scrollPercent * 20
+        }%`;
       }
     });
   }
 });
 
 function animateCount(el) {
-  const target = parseInt(el.getAttribute('data-count') || el.textContent.replace(/\D/g, ''));
+  const target = parseInt(
+    el.getAttribute("data-count") || el.textContent.replace(/\D/g, "")
+  );
   if (isNaN(target)) return;
   let start = 0;
   const duration = 1200;
@@ -353,7 +428,7 @@ function animateCount(el) {
     const value = Math.floor(progress * target);
     el.textContent = value.toLocaleString();
     if (progress < 1) {
-      requestAnimationFrame(ts => step(ts, startTime));
+      requestAnimationFrame((ts) => step(ts, startTime));
     } else {
       el.textContent = target.toLocaleString();
     }

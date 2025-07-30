@@ -1,247 +1,301 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aston Martin Valkyrie - Herculion | O Hipercarro Definitivo</title>
-  <meta name="description" content="Descubra o Aston Martin Valkyrie na Herculion. Um hipercarro com tecnologia de Fórmula 1, 1.160 HP e design revolucionário. Agende sua visita.">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/car-page.css">
-  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
-  <style>
-    /* === ASTON MARTIN VALKYRIE - DESIGN EXCLUSIVO === */
-    .valkyrie-page {
-      background: #0a0c10;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    .valkyrie-hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(120deg, #0a0c10 0%, #193c3e 70%, #1d1e22 100%);
-      overflow: hidden;
-    }
-    .valkyrie-hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(circle at 80% 30%, rgba(0,255,128,0.07) 0%, transparent 70%),
-                  radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .valkyrie-hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      align-items: center;
-      gap: 4rem;
-      position: relative;
-      z-index: 2;
-    }
-    .valkyrie-text-section {
-      position: relative;
-      z-index: 2;
-    }
-    .valkyrie-brand {
-      font-family: "Ephesis", cursive;
-      font-size: 1.8rem;
-      color: #00ff80;
-      margin-bottom: 1rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-    .valkyrie-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 6rem;
-      color: #fff;
-      margin-bottom: 1rem;
-      line-height: 0.9;
-      text-shadow: 0 0 30px rgba(0,255,128,0.2);
-    }
-    .valkyrie-tagline {
-      font-family: "Ephesis", cursive;
-      font-size: 2.2rem;
-      color: #00ff80;
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-    .valkyrie-price {
-      font-size: 3.2rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 20px rgba(0,255,128,0.25);
-    }
-    .valkyrie-description {
-      font-size: 1.4rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 3rem;
-      max-width: 500px;
-    }
-    .valkyrie-cta {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .valkyrie-btn {
-      padding: 1.5rem 3rem;
-      border-radius: 0;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      border: 2px solid #00ff80;
-      background: transparent;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-      overflow: hidden;
-    }
-    .valkyrie-btn:hover {
-      background: #00ff80;
-      color: #0a0c10;
-      border-color: #00ff80;
-    }
-    .valkyrie-image-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    .valkyrie-image-section img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 18px;
-    }
-    /* Responsive */
-    @media (max-width: 900px) {
-      .valkyrie-hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-top: 4rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aston Martin Valkyrie - Herculion | O Hipercarro Definitivo</title>
+    <meta
+      name="description"
+      content="Descubra o Aston Martin Valkyrie na Herculion. Um hipercarro com tecnologia de Fórmula 1, 1.160 HP e design revolucionário. Agende sua visita."
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/car-page.css" />
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <style>
+      /* === ASTON MARTIN VALKYRIE - DESIGN EXCLUSIVO === */
+      .valkyrie-page {
+        background: #0a0c10;
+        color: #fff;
+        overflow-x: hidden;
       }
-      .valkyrie-title { font-size: 3.5rem; }
-    }
-  </style>
-</head>
-<body class="valkyrie-page">
-  <header class="header">
-    <nav class="navigation">
-      <button class="menu-button" aria-label="Menu">
-        <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
-      </button>
-    </nav>
-    <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
-    <nav id="side-menu" class="side-menu">
-      <div class="menu-watermark">Herculion</div>
-      <button id="close-btn" class="close-btn">&times;</button>
-      <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../grade-carros.html">Modelos</a></li>
-        <li><a href="../experience.html">Experiências</a></li>
-        <li><a href="../busca.html">Busca</a></li>
-        <li><a href="../quem-somos.html">Quem Somos</a></li>
-        <li><a href="../contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <!-- Hero Section -->
-    <section class="valkyrie-hero">
-      <div class="valkyrie-hero-content">
-        <div class="valkyrie-text-section">
-          <div class="valkyrie-brand">Aston Martin</div>
-          <div class="valkyrie-title">Valkyrie</div>
-          <div class="valkyrie-tagline">Tecnologia de F1 para as ruas</div>
-          <div class="valkyrie-price">R$ 20.000.000</div>
-          <div class="valkyrie-description">
-            O Aston Martin Valkyrie é o ápice da engenharia automotiva, trazendo para as ruas a experiência de um verdadeiro Fórmula 1. Com aerodinâmica extrema, motor V12 híbrido de 1.160 HP e design revolucionário, cada detalhe foi pensado para entregar performance e exclusividade absolutas.
+      .valkyrie-hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+          120deg,
+          #0a0c10 0%,
+          #193c3e 70%,
+          #1d1e22 100%
+        );
+        overflow: hidden;
+      }
+      .valkyrie-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            circle at 80% 30%,
+            rgba(0, 255, 128, 0.07) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 255, 255, 0.04) 0%,
+            transparent 70%
+          );
+        pointer-events: none;
+      }
+      .valkyrie-hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        align-items: center;
+        gap: 4rem;
+        position: relative;
+        z-index: 2;
+      }
+      .valkyrie-text-section {
+        position: relative;
+        z-index: 2;
+      }
+      .valkyrie-brand {
+        font-family: "Ephesis", cursive;
+        font-size: 1.8rem;
+        color: #00ff80;
+        margin-bottom: 1rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .valkyrie-title {
+        font-family: "IM FELL Double Pica SC", serif;
+        font-size: 6rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 0.9;
+        text-shadow: 0 0 30px rgba(0, 255, 128, 0.2);
+      }
+      .valkyrie-tagline {
+        font-family: "Ephesis", cursive;
+        font-size: 2.2rem;
+        color: #00ff80;
+        margin-bottom: 2rem;
+        font-style: italic;
+      }
+      .valkyrie-price {
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 20px rgba(0, 255, 128, 0.25);
+      }
+      .valkyrie-description {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 3rem;
+        max-width: 500px;
+      }
+      .valkyrie-cta {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .valkyrie-btn {
+        padding: 1.5rem 3rem;
+        border-radius: 0;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        border: 2px solid #00ff80;
+        background: transparent;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        overflow: hidden;
+      }
+      .valkyrie-btn:hover {
+        background: #00ff80;
+        color: #0a0c10;
+        border-color: #00ff80;
+      }
+      .valkyrie-image-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .valkyrie-image-section img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 18px;
+      }
+      /* Responsive */
+      @media (max-width: 900px) {
+        .valkyrie-hero-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding-top: 4rem;
+        }
+        .valkyrie-title {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="valkyrie-page">
+    <header class="header">
+      <nav class="navigation">
+        <button class="menu-button" aria-label="Menu">
+          <img
+            class="svgviewer-png-output-2"
+            src="../assets/images/v11_2.png"
+            alt="Menu icon"
+          />
+        </button>
+      </nav>
+      <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
+      <nav id="side-menu" class="side-menu">
+        <div class="menu-watermark">Herculion</div>
+        <button id="close-btn" class="close-btn">&times;</button>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../grade-carros.html">Modelos</a></li>
+          <li><a href="../experience.html">Experiências</a></li>
+          <li><a href="../busca.html">Busca</a></li>
+          <li><a href="../quem-somos.html">Quem Somos</a></li>
+          <li><a href="../contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section class="valkyrie-hero">
+        <div class="valkyrie-hero-content">
+          <div class="valkyrie-text-section">
+            <div class="valkyrie-brand">Aston Martin</div>
+            <div class="valkyrie-title">Valkyrie</div>
+            <div class="valkyrie-tagline">Tecnologia de F1 para as ruas</div>
+            <div class="valkyrie-price">R$ 20.000.000</div>
+            <div class="valkyrie-description">
+              O Aston Martin Valkyrie é o ápice da engenharia automotiva,
+              trazendo para as ruas a experiência de um verdadeiro Fórmula 1.
+              Com aerodinâmica extrema, motor V12 híbrido de 1.160 HP e design
+              revolucionário, cada detalhe foi pensado para entregar performance
+              e exclusividade absolutas.
+            </div>
+            <div class="valkyrie-cta">
+              <a
+                href="../contato.html?car=Aston+Martin+Valkyrie"
+                class="valkyrie-btn"
+                >Tenho Interesse</a
+              >
+              <a href="#specs" class="valkyrie-btn">Ver Especificações</a>
+            </div>
           </div>
-          <div class="valkyrie-cta">
-            <a href="../contato.html?car=Aston+Martin+Valkyrie" class="valkyrie-btn">Tenho Interesse</a>
-            <a href="#specs" class="valkyrie-btn">Ver Especificações</a>
+          <div class="valkyrie-image-section">
+            <img
+              src="../assets/images/carros/aston_martin_valkyrie.png"
+              alt="Aston Martin Valkyrie"
+            />
           </div>
         </div>
-        <div class="valkyrie-image-section">
-          <img src="../assets/images/carros/aston_martin_valkyrie.png" alt="Aston Martin Valkyrie">
+      </section>
+      <!-- Especificações Técnicas -->
+      <section id="specs" class="car-details-section">
+        <h2>Especificações Técnicas</h2>
+        <div class="specs-container">
+          <div class="specs-category">
+            <h3>Motor e Performance</h3>
+            <ul>
+              <li>Motor V12 6.5L híbrido</li>
+              <li>Potência combinada: 1.160 HP</li>
+              <li>Torque: 900 Nm</li>
+              <li>0-100 km/h: 2,5 s</li>
+              <li>Velocidade máxima: 355 km/h</li>
+              <li>Tração traseira</li>
+              <li>Câmbio sequencial de 7 marchas</li>
+            </ul>
+          </div>
+          <div class="specs-category">
+            <h3>Dimensões & Peso</h3>
+            <ul>
+              <li>Peso: 1.030 kg</li>
+              <li>Comprimento: 4,43 m</li>
+              <li>Largura: 2,15 m</li>
+              <li>Altura: 1,12 m</li>
+              <li>Entre-eixos: 2,70 m</li>
+            </ul>
+          </div>
+          <div class="specs-category">
+            <h3>Outros Destaques</h3>
+            <ul>
+              <li>Produção limitada: 150 unidades</li>
+              <li>Aerodinâmica ativa</li>
+              <li>Chassi em fibra de carbono</li>
+              <li>Painel digital F1-style</li>
+              <li>Assinatura sonora exclusiva do V12 Cosworth</li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- Especificações Técnicas -->
-    <section id="specs" class="car-details-section">
-      <h2>Especificações Técnicas</h2>
-      <div class="specs-container">
-        <div class="specs-category">
-          <h3>Motor e Performance</h3>
-          <ul>
-            <li>Motor V12 6.5L híbrido</li>
-            <li>Potência combinada: 1.160 HP</li>
-            <li>Torque: 900 Nm</li>
-            <li>0-100 km/h: 2,5 s</li>
-            <li>Velocidade máxima: 355 km/h</li>
-            <li>Tração traseira</li>
-            <li>Câmbio sequencial de 7 marchas</li>
-          </ul>
+      </section>
+      <!-- História do Modelo -->
+      <section class="car-history-section">
+        <div class="history-content">
+          <div class="history-text">
+            <h2>A História do Aston Martin Valkyrie</h2>
+            <p>
+              O Valkyrie nasceu da colaboração entre Aston Martin e Red Bull
+              Racing, com o lendário Adrian Newey à frente do projeto. O
+              objetivo era simples: criar o carro de rua mais próximo de um
+              Fórmula 1 já feito. Cada linha, cada componente, cada solução
+              tecnológica foi pensada para entregar desempenho extremo, leveza e
+              dirigibilidade sem igual. O resultado é um hipercarro que redefine
+              os limites do possível, tanto nas ruas quanto nas pistas.
+            </p>
+          </div>
+          <div class="history-image">
+            <img
+              src="../assets/images/carros/aston_martin_valkyrie/aston_martin_valkyrie_historia.webp"
+              alt="História Aston Martin Valkyrie"
+            />
+          </div>
         </div>
-        <div class="specs-category">
-          <h3>Dimensões & Peso</h3>
-          <ul>
-            <li>Peso: 1.030 kg</li>
-            <li>Comprimento: 4,43 m</li>
-            <li>Largura: 2,15 m</li>
-            <li>Altura: 1,12 m</li>
-            <li>Entre-eixos: 2,70 m</li>
-          </ul>
+      </section>
+      <!-- Galeria de Imagens -->
+      <section class="car-gallery-section">
+        <h2>Galeria</h2>
+        <div class="car-gallery">
+          <img
+            src="../assets/images/carros/aston_martin_valkyrie/aston_martin_valkyrie_1.jpg"
+            alt="Valkyrie lateral"
+          />
+          <img
+            src="../assets/images/carros/aston_martin_valkyrie/aston_martin_valkyrie_2.png"
+            alt="Valkyrie traseira"
+          />
+          <img
+            src="../assets/images/carros/aston_martin_valkyrie/aston_martin_valkyrie_3.jpg"
+            alt="Valkyrie interior"
+          />
         </div>
-        <div class="specs-category">
-          <h3>Outros Destaques</h3>
-          <ul>
-            <li>Produção limitada: 150 unidades</li>
-            <li>Aerodinâmica ativa</li>
-            <li>Chassi em fibra de carbono</li>
-            <li>Painel digital F1-style</li>
-            <li>Assinatura sonora exclusiva do V12 Cosworth</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- História do Modelo -->
-    <section class="car-history-section">
-      <div class="history-content">
-        <div class="history-text">
-          <h2>A História do Aston Martin Valkyrie</h2>
-          <p>
-            O Valkyrie nasceu da colaboração entre Aston Martin e Red Bull Racing, com o lendário Adrian Newey à frente do projeto. O objetivo era simples: criar o carro de rua mais próximo de um Fórmula 1 já feito. Cada linha, cada componente, cada solução tecnológica foi pensada para entregar desempenho extremo, leveza e dirigibilidade sem igual. O resultado é um hipercarro que redefine os limites do possível, tanto nas ruas quanto nas pistas.
-          </p>
-        </div>
-        <div class="history-image">
-          <img src="../assets/images/carros/aston_martin_valkyrie/aston_martin_valkyrie_historia.webp" alt="História Aston Martin Valkyrie">
-        </div>
-      </div>
-    </section>
-    <!-- Galeria de Imagens -->
-    <section class="car-gallery-section">
-      <h2>Galeria</h2>
-      <div class="car-gallery">
-        <img src="../assets/images/carros/aston_martin_valkyrie/aston_martin_valkyrie_1.jpg" alt="Valkyrie lateral">
-        <img src="../assets/images/carros/aston_martin_valkyrie/aston_martin_valkyrie_2.png" alt="Valkyrie traseira">
-        <img src="../assets/images/carros/aston_martin_valkyrie/aston_martin_valkyrie_3.jpg" alt="Valkyrie interior">
-      </div>
-    </section>
-  </main>
-  <footer class="main-footer">
-    <div class="footer-content">
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="footer-content">
         <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
         <p>O melhor de um importado, é ter um Herculion.</p>
-    </div>
-  </footer>
-  <script src="../js/main.js"></script>
-</body>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
 </html>

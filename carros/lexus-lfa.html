@@ -1,247 +1,291 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lexus LFA - Herculion | O Supercarro Japonês</title>
-  <meta name="description" content="Descubra o lendário Lexus LFA na Herculion. V10 aspirado, engenharia japonesa e exclusividade máxima. Agende sua visita.">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/car-page.css">
-  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
-  <style>
-    /* === LEXUS LFA - DESIGN EXCLUSIVO === */
-    .lfa-page {
-      background: #191b1f;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    .lfa-hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(120deg, #191b1f 0%, #7a7c7f 70%, #23252a 100%);
-      overflow: hidden;
-    }
-    .lfa-hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(circle at 80% 30%, rgba(255,255,255,0.10) 0%, transparent 70%),
-                  radial-gradient(circle at 20% 80%, rgba(200,200,255,0.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .lfa-hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      align-items: center;
-      gap: 4rem;
-      position: relative;
-      z-index: 2;
-    }
-    .lfa-text-section {
-      position: relative;
-      z-index: 2;
-    }
-    .lfa-brand {
-      font-family: "Ephesis", cursive;
-      font-size: 1.8rem;
-      color: #b7bec9;
-      margin-bottom: 1rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-    .lfa-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 6rem;
-      color: #fff;
-      margin-bottom: 1rem;
-      line-height: 0.9;
-      text-shadow: 0 0 30px rgba(183,190,201,0.18);
-    }
-    .lfa-tagline {
-      font-family: "Ephesis", cursive;
-      font-size: 2.2rem;
-      color: #b7bec9;
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-    .lfa-price {
-      font-size: 3.2rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 20px rgba(183,190,201,0.18);
-    }
-    .lfa-description {
-      font-size: 1.4rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 3rem;
-      max-width: 500px;
-    }
-    .lfa-cta {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .lfa-btn {
-      padding: 1.5rem 3rem;
-      border-radius: 0;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      border: 2px solid #b7bec9;
-      background: transparent;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-      overflow: hidden;
-    }
-    .lfa-btn:hover {
-      background: #b7bec9;
-      color: #191b1f;
-      border-color: #b7bec9;
-    }
-    .lfa-image-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    .lfa-image-section img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 18px;
-    }
-    /* Responsive */
-    @media (max-width: 900px) {
-      .lfa-hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-top: 4rem;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexus LFA - Herculion | O Supercarro Japonês</title>
+    <meta
+      name="description"
+      content="Descubra o lendário Lexus LFA na Herculion. V10 aspirado, engenharia japonesa e exclusividade máxima. Agende sua visita."
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/car-page.css" />
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <style>
+      /* === LEXUS LFA - DESIGN EXCLUSIVO === */
+      .lfa-page {
+        background: #191b1f;
+        color: #fff;
+        overflow-x: hidden;
       }
-      .lfa-title { font-size: 3.5rem; }
-    }
-  </style>
-</head>
-<body class="lfa-page">
-  <header class="header">
-    <nav class="navigation">
-      <button class="menu-button" aria-label="Menu">
-        <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
-      </button>
-    </nav>
-    <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
-    <nav id="side-menu" class="side-menu">
-      <div class="menu-watermark">Herculion</div>
-      <button id="close-btn" class="close-btn">&times;</button>
-      <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../grade-carros.html">Modelos</a></li>
-        <li><a href="../index.html#experience">Experiências</a></li>
-        <li><a href="../busca.html">Busca</a></li>
-        <li><a href="../quem-somos.html">Quem Somos</a></li>
-        <li><a href="../contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <!-- Hero Section -->
-    <section class="lfa-hero">
-      <div class="lfa-hero-content">
-        <div class="lfa-text-section">
-          <div class="lfa-brand">Lexus</div>
-          <div class="lfa-title">LFA</div>
-          <div class="lfa-tagline">O lendário V10 japonês</div>
-          <div class="lfa-price">R$ 5.000.000</div>
-          <div class="lfa-description">
-            O Lexus LFA é um supercarro icônico: motor V10 aspirado de 560 HP, engenharia artesanal e um dos sons mais marcantes da história do automobilismo. Exclusividade japonesa para poucos colecionadores.
+      .lfa-hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+          120deg,
+          #191b1f 0%,
+          #7a7c7f 70%,
+          #23252a 100%
+        );
+        overflow: hidden;
+      }
+      .lfa-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            circle at 80% 30%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(200, 200, 255, 0.07) 0%,
+            transparent 70%
+          );
+        pointer-events: none;
+      }
+      .lfa-hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        align-items: center;
+        gap: 4rem;
+        position: relative;
+        z-index: 2;
+      }
+      .lfa-text-section {
+        position: relative;
+        z-index: 2;
+      }
+      .lfa-brand {
+        font-family: "Ephesis", cursive;
+        font-size: 1.8rem;
+        color: #b7bec9;
+        margin-bottom: 1rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .lfa-title {
+        font-family: "IM FELL Double Pica SC", serif;
+        font-size: 6rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 0.9;
+        text-shadow: 0 0 30px rgba(183, 190, 201, 0.18);
+      }
+      .lfa-tagline {
+        font-family: "Ephesis", cursive;
+        font-size: 2.2rem;
+        color: #b7bec9;
+        margin-bottom: 2rem;
+        font-style: italic;
+      }
+      .lfa-price {
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 20px rgba(183, 190, 201, 0.18);
+      }
+      .lfa-description {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 3rem;
+        max-width: 500px;
+      }
+      .lfa-cta {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .lfa-btn {
+        padding: 1.5rem 3rem;
+        border-radius: 0;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        border: 2px solid #b7bec9;
+        background: transparent;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        overflow: hidden;
+      }
+      .lfa-btn:hover {
+        background: #b7bec9;
+        color: #191b1f;
+        border-color: #b7bec9;
+      }
+      .lfa-image-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .lfa-image-section img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 18px;
+      }
+      /* Responsive */
+      @media (max-width: 900px) {
+        .lfa-hero-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding-top: 4rem;
+        }
+        .lfa-title {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="lfa-page">
+    <header class="header">
+      <nav class="navigation">
+        <button class="menu-button" aria-label="Menu">
+          <img
+            class="svgviewer-png-output-2"
+            src="../assets/images/v11_2.png"
+            alt="Menu icon"
+          />
+        </button>
+      </nav>
+      <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
+      <nav id="side-menu" class="side-menu">
+        <div class="menu-watermark">Herculion</div>
+        <button id="close-btn" class="close-btn">&times;</button>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../grade-carros.html">Modelos</a></li>
+          <li><a href="../index.html#experience">Experiências</a></li>
+          <li><a href="../busca.html">Busca</a></li>
+          <li><a href="../quem-somos.html">Quem Somos</a></li>
+          <li><a href="../contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section class="lfa-hero">
+        <div class="lfa-hero-content">
+          <div class="lfa-text-section">
+            <div class="lfa-brand">Lexus</div>
+            <div class="lfa-title">LFA</div>
+            <div class="lfa-tagline">O lendário V10 japonês</div>
+            <div class="lfa-price">R$ 5.000.000</div>
+            <div class="lfa-description">
+              O Lexus LFA é um supercarro icônico: motor V10 aspirado de 560 HP,
+              engenharia artesanal e um dos sons mais marcantes da história do
+              automobilismo. Exclusividade japonesa para poucos colecionadores.
+            </div>
+            <div class="lfa-cta">
+              <a href="../contato.html?car=Lexus+LFA" class="lfa-btn"
+                >Tenho Interesse</a
+              >
+              <a href="#specs" class="lfa-btn">Ver Especificações</a>
+            </div>
           </div>
-          <div class="lfa-cta">
-            <a href="../contato.html?car=Lexus+LFA" class="lfa-btn">Tenho Interesse</a>
-            <a href="#specs" class="lfa-btn">Ver Especificações</a>
+          <div class="lfa-image-section">
+            <img src="../assets/images/carros/lexus_lfa.png" alt="Lexus LFA" />
           </div>
         </div>
-        <div class="lfa-image-section">
-          <img src="../assets/images/carros/lexus_lfa.png" alt="Lexus LFA">
+      </section>
+      <!-- Especificações Técnicas -->
+      <section id="specs" class="car-details-section">
+        <h2>Especificações Técnicas</h2>
+        <div class="specs-container">
+          <div class="specs-category">
+            <h3>Motor e Performance</h3>
+            <ul>
+              <li>Motor V10 4.8L aspirado</li>
+              <li>Potência: 560 HP</li>
+              <li>Torque: 480 Nm</li>
+              <li>0-100 km/h: 3,7 s</li>
+              <li>Velocidade máxima: 325 km/h</li>
+              <li>Câmbio sequencial de 6 marchas</li>
+              <li>Tração traseira</li>
+            </ul>
+          </div>
+          <div class="specs-category">
+            <h3>Dimensões & Peso</h3>
+            <ul>
+              <li>Peso: 1.480 kg</li>
+              <li>Comprimento: 4,51 m</li>
+              <li>Largura: 1,89 m</li>
+              <li>Altura: 1,22 m</li>
+              <li>Entre-eixos: 2,60 m</li>
+            </ul>
+          </div>
+          <div class="specs-category">
+            <h3>Outros Destaques</h3>
+            <ul>
+              <li>Produção limitada: 500 unidades</li>
+              <li>Chassi em fibra de carbono</li>
+              <li>Interior artesanal em Alcantara</li>
+              <li>Painel digital inspirado em F1</li>
+              <li>Escapamento com 3 saídas centrais</li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- Especificações Técnicas -->
-    <section id="specs" class="car-details-section">
-      <h2>Especificações Técnicas</h2>
-      <div class="specs-container">
-        <div class="specs-category">
-          <h3>Motor e Performance</h3>
-          <ul>
-            <li>Motor V10 4.8L aspirado</li>
-            <li>Potência: 560 HP</li>
-            <li>Torque: 480 Nm</li>
-            <li>0-100 km/h: 3,7 s</li>
-            <li>Velocidade máxima: 325 km/h</li>
-            <li>Câmbio sequencial de 6 marchas</li>
-            <li>Tração traseira</li>
-          </ul>
+      </section>
+      <!-- História do Modelo -->
+      <section class="car-history-section">
+        <div class="history-content">
+          <div class="history-text">
+            <h2>A História do Lexus LFA</h2>
+            <p>
+              Desenvolvido ao longo de uma década, o LFA simboliza a obsessão da
+              Lexus por perfeição. Cada unidade foi montada à mão, com atenção
+              extrema a detalhes técnicos e acústicos. O resultado: um
+              supercarro lendário, desejado por colecionadores do mundo todo.
+            </p>
+          </div>
+          <div class="history-image">
+            <img
+              src="../assets/images/carros/lexus_lfa_historia.jpg"
+              alt="História Lexus LFA"
+            />
+          </div>
         </div>
-        <div class="specs-category">
-          <h3>Dimensões & Peso</h3>
-          <ul>
-            <li>Peso: 1.480 kg</li>
-            <li>Comprimento: 4,51 m</li>
-            <li>Largura: 1,89 m</li>
-            <li>Altura: 1,22 m</li>
-            <li>Entre-eixos: 2,60 m</li>
-          </ul>
+      </section>
+      <!-- Galeria de Imagens -->
+      <section class="car-gallery-section">
+        <h2>Galeria</h2>
+        <div class="car-gallery">
+          <img
+            src="../assets/images/carros/lexus_lfa_1.jpg"
+            alt="LFA lateral"
+          />
+          <img
+            src="../assets/images/carros/lexus_lfa_2.jpg"
+            alt="LFA traseira"
+          />
+          <img
+            src="../assets/images/carros/lexus_lfa_3.jpg"
+            alt="LFA interior"
+          />
         </div>
-        <div class="specs-category">
-          <h3>Outros Destaques</h3>
-          <ul>
-            <li>Produção limitada: 500 unidades</li>
-            <li>Chassi em fibra de carbono</li>
-            <li>Interior artesanal em Alcantara</li>
-            <li>Painel digital inspirado em F1</li>
-            <li>Escapamento com 3 saídas centrais</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- História do Modelo -->
-    <section class="car-history-section">
-      <div class="history-content">
-        <div class="history-text">
-          <h2>A História do Lexus LFA</h2>
-          <p>
-            Desenvolvido ao longo de uma década, o LFA simboliza a obsessão da Lexus por perfeição. Cada unidade foi montada à mão, com atenção extrema a detalhes técnicos e acústicos. O resultado: um supercarro lendário, desejado por colecionadores do mundo todo.
-          </p>
-        </div>
-        <div class="history-image">
-          <img src="../assets/images/carros/lexus_lfa_historia.jpg" alt="História Lexus LFA">
-        </div>
-      </div>
-    </section>
-    <!-- Galeria de Imagens -->
-    <section class="car-gallery-section">
-      <h2>Galeria</h2>
-      <div class="car-gallery">
-        <img src="../assets/images/carros/lexus_lfa_1.jpg" alt="LFA lateral">
-        <img src="../assets/images/carros/lexus_lfa_2.jpg" alt="LFA traseira">
-        <img src="../assets/images/carros/lexus_lfa_3.jpg" alt="LFA interior">
-      </div>
-    </section>
-  </main>
-  <footer class="main-footer">
-    <div class="footer-content">
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="footer-content">
         <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
         <p>O melhor de um importado, é ter um Herculion.</p>
-    </div>
-  </footer>
-  <script src="../js/main.js"></script>
-</body>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
 </html>

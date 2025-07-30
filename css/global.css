@@ -5,7 +5,7 @@
 :root {
   --primary-color: #121212;
   --secondary-color: #ffffff;
-  --accent-color: #B48F5D;
+  --accent-color: #b48f5d;
   --text-light: #f0f0f0;
   --text-dark: #1a1a1a;
   --border-color: rgba(255, 255, 255, 0.2);
@@ -22,12 +22,22 @@ body {
   overscroll-behavior: none;
 }
 
-body, button, a, img, input, textarea, select, .side-menu, .main-car, .side-car {
+body,
+button,
+a,
+img,
+input,
+textarea,
+select,
+.side-menu,
+.main-car,
+.side-car {
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Configurações para scroll suave */
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;

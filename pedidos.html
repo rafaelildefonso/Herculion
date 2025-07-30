@@ -1,169 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nossos Veículos - Herculion</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/pedidos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="shortcut icon" href="favicon.png" type="image/png">
-  <!-- GSAP e ScrollMagic -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
-</head>
-<body>
-  <!-- Cursor personalizado -->
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nossos Veículos - Herculion</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/pedidos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <!-- GSAP e ScrollMagic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+  </head>
+  <body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-  <div class="desktop">
-    <main class="main-content">
-      <!-- Header -->
-      <header class="header header-static">
-        <nav class="navigation">
-          <button class="menu-button" aria-label="Menu">
-            <img class="svgviewer-png-output-2" src="assets/images/v11_2.png" alt="Menu icon" />
-          </button>
-        </nav>
-        <h1 class="brand-name"><a href="index.html">Herculion</a></h1>
-        <nav id="side-menu" class="side-menu">
-          <div class="menu-watermark">Herculion</div>
-          <button id="close-btn" class="close-btn">&times;</button>
-          <ul>
-            <li><a href="index.html" class="nav-link">Início</a></li>
-            <li><a href="grade-carros.html" class="nav-link">Modelos</a></li>
-            <li><a href="busca.html" class="nav-link">Busca</a></li>
-            <li><a href="quem-somos.html" class="nav-link">Quem Somos</a></li>
-            <li><a href="contato.html" class="nav-link">Contato</a></li>
-            <li><a href="cadastro.html" class="nav-link">Cadastre-se</a></li>
-            <li><a href="pedidos.html" class="nav-link active">Meus Pedidos</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <!-- Seção de Veículos -->
-      <section class="orders-section">
-        <div class="orders-hero">
-          <h2 class="orders-title split-text">Nossos Veículos Exclusivos</h2>
-          <p class="orders-subtitle">Reviva a emoção de cada aquisição.</p>
-        </div>
-
-        <div class="orders-container">
-          <div class="orders-grid"></div>
-        </div>
-      </section>
-
-      <!-- Rodapé -->
-      <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <h2 class="brand-name">Herculion</h2>
-            <p>A experiência definitiva em automóveis de luxo.</p>
-          </div>
-          <div class="footer-links">
-            <h4>Navegação</h4>
+    <div class="desktop">
+      <main class="main-content">
+        <!-- Header -->
+        <header class="header header-static">
+          <nav class="navigation">
+            <button class="menu-button" aria-label="Menu">
+              <img
+                class="svgviewer-png-output-2"
+                src="assets/images/v11_2.png"
+                alt="Menu icon"
+              />
+            </button>
+          </nav>
+          <h1 class="brand-name"><a href="index.html">Herculion</a></h1>
+          <nav id="side-menu" class="side-menu">
+            <div class="menu-watermark">Herculion</div>
+            <button id="close-btn" class="close-btn">&times;</button>
             <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="grade-carros.html">Modelos</a></li>
-              <li><a href="busca.html">Busca</a></li>
-              <li><a href="quem-somos.html">Quem Somos</a></li>
-              <li><a href="contato.html">Contato</a></li>
-              <li><a href="cadastro.html">Cadastre-se</a></li>
-              <li><a href="pedidos.html">Meus Pedidos</a></li>
+              <li><a href="index.html" class="nav-link">Início</a></li>
+              <li><a href="grade-carros.html" class="nav-link">Modelos</a></li>
+              <li><a href="busca.html" class="nav-link">Busca</a></li>
+              <li><a href="quem-somos.html" class="nav-link">Quem Somos</a></li>
+              <li><a href="contato.html" class="nav-link">Contato</a></li>
+              <li><a href="cadastro.html" class="nav-link">Cadastre-se</a></li>
+              <li>
+                <a href="pedidos.html" class="nav-link active">Meus Pedidos</a>
+              </li>
             </ul>
+          </nav>
+        </header>
+
+        <!-- Seção de Veículos -->
+        <section class="orders-section">
+          <div class="orders-hero">
+            <h2 class="orders-title split-text">Nossos Veículos Exclusivos</h2>
+            <p class="orders-subtitle">Reviva a emoção de cada aquisição.</p>
           </div>
-          <div class="footer-social">
-            <h4>Siga-nos</h4>
-            <div class="social-icons">
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+
+          <div class="orders-container">
+            <div class="orders-grid"></div>
+          </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-brand">
+              <h2 class="brand-name">Herculion</h2>
+              <p>A experiência definitiva em automóveis de luxo.</p>
+            </div>
+            <div class="footer-links">
+              <h4>Navegação</h4>
+              <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="grade-carros.html">Modelos</a></li>
+                <li><a href="busca.html">Busca</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+                <li><a href="pedidos.html">Meus Pedidos</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <h4>Siga-nos</h4>
+              <div class="social-icons">
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 Herculion. Todos os direitos reservados.</p>
-        </div>
-      </footer>
-    </main>
-  </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Herculion. Todos os direitos reservados.</p>
+          </div>
+        </footer>
+      </main>
+    </div>
 
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Dados fictícios dos veículos
-      const vehicles = [
-        {
-          id: 1,
-          name: 'Lamborghini Revuelto',
-          price: 'R$ 5.990.000',
-          status: 'Disponível',
-          image: 'assets/images/carros/lamborghini_revuelto.png',
-          year: '2024',
-          mileage: '0 km',
-          color: 'Verde',
-          transmission: 'Automática',
-          fuel: 'Híbrido'
-        },
-        {
-          id: 2,
-          name: 'Ferrari Roma',
-          price: 'R$ 4.850.000',
-          status: 'Reservado',
-          image: 'assets/images/carros/ferrari_roma.png',
-          year: '2023',
-          mileage: '1.200 km',
-          color: 'Vermelho',
-          transmission: 'Automática',
-          fuel: 'Gasolina'
-        },
-        {
-          id: 3,
-          name: 'Porsche 911 Turbo S',
-          price: 'R$ 3.990.000',
-          status: 'Disponível',
-          image: 'assets/images/carros/porsche_911.png',
-          year: '2024',
-          mileage: '500 km',
-          color: 'Prata',
-          transmission: 'PDK',
-          fuel: 'Gasolina'
-        }
-      ];
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Dados fictícios dos veículos
+        const vehicles = [
+          {
+            id: 1,
+            name: "Lamborghini Revuelto",
+            price: "R$ 5.990.000",
+            status: "Disponível",
+            image: "assets/images/carros/lamborghini_revuelto.png",
+            year: "2024",
+            mileage: "0 km",
+            color: "Verde",
+            transmission: "Automática",
+            fuel: "Híbrido",
+          },
+          {
+            id: 2,
+            name: "Ferrari Roma",
+            price: "R$ 4.850.000",
+            status: "Reservado",
+            image: "assets/images/carros/ferrari_roma.png",
+            year: "2023",
+            mileage: "1.200 km",
+            color: "Vermelho",
+            transmission: "Automática",
+            fuel: "Gasolina",
+          },
+          {
+            id: 3,
+            name: "Porsche 911 Turbo S",
+            price: "R$ 3.990.000",
+            status: "Disponível",
+            image: "assets/images/carros/porsche_911.png",
+            year: "2024",
+            mileage: "500 km",
+            color: "Prata",
+            transmission: "PDK",
+            fuel: "Gasolina",
+          },
+        ];
 
-      // Função para criar os cards dos veículos
-      function createVehicleCards() {
-        const container = document.querySelector('.orders-grid');
-        if (!container) {
-          console.error('Container de veículos não encontrado');
-          return;
-        }
+        // Função para criar os cards dos veículos
+        function createVehicleCards() {
+          const container = document.querySelector(".orders-grid");
+          if (!container) {
+            console.error("Container de veículos não encontrado");
+            return;
+          }
 
-        container.innerHTML = ''; // Limpa o conteúdo existente
+          container.innerHTML = ""; // Limpa o conteúdo existente
 
-        vehicles.forEach(vehicle => {
-          // Verifica se a imagem existe
-          const img = new Image();
-          img.src = vehicle.image;
-          
-          // Se a imagem não carregar, usa uma imagem de fallback
-          img.onerror = function() {
-            console.warn(`Imagem não encontrada: ${vehicle.image}`);
-            vehicle.image = 'assets/images/placeholder-car.jpg';
-            updateCardImage(vehicle.id, vehicle.image);
-          };
+          vehicles.forEach((vehicle) => {
+            // Verifica se a imagem existe
+            const img = new Image();
+            img.src = vehicle.image;
 
-          const card = document.createElement('div');
-          card.className = 'order-card';
-          card.setAttribute('data-id', vehicle.id);
-          
-          card.innerHTML = `
-            <div class="order-card-image" style="background-image: url('${vehicle.image}')">
-              <span class="status-badge ${vehicle.status === 'Disponível' ? 'available' : 'reserved'}">
+            // Se a imagem não carregar, usa uma imagem de fallback
+            img.onerror = function () {
+              console.warn(`Imagem não encontrada: ${vehicle.image}`);
+              vehicle.image = "assets/images/placeholder-car.jpg";
+              updateCardImage(vehicle.id, vehicle.image);
+            };
+
+            const card = document.createElement("div");
+            card.className = "order-card";
+            card.setAttribute("data-id", vehicle.id);
+
+            card.innerHTML = `
+            <div class="order-card-image" style="background-image: url('${
+              vehicle.image
+            }')">
+              <span class="status-badge ${
+                vehicle.status === "Disponível" ? "available" : "reserved"
+              }">
                 ${vehicle.status}
               </span>
             </div>
@@ -197,24 +216,24 @@
               </div>
             </div>
           `;
-          container.appendChild(card);
-        });
-      }
-      
-      // Função para atualizar a imagem de um card
-      function updateCardImage(id, newImageUrl) {
-        const card = document.querySelector(`.order-card[data-id="${id}"]`);
-        if (card) {
-          const imgElement = card.querySelector('.order-card-image');
-          if (imgElement) {
-            imgElement.style.backgroundImage = `url('${newImageUrl}')`;
+            container.appendChild(card);
+          });
+        }
+
+        // Função para atualizar a imagem de um card
+        function updateCardImage(id, newImageUrl) {
+          const card = document.querySelector(`.order-card[data-id="${id}"]`);
+          if (card) {
+            const imgElement = card.querySelector(".order-card-image");
+            if (imgElement) {
+              imgElement.style.backgroundImage = `url('${newImageUrl}')`;
+            }
           }
         }
-      }
 
-      // Inicializa os cards quando o DOM estiver pronto
-      createVehicleCards();
-    });
-  </script>
-</body>
+        // Inicializa os cards quando o DOM estiver pronto
+        createVehicleCards();
+      });
+    </script>
+  </body>
 </html>

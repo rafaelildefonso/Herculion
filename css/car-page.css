@@ -16,15 +16,22 @@
 }
 
 .car-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 70%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 30% 70%,
+      rgba(255, 215, 0, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(255, 255, 255, 0.02) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -455,12 +462,12 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
-  
+
   .gallery-item.main {
     grid-row: auto;
   }
@@ -472,48 +479,48 @@
     text-align: center;
     padding: 2rem 1rem;
   }
-  
+
   .car-intro-details {
     padding: 2rem 1rem;
   }
-  
+
   .car-title {
     font-size: 2.5rem;
   }
-  
+
   .price {
     font-size: 2rem;
   }
-  
+
   .hero-actions {
     justify-content: center;
   }
-  
+
   .overview-stats {
     flex-direction: row;
     gap: 1rem;
   }
-  
+
   .stat-item {
     padding: 1rem;
   }
-  
+
   .stat-number {
     font-size: 2rem;
   }
-  
+
   .specs-container {
     grid-template-columns: 1fr;
   }
-  
+
   .features-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .cta-actions {
     flex-direction: column;
     align-items: center;
@@ -524,25 +531,25 @@
   .car-title {
     font-size: 2rem;
   }
-  
+
   .price {
     font-size: 1.5rem;
   }
-  
+
   .overview-stats {
     flex-direction: column;
   }
-  
+
   .car-badge {
     top: 1rem;
     right: 1rem;
     padding: 0.5rem 1rem;
   }
-  
+
   .badge-text {
     font-size: 0.6rem;
   }
-  
+
   .badge-model {
     font-size: 1rem;
   }

@@ -55,7 +55,8 @@
   font-weight: 500;
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active {
   background-color: var(--gold-color);
   color: var(--dark-bg);
   border-color: var(--gold-color);
