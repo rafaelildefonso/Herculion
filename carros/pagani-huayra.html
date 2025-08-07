@@ -1,166 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagani Huayra - Herculion | Arte e Engenharia</title>
-    <meta
-      name="description"
-      content="Descubra o Pagani Huayra na Herculion. Hipercarro italiano com motor V12 biturbo, design escultural e exclusividade máxima. Agende sua visita."
-    />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/car-page.css" />
-    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
-    <style>
-      /* === PAGANI HUAYRA - DESIGN EXCLUSIVO === */
-      .huayra-page {
-        background: #181514;
-        color: #fff;
-        overflow-x: hidden;
-      }
-      .huayra-hero {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(
-          120deg,
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagani Huayra - Herculion | Arte e Engenharia</title>
+  <meta name="description"
+    content="Descubra o Pagani Huayra na Herculion. Hipercarro italiano com motor V12 biturbo, design escultural e exclusividade máxima. Agende sua visita." />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/car-page.css" />
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+  <style>
+    /* === PAGANI HUAYRA - DESIGN EXCLUSIVO === */
+    body {
+      background: #181514;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .huayra-hero {
+      padding-top: var(--header-height);
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg,
           #181514 0%,
           #bca77f 70%,
-          #23201a 100%
-        );
-        overflow: hidden;
-      }
-      .huayra-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(
-            circle at 80% 30%,
-            rgba(188, 167, 127, 0.08) 0%,
-            transparent 70%
-          ),
-          radial-gradient(
-            circle at 20% 80%,
-            rgba(255, 255, 255, 0.04) 0%,
-            transparent 70%
-          );
-        pointer-events: none;
-      }
+          #23201a 100%);
+      overflow: hidden;
+    }
+
+    .huayra-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 80% 30%,
+          rgba(188, 167, 127, 0.08) 0%,
+          transparent 70%),
+        radial-gradient(circle at 20% 80%,
+          rgba(255, 255, 255, 0.04) 0%,
+          transparent 70%);
+      pointer-events: none;
+    }
+
+    .huayra-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .huayra-text-section {
+      position: relative;
+      z-index: 2;
+    }
+
+    .huayra-brand {
+      font-family: "Ephesis", cursive;
+      font-size: 1.8rem;
+      color: #bca77f;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .huayra-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(188, 167, 127, 0.18);
+    }
+
+    .huayra-tagline {
+      font-family: "Ephesis", cursive;
+      font-size: 2.2rem;
+      color: #bca77f;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .huayra-price {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(188, 167, 127, 0.18);
+    }
+
+    .huayra-description {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+
+    .huayra-cta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .huayra-btn {
+      padding: 1.5rem 3rem;
+      border-radius: 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      border: 2px solid #bca77f;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .huayra-btn:hover {
+      background: #bca77f;
+      color: #181514;
+      border-color: #bca77f;
+    }
+
+    .huayra-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .huayra-image-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
       .huayra-hero-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        align-items: center;
-        gap: 4rem;
-        position: relative;
-        z-index: 2;
-      }
-      .huayra-text-section {
-        position: relative;
-        z-index: 2;
-      }
-      .huayra-brand {
-        font-family: "Ephesis", cursive;
-        font-size: 1.8rem;
-        color: #bca77f;
-        margin-bottom: 1rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-      }
-      .huayra-title {
-        font-family: "IM FELL Double Pica SC", serif;
-        font-size: 6rem;
-        color: #fff;
-        margin-bottom: 1rem;
-        line-height: 0.9;
-        text-shadow: 0 0 30px rgba(188, 167, 127, 0.18);
-      }
-      .huayra-tagline {
-        font-family: "Ephesis", cursive;
-        font-size: 2.2rem;
-        color: #bca77f;
-        margin-bottom: 2rem;
-        font-style: italic;
-      }
-      .huayra-price {
-        font-size: 3.2rem;
-        font-weight: bold;
-        color: #fff;
-        margin-bottom: 2rem;
-        text-shadow: 0 0 20px rgba(188, 167, 127, 0.18);
-      }
-      .huayra-description {
-        font-size: 1.4rem;
-        line-height: 1.8;
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 3rem;
-        max-width: 500px;
-      }
-      .huayra-cta {
-        display: flex;
+        grid-template-columns: 1fr;
         gap: 2rem;
-        flex-wrap: wrap;
+        padding-top: 4rem;
       }
-      .huayra-btn {
-        padding: 1.5rem 3rem;
-        border-radius: 0;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.2rem;
-        transition: all 0.3s ease;
-        border: 2px solid #bca77f;
-        background: transparent;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        position: relative;
-        overflow: hidden;
+
+      .huayra-title {
+        font-size: 3.5rem;
       }
-      .huayra-btn:hover {
-        background: #bca77f;
-        color: #181514;
-        border-color: #bca77f;
-      }
-      .huayra-image-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-      .huayra-image-section img {
-        width: 100%;
-        max-width: 600px;
-        border-radius: 18px;
-      }
-      /* Responsive */
-      @media (max-width: 900px) {
-        .huayra-hero-content {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-          padding-top: 4rem;
-        }
-        .huayra-title {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-  </head>
-  <body class="huayra-page">
+    }
+  </style>
+</head>
+
+<body>
+  <div class="desktop">
     <header class="header">
       <nav class="navigation">
         <button class="menu-button" aria-label="Menu">
-          <img
-            class="svgviewer-png-output-2"
-            src="../assets/images/v11_2.png"
-            alt="Menu icon"
-          />
+          <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
         </button>
       </nav>
       <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
@@ -192,17 +200,12 @@
               absoluta. Um hipercarro para poucos.
             </div>
             <div class="huayra-cta">
-              <a href="../contato.html?car=Pagani+Huayra" class="huayra-btn"
-                >Tenho Interesse</a
-              >
+              <a href="../contato.html?car=Pagani+Huayra" class="huayra-btn">Tenho Interesse</a>
               <a href="#specs" class="huayra-btn">Ver Especificações</a>
             </div>
           </div>
           <div class="huayra-image-section">
-            <img
-              src="../assets/images/carros/pagani_huayra.png"
-              alt="Pagani Huayra"
-            />
+            <img src="../assets/images/carros/pagani_huayra.png" alt="Pagani Huayra" />
           </div>
         </div>
       </section>
@@ -256,10 +259,7 @@
             </p>
           </div>
           <div class="history-image">
-            <img
-              src="../assets/images/carros/pagani_huayra_historia.jpg"
-              alt="História Pagani Huayra"
-            />
+            <img src="../assets/images/carros/pagani_huayra_historia.jpg" alt="História Pagani Huayra" />
           </div>
         </div>
       </section>
@@ -267,18 +267,9 @@
       <section class="car-gallery-section">
         <h2>Galeria</h2>
         <div class="car-gallery">
-          <img
-            src="../assets/images/carros/pagani_huayra_1.jpg"
-            alt="Huayra lateral"
-          />
-          <img
-            src="../assets/images/carros/pagani_huayra_2.jpg"
-            alt="Huayra traseira"
-          />
-          <img
-            src="../assets/images/carros/pagani_huayra_3.jpg"
-            alt="Huayra interior"
-          />
+          <img src="../assets/images/carros/pagani_huayra_1.jpg" alt="Huayra lateral" />
+          <img src="../assets/images/carros/pagani_huayra_2.jpg" alt="Huayra traseira" />
+          <img src="../assets/images/carros/pagani_huayra_3.jpg" alt="Huayra interior" />
         </div>
       </section>
     </main>
@@ -288,11 +279,13 @@
         <p>O melhor de um importado, é ter um Herculion.</p>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <!-- ScrollSmoother requires ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="../js/main.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <!-- ScrollSmoother requires ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
 </html>

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lamborghini Revuelto - Herculion | O Futuro dos Supercars</title>
-  <meta name="description" content="Descubra a Lamborghini Revuelto na Herculion. O primeiro supercar híbrido da Lamborghini com 1.001 HP e design futurista. Agende sua visita.">
+  <meta name="description"
+    content="Descubra a Lamborghini Revuelto na Herculion. O primeiro supercar híbrido da Lamborghini com 1.001 HP e design futurista. Agende sua visita.">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/car-page.css">
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
   <style>
     /* === LAMBORGHINI REVUELTO - DESIGN EXCLUSIVO === */
-    .revuelto-page {
+    body {
       background: #181a1c;
       color: #fff;
       overflow-x: hidden;
     }
+
     .revuelto-hero {
+      padding-top: var(--header-height);
       position: relative;
       min-height: 100vh;
       display: flex;
@@ -24,14 +28,19 @@
       background: linear-gradient(120deg, #181a1c 0%, #f7d900 70%, #23201a 100%);
       overflow: hidden;
     }
+
     .revuelto-hero::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(circle at 80% 30%, rgba(247,217,0,0.08) 0%, transparent 70%),
-                  radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 70%);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(247, 217, 0, 0.08) 0%, transparent 70%),
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
       pointer-events: none;
     }
+
     .revuelto-hero-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -43,10 +52,12 @@
       position: relative;
       z-index: 2;
     }
+
     .revuelto-text-section {
       position: relative;
       z-index: 2;
     }
+
     .revuelto-brand {
       font-family: "Ephesis", cursive;
       font-size: 1.8rem;
@@ -55,14 +66,16 @@
       letter-spacing: 3px;
       text-transform: uppercase;
     }
+
     .revuelto-title {
       font-family: "IM FELL Double Pica SC", serif;
       font-size: 6rem;
       color: #fff;
       margin-bottom: 1rem;
       line-height: 0.9;
-      text-shadow: 0 0 30px rgba(247,217,0,0.18);
+      text-shadow: 0 0 30px rgba(247, 217, 0, 0.18);
     }
+
     .revuelto-tagline {
       font-family: "Ephesis", cursive;
       font-size: 2.2rem;
@@ -70,25 +83,29 @@
       margin-bottom: 2rem;
       font-style: italic;
     }
+
     .revuelto-price {
       font-size: 3.2rem;
       font-weight: bold;
       color: #fff;
       margin-bottom: 2rem;
-      text-shadow: 0 0 20px rgba(247,217,0,0.18);
+      text-shadow: 0 0 20px rgba(247, 217, 0, 0.18);
     }
+
     .revuelto-description {
       font-size: 1.4rem;
       line-height: 1.8;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255, 255, 255, 0.9);
       margin-bottom: 3rem;
       max-width: 500px;
     }
+
     .revuelto-cta {
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
     }
+
     .revuelto-btn {
       padding: 1.5rem 3rem;
       border-radius: 0;
@@ -104,22 +121,26 @@
       position: relative;
       overflow: hidden;
     }
+
     .revuelto-btn:hover {
       background: #f7d900;
       color: #181a1c;
       border-color: #f7d900;
     }
+
     .revuelto-image-section {
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
     }
+
     .revuelto-image-section img {
       width: 100%;
       max-width: 600px;
       border-radius: 18px;
     }
+
     /* Responsive */
     @media (max-width: 900px) {
       .revuelto-hero-content {
@@ -127,134 +148,140 @@
         gap: 2rem;
         padding-top: 4rem;
       }
-      .revuelto-title { font-size: 3.5rem; }
+
+      .revuelto-title {
+        font-size: 3.5rem;
+      }
     }
   </style>
-<body class="revuelto-page">
-  <header class="header">
-    <nav class="navigation">
-      <button class="menu-button" aria-label="Menu">
-        <img
-          class="svgviewer-png-output-2"
-          src="../assets/images/v11_2.png"
-          alt="Menu icon"
-        />
-      </button>
-    </nav>
-    <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
-    <nav id="side-menu" class="side-menu">
-      <div class="menu-watermark">Herculion</div>
-      <button id="close-btn" class="close-btn">&times;</button>
-      <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../grade-carros.html">Modelos</a></li>
-        <li><a href="../index.html#experience">Experiências</a></li>
-        <li><a href="../busca.html">Busca</a></li>
-        <li><a href="../quem-somos.html">Quem Somos</a></li>
-        <li><a href="../contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="revuelto-hero">
-  <div class="revuelto-hero-content">
-    <div class="revuelto-text-section">
-      <div class="revuelto-brand">Lamborghini</div>
-      <div class="revuelto-title">Revuelto</div>
-      <div class="revuelto-tagline">O Futuro dos Supercars</div>
-      <div class="revuelto-price">R$ 8.500.000</div>
-      <div class="revuelto-description">
-        A Lamborghini Revuelto é o primeiro supercarro híbrido plug-in da marca, combinando um V12 aspirado com três motores elétricos, totalizando 1.001 HP, aceleração de 0 a 100 km/h em 2,8 s e visual futurista.
-      </div>
-      <div class="revuelto-cta">
-        <a href="../contato.html?car=Lamborghini+Revuelto" class="revuelto-btn">Tenho Interesse</a>
-        <a href="#specs" class="revuelto-btn">Ver Especificações</a>
-      </div>
-    </div>
-    <div class="revuelto-image-section">
-      <img src="../assets/images/carros/lamborghini_revuelto.png" alt="Lamborghini Revuelto">
-    </div>
-  </div>
-</section>
-      
-    <!-- Car Overview -->
-    <!-- Especificações Técnicas -->
-<section id="specs" class="car-details-section">
-  <h2>Especificações Técnicas</h2>
-  <div class="specs-container">
-    <div class="specs-category">
-      <h3>Motor e Performance</h3>
-      <ul>
-        <li>Motor V12 6.5L aspirado + 3 motores elétricos</li>
-        <li>Potência combinada: 1.001 HP</li>
-        <li>Torque: 1.075 Nm</li>
-        <li>0-100 km/h: 2,8 s</li>
-        <li>Velocidade máxima: 350 km/h</li>
-        <li>Câmbio automatizado de 8 marchas</li>
-        <li>Tração integral híbrida</li>
-      </ul>
-    </div>
-    <div class="specs-category">
-      <h3>Dimensões & Peso</h3>
-      <ul>
-        <li>Peso: 1.772 kg</li>
-        <li>Comprimento: 4,95 m</li>
-        <li>Largura: 2,03 m</li>
-        <li>Altura: 1,16 m</li>
-        <li>Entre-eixos: 2,77 m</li>
-      </ul>
-    </div>
-    <div class="specs-category">
-      <h3>Outros Destaques</h3>
-      <ul>
-        <li>Chassi monocoque em carbono</li>
-        <li>Painel digital personalizável</li>
-        <li>Portas tipo tesoura</li>
-        <li>Modo de condução elétrica pura</li>
-        <li>Produção limitada</li>
-      </ul>
-    </div>
-  </div>
-</section>
-<!-- História do Modelo -->
-<section class="car-history-section">
-  <div class="history-content">
-    <div class="history-text">
-      <h2>A História da Lamborghini Revuelto</h2>
-      <p>
-        Lançada em 2023, a Revuelto inaugura uma nova era eletrificada para a Lamborghini, mantendo o DNA de supercarro italiano e inovando em tecnologia, design e sustentabilidade.
-      </p>
-    </div>
-    <div class="history-image">
-      <img src="../assets/images/carros/lamborghini_revuelto/lamborghini_revuelto_historia.webp" alt="História Lamborghini Revuelto">
-    </div>
-  </div>
-</section>
-<!-- Galeria de Imagens -->
-<section class="car-gallery-section">
-  <h2>Galeria</h2>
-  <div class="car-gallery">
-    <img src="../assets/images/carros/lamborghini_revuelto/lamborghini_revuelto_1.webp" alt="Revuelto lateral">
-    <img src="../assets/images/carros/lamborghini_revuelto/lamborghini_revuelto_2.webp" alt="Revuelto traseira">
-    <img src="../assets/images/carros/lamborghini_revuelto/lamborghini_revuelto_3.webp" alt="Revuelto interior">
-  </div>
-</section>
+<body>
+  <div class="desktop">
+    <header class="header">
+      <nav class="navigation">
+        <button class="menu-button" aria-label="Menu">
+          <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
+        </button>
+      </nav>
+      <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
+      <nav id="side-menu" class="side-menu">
+        <div class="menu-watermark">Herculion</div>
+        <button id="close-btn" class="close-btn">&times;</button>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../grade-carros.html">Modelos</a></li>
+          <li><a href="../index.html#experience">Experiências</a></li>
+          <li><a href="../busca.html">Busca</a></li>
+          <li><a href="../quem-somos.html">Quem Somos</a></li>
+          <li><a href="../contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  </main>
+    <main>
+      <!-- Hero Section -->
+      <section class="revuelto-hero">
+        <div class="revuelto-hero-content">
+          <div class="revuelto-text-section">
+            <div class="revuelto-brand">Lamborghini</div>
+            <div class="revuelto-title">Revuelto</div>
+            <div class="revuelto-tagline">O Futuro dos Supercars</div>
+            <div class="revuelto-price">R$ 8.500.000</div>
+            <div class="revuelto-description">
+              A Lamborghini Revuelto é o primeiro supercarro híbrido plug-in da marca, combinando um V12 aspirado com
+              três motores elétricos, totalizando 1.001 HP, aceleração de 0 a 100 km/h em 2,8 s e visual futurista.
+            </div>
+            <div class="revuelto-cta">
+              <a href="../contato.html?car=Lamborghini+Revuelto" class="revuelto-btn">Tenho Interesse</a>
+              <a href="#specs" class="revuelto-btn">Ver Especificações</a>
+            </div>
+          </div>
+          <div class="revuelto-image-section">
+            <img src="../assets/images/carros/lamborghini_revuelto.png" alt="Lamborghini Revuelto">
+          </div>
+        </div>
+      </section>
 
-  <footer class="main-footer">
-    <div class="footer-content">
+      <!-- Car Overview -->
+      <!-- Especificações Técnicas -->
+      <section id="specs" class="car-details-section">
+        <h2>Especificações Técnicas</h2>
+        <div class="specs-container">
+          <div class="specs-category">
+            <h3>Motor e Performance</h3>
+            <ul>
+              <li>Motor V12 6.5L aspirado + 3 motores elétricos</li>
+              <li>Potência combinada: 1.001 HP</li>
+              <li>Torque: 1.075 Nm</li>
+              <li>0-100 km/h: 2,8 s</li>
+              <li>Velocidade máxima: 350 km/h</li>
+              <li>Câmbio automatizado de 8 marchas</li>
+              <li>Tração integral híbrida</li>
+            </ul>
+          </div>
+          <div class="specs-category">
+            <h3>Dimensões & Peso</h3>
+            <ul>
+              <li>Peso: 1.772 kg</li>
+              <li>Comprimento: 4,95 m</li>
+              <li>Largura: 2,03 m</li>
+              <li>Altura: 1,16 m</li>
+              <li>Entre-eixos: 2,77 m</li>
+            </ul>
+          </div>
+          <div class="specs-category">
+            <h3>Outros Destaques</h3>
+            <ul>
+              <li>Chassi monocoque em carbono</li>
+              <li>Painel digital personalizável</li>
+              <li>Portas tipo tesoura</li>
+              <li>Modo de condução elétrica pura</li>
+              <li>Produção limitada</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- História do Modelo -->
+      <section class="car-history-section">
+        <div class="history-content">
+          <div class="history-text">
+            <h2>A História da Lamborghini Revuelto</h2>
+            <p>
+              Lançada em 2023, a Revuelto inaugura uma nova era eletrificada para a Lamborghini, mantendo o DNA de
+              supercarro italiano e inovando em tecnologia, design e sustentabilidade.
+            </p>
+          </div>
+          <div class="history-image">
+            <img src="../assets/images/carros/lamborghini_revuelto/lamborghini_revuelto_historia.webp"
+              alt="História Lamborghini Revuelto">
+          </div>
+        </div>
+      </section>
+      <!-- Galeria de Imagens -->
+      <section class="car-gallery-section">
+        <h2>Galeria</h2>
+        <div class="car-gallery">
+          <img src="../assets/images/carros/lamborghini_revuelto/lamborghini_revuelto_1.webp" alt="Revuelto lateral">
+          <img src="../assets/images/carros/lamborghini_revuelto/lamborghini_revuelto_2.webp" alt="Revuelto traseira">
+          <img src="../assets/images/carros/lamborghini_revuelto/lamborghini_revuelto_3.webp" alt="Revuelto interior">
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-content">
         <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
         <p>O melhor de um importado, é ter um Herculion.</p>
-    </div>
-  </footer>
+      </div>
+    </footer>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <!-- ScrollSmoother requires ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <!-- ScrollSmoother requires ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
   <script src="../js/main.js"></script>
 </body>
+
 </html>

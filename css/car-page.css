@@ -1,12 +1,12 @@
 /* === CAR PAGE STYLES === */
 
 .car-page-main {
-  /* margin-top: var(--header-height); */
   min-height: 100vh;
 }
 
 /* === HERO SECTION === */
 .car-hero {
+  padding-top: var(--header-height);
   position: relative;
   min-height: 100vh;
   display: flex;

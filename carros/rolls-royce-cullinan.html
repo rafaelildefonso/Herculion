@@ -14,12 +14,13 @@
     <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
     <style>
       /* === ROLLS-ROYCE CULLINAN - DESIGN EXCLUSIVO === */
-      .cullinan-page {
+      body {
         background: #161617;
         color: #fff;
         overflow-x: hidden;
       }
       .cullinan-hero {
+        padding-top: var(--header-height);
         position: relative;
         min-height: 100vh;
         display: flex;
@@ -152,7 +153,8 @@
       }
     </style>
   </head>
-  <body class="cullinan-page">
+  <body>
+    <div class="desktop">
     <header class="header">
       <nav class="navigation">
         <button class="menu-button" aria-label="Menu">
@@ -290,6 +292,7 @@
         <p>O melhor de um importado, é ter um Herculion.</p>
       </div>
     </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>

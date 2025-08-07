@@ -19,22 +19,6 @@ const todosCarros = [
     "categoria": "esportivo"
   },
   {
-    "id": "lamborghini-revuelto",
-    "nome": "Lamborghini Revuelto",
-    "marca": "Lamborghini",
-    "modelo": "Revuelto",
-    "ano": 2024,
-    "preco": "R$ 6.2M",
-    "cor": "Laranja",
-    "potencia": "1015 HP", 
-    "imagem": "assets/images/carros/lamborghini_revuelto.png",
-    "destaque": true,
-    "novo": true,
-    "descricao": "O Revuelto é o primeiro superesportivo V12 híbrido plug-in da Lamborghini, estabelecendo um novo paradigma em performance e design.",
-    "route": "carros/lamborghini-revuelto.html",
-    "categoria": "esportivo"
-  },
-  {
     "id": "mclaren-720s",
     "nome": "McLaren 720S",
     "marca": "McLaren",
@@ -83,22 +67,6 @@ const todosCarros = [
     "categoria": "esportivo"
   },
   {
-    "id": "aston-martin-valkyrie",
-    "nome": "Aston Martin Valkyrie",
-    "marca": "Aston Martin",
-    "modelo": "Valkyrie",
-    "ano": 2023,
-    "preco": "R$ 20M",
-    "cor": "Verde",
-    "potencia": "1160 HP", 
-    "imagem": "assets/images/carros/aston_martin_valkyrie.png",
-    "destaque": false,
-    "novo": false,
-    "descricao": "O Aston Martin Valkyrie é um hipercarro com tecnologia de Fórmula 1, oferecendo uma experiência de condução extrema e sem precedentes.",
-    "route": "carros/aston-martin-valkyrie.html",
-    "categoria": "esportivo"
-  },
-  {
     "id": "pagani-huayra",
     "nome": "Pagani Huayra",
     "marca": "Pagani",
@@ -128,22 +96,6 @@ const todosCarros = [
     "novo": true,
     "descricao": "O Rimac Nevera é um hipercarro totalmente elétrico que redefine os limites da aceleração e da tecnologia automotiva.",
     "route": "carros/rimac-nevera.html",
-    "categoria": "esportivo"
-  },
-  {
-    "id": "lexus-lfa",
-    "nome": "Lexus LFA",
-    "marca": "Lexus",
-    "modelo": "LFA",
-    "ano": 2012,
-    "preco": "R$ 5M",
-    "cor": "Branco Pérola",
-    "potencia": "560 HP", 
-    "imagem": "assets/images/carros/lexus_lfa.png",
-    "destaque": false,
-    "novo": false,
-    "descricao": "O Lexus LFA é um supercarro japonês lendário, famoso por seu motor V10 de alta rotação e som inconfundível.",
-    "route": "carros/lexus-lfa.html",
     "categoria": "esportivo"
   },
   {

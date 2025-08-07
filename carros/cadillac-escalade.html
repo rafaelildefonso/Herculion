@@ -1,166 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadillac Escalade - Herculion | Luxo e Imponência</title>
-    <meta
-      name="description"
-      content="Descubra o Cadillac Escalade na Herculion. SUV de luxo com motor V8, tecnologia avançada e espaço para toda a família. Agende sua visita."
-    />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/car-page.css" />
-    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
-    <style>
-      /* === CADILLAC ESCALADE - DESIGN EXCLUSIVO === */
-      .escalade-page {
-        background: #18151a;
-        color: #fff;
-        overflow-x: hidden;
-      }
-      .escalade-hero {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(
-          120deg,
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadillac Escalade - Herculion | Luxo e Imponência</title>
+  <meta name="description"
+    content="Descubra o Cadillac Escalade na Herculion. SUV de luxo com motor V8, tecnologia avançada e espaço para toda a família. Agende sua visita." />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/car-page.css" />
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+  <style>
+    /* === CADILLAC ESCALADE - DESIGN EXCLUSIVO === */
+    body {
+      background: #18151a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .escalade-hero {
+      padding-top: var(--header-height);
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg,
           #23242b 0%,
           #4b4b4b 70%,
-          #18151a 100%
-        );
-        overflow: hidden;
-      }
-      .escalade-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(
-            circle at 80% 30%,
-            rgba(53, 53, 53, 0.08) 0%,
-            transparent 70%
-          ),
-          radial-gradient(
-            circle at 20% 80%,
-            rgba(255, 255, 255, 0.04) 0%,
-            transparent 70%
-          );
-        pointer-events: none;
-      }
+          #18151a 100%);
+      overflow: hidden;
+    }
+
+    .escalade-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 80% 30%,
+          rgba(53, 53, 53, 0.08) 0%,
+          transparent 70%),
+        radial-gradient(circle at 20% 80%,
+          rgba(255, 255, 255, 0.04) 0%,
+          transparent 70%);
+      pointer-events: none;
+    }
+
+    .escalade-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .escalade-text-section {
+      position: relative;
+      z-index: 2;
+    }
+
+    .escalade-brand {
+      font-family: "Ephesis", cursive;
+      font-size: 1.8rem;
+      color: #c2c2c2;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .escalade-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(255, 215, 0, 0.18);
+    }
+
+    .escalade-tagline {
+      font-family: "Ephesis", cursive;
+      font-size: 2.2rem;
+      color: #c2c2c2;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .escalade-price {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.18);
+    }
+
+    .escalade-description {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+
+    .escalade-cta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .escalade-btn {
+      padding: 1.5rem 3rem;
+      border-radius: 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      border: 2px solid #c2c2c2;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .escalade-btn:hover {
+      background: #c2c2c2;
+      color: #18151a;
+      border-color: #c2c2c2;
+    }
+
+    .escalade-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .escalade-image-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
       .escalade-hero-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        align-items: center;
-        gap: 4rem;
-        position: relative;
-        z-index: 2;
-      }
-      .escalade-text-section {
-        position: relative;
-        z-index: 2;
-      }
-      .escalade-brand {
-        font-family: "Ephesis", cursive;
-        font-size: 1.8rem;
-        color: #c2c2c2;
-        margin-bottom: 1rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-      }
-      .escalade-title {
-        font-family: "IM FELL Double Pica SC", serif;
-        font-size: 6rem;
-        color: #fff;
-        margin-bottom: 1rem;
-        line-height: 0.9;
-        text-shadow: 0 0 30px rgba(255, 215, 0, 0.18);
-      }
-      .escalade-tagline {
-        font-family: "Ephesis", cursive;
-        font-size: 2.2rem;
-        color: #c2c2c2;
-        margin-bottom: 2rem;
-        font-style: italic;
-      }
-      .escalade-price {
-        font-size: 3.2rem;
-        font-weight: bold;
-        color: #fff;
-        margin-bottom: 2rem;
-        text-shadow: 0 0 20px rgba(255, 215, 0, 0.18);
-      }
-      .escalade-description {
-        font-size: 1.4rem;
-        line-height: 1.8;
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 3rem;
-        max-width: 500px;
-      }
-      .escalade-cta {
-        display: flex;
+        grid-template-columns: 1fr;
         gap: 2rem;
-        flex-wrap: wrap;
+        padding-top: 4rem;
       }
-      .escalade-btn {
-        padding: 1.5rem 3rem;
-        border-radius: 0;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.2rem;
-        transition: all 0.3s ease;
-        border: 2px solid #c2c2c2;
-        background: transparent;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        position: relative;
-        overflow: hidden;
+
+      .escalade-title {
+        font-size: 3.5rem;
       }
-      .escalade-btn:hover {
-        background: #c2c2c2;
-        color: #18151a;
-        border-color: #c2c2c2;
-      }
-      .escalade-image-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-      .escalade-image-section img {
-        width: 100%;
-        max-width: 600px;
-        border-radius: 18px;
-      }
-      /* Responsive */
-      @media (max-width: 900px) {
-        .escalade-hero-content {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-          padding-top: 4rem;
-        }
-        .escalade-title {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-  </head>
-  <body class="escalade-page">
+    }
+  </style>
+</head>
+
+<body>
+  <div class="desktop">
     <header class="header">
       <nav class="navigation">
         <button class="menu-button" aria-label="Menu">
-          <img
-            class="svgviewer-png-output-2"
-            src="../assets/images/v11_2.png"
-            alt="Menu icon"
-          />
+          <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
         </button>
       </nav>
       <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
@@ -195,19 +203,12 @@
               presença.
             </div>
             <div class="escalade-cta">
-              <a
-                href="../contato.html?car=Cadillac+Escalade"
-                class="escalade-btn"
-                >Tenho Interesse</a
-              >
+              <a href="../contato.html?car=Cadillac+Escalade" class="escalade-btn">Tenho Interesse</a>
               <a href="#specs" class="escalade-btn">Ver Especificações</a>
             </div>
           </div>
           <div class="escalade-image-section">
-            <img
-              src="../assets/images/carros/cadillac_escalade.png"
-              alt="Cadillac Escalade"
-            />
+            <img src="../assets/images/carros/cadillac_escalade.png" alt="Cadillac Escalade" />
           </div>
         </div>
       </section>
@@ -263,10 +264,8 @@
             </p>
           </div>
           <div class="history-image">
-            <img
-              src="../assets/images/carros/cadillac_escalade/cadillac_escalade_historia.jpg"
-              alt="História Cadillac Escalade"
-            />
+            <img src="../assets/images/carros/cadillac_escalade/cadillac_escalade_historia.jpg"
+              alt="História Cadillac Escalade" />
           </div>
         </div>
       </section>
@@ -274,18 +273,9 @@
       <section class="car-gallery-section">
         <h2>Galeria</h2>
         <div class="car-gallery">
-          <img
-            src="../assets/images/carros/cadillac_escalade/cadillac_escalade_1.avif"
-            alt="Escalade lateral"
-          />
-          <img
-            src="../assets/images/carros/cadillac_escalade/cadillac_escalade_2.avif"
-            alt="Escalade traseira"
-          />
-          <img
-            src="../assets/images/carros/cadillac_escalade/cadillac_escalade_3.avif"
-            alt="Escalade interior"
-          />
+          <img src="../assets/images/carros/cadillac_escalade/cadillac_escalade_1.avif" alt="Escalade lateral" />
+          <img src="../assets/images/carros/cadillac_escalade/cadillac_escalade_2.avif" alt="Escalade traseira" />
+          <img src="../assets/images/carros/cadillac_escalade/cadillac_escalade_3.avif" alt="Escalade interior" />
         </div>
       </section>
     </main>
@@ -295,11 +285,13 @@
         <p>O melhor de um importado, é ter um Herculion.</p>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <!-- ScrollSmoother requires ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="../js/main.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <!-- ScrollSmoother requires ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
 </html>

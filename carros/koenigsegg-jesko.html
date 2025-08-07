@@ -1,166 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Koenigsegg Jesko - Herculion | O Limite da Engenharia</title>
-    <meta
-      name="description"
-      content="Descubra o Koenigsegg Jesko na Herculion. Hipercarro sueco, V8 biturbo, 1.600 HP e tecnologia de ponta. Agende sua visita."
-    />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/car-page.css" />
-    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
-    <style>
-      /* === KOENIGSEGG JESKO - DESIGN EXCLUSIVO === */
-      .jesko-page {
-        background: #181b1e;
-        color: #fff;
-        overflow-x: hidden;
-      }
-      .jesko-hero {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(
-          120deg,
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koenigsegg Jesko - Herculion | O Limite da Engenharia</title>
+  <meta name="description"
+    content="Descubra o Koenigsegg Jesko na Herculion. Hipercarro sueco, V8 biturbo, 1.600 HP e tecnologia de ponta. Agende sua visita." />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/car-page.css" />
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+  <style>
+    /* === KOENIGSEGG JESKO - DESIGN EXCLUSIVO === */
+    body {
+      background: #181b1e;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .jesko-hero {
+      padding-top: var(--header-height);
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg,
           #181b1e 0%,
           #2e3c4f 70%,
-          #23252a 100%
-        );
-        overflow: hidden;
-      }
-      .jesko-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(
-            circle at 80% 30%,
-            rgba(0, 255, 180, 0.08) 0%,
-            transparent 70%
-          ),
-          radial-gradient(
-            circle at 20% 80%,
-            rgba(255, 255, 255, 0.04) 0%,
-            transparent 70%
-          );
-        pointer-events: none;
-      }
+          #23252a 100%);
+      overflow: hidden;
+    }
+
+    .jesko-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 80% 30%,
+          rgba(0, 255, 180, 0.08) 0%,
+          transparent 70%),
+        radial-gradient(circle at 20% 80%,
+          rgba(255, 255, 255, 0.04) 0%,
+          transparent 70%);
+      pointer-events: none;
+    }
+
+    .jesko-hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .jesko-text-section {
+      position: relative;
+      z-index: 2;
+    }
+
+    .jesko-brand {
+      font-family: "Ephesis", cursive;
+      font-size: 1.8rem;
+      color: #00ffb4;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .jesko-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 0.9;
+      text-shadow: 0 0 30px rgba(0, 255, 180, 0.18);
+    }
+
+    .jesko-tagline {
+      font-family: "Ephesis", cursive;
+      font-size: 2.2rem;
+      color: #00ffb4;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .jesko-price {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 20px rgba(0, 255, 180, 0.18);
+    }
+
+    .jesko-description {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+
+    .jesko-cta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .jesko-btn {
+      padding: 1.5rem 3rem;
+      border-radius: 0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      border: 2px solid #00ffb4;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .jesko-btn:hover {
+      background: #00ffb4;
+      color: #181b1e;
+      border-color: #00ffb4;
+    }
+
+    .jesko-image-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .jesko-image-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 18px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
       .jesko-hero-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        align-items: center;
-        gap: 4rem;
-        position: relative;
-        z-index: 2;
-      }
-      .jesko-text-section {
-        position: relative;
-        z-index: 2;
-      }
-      .jesko-brand {
-        font-family: "Ephesis", cursive;
-        font-size: 1.8rem;
-        color: #00ffb4;
-        margin-bottom: 1rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-      }
-      .jesko-title {
-        font-family: "IM FELL Double Pica SC", serif;
-        font-size: 6rem;
-        color: #fff;
-        margin-bottom: 1rem;
-        line-height: 0.9;
-        text-shadow: 0 0 30px rgba(0, 255, 180, 0.18);
-      }
-      .jesko-tagline {
-        font-family: "Ephesis", cursive;
-        font-size: 2.2rem;
-        color: #00ffb4;
-        margin-bottom: 2rem;
-        font-style: italic;
-      }
-      .jesko-price {
-        font-size: 3.2rem;
-        font-weight: bold;
-        color: #fff;
-        margin-bottom: 2rem;
-        text-shadow: 0 0 20px rgba(0, 255, 180, 0.18);
-      }
-      .jesko-description {
-        font-size: 1.4rem;
-        line-height: 1.8;
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 3rem;
-        max-width: 500px;
-      }
-      .jesko-cta {
-        display: flex;
+        grid-template-columns: 1fr;
         gap: 2rem;
-        flex-wrap: wrap;
+        padding-top: 4rem;
       }
-      .jesko-btn {
-        padding: 1.5rem 3rem;
-        border-radius: 0;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.2rem;
-        transition: all 0.3s ease;
-        border: 2px solid #00ffb4;
-        background: transparent;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        position: relative;
-        overflow: hidden;
+
+      .jesko-title {
+        font-size: 3.5rem;
       }
-      .jesko-btn:hover {
-        background: #00ffb4;
-        color: #181b1e;
-        border-color: #00ffb4;
-      }
-      .jesko-image-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-      .jesko-image-section img {
-        width: 100%;
-        max-width: 600px;
-        border-radius: 18px;
-      }
-      /* Responsive */
-      @media (max-width: 900px) {
-        .jesko-hero-content {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-          padding-top: 4rem;
-        }
-        .jesko-title {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-  </head>
-  <body class="jesko-page">
+    }
+  </style>
+</head>
+
+<body>
+  <div class="desktop">
     <header class="header">
       <nav class="navigation">
         <button class="menu-button" aria-label="Menu">
-          <img
-            class="svgviewer-png-output-2"
-            src="../assets/images/v11_2.png"
-            alt="Menu icon"
-          />
+          <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
         </button>
       </nav>
       <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
@@ -193,17 +201,12 @@
               exclusividade absoluta.
             </div>
             <div class="jesko-cta">
-              <a href="../contato.html?car=Koenigsegg+Jesko" class="jesko-btn"
-                >Tenho Interesse</a
-              >
+              <a href="../contato.html?car=Koenigsegg+Jesko" class="jesko-btn">Tenho Interesse</a>
               <a href="#specs" class="jesko-btn">Ver Especificações</a>
             </div>
           </div>
           <div class="jesko-image-section">
-            <img
-              src="../assets/images/carros/koenigsegg_jesko.png"
-              alt="Koenigsegg Jesko"
-            />
+            <img src="../assets/images/carros/koenigsegg_jesko.png" alt="Koenigsegg Jesko" />
           </div>
         </div>
       </section>
@@ -259,10 +262,8 @@
             </p>
           </div>
           <div class="history-image">
-            <img
-              src="../assets/images/carros/koenigsegg_jesko/koenigsegg_jesko_historia.jpg"
-              alt="História Koenigsegg Jesko"
-            />
+            <img src="../assets/images/carros/koenigsegg_jesko/koenigsegg_jesko_historia.jpg"
+              alt="História Koenigsegg Jesko" />
           </div>
         </div>
       </section>
@@ -270,18 +271,9 @@
       <section class="car-gallery-section">
         <h2>Galeria</h2>
         <div class="car-gallery">
-          <img
-            src="../assets/images/carros/koenigsegg_jesko/koenigsegg_jesko_1.jpg"
-            alt="Jesko lateral"
-          />
-          <img
-            src="../assets/images/carros/koenigsegg_jesko/koenigsegg_jesko_2.jpg"
-            alt="Jesko traseira"
-          />
-          <img
-            src="../assets/images/carros/koenigsegg_jesko/koenigsegg_jesko_3.jpg"
-            alt="Jesko interior"
-          />
+          <img src="../assets/images/carros/koenigsegg_jesko/koenigsegg_jesko_1.jpg" alt="Jesko lateral" />
+          <img src="../assets/images/carros/koenigsegg_jesko/koenigsegg_jesko_2.jpg" alt="Jesko traseira" />
+          <img src="../assets/images/carros/koenigsegg_jesko/koenigsegg_jesko_3.jpg" alt="Jesko interior" />
         </div>
       </section>
     </main>
@@ -291,11 +283,13 @@
         <p>O melhor de um importado, é ter um Herculion.</p>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <!-- ScrollSmoother requires ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="../js/main.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <!-- ScrollSmoother requires ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
 </html>
