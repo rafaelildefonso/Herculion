@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../css/global.css" />
   <link rel="stylesheet" href="../css/car-page.css" />
+  <link rel="stylesheet" href="../css/modal-3d.css" />
   <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
   <style>
     /* === BUGATTI TOURBILLON - DESIGN EXCLUSIVO === */
@@ -163,7 +164,7 @@
   </style>
 </head>
 
-<body>
+<body data-model-3d="4f63f5a74611477989cefd9861b9784a">
   <div class="desktop">
     <header class="header">
       <nav class="navigation">
@@ -267,12 +268,76 @@
         </div>
       </section>
       <!-- Galeria de Imagens -->
-      <section class="car-gallery-section">
-        <h2>Galeria</h2>
-        <div class="car-gallery">
-          <img src="../assets/images/carros/bugatti_tourbillon/bugatti_tourbillon_1.jpg" alt="Tourbillon lateral" />
-          <img src="../assets/images/carros/bugatti_tourbillon/bugatti_tourbillon_2.jpg" alt="Tourbillon traseira" />
-          <img src="../assets/images/carros/bugatti_tourbillon/bugatti_tourbillon_3.jpg" alt="Tourbillon interior" />
+      <!-- Galeria Section Added Here -->
+      <style>
+        .tourbillon-gallery {
+          padding: 6rem 2rem;
+          background: #0a0a0a;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .tourbillon-gallery::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .tourbillon-gallery-title {
+          font-family: "IM FELL Double Pica SC", serif;
+          font-size: 2.5rem;
+          color: #e8b54e;
+          text-align: center;
+          margin-bottom: 3rem;
+          text-shadow: 0 0 12px rgba(232, 181, 78, 0.3);
+        }
+
+        .tourbillon-gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+          max-width: 1100px;
+          margin: 0 auto;
+        }
+
+        .tourbillon-gallery-img {
+          width: 100%;
+          border-radius: 10px;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          object-fit: cover;
+          max-height: 220px;
+          background: #111;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tourbillon-gallery-img:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+          .tourbillon-gallery-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .tourbillon-gallery-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
+
+      <section class="tourbillon-gallery">
+        <h2 class="tourbillon-gallery-title">Galeria</h2>
+        <div class="tourbillon-gallery-grid">
+          <img src="../assets/images/carros/bugatti_tourbillon/bugatti_tourbillon_1.jpg" alt="Bugatti Tourbillon 1" class="tourbillon-gallery-img" />
+          <img src="../assets/images/carros/bugatti_tourbillon/bugatti_tourbillon_2.jpg" alt="Bugatti Tourbillon 2" class="tourbillon-gallery-img" />
+          <img src="../assets/images/carros/bugatti_tourbillon/bugatti_tourbillon_3.jpg" alt="Bugatti Tourbillon 3" class="tourbillon-gallery-img" />
         </div>
       </section>
     </main>
@@ -288,7 +353,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <!-- ScrollSmoother requires ScrollTrigger -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js"></script>  
+  <script src="../js/modal-3d.js"></script>
 </body>
 
 </html>

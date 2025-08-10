@@ -19,6 +19,22 @@ const todosCarros = [
     "categoria": "esportivo"
   },
   {
+    "id": "lamborghini-revuelto",
+    "nome": "Lamborghini Revuelto",
+    "marca": "Lamborghini",
+    "modelo": "Revuelto",
+    "ano": 2024,
+    "preco": "R$ 6.2M",
+    "cor": "Laranja",
+    "potencia": "1015 HP", 
+    "imagem": "assets/images/carros/lamborghini_revuelto.png",
+    "destaque": true,
+    "novo": true,
+    "descricao": "O Revuelto é o primeiro superesportivo V12 híbrido plug-in da Lamborghini, estabelecendo um novo paradigma em performance e design.",
+    "route": "carros/lamborghini-revuelto.html",
+    "categoria": "esportivo"
+  },
+  {
     "id": "mclaren-720s",
     "nome": "McLaren 720S",
     "marca": "McLaren",
