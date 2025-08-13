@@ -7,7 +7,10 @@ ScrollSmoother.create({
   effects: true, // looks for data-speed and data-lag attributes on elements
   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
   onUpdate: (event) => {
-    document.querySelector(".header").classList.toggle("scrolled", event.progress > 0);
+    const header = document.querySelector(".header");
+    if(event.progress > 0){
+      header.classList.toggle("scrolled", event.progress > 0);
+    }
   }
 });
 

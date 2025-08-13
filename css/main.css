@@ -78,16 +78,22 @@ h6::-moz-selection,
 
 .intro-container {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  width: 100dvw;
+  height: 100dvh;
   z-index: 99999;
-  background-color: #000;
+  background-color: #0b0d0f;
+  align-items: center;
+  justify-content: center;
+  /* padding: 10rem; */
 }
 
 .intro-video {
   /* object-fit: cover; */
-  width: 100%;
-  height: 100%;
+  background-color: #0b0d0f;
+  width: 40%;
+  height: 40%;
+  opacity: 90%;
   /* height: fit-content; */
 }
 
@@ -529,12 +535,11 @@ h6::-moz-selection,
   z-index: 1000;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
   background-color: transparent;
-  
 }
 
 .header.scrolled {
   /* background-color: rgba(18, 18, 18, 0.85); */
-  background: rgba(18, 18, 18, 0.95);
+  /* background: rgba(18, 18, 18, 0.95); */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
