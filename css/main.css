@@ -121,7 +121,7 @@ h6::-moz-selection,
 }
 
 /* Header fixo para scroll suave */
-.header {
+/* .header {
   position: fixed;
   top: 0;
   left: 0;
@@ -132,7 +132,7 @@ h6::-moz-selection,
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 /* Ajuste para seções com scroll suave */
 .hero-section,
@@ -329,7 +329,7 @@ h6::-moz-selection,
 
 .footer-links a:hover {
   color: #ffffff;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
 }
 
 .footer-links a:hover::before {
@@ -529,11 +529,15 @@ h6::-moz-selection,
   z-index: 1000;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
   background-color: transparent;
+  
 }
 
 .header.scrolled {
-  background-color: rgba(18, 18, 18, 0.85);
+  /* background-color: rgba(18, 18, 18, 0.85); */
+  background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .brand-name {
