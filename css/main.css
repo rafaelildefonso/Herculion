@@ -39,14 +39,10 @@ a {
 
 /* === LUXURY TEXT SELECTION === */
 ::selection {
-  background: linear-gradient(120deg, #ffd700 0%, #b8860b 100%);
-  color: #181818;
-  text-shadow: 0 1px 8px #fffbe6, 0 0 2px #ffd700;
+  background: rgba(255, 217, 0, 0.3);
 }
 ::-moz-selection {
-  background: linear-gradient(120deg, #ffd700 0%, #b8860b 100%);
-  color: #181818;
-  text-shadow: 0 1px 8px #fffbe6, 0 0 2px #ffd700;
+  background: rgba(255, 217, 0, 0.3);;
 }
 
 h1::selection,
@@ -581,10 +577,10 @@ h6::-moz-selection,
 .side-menu {
   position: fixed;
   top: 0;
-  right: -100vw;
+  right: -120vw;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #232323 100%);
+  background: linear-gradient(335deg,rgba(64, 64, 64, 1) 0%, rgba(43, 43, 43, 1) 50%, rgba(110, 110, 110, 1) 100%);
   opacity: 1;
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7), 0 0 0 100vw rgba(0, 0, 0, 0.3);
   z-index: 1001;
@@ -592,7 +588,7 @@ h6::-moz-selection,
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   transform: translateX(105vw) skewX(-12deg) scale(0.98);
   transition: transform 0.7s cubic-bezier(0.77, 0, 0.18, 1),
@@ -608,12 +604,7 @@ h6::-moz-selection,
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(18, 18, 18, 0.3) 0%,
-    rgba(26, 26, 26, 0.2) 50%,
-    rgba(35, 35, 35, 0.1) 100%
-  );
+  background: linear-gradient(135deg,rgba(64, 64, 64, 1) 0%, rgba(43, 43, 43, 1) 50%, rgba(110, 110, 110, 1) 100%);
   pointer-events: none;
 }
 
@@ -625,18 +616,18 @@ h6::-moz-selection,
 /* Marca d'água Herculion - Arte pintada à mão */
 .side-menu .menu-watermark {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 60%;
+  top: 60%;
   font-family: "Ephesis", "Island Moments", cursive;
-  font-size: 30vw;
+  font-size: 20vw;
   color: rgba(255, 255, 255, 1);
   white-space: nowrap;
   user-select: none;
   pointer-events: none;
   z-index: 2;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 0 8px rgba(255, 255, 255, 0.05),
+  text-shadow: 0 4px 20px rgba(148, 148, 148, 0.9), 0 0 8px rgba(255, 255, 255, 0.05),
     0 0 16px rgba(255, 215, 0, 0.03);
-  filter: blur(1px);
+  /* filter: blur(1px); */
   transform: translate(-50%, -50%) rotate(-8deg) skewX(-2deg);
   opacity: 0.2;
 }
@@ -678,14 +669,15 @@ h6::-moz-selection,
   justify-content: center;
   z-index: 3;
   text-align: center;
+  margin-left: 10%;
 }
 
 .side-menu ul li {
-  margin: 1.5rem 0;
+  margin: 0.5rem 0;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
 }
 
@@ -742,7 +734,7 @@ h6::-moz-selection,
     max-width: 320px;
   }
   .side-menu ul li {
-    margin: 1.3rem 0;
+    margin: 1.0rem 0;
   }
   .side-menu ul li a {
     font-size: 1.6rem;
@@ -854,12 +846,16 @@ h6::-moz-selection,
     margin: 0.8rem 0;
   }
   .side-menu ul li a {
-    font-size: 1.1rem;
+    font-size: 0.4rem;
     letter-spacing: 1px;
     padding: 0.15rem 0.3rem;
   }
   .side-menu .menu-watermark {
     /* font-size: 85px;  */
+    left: unset;
+    top: unset;
+    right: -25%;
+    bottom: -10%;
   }
   .side-menu .close-btn {
     top: 0.8rem;
@@ -923,7 +919,7 @@ h6::-moz-selection,
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 101%;
   background: linear-gradient(
     to top,
     rgba(18, 18, 18, 1) 5%,
@@ -1837,8 +1833,8 @@ h6::-moz-selection,
 
   /* Menu em tela cheia para mobile pequeno */
   .side-menu ul li a {
-    font-size: 1.5rem;
-    padding: 1.2rem 1.5rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
   }
 
   .side-menu .close-btn {
@@ -2191,12 +2187,12 @@ button:hover,
   bottom: 0;
   background: radial-gradient(
       circle at 30% 70%,
-      rgba(255, 215, 0, 0.03) 0%,
+      rgba(255, 237, 132, 0.03) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 70% 30%,
-      rgba(255, 215, 0, 0.02) 0%,
+      rgba(255, 241, 159, 0.02) 0%,
       transparent 50%
     );
   pointer-events: none;
