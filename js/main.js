@@ -8,9 +8,7 @@ ScrollSmoother.create({
   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
   onUpdate: (event) => {
     const header = document.querySelector(".header");
-    if(event.progress > 0){
-      header.classList.toggle("scrolled", event.progress > 0);
-    }
+    header.classList.toggle("scrolled", event.progress > 0);
   }
 });
 
