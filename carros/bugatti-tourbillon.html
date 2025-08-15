@@ -161,6 +161,165 @@
         font-size: 3.5rem;
       }
     }
+
+    /* === SEÇÃO INTERATIVA - SOM E VÍDEO DO BUGATTI TOURBILLON === */
+    .tourbillon-interactive-section {
+      position: relative;
+      padding: 6rem 5vw;
+      text-align: center;
+      background: #0a0a0a;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    .tourbillon-interactive-video {
+      width: 100dvw;
+      /* border-radius: 10px; */
+      max-width: 100vw;
+      height: auto;
+      object-fit: cover;
+      /* min-height: 200px; */
+      max-height: 100vh;
+      background: #000;
+    }
+
+    .tourbillon-interactive-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(10, 10, 18, 0.8);
+      color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .tourbillon-interactive-section:hover .tourbillon-interactive-overlay,
+    .tourbillon-interactive-section:focus-within .tourbillon-interactive-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .tourbillon-interactive-section.space-pressed .tourbillon-interactive-overlay {
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    .tourbillon-interactive-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .tourbillon-interactive-overlay p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .key {
+      font-weight: bold;
+      color: #00b4ff;
+    }
+
+    @media (max-width: 700px) {
+      .tourbillon-interactive-section {
+        padding: 2rem 0.5rem;
+        min-height: 220px;
+        height: auto;
+        flex-direction: column;
+      }
+
+      .tourbillon-interactive-video {
+        width: 100vw;
+        max-width: 100vw;
+        min-height: 140px;
+        max-height: 35vh;
+      }
+
+      .tourbillon-interactive-overlay {
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .tourbillon-interactive-overlay h2 {
+        font-size: 1.3rem;
+      }
+
+      .tourbillon-interactive-overlay p {
+        font-size: 1rem;
+      }
+    }
+
+    /* === GALERIA DE IMAGENS - ESTILOS EXCLUSIVOS === */
+    .tourbillon-gallery {
+      padding: 6rem 2rem;
+      background: #0a0a0a;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tourbillon-gallery::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    }
+
+    .tourbillon-gallery-title {
+      font-family: "IM FELL Double Pica SC", serif;
+      font-size: 2.5rem;
+      color: #e8b54e;
+      text-align: center;
+      margin-bottom: 3rem;
+      text-shadow: 0 0 12px rgba(232, 181, 78, 0.3);
+    }
+
+    .tourbillon-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .tourbillon-gallery-img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      object-fit: cover;
+      max-height: 220px;
+      background: #111;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tourbillon-gallery-img:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .tourbillon-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tourbillon-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -189,7 +348,7 @@
     <main>
       <!-- Hero Section -->
       <section class="tourbillon-hero">
-        <div class="tourbillon-hero-content">
+        <div class="tourbillon-hero-content car-details">
           <div class="tourbillon-text-section">
             <div class="tourbillon-brand">Bugatti</div>
             <div class="tourbillon-title">Tourbillon</div>
@@ -265,6 +424,27 @@
             <img src="../assets/images/carros/bugatti_tourbillon/bugatti_tourbillon_historia.jpg"
               alt="História Bugatti Tourbillon" />
           </div>
+        </div>
+      </section>
+      <!-- Seção Interativa: Som e Vídeo do Bugatti Tourbillon -->
+      <section class="tourbillon-interactive-section" id="tourbillon-interactive">
+        <video
+          class="tourbillon-interactive-video"
+          src="../assets/videos/bugatti_tourbillon_sound.mp4"
+          preload="auto"
+          playsinline
+          muted
+        ></video>
+        <audio
+          class="tourbillon-interactive-audio"
+          src="../assets/audios/bugatti_tourbillon_engine.mp3"
+          preload="auto"
+        ></audio>
+        <div class="tourbillon-interactive-overlay">
+          <h2>Experimente o Som do Tourbillon</h2>
+          <p>
+            Mantenha pressionada a tecla <span class="key">Espaço</span> enquanto estiver nesta seção para ouvir e ver o Bugatti Tourbillon em ação.
+          </p>
         </div>
       </section>
       <!-- Galeria de Imagens -->

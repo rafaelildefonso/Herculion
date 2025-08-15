@@ -42,7 +42,7 @@ a {
   background: rgba(255, 217, 0, 0.3);
 }
 ::-moz-selection {
-  background: rgba(255, 217, 0, 0.3);;
+  background: rgba(255, 217, 0, 0.3);
 }
 
 h1::selection,
@@ -502,6 +502,12 @@ h6::-moz-selection,
   .footer-social .social-icons {
     justify-content: center;
   }
+
+  /* Mobile: imagem do carro antes das informações */
+  .car-details {
+    display: flex !important;
+    flex-direction: column-reverse;
+  }
 }
 
 /* Correção para o carrossel */
@@ -580,7 +586,12 @@ h6::-moz-selection,
   right: -120vw;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(335deg,rgba(64, 64, 64, 1) 0%, rgba(43, 43, 43, 1) 50%, rgba(110, 110, 110, 1) 100%);
+  background: linear-gradient(
+    335deg,
+    rgba(64, 64, 64, 1) 0%,
+    rgba(43, 43, 43, 1) 50%,
+    rgba(110, 110, 110, 1) 100%
+  );
   opacity: 1;
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7), 0 0 0 100vw rgba(0, 0, 0, 0.3);
   z-index: 1001;
@@ -604,7 +615,12 @@ h6::-moz-selection,
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg,rgba(64, 64, 64, 1) 0%, rgba(43, 43, 43, 1) 50%, rgba(110, 110, 110, 1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(64, 64, 64, 1) 0%,
+    rgba(43, 43, 43, 1) 50%,
+    rgba(110, 110, 110, 1) 100%
+  );
   pointer-events: none;
 }
 
@@ -625,8 +641,8 @@ h6::-moz-selection,
   user-select: none;
   pointer-events: none;
   z-index: 2;
-  text-shadow: 0 4px 20px rgba(148, 148, 148, 0.9), 0 0 8px rgba(255, 255, 255, 0.05),
-    0 0 16px rgba(255, 215, 0, 0.03);
+  text-shadow: 0 4px 20px rgba(148, 148, 148, 0.9),
+    0 0 8px rgba(255, 255, 255, 0.05), 0 0 16px rgba(255, 215, 0, 0.03);
   /* filter: blur(1px); */
   transform: translate(-50%, -50%) rotate(-8deg) skewX(-2deg);
   opacity: 0.2;
@@ -734,7 +750,7 @@ h6::-moz-selection,
     max-width: 320px;
   }
   .side-menu ul li {
-    margin: 1.0rem 0;
+    margin: 1rem 0;
   }
   .side-menu ul li a {
     font-size: 1.6rem;
@@ -1626,326 +1642,80 @@ h6::-moz-selection,
   opacity: 0.8;
 }
 
-/* === RESPONSIVE STYLES === */
-@media (max-width: 1200px) {
-  .experience-text h2,
-  .section-title {
-    font-size: 60px;
-  }
-
-  .tagline {
-    font-size: 50px;
-  }
-}
-
-@media (max-width: 992px) {
-  .header {
-    padding: 1rem 2rem;
-  }
-
-  .brand-name {
-    font-size: 40px;
-  }
-
-  .hero-title {
-    font-size: 1.5rem;
-  }
-
-  .car-model {
-    font-size: 80px;
-  }
-
-  .car-model .brand {
-    font-size: 60px;
-  }
-
-  .tagline {
-    font-size: 48px;
-  }
-
-  .experience-content,
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .experience-text,
-  .footer-brand,
-  .footer-links,
-  .footer-social {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .experience-text h2::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .footer-links h4::after,
-  .footer-social h4::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .footer-links a::before {
-    display: none;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding: 1rem;
-  }
-
-  .brand-name {
-    font-size: 36px;
-  }
-
-  .hero-content {
-    padding: 0 1rem;
-  }
-
-  .hero-title {
-    font-size: 1.25rem;
-  }
-
-  .car-model {
-    font-size: 60px;
-  }
-
-  .car-model .brand {
-    font-size: 48px;
-  }
-
-  .tagline,
-  .section-title,
-  .experience-text h2 {
-    font-size: 36px;
-  }
-
-  .highlights-section,
-  .experience-section,
-  .footer {
-    padding: 60px 20px;
-  }
-
-  .highlight-item {
-    padding: 20px;
-  }
-
-  .cta-button {
-    padding: 12px 24px;
-    font-size: 16px;
-  }
-
-  .slider-controls {
-    gap: 100px;
-  }
-
-  .slider-button {
-    width: 50px;
-    height: 50px;
-  }
-
-  .slider-button img {
-    width: 16px;
-    height: 24px;
-  }
-
-  /* Menu em tela cheia para mobile */
-  .side-menu ul li a {
-    font-size: 1.8rem;
-    padding: 1.5rem 2rem;
-  }
-
-  .side-menu .close-btn {
-    top: 1.5rem;
-    right: 1.5rem;
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    padding: 0.75rem;
-  }
-
-  .brand-name {
-    font-size: 32px;
-  }
-
-  .menu-button img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .hero-title {
-    font-size: 1.1rem;
-  }
-
-  .car-model {
-    font-size: 48px;
-  }
-
-  .car-model .brand {
-    font-size: 36px;
-  }
-
-  .tagline,
-  .section-title,
-  .experience-text h2 {
-    font-size: 28px;
-  }
-
-  .highlights-section,
-  .experience-section,
-  .footer {
-    padding: 50px 15px;
-  }
-
-  .highlight-item h3 {
-    font-size: 20px;
-  }
-
-  .highlight-item p,
-  .experience-text p {
-    font-size: 15px;
-  }
-
-  .experience-text h2::after {
-    width: 60px;
-  }
-
-  .footer-brand h2 {
-    font-size: 36px;
-  }
-
-  .footer-links,
-  .footer-social {
-    min-width: 100%;
-  }
-
-  /* Menu em tela cheia para mobile pequeno */
-  .side-menu ul li a {
-    font-size: 1.2rem;
-    padding: 0.5rem 1.5rem;
-  }
-
-  .side-menu .close-btn {
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-  }
-}
-
-.highlight-item img {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 1.5rem;
-}
-
-.highlight-item h3 {
-  font-family: "Instrument Serif", serif;
-  font-size: 1.8rem;
-  color: var(--accent-color);
-  margin-bottom: 1rem;
-}
-
-.highlight-item p {
-  font-family: "Inria Sans", sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-light);
-}
-
-.footer {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  padding: 4rem 2rem 2rem;
-  border-top: 1px solid var(--border-color);
-}
-
-.footer-content {
+/* Seção Interativa Bugatti Tourbillon */
+.tourbillon-interactive-section {
+  position: relative;
+  width: 100vw;
+  min-height: 60vh;
+  height: 70vh;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto 3rem;
-}
-
-.footer-brand,
-.footer-links,
-.footer-social {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-brand .brand-name {
-  font-family: "Ephesis", "Island Moments", cursive;
-  font-size: 40px;
-  margin-bottom: 1rem;
-}
-
-.footer-brand p {
-  font-size: 0.9rem;
-  max-width: 300px;
-}
-
-.footer h4 {
-  font-family: "Instrument Serif", serif;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--secondary-color);
-}
-
-.footer-links ul {
-  list-style: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
   padding: 0;
+  background: #0a0a12;
 }
 
-.footer-links ul li {
-  margin-bottom: 0.8rem;
+.tourbillon-interactive-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.4;
+  transition: opacity 0.4s;
+  pointer-events: none;
 }
 
-.footer-links ul li a {
-  color: var(--text-light);
-  text-decoration: none;
-  transition: color 0.3s ease;
+.tourbillon-interactive-section.active .tourbillon-interactive-video {
+  opacity: 1;
 }
 
-.footer-links ul li a:hover {
-  color: var(--accent-color);
-}
-
-.footer-social a {
-  display: block;
-  margin-bottom: 0.8rem;
-  color: var(--text-light);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-social a:hover {
-  color: var(--accent-color);
-}
-
-.footer-bottom {
+.tourbillon-interactive-overlay {
+  position: relative;
+  z-index: 2;
+  color: #fff;
   text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border-color);
-  max-width: 1200px;
+  background: rgba(10, 10, 18, 0.45);
+  padding: 2rem 2rem;
+  border-radius: 18px;
+  /* max-width: 90vw; */
   margin: 0 auto;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
 }
 
-.footer-bottom p {
-  font-size: 0.9rem;
+.tourbillon-interactive-overlay h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.tourbillon-interactive-overlay .key {
+  display: inline-block;
+  background: #222;
+  color: #e8b54e;
+  border-radius: 6px;
+  padding: 0.2em 0.7em;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 0 0.2em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 700px) {
+  .tourbillon-interactive-section {
+    min-height: 40vh;
+    height: 45vh;
+  }
+  .tourbillon-interactive-overlay h2 {
+    font-size: 1.3rem;
+  }
+  .tourbillon-interactive-overlay {
+    padding: 1rem 0.5rem;
+  }
 }
 
 /* Suavizar hover em botões e links */
@@ -2031,6 +1801,18 @@ button:hover,
   .slider-button {
     width: 50px;
     height: 50px;
+  }
+
+  /* Menu em tela cheia para mobile */
+  .side-menu ul li a {
+    font-size: 1.8rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .side-menu .close-btn {
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -2483,226 +2265,6 @@ button:hover,
   width: 100%;
   height: 100%;
   border-radius: 20px;
-}
-
-@media (max-width: 900px) {
-  .contato-hero .hero-title {
-    font-size: 3.5rem;
-  }
-
-  .contato-hero .hero-subtitle {
-    font-size: 2rem;
-  }
-
-  .contato-hero .hero-subtitle .brand {
-    font-size: 2.5rem;
-  }
-
-  .contato-hero .hero-subtitle .subtitle {
-    font-size: 1.5rem;
-  }
-
-  .contato-content {
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .contato-form-container,
-  .contato-info-container {
-    max-width: 100%;
-    min-width: 0;
-    width: 100%;
-    padding: 40px 30px;
-  }
-
-  .mapa {
-    max-width: 100%;
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contato-hero .hero-title {
-    font-size: 2.8rem;
-  }
-
-  .contato-hero .hero-subtitle {
-    font-size: 1.8rem;
-  }
-
-  .contato-hero .hero-subtitle .brand {
-    font-size: 2.2rem;
-  }
-
-  .contato-hero .hero-description {
-    font-size: 1.1rem;
-  }
-
-  .contato-form-container,
-  .contato-info-container {
-    padding: 30px 20px;
-  }
-
-  .mapa {
-    height: 250px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contato-hero .hero-title {
-    font-size: 2.2rem;
-  }
-
-  .contato-hero .hero-subtitle {
-    font-size: 1.5rem;
-  }
-
-  .contato-hero .hero-subtitle .brand {
-    font-size: 1.8rem;
-  }
-
-  .contato-hero .hero-description {
-    font-size: 1rem;
-  }
-
-  .contato-form-container,
-  .contato-info-container {
-    padding: 25px 15px;
-  }
-
-  .mapa {
-    height: 200px;
-  }
-}
-
-/* === CONTATO PAGE STYLES === */
-.contato-hero {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #232323 100%);
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contato-hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(18, 18, 18, 0.8) 0%,
-    rgba(18, 18, 18, 0.3) 50%,
-    rgba(18, 18, 18, 0) 100%
-  );
-  pointer-events: none;
-}
-
-.contato-hero .hero-content {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  max-width: 800px;
-  padding: 0 2rem;
-}
-
-.contato-hero .hero-title {
-  font-family: "IM FELL Double Pica SC", serif;
-  font-size: 3.5rem;
-  color: #ffffff;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-}
-
-.contato-hero .hero-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 2px;
-  background: var(--accent-color);
-  margin: 1rem auto 0;
-}
-
-.contato-hero .hero-subtitle {
-  font-family: "Inria Sans", sans-serif;
-  font-size: 1.5rem;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-}
-
-.contato-hero .hero-subtitle .brand {
-  color: var(--accent-color);
-  font-weight: 400;
-}
-
-.contato-hero .hero-subtitle .subtitle {
-  color: #cccccc;
-  font-size: 1.2rem;
-  display: block;
-  margin-top: 0.5rem;
-}
-
-.contato-hero .hero-description {
-  font-family: "Inria Sans", sans-serif;
-  font-size: 1.1rem;
-  color: #cccccc;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Elementos flutuantes decorativos */
-.contato-hero .floating-elements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.contato-hero .floating-element {
-  position: absolute;
-  opacity: 0.1;
-  animation: float 6s ease-in-out infinite;
-}
-
-.contato-hero .floating-element:nth-child(1) {
-  top: 20%;
-  left: 10%;
-  font-size: 2rem;
-  animation-delay: 0s;
-}
-
-.contato-hero .floating-element:nth-child(2) {
-  top: 60%;
-  right: 15%;
-  font-size: 1.5rem;
-  animation-delay: 2s;
-}
-
-.contato-hero .floating-element:nth-child(3) {
-  bottom: 30%;
-  left: 20%;
-  font-size: 1.8rem;
-  animation-delay: 4s;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(5deg);
-  }
 }
 
 /* === BUSCA PAGE STYLES === */

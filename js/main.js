@@ -228,18 +228,22 @@ document.addEventListener("DOMContentLoaded", () => {
         type === "car"
           ? { maxHeight: "200px" }
           : {
-              maxWidth: "300px",
-              maxHeight: "400px",
-              position: { ...sizeConfig.position, top: "25%" },
+              width: "90vw",
+              maxWidth: "95vw",
+              height: "auto",
+              maxHeight: "none",
+              position: { ...sizeConfig.position, top: "10%" },
             };
     } else if (screenWidth <= 768) {
       adjustments =
         type === "car"
           ? { maxHeight: "250px" }
           : {
-              maxWidth: "450px",
-              maxHeight: "500px",
-              position: { ...sizeConfig.position, top: "20%" },
+              width: "70vw",
+              maxWidth: "80vw",
+              height: "auto",
+              maxHeight: "none",
+              position: { ...sizeConfig.position, top: "15%" },
             };
     } else if (screenWidth <= 992) {
       adjustments =
@@ -449,3 +453,127 @@ function animateCount(el) {
   };
   requestAnimationFrame(step);
 }
+
+// === Seção Interativa Bugatti Tourbillon ===
+document.addEventListener("DOMContentLoaded", () => {
+  const interactiveSection = document.getElementById("tourbillon-interactive");
+  if (!interactiveSection) return;
+
+  const video = interactiveSection.querySelector(".tourbillon-interactive-video");
+  const audio = interactiveSection.querySelector(".tourbillon-interactive-audio");
+  let isActive = false;
+  let isSpacePressed = false;
+  let fadeOutInterval = null;
+
+  // Detecta se é mobile/touch
+  function isMobile() {
+    return window.matchMedia("(max-width: 900px)").matches || 'ontouchstart' in window;
+  }
+
+  // Usando GSAP ScrollTrigger para ativar/desativar controles
+  if (window.ScrollTrigger) {
+    ScrollTrigger.create({
+      trigger: interactiveSection,
+      start: "top 60%",
+      end: "bottom 40%",
+      onEnter: () => { isActive = true; },
+      onEnterBack: () => { isActive = true; },
+      onLeave: () => { isActive = false; stopMedia(); },
+      onLeaveBack: () => { isActive = false; stopMedia(); }
+    });
+  } else {
+    // fallback para IntersectionObserver se GSAP não estiver disponível
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          isActive = true;
+        } else {
+          isActive = false;
+          stopMedia();
+        }
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(interactiveSection);
+  }
+
+  function playMedia() {
+    if (!isActive || isSpacePressed) return;
+    isSpacePressed = true;
+    interactiveSection.classList.add("space-pressed");
+    video.currentTime = 0;
+    audio.currentTime = 0;
+    video.play();
+    audio.volume = 1;
+    audio.play();
+    interactiveSection.classList.add("active");
+  }
+  function stopMedia() {
+    if (!isSpacePressed) return;
+    isSpacePressed = false;
+    interactiveSection.classList.remove("space-pressed");
+    if (fadeOutInterval) clearInterval(fadeOutInterval);
+    fadeOutInterval = setInterval(() => {
+      if (audio.volume > 0.05) {
+        audio.volume = Math.max(0, audio.volume - 0.05);
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.volume = 1;
+        clearInterval(fadeOutInterval);
+        fadeOutInterval = null;
+      }
+    }, 30);
+    video.pause();
+    video.currentTime = 0;
+    interactiveSection.classList.remove("active");
+  }
+
+  // Desktop: barra de espaço
+  window.addEventListener("keydown", (e) => {
+    if (e.code === "Space" && isActive && !isMobile()) {
+      e.preventDefault();
+      if (!isSpacePressed) playMedia();
+    }
+  });
+  window.addEventListener("keyup", (e) => {
+    if (e.code === "Space" && isSpacePressed && !isMobile()) {
+      e.preventDefault();
+      stopMedia();
+    }
+  });
+
+  // Mobile: toque/click na seção
+  if (isMobile()) {
+    let pointerDown = false;
+    // Para touch e mouse
+    const startEvt = 'ontouchstart' in window ? 'touchstart' : 'mousedown';
+    const endEvt = 'ontouchend' in window ? 'touchend' : 'mouseup';
+
+    interactiveSection.addEventListener(startEvt, (e) => {
+      if (!isActive) return;
+      pointerDown = true;
+      if (!isSpacePressed) playMedia();
+      // Evita seleção de texto no mobile
+      e.preventDefault();
+    });
+    interactiveSection.addEventListener(endEvt, (e) => {
+      if (pointerDown && isSpacePressed) {
+        stopMedia();
+        pointerDown = false;
+        e.preventDefault();
+      }
+    });
+    // Caso o usuário arraste o dedo para fora da seção
+    interactiveSection.addEventListener('touchcancel', () => {
+      if (pointerDown && isSpacePressed) {
+        stopMedia();
+        pointerDown = false;
+      }
+    });
+    // Previne scroll ao tocar na seção
+    interactiveSection.addEventListener('touchmove', (e) => {
+      if (pointerDown) e.preventDefault();
+    }, { passive: false });
+  }
+});

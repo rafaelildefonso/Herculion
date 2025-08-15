@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function createCarCard(car) {
         return `
             <div class="car-card">
+            <a href="${car.route || '#'}">
                 <div class="car-image-container">
                     <img src="${car.imagem}" alt="${car.nome}" class="car-image">
                     ${car.novo ? '<span class="car-badge">Novo</span>' : ''}
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="car-description">${car.descricao || 'Um veículo de alto desempenho que combina luxo e tecnologia de ponta.'}</p>
                     <a href="${car.route || '#'}" class="car-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
                 </div>
+                </a>
             </div>
         `;
     }
