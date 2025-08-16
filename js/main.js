@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 // create the scrollSmoother before your scrollTriggers
-ScrollSmoother.create({
+var smoother = ScrollSmoother.create({
   content: ".main-content",
   smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
   effects: true, // looks for data-speed and data-lag attributes on elements

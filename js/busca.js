@@ -16,7 +16,7 @@ const todosCarros = [
     "novo": true,
     "descricao": "O Bugatti Tourbillon é o mais novo hipercarro da marca, combinando um motor V16 híbrido com tecnologia de ponta e design inovador.",
     "route": "carros/bugatti-tourbillon.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo","luxo"]
   },
   {
     "id": "lamborghini-revuelto",
@@ -32,7 +32,7 @@ const todosCarros = [
     "novo": true,
     "descricao": "O Revuelto é o primeiro superesportivo V12 híbrido plug-in da Lamborghini, estabelecendo um novo paradigma em performance e design.",
     "route": "carros/lamborghini-revuelto.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo", "elétrico"]
   },
   {
     "id": "mclaren-720s",
@@ -41,14 +41,14 @@ const todosCarros = [
     "modelo": "720S",
     "ano": 2023,
     "preco": "R$ 3.6M",
-    "cor": "Azul",
+    "cor": "Laranja",
     "potencia": "720 HP", 
     "imagem": "assets/images/carros/mclaren_720s.png",
     "destaque": false,
     "novo": false,
     "descricao": "O McLaren 720S é uma obra-prima da engenharia, com um chassi de fibra de carbono e um design aerodinâmico impressionante.",
     "route": "carros/mclaren-720s.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo"]
   },
   {
     "id": "bugatti-chiron",
@@ -64,7 +64,7 @@ const todosCarros = [
     "novo": false,
     "descricao": "O Bugatti Chiron é um ícone de hipercarros, conhecido por sua velocidade máxima alucinante e luxo incomparável.",
     "route": "carros/bugatti-chiron.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo"]
   },
   {
     "id": "koenigsegg-jesko",
@@ -80,7 +80,7 @@ const todosCarros = [
     "novo": false,
     "descricao": "O Koenigsegg Jesko é uma máquina de pista homologada para as ruas, projetada para ser o carro mais rápido do mundo em um circuito.",
     "route": "carros/koenigsegg-jesko.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo"]
   },
   {
     "id": "pagani-huayra",
@@ -96,7 +96,7 @@ const todosCarros = [
     "novo": false,
     "descricao": "O Pagani Huayra é uma obra de arte sobre rodas, combinando um design deslumbrante com um desempenho de tirar o fôlego.",
     "route": "carros/pagani-huayra.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo"]
   },
   {
     "id": "rimac-nevera",
@@ -112,7 +112,7 @@ const todosCarros = [
     "novo": true,
     "descricao": "O Rimac Nevera é um hipercarro totalmente elétrico que redefine os limites da aceleração e da tecnologia automotiva.",
     "route": "carros/rimac-nevera.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo", "elétrico"]
   },
   {
     "id": "nissan-gt-r-nismo",
@@ -128,7 +128,7 @@ const todosCarros = [
     "novo": true,
     "descricao": "O Nissan GT-R Nismo, também conhecido como 'Godzilla', é um ícone de performance com tração integral e tecnologia de ponta.",
     "route": "carros/nissan-gt-r-nismo.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo"]
   },
   {
     "id": "audi-r8",
@@ -144,7 +144,7 @@ const todosCarros = [
     "novo": false,
     "descricao": "Superesportivo conversível com motor V10 e design agressivo, pura emoção ao dirigir.",
     "route": "carros/audi-r8.html",
-    "categoria": "conversível"
+    "categoria": ["conversível", "esportivo"]
   },
   {
     "id": "rolls-royce-cullinan",
@@ -160,9 +160,8 @@ const todosCarros = [
     "novo": true,
     "descricao": "O SUV de ultra-luxo, combinando a opulência e o conforto inigualáveis da Rolls-Royce com a versatilidade de um SUV.",
     "route": "carros/rolls-royce-cullinan.html",
-    "categoria": "suv"
+    "categoria": ["suv", "luxo"]
   },
-
   {
     "id": "lamborghini-urus",
     "nome": "Lamborghini Urus",
@@ -177,7 +176,7 @@ const todosCarros = [
     "novo": false,
     "descricao": "O SUV mais rápido do mundo, unindo esportividade e luxo.",
     "route": "carros/lamborghini-urus.html",
-    "categoria": "suv"
+    "categoria": ["suv", "esportivo"]
   },
   {
     "id": "porsche-911",
@@ -193,7 +192,7 @@ const todosCarros = [
     "novo": false,
     "descricao": "O Porsche 911 é um ícone dos esportivos, combinando desempenho, elegância e tecnologia de ponta.",
     "route": "carros/porsche-911.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo"]
   },
   {
     "id": "ferrari-roma",
@@ -209,9 +208,8 @@ const todosCarros = [
     "novo": false,
     "descricao": "Cupê, esportivo que combina elegância clássica com tecnologia de ponta. Ferrari em sua essência.",
     "route": "carros/ferrari-roma.html",
-    "categoria": "esportivo"
+    "categoria": ["esportivo"]
   },
-
   {
     "id": "mercedes-benz-sl",
     "nome": "Mercedes-Benz SL",
@@ -226,7 +224,7 @@ const todosCarros = [
     "novo": true,
     "descricao": "Roadster de luxo, conversível com performance e conforto inigualáveis.",
     "route": "carros/mercedes-benz-sl.html",
-    "categoria": "conversível"
+    "categoria": ["conversível", "luxo"]
   },
   {
     "id": "cadillac-escalade",
@@ -242,7 +240,7 @@ const todosCarros = [
     "novo": false,
     "descricao": "SUV icônico que oferece luxo, espaço e tecnologia de ponta.",
     "route": "carros/cadillac-escalade.html",
-    "categoria": "suv"
+    "categoria": ["suv", "luxo"]
   }
 ];
 
@@ -253,9 +251,11 @@ const porPagina = 6;
 function scrollParaResultados() {
   const secaoResultados = document.querySelector('.resultados-section');
   if (secaoResultados) {
-    secaoResultados.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // secaoResultados.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    smoother.scrollTo(".resultados-section");
   }
 }
+
 
 function aplicarFiltros() {
   const texto = document.querySelector('.busca-input').value.trim().toLowerCase();
@@ -286,7 +286,7 @@ function aplicarFiltros() {
     }
     let matchAno = !ano || carro.ano == ano;
     let matchCor = !cor || carro.cor.toLowerCase() === cor;
-    let matchCategoria = !categoriaAtiva || categoriaAtiva === 'todos' || carro.categoria === categoriaAtiva;
+    let matchCategoria = !categoriaAtiva || categoriaAtiva === 'todos' || (Array.isArray(carro.categoria) && carro.categoria.includes(categoriaAtiva));
     return matchTexto && matchMarca && matchPreco && matchAno && matchCor && matchCategoria;
   });
   paginaAtual = 1;
@@ -369,8 +369,13 @@ document.querySelectorAll('.filtro-tag').forEach(tag => {
     document.querySelectorAll('.filtro-tag').forEach(t => t.classList.remove('active'));
     // Adiciona a classe 'active' apenas na tag clicada
     tag.classList.add('active');
+    // Se clicou em "Todos", limpa o filtro de categoria
+    if (tag.textContent.trim().toLowerCase() === 'todos') {
+      document.querySelector('.busca-input').value = '';
+    }
     // Aplica os filtros
     aplicarFiltros();
+    scrollParaResultados();
   });
 });
 
@@ -411,7 +416,7 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.busca-input').value = tipo;
         aplicarFiltros();
       }
-      scrollParaResultados();
+      // scrollParaResultados();
     });
   });
   document.querySelector('.ordenacao-select').addEventListener('change', function() {
@@ -426,4 +431,4 @@ window.addEventListener('DOMContentLoaded', () => {
     atualizarPaginacao();
     scrollParaResultados();
   });
-}); 
+});

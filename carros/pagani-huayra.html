@@ -1,357 +1,395 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagani Huayra - Herculion | Arte e Engenharia</title>
+    <meta
+      name="description"
+      content="Descubra o Pagani Huayra na Herculion. Hipercarro italiano com motor V12 biturbo, design escultural e exclusividade máxima. Agende sua visita."
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/car-page.css" />
+    <link rel="stylesheet" href="../css/modal-3d.css" />
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <style>
+      /* === PAGANI HUAYRA - DESIGN EXCLUSIVO === */
+      body {
+        background: #181514;
+        color: #fff;
+        overflow-x: hidden;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pagani Huayra - Herculion | Arte e Engenharia</title>
-  <meta name="description"
-    content="Descubra o Pagani Huayra na Herculion. Hipercarro italiano com motor V12 biturbo, design escultural e exclusividade máxima. Agende sua visita." />
-  <link rel="stylesheet" href="../css/main.css" />
-  <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/car-page.css" />
-  <link rel="stylesheet" href="../css/modal-3d.css" />
-  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
-  <style>
-    /* === PAGANI HUAYRA - DESIGN EXCLUSIVO === */
-    body {
-      background: #181514;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    .huayra-hero {
-      padding-top: var(--header-height);
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(120deg,
+      .huayra-hero {
+        padding-top: var(--header-height);
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+          120deg,
           #181514 0%,
           #bca77f 70%,
-          #23201a 100%);
-      overflow: hidden;
-    }
+          #23201a 100%
+        );
+        overflow: hidden;
+      }
 
-    .huayra-hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 80% 30%,
-          rgba(188, 167, 127, 0.08) 0%,
-          transparent 70%),
-        radial-gradient(circle at 20% 80%,
-          rgba(255, 255, 255, 0.04) 0%,
-          transparent 70%);
-      pointer-events: none;
-    }
+      .huayra-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            circle at 80% 30%,
+            rgba(188, 167, 127, 0.08) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 255, 255, 0.04) 0%,
+            transparent 70%
+          );
+        pointer-events: none;
+      }
 
-    .huayra-hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      align-items: center;
-      gap: 4rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .huayra-text-section {
-      position: relative;
-      z-index: 2;
-    }
-
-    .huayra-brand {
-      font-family: "Ephesis", cursive;
-      font-size: 1.8rem;
-      color: #bca77f;
-      margin-bottom: 1rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    .huayra-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 6rem;
-      color: #fff;
-      margin-bottom: 1rem;
-      line-height: 0.9;
-      text-shadow: 0 0 30px rgba(188, 167, 127, 0.18);
-    }
-
-    .huayra-tagline {
-      font-family: "Ephesis", cursive;
-      font-size: 2.2rem;
-      color: #bca77f;
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-
-    .huayra-price {
-      font-size: 3.2rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 20px rgba(188, 167, 127, 0.18);
-    }
-
-    .huayra-description {
-      font-size: 1.4rem;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 3rem;
-      max-width: 500px;
-    }
-
-    .huayra-cta {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .huayra-btn {
-      padding: 1.5rem 3rem;
-      border-radius: 0;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      border: 2px solid #bca77f;
-      background: transparent;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .huayra-btn:hover {
-      background: #bca77f;
-      color: #181514;
-      border-color: #bca77f;
-    }
-
-    .huayra-image-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .huayra-image-section img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 18px;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
       .huayra-hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        align-items: center;
+        gap: 4rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .huayra-text-section {
+        position: relative;
+        z-index: 2;
+      }
+
+      .huayra-brand {
+        font-family: "Ephesis", cursive;
+        font-size: 1.8rem;
+        color: #bca77f;
+        margin-bottom: 1rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
       }
 
       .huayra-title {
-        font-size: 3.5rem;
+        font-family: "IM FELL Double Pica SC", serif;
+        font-size: 6rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 0.9;
+        text-shadow: 0 0 30px rgba(188, 167, 127, 0.18);
       }
-    }
-  </style>
-</head>
 
-<body data-model-3d="dee0c9fd1ba344c8a39d1fdb6cba3f6d">
-  <div class="desktop">
-    <header class="header">
-      <nav class="navigation">
-        <button class="menu-button" aria-label="Menu">
-          <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
-        </button>
-      </nav>
-      <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
-      <nav id="side-menu" class="side-menu">
-        <div class="menu-watermark">Herculion</div>
-        <button id="close-btn" class="close-btn">&times;</button>
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="../grade-carros.html">Modelos</a></li>
-          <li><a href="../index.html#experience">Experiências</a></li>
-          <li><a href="../busca.html">Busca</a></li>
-          <li><a href="../quem-somos.html">Quem Somos</a></li>
-          <li><a href="../contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <!-- Hero Section -->
-      <section class="huayra-hero">
-        <div class="huayra-hero-content car-details">
-          <div class="huayra-text-section">
-            <div class="huayra-brand">Pagani</div>
-            <div class="huayra-title">Huayra</div>
-            <div class="huayra-tagline">Arte e engenharia italiana</div>
-            <div class="huayra-price">R$ 26.000.000</div>
-            <div class="huayra-description">
-              O Pagani Huayra é uma obra-prima: motor V12 6.0 biturbo de 730 HP,
-              carroceria em fibra de carbono, aerodinâmica ativa e exclusividade
-              absoluta. Um hipercarro para poucos.
-            </div>
-            <div class="huayra-cta">
-              <a href="../contato.html?car=Pagani+Huayra" class="huayra-btn">Tenho Interesse</a>
-              <a href="#specs" class="huayra-btn">Ver Especificações</a>
-            </div>
-          </div>
-          <div class="huayra-image-section">
-            <img src="../assets/images/carros/pagani_huayra.png" alt="Pagani Huayra" />
-          </div>
-        </div>
-      </section>
-      <!-- Especificações Técnicas -->
-      <section id="specs" class="car-details-section">
-        <h2>Especificações Técnicas</h2>
-        <div class="specs-container">
-          <div class="specs-category">
-            <h3>Motor e Performance</h3>
-            <ul>
-              <li>Motor V12 6.0L biturbo</li>
-              <li>Potência: 730 HP</li>
-              <li>Torque: 1.000 Nm</li>
-              <li>0-100 km/h: 3,2 s</li>
-              <li>Velocidade máxima: 370 km/h</li>
-              <li>Câmbio automatizado de 7 marchas</li>
-              <li>Tração traseira</li>
-            </ul>
-          </div>
-          <div class="specs-category">
-            <h3>Dimensões & Peso</h3>
-            <ul>
-              <li>Peso: 1.350 kg</li>
-              <li>Comprimento: 4,60 m</li>
-              <li>Largura: 2,04 m</li>
-              <li>Altura: 1,17 m</li>
-              <li>Entre-eixos: 2,80 m</li>
-            </ul>
-          </div>
-          <div class="specs-category">
-            <h3>Outros Destaques</h3>
-            <ul>
-              <li>Carroceria em fibra de carbono</li>
-              <li>Aerodinâmica ativa</li>
-              <li>Interior artesanal</li>
-              <li>Produção limitada: 100 unidades</li>
-              <li>Portas tipo "asa de gaivota"</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- História do Modelo -->
-      <section class="car-history-section">
-        <div class="history-content">
-          <div class="history-text">
-            <h2>A História do Pagani Huayra</h2>
-            <p>
-              O Huayra foi lançado em 2011 e rapidamente se tornou um ícone
-              entre os hipercarros. Cada unidade é montada à mão na Itália,
-              combinando arte, engenharia e exclusividade em níveis máximos.
-            </p>
-          </div>
-          <div class="history-image">
-            <img src="../assets/images/carros/pagani_huayra_historia.jpg" alt="História Pagani Huayra" />
-          </div>
-        </div>
-      </section>
-      <!-- Galeria de Imagens -->
-      <!-- Galeria Section Added Here -->
-      <style>
-        .huayra-gallery {
-          padding: 6rem 2rem;
-          background: #0a0a0a;
-          position: relative;
-          overflow: hidden;
-        }
+      .huayra-tagline {
+        font-family: "Ephesis", cursive;
+        font-size: 2.2rem;
+        color: #bca77f;
+        margin-bottom: 2rem;
+        font-style: italic;
+      }
 
-        .huayra-gallery::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-        }
+      .huayra-price {
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 20px rgba(188, 167, 127, 0.18);
+      }
 
-        .huayra-gallery-title {
-          font-family: "IM FELL Double Pica SC", serif;
-          font-size: 2.5rem;
-          color: #c0b2a8;
-          text-align: center;
-          margin-bottom: 3rem;
-          text-shadow: 0 0 12px rgba(192, 178, 168, 0.3);
-        }
+      .huayra-description {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 3rem;
+        max-width: 500px;
+      }
 
-        .huayra-gallery-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
+      .huayra-cta {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .huayra-btn {
+        padding: 1.5rem 3rem;
+        border-radius: 0;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        border: 2px solid #bca77f;
+        background: transparent;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .huayra-btn:hover {
+        background: #bca77f;
+        color: #181514;
+        border-color: #bca77f;
+      }
+
+      .huayra-image-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .huayra-image-section img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 18px;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .huayra-hero-content {
+          grid-template-columns: 1fr;
           gap: 2rem;
-          max-width: 1100px;
-          margin: 0 auto;
+          padding-top: 4rem;
         }
 
-        .huayra-gallery-img {
-          width: 100%;
-          border-radius: 10px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-          object-fit: cover;
-          max-height: 220px;
-          background: #111;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .huayra-title {
+          font-size: 3.5rem;
         }
+      }
+    </style>
+  </head>
 
-        .huayra-gallery-img:hover {
-          transform: translateY(-5px) scale(1.1);
-          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-        }
-
-        @media (max-width: 768px) {
-          .huayra-gallery-grid {
-            grid-template-columns: 1fr 1fr;
+  <body data-model-3d="dee0c9fd1ba344c8a39d1fdb6cba3f6d">
+    <div class="desktop">
+      <header class="header">
+        <nav class="navigation">
+          <button class="menu-button" aria-label="Menu">
+            <img
+              class="svgviewer-png-output-2"
+              src="../assets/images/v11_2.png"
+              alt="Menu icon"
+            />
+          </button>
+        </nav>
+        <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
+        <nav id="side-menu" class="side-menu">
+          <div class="menu-watermark">Herculion</div>
+          <button id="close-btn" class="close-btn">&times;</button>
+          <ul>
+            <li><a href="../index.html#hero">Início</a></li>
+            <li><a href="../grade-carros.html">Modelos</a></li>
+            <li><a href="../index.html#experience">Experiências</a></li>
+            <li><a href="../busca.html">Busca</a></li>
+            <li><a href="../quem-somos.html">Quem Somos</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+            <li><a href="../pedidos.html">Meus Pedidos</a></li>
+            <li><a href="../cadastro.html">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!-- Hero Section -->
+        <section class="huayra-hero">
+          <div class="huayra-hero-content car-details">
+            <div class="huayra-text-section">
+              <div class="huayra-brand">Pagani</div>
+              <div class="huayra-title">Huayra</div>
+              <div class="huayra-tagline">Arte e engenharia italiana</div>
+              <div class="huayra-price">R$ 18M</div>
+              <div class="huayra-description">
+                O Pagani Huayra é uma obra-prima: motor V12 6.0 biturbo de 730
+                HP, carroceria em fibra de carbono, aerodinâmica ativa e
+                exclusividade absoluta. Um hipercarro para poucos.
+              </div>
+              <div class="huayra-cta">
+                <a href="../contato.html?car=Pagani+Huayra" class="huayra-btn"
+                  >Tenho Interesse</a
+                >
+                <a href="#specs" class="huayra-btn">Ver Especificações</a>
+              </div>
+            </div>
+            <div class="huayra-image-section">
+              <img
+                src="../assets/images/carros/pagani_huayra.png"
+                alt="Pagani Huayra"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Especificações Técnicas -->
+        <section id="specs" class="car-details-section">
+          <h2>Especificações Técnicas</h2>
+          <div class="specs-container">
+            <div class="specs-category">
+              <h3>Motor e Performance</h3>
+              <ul>
+                <li>Motor V12 6.0L biturbo</li>
+                <li>Potência: 730 HP</li>
+                <li>Torque: 1.000 Nm</li>
+                <li>0-100 km/h: 3,2 s</li>
+                <li>Velocidade máxima: 370 km/h</li>
+                <li>Câmbio automatizado de 7 marchas</li>
+                <li>Tração traseira</li>
+              </ul>
+            </div>
+            <div class="specs-category">
+              <h3>Dimensões & Peso</h3>
+              <ul>
+                <li>Peso: 1.350 kg</li>
+                <li>Comprimento: 4,60 m</li>
+                <li>Largura: 2,04 m</li>
+                <li>Altura: 1,17 m</li>
+                <li>Entre-eixos: 2,80 m</li>
+              </ul>
+            </div>
+            <div class="specs-category">
+              <h3>Outros Destaques</h3>
+              <ul>
+                <li>Carroceria em fibra de carbono</li>
+                <li>Aerodinâmica ativa</li>
+                <li>Interior artesanal</li>
+                <li>Produção limitada: 100 unidades</li>
+                <li>Portas tipo "asa de gaivota"</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- História do Modelo -->
+        <section class="car-history-section">
+          <div class="history-content">
+            <div class="history-text">
+              <h2>A História do Pagani Huayra</h2>
+              <p>
+                O Huayra foi lançado em 2011 e rapidamente se tornou um ícone
+                entre os hipercarros. Cada unidade é montada à mão na Itália,
+                combinando arte, engenharia e exclusividade em níveis máximos.
+              </p>
+            </div>
+            <div class="history-image">
+              <img
+                src="../assets/images/carros/pagani_huayra_historia.jpg"
+                alt="História Pagani Huayra"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Galeria de Imagens -->
+        <!-- Galeria Section Added Here -->
+        <style>
+          .huayra-gallery {
+            padding: 6rem 2rem;
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
           }
-        }
 
-        @media (max-width: 480px) {
-          .huayra-gallery-grid {
-            grid-template-columns: 1fr;
+          .huayra-gallery::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 255, 255, 0.1),
+              transparent
+            );
           }
-        }
-      </style>
 
-      <section class="huayra-gallery">
-        <h2 class="huayra-gallery-title">Galeria</h2>
-        <div class="huayra-gallery-grid">
-          <img src="../assets/images/carros/pagani_huayra/pagani_huayra_1.jpg" alt="Pagani Huayra 1" class="huayra-gallery-img" />
-          <img src="../assets/images/carros/pagani_huayra/pagani_huayra_2.jpg" alt="Pagani Huayra 2" class="huayra-gallery-img" />
-          <img src="../assets/images/carros/pagani_huayra/pagani_huayra_3.jpg" alt="Pagani Huayra 3" class="huayra-gallery-img" />
+          .huayra-gallery-title {
+            font-family: "IM FELL Double Pica SC", serif;
+            font-size: 2.5rem;
+            color: #c0b2a8;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 12px rgba(192, 178, 168, 0.3);
+          }
+
+          .huayra-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+          }
+
+          .huayra-gallery-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            max-height: 220px;
+            background: #111;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .huayra-gallery-img:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+          }
+
+          @media (max-width: 768px) {
+            .huayra-gallery-grid {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .huayra-gallery-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        </style>
+
+        <section class="huayra-gallery">
+          <h2 class="huayra-gallery-title">Galeria</h2>
+          <div class="huayra-gallery-grid">
+            <img
+              src="../assets/images/carros/pagani_huayra/pagani_huayra_1.jpg"
+              alt="Pagani Huayra 1"
+              class="huayra-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/pagani_huayra/pagani_huayra_2.jpg"
+              alt="Pagani Huayra 2"
+              class="huayra-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/pagani_huayra/pagani_huayra_3.jpg"
+              alt="Pagani Huayra 3"
+              class="huayra-gallery-img"
+            />
+          </div>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
+          <p>O melhor de um importado, é ter um Herculion.</p>
         </div>
-      </section>
-    </main>
-    <footer class="main-footer">
-      <div class="footer-content">
-        <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
-        <p>O melhor de um importado, é ter um Herculion.</p>
-      </div>
-    </footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <!-- ScrollSmoother requires ScrollTrigger -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/modal-3d.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/modal-3d.js"></script>
+  </body>
 </html>

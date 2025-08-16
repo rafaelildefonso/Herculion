@@ -1,357 +1,394 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercedes-Benz SL - Herculion | O Roadster de Luxo</title>
+    <meta
+      name="description"
+      content="Descubra o Mercedes-Benz SL na Herculion. Roadster de luxo com elegância, tecnologia e performance esportiva. Agende sua visita."
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/car-page.css" />
+    <link rel="stylesheet" href="../css/modal-3d.css" />
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <style>
+      /* === MERCEDES-BENZ SL - DESIGN EXCLUSIVO === */
+      body {
+        background: #181a1e;
+        color: #fff;
+        overflow-x: hidden;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mercedes-Benz SL - Herculion | O Roadster de Luxo</title>
-  <meta name="description"
-    content="Descubra o Mercedes-Benz SL na Herculion. Roadster de luxo com elegância, tecnologia e performance esportiva. Agende sua visita." />
-  <link rel="stylesheet" href="../css/main.css" />
-  <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/car-page.css" />
-  <link rel="stylesheet" href="../css/modal-3d.css" />
-  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
-  <style>
-    /* === MERCEDES-BENZ SL - DESIGN EXCLUSIVO === */
-    body {
-      background: #181a1e;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    .sl-hero {
-      padding-top: var(--header-height);
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(120deg,
+      .sl-hero {
+        padding-top: var(--header-height);
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+          120deg,
           #181a1e 0%,
           #bfc8d1 70%,
-          #23252a 100%);
-      overflow: hidden;
-    }
+          #23252a 100%
+        );
+        overflow: hidden;
+      }
 
-    .sl-hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 80% 30%,
-          rgba(191, 200, 209, 0.08) 0%,
-          transparent 70%),
-        radial-gradient(circle at 20% 80%,
-          rgba(255, 255, 255, 0.04) 0%,
-          transparent 70%);
-      pointer-events: none;
-    }
+      .sl-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            circle at 80% 30%,
+            rgba(191, 200, 209, 0.08) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 255, 255, 0.04) 0%,
+            transparent 70%
+          );
+        pointer-events: none;
+      }
 
-    .sl-hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      align-items: center;
-      gap: 4rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .sl-text-section {
-      position: relative;
-      z-index: 2;
-    }
-
-    .sl-brand {
-      font-family: "Ephesis", cursive;
-      font-size: 1.8rem;
-      color: #bfc8d1;
-      margin-bottom: 1rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    .sl-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 6rem;
-      color: #fff;
-      margin-bottom: 1rem;
-      line-height: 0.9;
-      text-shadow: 0 0 30px rgba(191, 200, 209, 0.18);
-    }
-
-    .sl-tagline {
-      font-family: "Ephesis", cursive;
-      font-size: 2.2rem;
-      color: #bfc8d1;
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-
-    .sl-price {
-      font-size: 3.2rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 20px rgba(191, 200, 209, 0.18);
-    }
-
-    .sl-description {
-      font-size: 1.4rem;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 3rem;
-      max-width: 500px;
-    }
-
-    .sl-cta {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .sl-btn {
-      padding: 1.5rem 3rem;
-      border-radius: 0;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      border: 2px solid #bfc8d1;
-      background: transparent;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sl-btn:hover {
-      background: #bfc8d1;
-      color: #181a1e;
-      border-color: #bfc8d1;
-    }
-
-    .sl-image-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .sl-image-section img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 18px;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
       .sl-hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        align-items: center;
+        gap: 4rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .sl-text-section {
+        position: relative;
+        z-index: 2;
+      }
+
+      .sl-brand {
+        font-family: "Ephesis", cursive;
+        font-size: 1.8rem;
+        color: #bfc8d1;
+        margin-bottom: 1rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
       }
 
       .sl-title {
-        font-size: 3.5rem;
+        font-family: "IM FELL Double Pica SC", serif;
+        font-size: 6rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 0.9;
+        text-shadow: 0 0 30px rgba(191, 200, 209, 0.18);
       }
-    }
-  </style>
-</head>
 
-<body data-model-3d="f7a625e6f5de425e89e84ae2e92cad65">
-  <div class="desktop">
-    <header class="header">
-      <nav class="navigation">
-        <button class="menu-button" aria-label="Menu">
-          <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
-        </button>
-      </nav>
-      <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
-      <nav id="side-menu" class="side-menu">
-        <div class="menu-watermark">Herculion</div>
-        <button id="close-btn" class="close-btn">&times;</button>
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="../grade-carros.html">Modelos</a></li>
-          <li><a href="../index.html#experience">Experiências</a></li>
-          <li><a href="../busca.html">Busca</a></li>
-          <li><a href="../quem-somos.html">Quem Somos</a></li>
-          <li><a href="../contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <!-- Hero Section -->
-      <section class="sl-hero">
-        <div class="sl-hero-content car-details">
-          <div class="sl-text-section">
-            <div class="sl-brand">Mercedes-Benz</div>
-            <div class="sl-title">SL</div>
-            <div class="sl-tagline">Elegância e esportividade</div>
-            <div class="sl-price">R$ 1.100.000</div>
-            <div class="sl-description">
-              O Mercedes-Benz SL é o roadster definitivo: motor potente, design
-              atemporal, teto retrátil e tecnologia de ponta. Luxo e emoção ao
-              ar livre.
-            </div>
-            <div class="sl-cta">
-              <a href="../contato.html?car=Mercedes-Benz+SL" class="sl-btn">Tenho Interesse</a>
-              <a href="#specs" class="sl-btn">Ver Especificações</a>
-            </div>
-          </div>
-          <div class="sl-image-section">
-            <img src="../assets/images/carros/mercedes_benz_sl.png" alt="Mercedes-Benz SL" />
-          </div>
-        </div>
-      </section>
-      <!-- Especificações Técnicas -->
-      <section id="specs" class="car-details-section">
-        <h2>Especificações Técnicas</h2>
-        <div class="specs-container">
-          <div class="specs-category">
-            <h3>Motor e Performance</h3>
-            <ul>
-              <li>Motor V8 4.0L biturbo</li>
-              <li>Potência: 476 HP</li>
-              <li>Torque: 700 Nm</li>
-              <li>0-100 km/h: 4,1 s</li>
-              <li>Velocidade máxima: 295 km/h</li>
-              <li>Câmbio automático de 9 marchas</li>
-              <li>Tração traseira</li>
-            </ul>
-          </div>
-          <div class="specs-category">
-            <h3>Dimensões & Peso</h3>
-            <ul>
-              <li>Peso: 1.950 kg</li>
-              <li>Comprimento: 4,83 m</li>
-              <li>Largura: 1,91 m</li>
-              <li>Altura: 1,35 m</li>
-              <li>Entre-eixos: 2,70 m</li>
-            </ul>
-          </div>
-          <div class="specs-category">
-            <h3>Outros Destaques</h3>
-            <ul>
-              <li>Teto retrátil elétrico</li>
-              <li>Bancos aquecidos e ventilados</li>
-              <li>Interior em couro Nappa</li>
-              <li>Suspensão adaptativa</li>
-              <li>Sistema de som Burmester</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- História do Modelo -->
-      <section class="car-history-section">
-        <div class="history-content">
-          <div class="history-text">
-            <h2>A História do Mercedes-Benz SL</h2>
-            <p>
-              O SL é um ícone da Mercedes-Benz desde 1954. Evoluiu de carro de
-              corrida para símbolo de luxo e inovação, mantendo sempre o
-              espírito esportivo e o charme clássico dos roadsters alemães.
-            </p>
-          </div>
-          <div class="history-image">
-            <img src="../assets/images/carros/mercedes_benz_sl/mercedes_benz_sl_historia.jpg"
-              alt="História Mercedes-Benz SL" />
-          </div>
-        </div>
-      </section>
-      <!-- Galeria de Imagens -->
-      <!-- Galeria Section Added Here -->
-      <style>
-        .sl-gallery {
-          padding: 6rem 2rem;
-          background: #0a0a0a;
-          position: relative;
-          overflow: hidden;
-        }
+      .sl-tagline {
+        font-family: "Ephesis", cursive;
+        font-size: 2.2rem;
+        color: #bfc8d1;
+        margin-bottom: 2rem;
+        font-style: italic;
+      }
 
-        .sl-gallery::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-        }
+      .sl-price {
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 20px rgba(191, 200, 209, 0.18);
+      }
 
-        .sl-gallery-title {
-          font-family: "IM FELL Double Pica SC", serif;
-          font-size: 2.5rem;
-          color: #bfc8d1;
-          text-align: center;
-          margin-bottom: 3rem;
-          text-shadow: 0 0 12px rgba(0, 210, 255, 0.3);
-        }
+      .sl-description {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 3rem;
+        max-width: 500px;
+      }
 
-        .sl-gallery-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
+      .sl-cta {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .sl-btn {
+        padding: 1.5rem 3rem;
+        border-radius: 0;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        border: 2px solid #bfc8d1;
+        background: transparent;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .sl-btn:hover {
+        background: #bfc8d1;
+        color: #181a1e;
+        border-color: #bfc8d1;
+      }
+
+      .sl-image-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .sl-image-section img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 18px;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .sl-hero-content {
+          grid-template-columns: 1fr;
           gap: 2rem;
-          max-width: 1100px;
-          margin: 0 auto;
+          padding-top: 4rem;
         }
 
-        .sl-gallery-img {
-          width: 100%;
-          border-radius: 10px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-          object-fit: cover;
-          max-height: 220px;
-          background: #111;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .sl-title {
+          font-size: 3.5rem;
         }
+      }
+    </style>
+  </head>
 
-        .sl-gallery-img:hover {
-          transform: translateY(-5px) scale(1.1);
-          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-        }
-
-        @media (max-width: 768px) {
-          .sl-gallery-grid {
-            grid-template-columns: 1fr 1fr;
+  <body data-model-3d="f7a625e6f5de425e89e84ae2e92cad65">
+    <div class="desktop">
+      <header class="header">
+        <nav class="navigation">
+          <button class="menu-button" aria-label="Menu">
+            <img
+              class="svgviewer-png-output-2"
+              src="../assets/images/v11_2.png"
+              alt="Menu icon"
+            />
+          </button>
+        </nav>
+        <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
+        <nav id="side-menu" class="side-menu">
+          <div class="menu-watermark">Herculion</div>
+          <button id="close-btn" class="close-btn">&times;</button>
+          <ul>
+            <li><a href="../index.html#hero">Início</a></li>
+            <li><a href="../grade-carros.html">Modelos</a></li>
+            <li><a href="../index.html#experience">Experiências</a></li>
+            <li><a href="../busca.html">Busca</a></li>
+            <li><a href="../quem-somos.html">Quem Somos</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+            <li><a href="../pedidos.html">Meus Pedidos</a></li>
+            <li><a href="../cadastro.html">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!-- Hero Section -->
+        <section class="sl-hero">
+          <div class="sl-hero-content car-details">
+            <div class="sl-text-section">
+              <div class="sl-brand">Mercedes-Benz</div>
+              <div class="sl-title">SL</div>
+              <div class="sl-tagline">Elegância e esportividade</div>
+              <div class="sl-price">R$ 1.5M</div>
+              <div class="sl-description">
+                O Mercedes-Benz SL é o roadster definitivo: motor potente,
+                design atemporal, teto retrátil e tecnologia de ponta. Luxo e
+                emoção ao ar livre.
+              </div>
+              <div class="sl-cta">
+                <a href="../contato.html?car=Mercedes-Benz+SL" class="sl-btn"
+                  >Tenho Interesse</a
+                >
+                <a href="#specs" class="sl-btn">Ver Especificações</a>
+              </div>
+            </div>
+            <div class="sl-image-section">
+              <img
+                src="../assets/images/carros/mercedes_benz_sl.png"
+                alt="Mercedes-Benz SL"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Especificações Técnicas -->
+        <section id="specs" class="car-details-section">
+          <h2>Especificações Técnicas</h2>
+          <div class="specs-container">
+            <div class="specs-category">
+              <h3>Motor e Performance</h3>
+              <ul>
+                <li>Motor V8 4.0L biturbo</li>
+                <li>Potência: 476 HP</li>
+                <li>Torque: 700 Nm</li>
+                <li>0-100 km/h: 4,1 s</li>
+                <li>Velocidade máxima: 295 km/h</li>
+                <li>Câmbio automático de 9 marchas</li>
+                <li>Tração traseira</li>
+              </ul>
+            </div>
+            <div class="specs-category">
+              <h3>Dimensões & Peso</h3>
+              <ul>
+                <li>Peso: 1.950 kg</li>
+                <li>Comprimento: 4,83 m</li>
+                <li>Largura: 1,91 m</li>
+                <li>Altura: 1,35 m</li>
+                <li>Entre-eixos: 2,70 m</li>
+              </ul>
+            </div>
+            <div class="specs-category">
+              <h3>Outros Destaques</h3>
+              <ul>
+                <li>Teto retrátil elétrico</li>
+                <li>Bancos aquecidos e ventilados</li>
+                <li>Interior em couro Nappa</li>
+                <li>Suspensão adaptativa</li>
+                <li>Sistema de som Burmester</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- História do Modelo -->
+        <section class="car-history-section">
+          <div class="history-content">
+            <div class="history-text">
+              <h2>A História do Mercedes-Benz SL</h2>
+              <p>
+                O SL é um ícone da Mercedes-Benz desde 1954. Evoluiu de carro de
+                corrida para símbolo de luxo e inovação, mantendo sempre o
+                espírito esportivo e o charme clássico dos roadsters alemães.
+              </p>
+            </div>
+            <div class="history-image">
+              <img
+                src="../assets/images/carros/mercedes_benz_sl/mercedes_benz_sl_historia.jpg"
+                alt="História Mercedes-Benz SL"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Galeria de Imagens -->
+        <!-- Galeria Section Added Here -->
+        <style>
+          .sl-gallery {
+            padding: 6rem 2rem;
+            background: #0a0a0a;
+            position: relative;
+            overflow: hidden;
           }
-        }
 
-        @media (max-width: 480px) {
-          .sl-gallery-grid {
-            grid-template-columns: 1fr;
+          .sl-gallery::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 255, 255, 0.1),
+              transparent
+            );
           }
-        }
-      </style>
 
-      <section class="sl-gallery">
-        <h2 class="sl-gallery-title">Galeria</h2>
-        <div class="sl-gallery-grid">
-          <img src="../assets/images/carros/mercedes_benz_sl/mercedes_benz_sl_1.webp" alt="Mercedes-Benz SL 1" class="sl-gallery-img" />
-          <img src="../assets/images/carros/mercedes_benz_sl/mercedes_benz_sl_2.webp" alt="Mercedes-Benz SL 2" class="sl-gallery-img" />
-          <img src="../assets/images/carros/mercedes_benz_sl/mercedes_benz_sl_3.webp" alt="Mercedes-Benz SL 3" class="sl-gallery-img" />
+          .sl-gallery-title {
+            font-family: "IM FELL Double Pica SC", serif;
+            font-size: 2.5rem;
+            color: #bfc8d1;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 12px rgba(0, 210, 255, 0.3);
+          }
+
+          .sl-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+          }
+
+          .sl-gallery-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            max-height: 220px;
+            background: #111;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .sl-gallery-img:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+          }
+
+          @media (max-width: 768px) {
+            .sl-gallery-grid {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .sl-gallery-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        </style>
+
+        <section class="sl-gallery">
+          <h2 class="sl-gallery-title">Galeria</h2>
+          <div class="sl-gallery-grid">
+            <img
+              src="../assets/images/carros/mercedes_benz_sl/mercedes_benz_sl_1.webp"
+              alt="Mercedes-Benz SL 1"
+              class="sl-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/mercedes_benz_sl/mercedes_benz_sl_2.webp"
+              alt="Mercedes-Benz SL 2"
+              class="sl-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/mercedes_benz_sl/mercedes_benz_sl_3.webp"
+              alt="Mercedes-Benz SL 3"
+              class="sl-gallery-img"
+            />
+          </div>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
+          <p>O melhor de um importado, é ter um Herculion.</p>
         </div>
-      </section>
-    </main>
-    <footer class="main-footer">
-      <div class="footer-content">
-        <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
-        <p>O melhor de um importado, é ter um Herculion.</p>
-      </div>
-    </footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <!-- ScrollSmoother requires ScrollTrigger -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-  <script src="../js/main.js"></script>  
-  <script src="../js/modal-3d.js"></script>
-</body>
-
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/modal-3d.js"></script>
+  </body>
 </html>

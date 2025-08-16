@@ -1,359 +1,395 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audi R8 - Herculion | Supercarro Alemão</title>
+    <meta
+      name="description"
+      content="Descubra o Audi R8 na Herculion. Supercarro com motor V10 aspirado, tração quattro e design icônico. Agende sua visita."
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/car-page.css" />
+    <link rel="stylesheet" href="../css/modal-3d.css" />
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <style>
+      /* === AUDI R8 - DESIGN EXCLUSIVO === */
+      body {
+        background: #14151a;
+        color: #fff;
+        overflow-x: hidden;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Audi R8 - Herculion | Supercarro Alemão</title>
-  <meta name="description"
-    content="Descubra o Audi R8 na Herculion. Supercarro com motor V10 aspirado, tração quattro e design icônico. Agende sua visita." />
-  <link rel="stylesheet" href="../css/main.css" />
-  <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/car-page.css" />
-  <link rel="stylesheet" href="../css/modal-3d.css" />
-  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
-  <style>
-    /* === AUDI R8 - DESIGN EXCLUSIVO === */
-    body {
-      background: #14151a;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    .r8-hero {
-      padding-top: var(--header-height);
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(120deg,
+      .r8-hero {
+        padding-top: var(--header-height);
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+          120deg,
           #23242b 0%,
           #43454d 70%,
-          #14151a 100%);
-      overflow: hidden;
-    }
+          #14151a 100%
+        );
+        overflow: hidden;
+      }
 
-    .r8-hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 80% 30%,
-          rgba(29, 29, 29, 0.09) 0%,
-          transparent 70%),
-        radial-gradient(circle at 20% 80%,
-          rgba(255, 255, 255, 0.04) 0%,
-          transparent 70%);
-      pointer-events: none;
-    }
+      .r8-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            circle at 80% 30%,
+            rgba(29, 29, 29, 0.09) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 255, 255, 0.04) 0%,
+            transparent 70%
+          );
+        pointer-events: none;
+      }
 
-    .r8-hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      align-items: center;
-      gap: 4rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .r8-text-section {
-      position: relative;
-      z-index: 2;
-    }
-
-    .r8-brand {
-      font-family: "Ephesis", cursive;
-      font-size: 1.8rem;
-      color: #747474;
-      margin-bottom: 1rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    .r8-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 6rem;
-      color: #fff;
-      margin-bottom: 1rem;
-      line-height: 0.9;
-      text-shadow: 0 0 30px rgba(32, 32, 32, 0.18);
-    }
-
-    .r8-tagline {
-      font-family: "Ephesis", cursive;
-      font-size: 2.2rem;
-      color: #747474;
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-
-    .r8-price {
-      font-size: 3.2rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 20px rgba(37, 37, 37, 0.18);
-    }
-
-    .r8-description {
-      font-size: 1.4rem;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 3rem;
-      max-width: 500px;
-    }
-
-    .r8-cta {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .r8-btn {
-      padding: 1.5rem 3rem;
-      border-radius: 0;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      border: 2px solid #292929;
-      background: transparent;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .r8-btn:hover {
-      background: #747474;
-      color: #14151a;
-      border-color: #747474;
-    }
-
-    .r8-image-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .r8-image-section img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 18px;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
       .r8-hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        align-items: center;
+        gap: 4rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .r8-text-section {
+        position: relative;
+        z-index: 2;
+      }
+
+      .r8-brand {
+        font-family: "Ephesis", cursive;
+        font-size: 1.8rem;
+        color: #747474;
+        margin-bottom: 1rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
       }
 
       .r8-title {
-        font-size: 3.5rem;
+        font-family: "IM FELL Double Pica SC", serif;
+        font-size: 6rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 0.9;
+        text-shadow: 0 0 30px rgba(32, 32, 32, 0.18);
       }
-    }
-  </style>
-</head>
 
-<body data-model-3d="c1df5b893028412488d53d9b4104254a">
-  <div class="desktop">
-    <header class="header">
-      <nav class="navigation">
-        <button class="menu-button" aria-label="Menu">
-          <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
-        </button>
-      </nav>
-      <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
-      <nav id="side-menu" class="side-menu">
-        <div class="menu-watermark">Herculion</div>
-        <button id="close-btn" class="close-btn">&times;</button>
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="../grade-carros.html">Modelos</a></li>
-          <li><a href="../experience.html">Experiências</a></li>
-          <li><a href="../busca.html">Busca</a></li>
-          <li><a href="../quem-somos.html">Quem Somos</a></li>
-          <li><a href="../contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <!-- Hero Section -->
-      <section class="r8-hero">
-        <div class="r8-hero-content car-details">
-          <div class="r8-text-section">
-            <div class="r8-brand">Audi</div>
-            <div class="r8-title">R8</div>
-            <div class="r8-tagline">Performance e sofisticação alemã</div>
-            <div class="r8-price">R$ 1.200.000</div>
-            <div class="r8-description">
-              O Audi R8 é o superesportivo que une o melhor da engenharia alemã:
-              motor V10 aspirado, tração quattro e um design que virou ícone.
-              Perfeito para quem busca emoção e exclusividade em cada curva.
-            </div>
-            <div class="r8-cta">
-              <a href="../contato.html?car=Audi+R8" class="r8-btn">Tenho Interesse</a>
-              <a href="#specs" class="r8-btn">Ver Especificações</a>
-            </div>
-          </div>
-          <div class="r8-image-section">
-            <img src="../assets/images/carros/audi_r8.png" alt="Audi R8" />
-          </div>
-        </div>
-      </section>
-      <!-- Especificações Técnicas -->
-      <section id="specs" class="car-details-section">
-        <h2>Especificações Técnicas</h2>
-        <div class="specs-container">
-          <div class="specs-category">
-            <h3>Motor e Performance</h3>
-            <ul>
-              <li>Motor V10 5.2L aspirado</li>
-              <li>Potência: 610 HP</li>
-              <li>Torque: 560 Nm</li>
-              <li>0-100 km/h: 3,2 s</li>
-              <li>Velocidade máxima: 330 km/h</li>
-              <li>Tração quattro (AWD)</li>
-              <li>Câmbio S tronic de 7 marchas</li>
-            </ul>
-          </div>
-          <div class="specs-category">
-            <h3>Dimensões & Peso</h3>
-            <ul>
-              <li>Peso: 1.595 kg</li>
-              <li>Comprimento: 4,43 m</li>
-              <li>Largura: 1,94 m</li>
-              <li>Altura: 1,24 m</li>
-              <li>Entre-eixos: 2,65 m</li>
-            </ul>
-          </div>
-          <div class="specs-category">
-            <h3>Outros Destaques</h3>
-            <ul>
-              <li>Produção limitada</li>
-              <li>Chassi em alumínio e fibra de carbono</li>
-              <li>Painel virtual cockpit</li>
-              <li>Escape esportivo com som V10 inconfundível</li>
-              <li>Faróis full LED/Laser</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- História do Modelo -->
-      <section class="car-history-section">
-        <div class="history-content">
-          <div class="history-text">
-            <h2>A História do Audi R8</h2>
-            <p>
-              Inspirado nos protótipos das 24 Horas de Le Mans, o Audi R8 foi
-              lançado em 2006 e logo se tornou referência entre os
-              superesportivos. Ao longo das gerações, manteve o motor V10 e a
-              tração quattro, evoluindo em tecnologia e design. O R8 é símbolo
-              de inovação, desempenho e exclusividade, sendo o carro-chefe da
-              Audi Sport.
-            </p>
-          </div>
-          <div class="history-image">
-            <img src="../assets/images/carros/audi_r8_historia.jpg" alt="História Audi R8" />
-          </div>
-        </div>
-      </section>
-      <!-- Galeria de Imagens -->
-      <!-- Galeria Section Added Here -->
-      <style>
-        .r8-gallery {
-          padding: 6rem 2rem;
-          background: #0c0c0e;
-          position: relative;
-          overflow: hidden;
-        }
+      .r8-tagline {
+        font-family: "Ephesis", cursive;
+        font-size: 2.2rem;
+        color: #747474;
+        margin-bottom: 2rem;
+        font-style: italic;
+      }
 
-        .r8-gallery::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-        }
+      .r8-price {
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 20px rgba(37, 37, 37, 0.18);
+      }
 
-        .r8-gallery-title {
-          font-family: "IM FELL Double Pica SC", serif;
-          font-size: 2.5rem;
-          color: #e23b3b;
-          text-align: center;
-          margin-bottom: 3rem;
-          text-shadow: 0 0 12px rgba(226, 70, 59, 0.3);
-        }
+      .r8-description {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 3rem;
+        max-width: 500px;
+      }
 
-        .r8-gallery-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
+      .r8-cta {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .r8-btn {
+        padding: 1.5rem 3rem;
+        border-radius: 0;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        border: 2px solid #292929;
+        background: transparent;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .r8-btn:hover {
+        background: #747474;
+        color: #14151a;
+        border-color: #747474;
+      }
+
+      .r8-image-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .r8-image-section img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 18px;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .r8-hero-content {
+          grid-template-columns: 1fr;
           gap: 2rem;
-          max-width: 1100px;
-          margin: 0 auto;
+          padding-top: 4rem;
         }
 
-        .r8-gallery-img {
-          width: 100%;
-          border-radius: 10px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-          object-fit: cover;
-          max-height: 220px;
-          background: #222;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .r8-title {
+          font-size: 3.5rem;
         }
+      }
+    </style>
+  </head>
 
-        .r8-gallery-img:hover {
-          transform: translateY(-5px) scale(1.1);
-          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
-        }
-
-        @media (max-width: 768px) {
-          .r8-gallery-grid {
-            grid-template-columns: 1fr 1fr;
+  <body data-model-3d="c1df5b893028412488d53d9b4104254a">
+    <div class="desktop">
+      <header class="header">
+        <nav class="navigation">
+          <button class="menu-button" aria-label="Menu">
+            <img
+              class="svgviewer-png-output-2"
+              src="../assets/images/v11_2.png"
+              alt="Menu icon"
+            />
+          </button>
+        </nav>
+        <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
+        <nav id="side-menu" class="side-menu">
+          <div class="menu-watermark">Herculion</div>
+          <button id="close-btn" class="close-btn">&times;</button>
+          <ul>
+            <li><a href="../index.html#hero">Início</a></li>
+            <li><a href="../grade-carros.html">Modelos</a></li>
+            <li><a href="../index.html#experience">Experiências</a></li>
+            <li><a href="../busca.html">Busca</a></li>
+            <li><a href="../quem-somos.html">Quem Somos</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+            <li><a href="../pedidos.html">Meus Pedidos</a></li>
+            <li><a href="../cadastro.html">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!-- Hero Section -->
+        <section class="r8-hero">
+          <div class="r8-hero-content car-details">
+            <div class="r8-text-section">
+              <div class="r8-brand">Audi</div>
+              <div class="r8-title">R8</div>
+              <div class="r8-tagline">Performance e sofisticação alemã</div>
+              <div class="r8-price">R$ 1.8M</div>
+              <div class="r8-description">
+                O Audi R8 é o superesportivo que une o melhor da engenharia
+                alemã: motor V10 aspirado, tração quattro e um design que virou
+                ícone. Perfeito para quem busca emoção e exclusividade em cada
+                curva.
+              </div>
+              <div class="r8-cta">
+                <a href="../contato.html?car=Audi+R8" class="r8-btn"
+                  >Tenho Interesse</a
+                >
+                <a href="#specs" class="r8-btn">Ver Especificações</a>
+              </div>
+            </div>
+            <div class="r8-image-section">
+              <img src="../assets/images/carros/audi_r8.png" alt="Audi R8" />
+            </div>
+          </div>
+        </section>
+        <!-- Especificações Técnicas -->
+        <section id="specs" class="car-details-section">
+          <h2>Especificações Técnicas</h2>
+          <div class="specs-container">
+            <div class="specs-category">
+              <h3>Motor e Performance</h3>
+              <ul>
+                <li>Motor V10 5.2L aspirado</li>
+                <li>Potência: 610 HP</li>
+                <li>Torque: 560 Nm</li>
+                <li>0-100 km/h: 3,2 s</li>
+                <li>Velocidade máxima: 330 km/h</li>
+                <li>Tração quattro (AWD)</li>
+                <li>Câmbio S tronic de 7 marchas</li>
+              </ul>
+            </div>
+            <div class="specs-category">
+              <h3>Dimensões & Peso</h3>
+              <ul>
+                <li>Peso: 1.595 kg</li>
+                <li>Comprimento: 4,43 m</li>
+                <li>Largura: 1,94 m</li>
+                <li>Altura: 1,24 m</li>
+                <li>Entre-eixos: 2,65 m</li>
+              </ul>
+            </div>
+            <div class="specs-category">
+              <h3>Outros Destaques</h3>
+              <ul>
+                <li>Produção limitada</li>
+                <li>Chassi em alumínio e fibra de carbono</li>
+                <li>Painel virtual cockpit</li>
+                <li>Escape esportivo com som V10 inconfundível</li>
+                <li>Faróis full LED/Laser</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- História do Modelo -->
+        <section class="car-history-section">
+          <div class="history-content">
+            <div class="history-text">
+              <h2>A História do Audi R8</h2>
+              <p>
+                Inspirado nos protótipos das 24 Horas de Le Mans, o Audi R8 foi
+                lançado em 2006 e logo se tornou referência entre os
+                superesportivos. Ao longo das gerações, manteve o motor V10 e a
+                tração quattro, evoluindo em tecnologia e design. O R8 é símbolo
+                de inovação, desempenho e exclusividade, sendo o carro-chefe da
+                Audi Sport.
+              </p>
+            </div>
+            <div class="history-image">
+              <img
+                src="../assets/images/carros/audi_r8_historia.jpg"
+                alt="História Audi R8"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Galeria de Imagens -->
+        <!-- Galeria Section Added Here -->
+        <style>
+          .r8-gallery {
+            padding: 6rem 2rem;
+            background: #0c0c0e;
+            position: relative;
+            overflow: hidden;
           }
-        }
 
-        @media (max-width: 480px) {
-          .r8-gallery-grid {
-            grid-template-columns: 1fr;
+          .r8-gallery::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 255, 255, 0.1),
+              transparent
+            );
           }
-        }
-      </style>
 
-      <section class="r8-gallery">
-        <h2 class="r8-gallery-title">Galeria</h2>
-        <div class="r8-gallery-grid">
-          <img src="../assets/images/carros/audi_r8/audi_r8_1.jpg" alt="Audi R8 1" class="r8-gallery-img" />
-          <img src="../assets/images/carros/audi_r8/audi_r8_2.jpg" alt="Audi R8 2" class="r8-gallery-img" />
-          <img src="../assets/images/carros/audi_r8/audi_r8_3.jpg" alt="Audi R8 3" class="r8-gallery-img" />
+          .r8-gallery-title {
+            font-family: "IM FELL Double Pica SC", serif;
+            font-size: 2.5rem;
+            color: #e23b3b;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 12px rgba(226, 70, 59, 0.3);
+          }
+
+          .r8-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+          }
+
+          .r8-gallery-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            max-height: 220px;
+            background: #222;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .r8-gallery-img:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+          }
+
+          @media (max-width: 768px) {
+            .r8-gallery-grid {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .r8-gallery-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        </style>
+
+        <section class="r8-gallery">
+          <h2 class="r8-gallery-title">Galeria</h2>
+          <div class="r8-gallery-grid">
+            <img
+              src="../assets/images/carros/audi_r8/audi_r8_1.jpg"
+              alt="Audi R8 1"
+              class="r8-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/audi_r8/audi_r8_2.jpg"
+              alt="Audi R8 2"
+              class="r8-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/audi_r8/audi_r8_3.jpg"
+              alt="Audi R8 3"
+              class="r8-gallery-img"
+            />
+          </div>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
+          <p>O melhor de um importado, é ter um Herculion.</p>
         </div>
-      </section>
-    </main>
-    <footer class="main-footer">
-      <div class="footer-content">
-        <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
-        <p>O melhor de um importado, é ter um Herculion.</p>
-      </div>
-    </footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <!-- ScrollSmoother requires ScrollTrigger -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/modal-3d.js"></script>
-</body>
-
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/modal-3d.js"></script>
+  </body>
 </html>

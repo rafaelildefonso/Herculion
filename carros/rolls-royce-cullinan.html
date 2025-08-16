@@ -109,6 +109,7 @@
         display: flex;
         gap: 2rem;
         flex-wrap: wrap;
+        margin-bottom: 2rem;
       }
       .cullinan-btn {
         padding: 1.5rem 3rem;
@@ -156,135 +157,149 @@
   </head>
   <body data-model-3d="">
     <div class="desktop">
-    <header class="header">
-      <nav class="navigation">
-        <button class="menu-button" aria-label="Menu">
-          <img
-            class="svgviewer-png-output-2"
-            src="../assets/images/v11_2.png"
-            alt="Menu icon"
-          />
-        </button>
-      </nav>
-      <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
-      <nav id="side-menu" class="side-menu">
-        <div class="menu-watermark">Herculion</div>
-        <button id="close-btn" class="close-btn">&times;</button>
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="../grade-carros.html">Modelos</a></li>
-          <li><a href="../index.html#experience">Experiências</a></li>
-          <li><a href="../busca.html">Busca</a></li>
-          <li><a href="../quem-somos.html">Quem Somos</a></li>
-          <li><a href="../contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <!-- Hero Section -->
-      <section class="cullinan-hero">
-        <div class="cullinan-hero-content car-details">
-          <div class="cullinan-text-section">
-            <div class="cullinan-brand">Rolls-Royce</div>
-            <div class="cullinan-title">Cullinan</div>
-            <div class="cullinan-tagline">O SUV do luxo absoluto</div>
-            <div class="cullinan-price">R$ 7.500.000</div>
-            <div class="cullinan-description">
-              O Rolls-Royce Cullinan é o SUV mais luxuoso do mundo: motor V12
-              6.75 biturbo, tração integral, acabamento artesanal e conforto
-              incomparável. Exclusividade para poucos.
+      <header class="header">
+        <nav class="navigation">
+          <button class="menu-button" aria-label="Menu">
+            <img
+              class="svgviewer-png-output-2"
+              src="../assets/images/v11_2.png"
+              alt="Menu icon"
+            />
+          </button>
+        </nav>
+        <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
+        <nav id="side-menu" class="side-menu">
+          <div class="menu-watermark">Herculion</div>
+          <button id="close-btn" class="close-btn">&times;</button>
+          <ul>
+            <li><a href="../index.html#hero">Início</a></li>
+            <li><a href="../grade-carros.html">Modelos</a></li>
+            <li><a href="../index.html#experience">Experiências</a></li>
+            <li><a href="../busca.html">Busca</a></li>
+            <li><a href="../quem-somos.html">Quem Somos</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+            <li><a href="../pedidos.html">Meus Pedidos</a></li>
+            <li><a href="../cadastro.html">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!-- Hero Section -->
+        <section class="cullinan-hero">
+          <div class="cullinan-hero-content car-details">
+            <div class="cullinan-text-section">
+              <div class="cullinan-brand">Rolls-Royce</div>
+              <div class="cullinan-title">Cullinan</div>
+              <div class="cullinan-tagline">O SUV do luxo absoluto</div>
+              <div class="cullinan-price">R$ 7M</div>
+              <div class="cullinan-description">
+                O Rolls-Royce Cullinan é o SUV mais luxuoso do mundo: motor V12
+                6.75 biturbo, tração integral, acabamento artesanal e conforto
+                incomparável. Exclusividade para poucos.
+              </div>
+              <div class="cullinan-cta">
+                <a
+                  href="../contato.html?car=Rolls-Royce+Cullinan"
+                  class="cullinan-btn"
+                  >Tenho Interesse</a
+                >
+                <a href="#specs" class="cullinan-btn">Ver Especificações</a>
+              </div>
             </div>
-            <div class="cullinan-cta">
-              <a
-                href="../contato.html?car=Rolls-Royce+Cullinan"
-                class="cullinan-btn"
-                >Tenho Interesse</a
-              >
-              <a href="#specs" class="cullinan-btn">Ver Especificações</a>
+            <div class="cullinan-image-section">
+              <img
+                src="../assets/images/carros/rolls_royce_cullinan.png"
+                alt="Rolls-Royce Cullinan"
+              />
             </div>
           </div>
-          <div class="cullinan-image-section">
+        </section>
+        <!-- Especificações Técnicas -->
+        <section id="specs" class="car-details-section">
+          <h2>Especificações Técnicas</h2>
+          <div class="specs-container">
+            <div class="specs-category">
+              <h3>Motor e Performance</h3>
+              <ul>
+                <li>Motor V12 6.75L biturbo</li>
+                <li>Potência: 563 HP</li>
+                <li>Torque: 850 Nm</li>
+                <li>0-100 km/h: 5,2 s</li>
+                <li>Velocidade máxima: 250 km/h</li>
+                <li>Câmbio automático de 8 marchas</li>
+                <li>Tração integral</li>
+              </ul>
+            </div>
+            <div class="specs-category">
+              <h3>Dimensões & Peso</h3>
+              <ul>
+                <li>Peso: 2.660 kg</li>
+                <li>Comprimento: 5,34 m</li>
+                <li>Largura: 2,00 m</li>
+                <li>Altura: 1,83 m</li>
+                <li>Entre-eixos: 3,29 m</li>
+              </ul>
+            </div>
+            <div class="specs-category">
+              <h3>Outros Destaques</h3>
+              <ul>
+                <li>Interior em couro e madeira nobre</li>
+                <li>Suspensão pneumática adaptativa</li>
+                <li>Portas traseiras "suicidas"</li>
+                <li>Iluminação ambiente personalizada</li>
+                <li>Produção limitada</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- História do Modelo -->
+        <section class="car-history-section">
+          <div class="history-content">
+            <div class="history-text">
+              <h2>A História do Rolls-Royce Cullinan</h2>
+              <p>
+                O Cullinan foi lançado em 2018, revolucionando o segmento de
+                SUVs de luxo. Seu nome homenageia o maior diamante já
+                encontrado, refletindo seu status de exclusividade e requinte.
+              </p>
+            </div>
+            <div class="history-image">
+              <img
+                src="../assets/images/carros/rolls_royce_cullinan/rolls_royce_cullinan_historia.webp"
+                alt="História Rolls-Royce Cullinan"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Galeria de Imagens -->
+        <!-- Galeria Section Added Here -->
+        <section class="cullinan-gallery">
+          <h2 class="cullinan-gallery-title">Galeria</h2>
+          <div class="cullinan-gallery-grid">
             <img
-              src="../assets/images/carros/rolls_royce_cullinan.png"
-              alt="Rolls-Royce Cullinan"
+              src="../assets/images/carros/rolls_royce_cullinan/rolls_royce_cullinan_1.webp"
+              alt="Rolls-Royce Cullinan 1"
+              class="cullinan-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/rolls_royce_cullinan/rolls_royce_cullinan_2.webp"
+              alt="Rolls-Royce Cullinan 2"
+              class="cullinan-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/rolls_royce_cullinan/rolls_royce_cullinan_3.webp"
+              alt="Rolls-Royce Cullinan 3"
+              class="cullinan-gallery-img"
             />
           </div>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
+          <p>O melhor de um importado, é ter um Herculion.</p>
         </div>
-      </section>
-      <!-- Especificações Técnicas -->
-      <section id="specs" class="car-details-section">
-        <h2>Especificações Técnicas</h2>
-        <div class="specs-container">
-          <div class="specs-category">
-            <h3>Motor e Performance</h3>
-            <ul>
-              <li>Motor V12 6.75L biturbo</li>
-              <li>Potência: 563 HP</li>
-              <li>Torque: 850 Nm</li>
-              <li>0-100 km/h: 5,2 s</li>
-              <li>Velocidade máxima: 250 km/h</li>
-              <li>Câmbio automático de 8 marchas</li>
-              <li>Tração integral</li>
-            </ul>
-          </div>
-          <div class="specs-category">
-            <h3>Dimensões & Peso</h3>
-            <ul>
-              <li>Peso: 2.660 kg</li>
-              <li>Comprimento: 5,34 m</li>
-              <li>Largura: 2,00 m</li>
-              <li>Altura: 1,83 m</li>
-              <li>Entre-eixos: 3,29 m</li>
-            </ul>
-          </div>
-          <div class="specs-category">
-            <h3>Outros Destaques</h3>
-            <ul>
-              <li>Interior em couro e madeira nobre</li>
-              <li>Suspensão pneumática adaptativa</li>
-              <li>Portas traseiras "suicidas"</li>
-              <li>Iluminação ambiente personalizada</li>
-              <li>Produção limitada</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- História do Modelo -->
-      <section class="car-history-section">
-        <div class="history-content">
-          <div class="history-text">
-            <h2>A História do Rolls-Royce Cullinan</h2>
-            <p>
-              O Cullinan foi lançado em 2018, revolucionando o segmento de SUVs
-              de luxo. Seu nome homenageia o maior diamante já encontrado,
-              refletindo seu status de exclusividade e requinte.
-            </p>
-          </div>
-          <div class="history-image">
-            <img
-              src="../assets/images/carros/rolls_royce_cullinan/rolls_royce_cullinan_historia.webp"
-              alt="História Rolls-Royce Cullinan"
-            />
-          </div>
-        </div>
-      </section>
-      <!-- Galeria de Imagens -->
-      <!-- Galeria Section Added Here -->
-      <section class="cullinan-gallery">
-        <h2 class="cullinan-gallery-title">Galeria</h2>
-        <div class="cullinan-gallery-grid">
-          <img src="../assets/images/carros/rolls_royce_cullinan/rolls_royce_cullinan_1.webp" alt="Rolls-Royce Cullinan 1" class="cullinan-gallery-img" />
-          <img src="../assets/images/carros/rolls_royce_cullinan/rolls_royce_cullinan_2.webp" alt="Rolls-Royce Cullinan 2" class="cullinan-gallery-img" />
-          <img src="../assets/images/carros/rolls_royce_cullinan/rolls_royce_cullinan_3.webp" alt="Rolls-Royce Cullinan 3" class="cullinan-gallery-img" />
-        </div>
-      </section>
-    </main>
-    <footer class="main-footer">
-      <div class="footer-content">
-        <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
-        <p>O melhor de um importado, é ter um Herculion.</p>
-      </div>
-    </footer>
+      </footer>
     </div>
     <style>
       .cullinan-gallery {
@@ -295,13 +310,18 @@
       }
 
       .cullinan-gallery::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
       }
 
       .cullinan-gallery-title {

@@ -53,9 +53,7 @@ h5::selection,
 h6::selection,
 .brand-name::selection,
 .section-title::selection {
-  background: linear-gradient(120deg, #fffbe6 0%, #ffd700 100%);
-  color: #b8860b;
-  text-shadow: 0 0 8px #fffbe6, 0 0 2px #ffd700;
+  background: rgba(255, 217, 0, 0.3);
 }
 h1::-moz-selection,
 h2::-moz-selection,
@@ -65,9 +63,7 @@ h5::-moz-selection,
 h6::-moz-selection,
 .brand-name::-moz-selection,
 .section-title::-moz-selection {
-  background: linear-gradient(120deg, #fffbe6 0%, #ffd700 100%);
-  color: #b8860b;
-  text-shadow: 0 0 8px #fffbe6, 0 0 2px #ffd700;
+  background: rgba(255, 217, 0, 0.3);
 }
 
 /* === LAYOUT === */
@@ -121,20 +117,6 @@ h6::-moz-selection,
   flex-direction: column;
   min-height: 0;
 }
-
-/* Header fixo para scroll suave */
-/* .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: rgba(18, 18, 18, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-} */
 
 /* Ajuste para seções com scroll suave */
 .hero-section,
@@ -218,7 +200,7 @@ h6::-moz-selection,
 }
 
 .footer-brand .brand-name {
-  font-family: "Playfair Display", serif;
+  font-family: "Ephesis", cursive;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   color: var(--accent-color);
@@ -636,13 +618,13 @@ h6::-moz-selection,
   top: 60%;
   font-family: "Ephesis", "Island Moments", cursive;
   font-size: 20vw;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(179, 171, 129);
   white-space: nowrap;
   user-select: none;
   pointer-events: none;
   z-index: 2;
-  text-shadow: 0 4px 20px rgba(148, 148, 148, 0.9),
-    0 0 8px rgba(255, 255, 255, 0.05), 0 0 16px rgba(255, 215, 0, 0.03);
+  /* text-shadow: 0 4px 20px rgba(255, 215, 0, 0.3),
+    0 0 8px rgba(255, 215, 0, 0.05), 0 0 16px rgba(255, 215, 0, 0.03); */
   /* filter: blur(1px); */
   transform: translate(-50%, -50%) rotate(-8deg) skewX(-2deg);
   opacity: 0.2;
@@ -1645,7 +1627,7 @@ h6::-moz-selection,
 /* Seção Interativa Bugatti Tourbillon */
 .tourbillon-interactive-section {
   position: relative;
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 60vh;
   height: 70vh;
   display: flex;
@@ -1660,14 +1642,15 @@ h6::-moz-selection,
 .tourbillon-interactive-video {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100dvw;
+  /* left: 0; */
+  width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 1;
   opacity: 0.4;
   transition: opacity 0.4s;
   pointer-events: none;
+  margin: 0 4rem;
 }
 
 .tourbillon-interactive-section.active .tourbillon-interactive-video {

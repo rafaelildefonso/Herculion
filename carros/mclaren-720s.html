@@ -1,551 +1,324 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>McLaren 720S - Herculion | Performance e Elegância</title>
+    <meta
+      name="description"
+      content="Descubra o McLaren 720S na Herculion. Superesportivo britânico com 720 HP, design aerodinâmico e tecnologia de ponta. Agende sua visita."
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/car-page.css" />
+    <link rel="stylesheet" href="../css/modal-3d.css" />
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <style>
+      /* === MCLAREN 720S - DESIGN EXCLUSIVO === */
+      body {
+        background: #16181a;
+        color: #fff;
+        overflow-x: hidden;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>McLaren 720S - Herculion | Performance e Elegância</title>
-  <meta name="description"
-    content="Descubra o McLaren 720S na Herculion. Superesportivo britânico com 720 HP, design aerodinâmico e tecnologia de ponta. Agende sua visita." />
-  <link rel="stylesheet" href="../css/main.css" />
-  <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/car-page.css" />
-  <link rel="stylesheet" href="../css/modal-3d.css" />
-  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
-  <style>
-    /* === MCLAREN 720S - DESIGN EXCLUSIVO === */
-    body {
-      background: #16181a;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    .mclaren720s-hero {
-      padding-top: var(--header-height);
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(120deg,
+      .mclaren720s-hero {
+        padding-top: var(--header-height);
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+          120deg,
           #16181a 0%,
           #ff8000 70%,
-          #23201a 100%);
-      overflow: hidden;
-    }
-
-    .mclaren720s-hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 80% 30%,
-          rgba(255, 128, 0, 0.08) 0%,
-          transparent 70%),
-        radial-gradient(circle at 20% 80%,
-          rgba(255, 255, 255, 0.04) 0%,
-          transparent 70%);
-      pointer-events: none;
-    }
-
-    .mclaren720s-hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      align-items: center;
-      gap: 4rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .mclaren720s-text-section {
-      position: relative;
-      z-index: 2;
-    }
-
-    .mclaren720s-brand {
-      font-family: "Ephesis", cursive;
-      font-size: 1.8rem;
-      color: #ff8000;
-      margin-bottom: 1rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    .mclaren720s-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 6rem;
-      color: #fff;
-      margin-bottom: 1rem;
-      line-height: 0.9;
-      text-shadow: 0 0 30px rgba(255, 128, 0, 0.3);
-    }
-
-    .mclaren720s-tagline {
-      font-family: "Ephesis", cursive;
-      font-size: 2.5rem;
-      color: #ff8000;
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-
-    .mclaren720s-price {
-      font-size: 4rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 20px rgba(255, 128, 0, 0.4);
-    }
-
-    .mclaren720s-description {
-      font-size: 1.4rem;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 3rem;
-      max-width: 500px;
-    }
-
-    .mclaren720s-cta {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .mclaren720s-btn {
-      padding: 1.5rem 3rem;
-      border-radius: 0;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .mclaren720s-btn.primary {
-      background: #ff8000;
-      color: #16181a;
-      border-color: #ff8000;
-    }
-
-    .mclaren720s-btn.primary::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg,
-          transparent,
-          rgba(255, 255, 255, 0.3),
-          transparent);
-      transition: left 0.5s;
-    }
-
-    .mclaren720s-btn.primary:hover::before {
-      left: 100%;
-    }
-
-    .mclaren720s-btn.primary:hover {
-      background: #fff;
-      color: #16181a;
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(255, 128, 0, 0.3);
-    }
-
-    .mclaren720s-btn.secondary {
-      background: transparent;
-      color: #fff;
-      border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .mclaren720s-btn.secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: #fff;
-      transform: translateY(-3px);
-    }
-
-    .mclaren720s-image-section {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .mclaren720s-image-container {
-      position: relative;
-      transition: transform 0.5s ease;
-    }
-
-    .mclaren720s-image-container img {
-      max-width: 100%;
-      max-height: 70vh;
-      object-fit: contain;
-      filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.8));
-    }
-
-    /* Especificações Técnicas */
-    .mclaren720s-specs {
-      padding: 8rem 2rem 4rem 2rem;
-      background: linear-gradient(135deg, #16181a 0%, #23201a 100%);
-    }
-
-    .mclaren720s-specs-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .mclaren720s-specs-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 3.5rem;
-      text-align: center;
-      color: #ff8000;
-      margin-bottom: 3rem;
-      text-shadow: 0 0 25px rgba(255, 128, 0, 0.3);
-    }
-
-    .mclaren720s-specs-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
-    .mclaren720s-specs-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 128, 0, 0.1);
-      border-radius: 0;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .mclaren720s-specs-card:hover {
-      border-color: #ff8000;
-      transform: translateY(-10px);
-      background: rgba(255, 128, 0, 0.05);
-    }
-
-    .mclaren720s-specs-label {
-      font-size: 1.1rem;
-      color: rgba(255, 255, 255, 0.8);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 0.5rem;
-    }
-
-    .mclaren720s-specs-value {
-      font-size: 2.2rem;
-      font-weight: bold;
-      color: #ff8000;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 0 15px rgba(255, 128, 0, 0.3);
-    }
-
-    .mclaren720s-specs-detail {
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    /* História */
-    .mclaren720s-history {
-      padding: 8rem 2rem;
-      background: #16181a;
-    }
-
-    .mclaren720s-history-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .mclaren720s-history-text {
-      font-size: 1.35rem;
-      line-height: 2;
-      color: rgba(255, 255, 255, 0.92);
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-
-    .mclaren720s-history-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 2.5rem;
-      color: #ff8000;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 18px rgba(255, 128, 0, 0.3);
-    }
-
-    .mclaren720s-history-img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-      object-fit: cover;
-      max-height: 340px;
-    }
-
-    /* Galeria */
-    .mclaren720s-gallery {
-      padding: 6rem 2rem 8rem 2rem;
-      background: linear-gradient(120deg, #23201a 0%, #16181a 100%);
-    }
-
-    .mclaren720s-gallery-title {
-      font-family: "IM FELL Double Pica SC", serif;
-      font-size: 2.5rem;
-      color: #ff8000;
-      text-align: center;
-      margin-bottom: 3rem;
-      text-shadow: 0 0 12px rgba(255, 128, 0, 0.3);
-    }
-
-    .mclaren720s-gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .mclaren720s-gallery-img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      object-fit: cover;
-      max-height: 220px;
-      background: #222;
-    }
-
-    /* Responsivo */
-    @media (max-width: 1200px) {
-      .mclaren720s-hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-      }
-
-      .mclaren720s-specs-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .mclaren720s-history-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .mclaren720s-gallery-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .mclaren720s-title {
-        font-size: 3.5rem;
-      }
-
-      .mclaren720s-tagline {
-        font-size: 1.8rem;
-      }
-
-      .mclaren720s-price {
-        font-size: 2.5rem;
-      }
-
-      .mclaren720s-specs-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .mclaren720s-cta {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .mclaren720s-image-container {
-        transform: none;
-      }
-
-      .mclaren720s-badge {
-        width: 80px;
-        height: 80px;
-        top: -1rem;
-        right: -1rem;
-      }
-
-      .mclaren720s-gallery-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-
-<body data-model-3d="3d6178f0e8b0482f98ce44a27dc9ad0b">
-  <div class="desktop">
-    <header class="header">
-      <nav class="navigation">
-        <button class="menu-button" aria-label="Menu">
-          <img class="svgviewer-png-output-2" src="../assets/images/v11_2.png" alt="Menu icon" />
-        </button>
-      </nav>
-      <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
-      <nav id="side-menu" class="side-menu">
-        <div class="menu-watermark">Herculion</div>
-        <button id="close-btn" class="close-btn">&times;</button>
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="../grade-carros.html">Modelos</a></li>
-          <li><a href="../index.html#experience">Experiências</a></li>
-          <li><a href="../busca.html">Busca</a></li>
-          <li><a href="../quem-somos.html">Quem Somos</a></li>
-          <li><a href="../contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <!-- Hero Section -->
-      <section class="mclaren720s-hero">
-        <div class="mclaren720s-hero-content car-details">
-          <div class="mclaren720s-text-section">
-            <div class="mclaren720s-brand">McLaren</div>
-            <h1 class="mclaren720s-title">720S</h1>
-            <p class="mclaren720s-tagline">
-              "Performance e Elegância Britânica"
-            </p>
-            <p class="mclaren720s-price">R$ 4.200.000</p>
-            <p class="mclaren720s-description">
-              O McLaren 720S é a expressão máxima da engenharia britânica em
-              superesportivos. Com design aerodinâmico, estrutura leve em fibra
-              de carbono e um motor V8 biturbo de 720 cv, entrega uma
-              experiência de condução única e emocionante.
-            </p>
-            <div class="mclaren720s-cta">
-              <a href="../contato.html?car=McLaren+720S" class="mclaren720s-btn primary">Tenho Interesse</a>
-              <a href="#specs" class="mclaren720s-btn secondary">Ver Especificações</a>
-            </div>
-          </div>
-          <div class="mclaren720s-image-section">
-            <div class="mclaren720s-image-container">
-              <img src="../assets/images/carros/mclaren_720s.png" alt="McLaren 720S - Performance e Elegância" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Especificações Técnicas -->
-      <section id="specs" class="mclaren720s-specs">
-        <div class="mclaren720s-specs-container">
-          <h2 class="mclaren720s-specs-title">Especificações Técnicas</h2>
-          <div class="mclaren720s-specs-grid">
-            <div class="mclaren720s-specs-card">
-              <div class="mclaren720s-specs-label">Motor</div>
-              <div class="mclaren720s-specs-value">4.0 V8 Biturbo</div>
-              <div class="mclaren720s-specs-detail">
-                Potência Máxima: 720 cv
-              </div>
-            </div>
-            <div class="mclaren720s-specs-card">
-              <div class="mclaren720s-specs-label">0-100 km/h</div>
-              <div class="mclaren720s-specs-value">2,9 s</div>
-              <div class="mclaren720s-specs-detail">Aceleração</div>
-            </div>
-            <div class="mclaren720s-specs-card">
-              <div class="mclaren720s-specs-label">Velocidade Máxima</div>
-              <div class="mclaren720s-specs-value">341 km/h</div>
-              <div class="mclaren720s-specs-detail">Dados de fábrica</div>
-            </div>
-            <div class="mclaren720s-specs-card">
-              <div class="mclaren720s-specs-label">Torque</div>
-              <div class="mclaren720s-specs-value">770 Nm</div>
-              <div class="mclaren720s-specs-detail">Entre 5.500-6.500 rpm</div>
-            </div>
-            <div class="mclaren720s-specs-card">
-              <div class="mclaren720s-specs-label">Peso</div>
-              <div class="mclaren720s-specs-value">1.419 kg</div>
-              <div class="mclaren720s-specs-detail">Estrutura Monocasco</div>
-            </div>
-            <div class="mclaren720s-specs-card">
-              <div class="mclaren720s-specs-label">Transmissão</div>
-              <div class="mclaren720s-specs-value">DCT 7 marchas</div>
-              <div class="mclaren720s-specs-detail">Dupla embreagem</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- História -->
-      <section class="mclaren720s-history">
-        <div class="mclaren720s-history-container">
-          <div>
-            <h2 class="mclaren720s-history-title">
-              A História do McLaren 720S
-            </h2>
-            <p class="mclaren720s-history-text">
-              Lançado em 2017, o McLaren 720S faz parte da linha Super Series da
-              marca britânica. Seu chassi Monocage II de fibra de carbono e o
-              motor M840T revolucionaram o segmento de superesportivos, trazendo
-              leveza, potência e tecnologia de ponta.
-            </p>
-            <p class="mclaren720s-history-text">
-              O design do 720S foi inspirado nos predadores do oceano, com
-              linhas fluidas e soluções aerodinâmicas inovadoras, garantindo
-              máxima eficiência e estabilidade em altas velocidades.
-            </p>
-            <p class="mclaren720s-history-text">
-              O 720S representa a busca incessante da McLaren pela perfeição em
-              performance, engenharia e emoção ao dirigir.
-            </p>
-          </div>
-          <img src="../assets/images/carros/mclaren_720s/mclaren_720s_historia.jpg" alt="McLaren 720S História"
-            class="mclaren720s-history-img" />
-        </div>
-      </section>
-      <!-- Galeria -->
-      <section class="mclaren720s-gallery">
-        <h2 class="mclaren720s-gallery-title">Galeria</h2>
-        <div class="mclaren720s-gallery-grid">
-          <img src="../assets/images/carros/mclaren_720s/mclaren_720s_1.webp" alt="McLaren 720S 1"
-            class="mclaren720s-gallery-img" />
-          <img src="../assets/images/carros/mclaren_720s/mclaren_720s_2.png" alt="McLaren 720S 2"
-            class="mclaren720s-gallery-img" />
-          <img src="../assets/images/carros/mclaren_720s/mclaren_720s_3.webp" alt="McLaren 720S 3"
-            class="mclaren720s-gallery-img" />
-        </div>
-      </section>
-    </main>
-    <style>
-      .mclaren-gallery {
-        padding: 6rem 2rem;
-        background: #0a0a0a;
-        position: relative;
+          #23201a 100%
+        );
         overflow: hidden;
       }
 
-      .mclaren-gallery::before {
-        content: '';
+      .mclaren720s-hero::before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        bottom: 0;
+        background: radial-gradient(
+            circle at 80% 30%,
+            rgba(255, 128, 0, 0.08) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(255, 255, 255, 0.04) 0%,
+            transparent 70%
+          );
+        pointer-events: none;
       }
 
-      .mclaren-gallery-title {
+      .mclaren720s-hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        align-items: center;
+        gap: 4rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .mclaren720s-text-section {
+        position: relative;
+        z-index: 2;
+      }
+
+      .mclaren720s-brand {
+        font-family: "Ephesis", cursive;
+        font-size: 1.8rem;
+        color: #ff8000;
+        margin-bottom: 1rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+
+      .mclaren720s-title {
+        font-family: "IM FELL Double Pica SC", serif;
+        font-size: 6rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 0.9;
+        text-shadow: 0 0 30px rgba(255, 128, 0, 0.3);
+      }
+
+      .mclaren720s-tagline {
+        font-family: "Ephesis", cursive;
+        font-size: 2.5rem;
+        color: #ff8000;
+        margin-bottom: 2rem;
+        font-style: italic;
+      }
+
+      .mclaren720s-price {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 20px rgba(255, 128, 0, 0.4);
+      }
+
+      .mclaren720s-description {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 3rem;
+        max-width: 500px;
+      }
+
+      .mclaren720s-cta {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .mclaren720s-btn {
+        padding: 1.5rem 3rem;
+        border-radius: 0;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mclaren720s-btn.primary {
+        background: #ff8000;
+        color: #16181a;
+        border-color: #ff8000;
+      }
+
+      .mclaren720s-btn.primary::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .mclaren720s-btn.primary:hover::before {
+        left: 100%;
+      }
+
+      .mclaren720s-btn.primary:hover {
+        background: #fff;
+        color: #16181a;
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(255, 128, 0, 0.3);
+      }
+
+      .mclaren720s-btn.secondary {
+        background: transparent;
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .mclaren720s-btn.secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #fff;
+        transform: translateY(-3px);
+      }
+
+      .mclaren720s-image-section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mclaren720s-image-container {
+        position: relative;
+        transition: transform 0.5s ease;
+      }
+
+      .mclaren720s-image-container img {
+        max-width: 100%;
+        max-height: 70vh;
+        object-fit: contain;
+        filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.8));
+      }
+
+      /* Especificações Técnicas */
+      .mclaren720s-specs {
+        padding: 8rem 2rem 4rem 2rem;
+        background: linear-gradient(135deg, #16181a 0%, #23201a 100%);
+      }
+
+      .mclaren720s-specs-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .mclaren720s-specs-title {
+        font-family: "IM FELL Double Pica SC", serif;
+        font-size: 3.5rem;
+        text-align: center;
+        color: #ff8000;
+        margin-bottom: 3rem;
+        text-shadow: 0 0 25px rgba(255, 128, 0, 0.3);
+      }
+
+      .mclaren720s-specs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .mclaren720s-specs-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 128, 0, 0.1);
+        border-radius: 0;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .mclaren720s-specs-card:hover {
+        border-color: #ff8000;
+        transform: translateY(-10px);
+        background: rgba(255, 128, 0, 0.05);
+      }
+
+      .mclaren720s-specs-label {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+      }
+
+      .mclaren720s-specs-value {
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #ff8000;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 15px rgba(255, 128, 0, 0.3);
+      }
+
+      .mclaren720s-specs-detail {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* História */
+      .mclaren720s-history {
+        padding: 8rem 2rem;
+        background: #16181a;
+      }
+
+      .mclaren720s-history-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .mclaren720s-history-text {
+        font-size: 1.35rem;
+        line-height: 2;
+        color: rgba(255, 255, 255, 0.92);
+        margin-bottom: 2rem;
+        font-style: italic;
+      }
+
+      .mclaren720s-history-title {
         font-family: "IM FELL Double Pica SC", serif;
         font-size: 2.5rem;
-        color: #ff0000;
-        text-align: center;
-        margin-bottom: 3rem;
-        text-shadow: 0 0 12px rgba(255, 0, 0, 0.3);
+        color: #ff8000;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 18px rgba(255, 128, 0, 0.3);
       }
 
-      .mclaren-gallery-grid {
+      .mclaren720s-history-img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        object-fit: cover;
+        max-height: 340px;
+      }
+
+      /* Galeria */
+      .mclaren720s-gallery {
+        padding: 6rem 2rem 8rem 2rem;
+        background: linear-gradient(120deg, #23201a 0%, #16181a 100%);
+      }
+
+      .mclaren720s-gallery-title {
+        font-family: "IM FELL Double Pica SC", serif;
+        font-size: 2.5rem;
+        color: #ff8000;
+        text-align: center;
+        margin-bottom: 3rem;
+        text-shadow: 0 0 12px rgba(255, 128, 0, 0.3);
+      }
+
+      .mclaren720s-gallery-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
@@ -553,47 +326,317 @@
         margin: 0 auto;
       }
 
-      .mclaren-gallery-img {
+      .mclaren720s-gallery-img {
         width: 100%;
         border-radius: 10px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         object-fit: cover;
         max-height: 220px;
-        background: #111;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: #222;
       }
 
-      .mclaren-gallery-img:hover {
-        transform: translateY(-5px) scale(1.1);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-      }
+      /* Responsivo */
+      @media (max-width: 1200px) {
+        .mclaren720s-hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 2rem;
+        }
 
-      @media (max-width: 768px) {
-        .mclaren-gallery-grid {
+        .mclaren720s-specs-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .mclaren720s-history-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .mclaren720s-gallery-grid {
           grid-template-columns: 1fr 1fr;
         }
       }
 
-      @media (max-width: 480px) {
-        .mclaren-gallery-grid {
+      @media (max-width: 768px) {
+        .mclaren720s-title {
+          font-size: 3.5rem;
+        }
+
+        .mclaren720s-tagline {
+          font-size: 1.8rem;
+        }
+
+        .mclaren720s-price {
+          font-size: 2.5rem;
+        }
+
+        .mclaren720s-specs-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .mclaren720s-cta {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .mclaren720s-image-container {
+          transform: none;
+        }
+
+        .mclaren720s-badge {
+          width: 80px;
+          height: 80px;
+          top: -1rem;
+          right: -1rem;
+        }
+
+        .mclaren720s-gallery-grid {
           grid-template-columns: 1fr;
         }
       }
     </style>
-    <footer class="main-footer">
-      <div class="footer-content">
-        <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
-        <p>O melhor de um importado, é ter um Herculion.</p>
-      </div>
-    </footer>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  </head>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <!-- ScrollSmoother requires ScrollTrigger -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/modal-3d.js"></script>
-</body>
+  <body data-model-3d="3d6178f0e8b0482f98ce44a27dc9ad0b">
+    <div class="desktop">
+      <header class="header">
+        <nav class="navigation">
+          <button class="menu-button" aria-label="Menu">
+            <img
+              class="svgviewer-png-output-2"
+              src="../assets/images/v11_2.png"
+              alt="Menu icon"
+            />
+          </button>
+        </nav>
+        <h1 class="brand-name"><a href="../index.html">Herculion</a></h1>
+        <nav id="side-menu" class="side-menu">
+          <div class="menu-watermark">Herculion</div>
+          <button id="close-btn" class="close-btn">&times;</button>
+          <ul>
+            <li><a href="../index.html#hero">Início</a></li>
+            <li><a href="../grade-carros.html">Modelos</a></li>
+            <li><a href="../index.html#experience">Experiências</a></li>
+            <li><a href="../busca.html">Busca</a></li>
+            <li><a href="../quem-somos.html">Quem Somos</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+            <li><a href="../pedidos.html">Meus Pedidos</a></li>
+            <li><a href="../cadastro.html">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <!-- Hero Section -->
+        <section class="mclaren720s-hero">
+          <div class="mclaren720s-hero-content car-details">
+            <div class="mclaren720s-text-section">
+              <div class="mclaren720s-brand">McLaren</div>
+              <h1 class="mclaren720s-title">720S</h1>
+              <p class="mclaren720s-tagline">
+                "Performance e Elegância Britânica"
+              </p>
+              <p class="mclaren720s-price">R$ 3.6M</p>
+              <p class="mclaren720s-description">
+                O McLaren 720S é a expressão máxima da engenharia britânica em
+                superesportivos. Com design aerodinâmico, estrutura leve em
+                fibra de carbono e um motor V8 biturbo de 720 cv, entrega uma
+                experiência de condução única e emocionante.
+              </p>
+              <div class="mclaren720s-cta">
+                <a
+                  href="../contato.html?car=McLaren+720S"
+                  class="mclaren720s-btn primary"
+                  >Tenho Interesse</a
+                >
+                <a href="#specs" class="mclaren720s-btn secondary"
+                  >Ver Especificações</a
+                >
+              </div>
+            </div>
+            <div class="mclaren720s-image-section">
+              <div class="mclaren720s-image-container">
+                <img
+                  src="../assets/images/carros/mclaren_720s.png"
+                  alt="McLaren 720S - Performance e Elegância"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Especificações Técnicas -->
+        <section id="specs" class="mclaren720s-specs">
+          <div class="mclaren720s-specs-container">
+            <h2 class="mclaren720s-specs-title">Especificações Técnicas</h2>
+            <div class="mclaren720s-specs-grid">
+              <div class="mclaren720s-specs-card">
+                <div class="mclaren720s-specs-label">Motor</div>
+                <div class="mclaren720s-specs-value">4.0 V8 Biturbo</div>
+                <div class="mclaren720s-specs-detail">
+                  Potência Máxima: 720 cv
+                </div>
+              </div>
+              <div class="mclaren720s-specs-card">
+                <div class="mclaren720s-specs-label">0-100 km/h</div>
+                <div class="mclaren720s-specs-value">2,9 s</div>
+                <div class="mclaren720s-specs-detail">Aceleração</div>
+              </div>
+              <div class="mclaren720s-specs-card">
+                <div class="mclaren720s-specs-label">Velocidade Máxima</div>
+                <div class="mclaren720s-specs-value">341 km/h</div>
+                <div class="mclaren720s-specs-detail">Dados de fábrica</div>
+              </div>
+              <div class="mclaren720s-specs-card">
+                <div class="mclaren720s-specs-label">Torque</div>
+                <div class="mclaren720s-specs-value">770 Nm</div>
+                <div class="mclaren720s-specs-detail">
+                  Entre 5.500-6.500 rpm
+                </div>
+              </div>
+              <div class="mclaren720s-specs-card">
+                <div class="mclaren720s-specs-label">Peso</div>
+                <div class="mclaren720s-specs-value">1.419 kg</div>
+                <div class="mclaren720s-specs-detail">Estrutura Monocasco</div>
+              </div>
+              <div class="mclaren720s-specs-card">
+                <div class="mclaren720s-specs-label">Transmissão</div>
+                <div class="mclaren720s-specs-value">DCT 7 marchas</div>
+                <div class="mclaren720s-specs-detail">Dupla embreagem</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- História -->
+        <section class="mclaren720s-history">
+          <div class="mclaren720s-history-container">
+            <div>
+              <h2 class="mclaren720s-history-title">
+                A História do McLaren 720S
+              </h2>
+              <p class="mclaren720s-history-text">
+                Lançado em 2017, o McLaren 720S faz parte da linha Super Series
+                da marca britânica. Seu chassi Monocage II de fibra de carbono e
+                o motor M840T revolucionaram o segmento de superesportivos,
+                trazendo leveza, potência e tecnologia de ponta.
+              </p>
+              <p class="mclaren720s-history-text">
+                O design do 720S foi inspirado nos predadores do oceano, com
+                linhas fluidas e soluções aerodinâmicas inovadoras, garantindo
+                máxima eficiência e estabilidade em altas velocidades.
+              </p>
+              <p class="mclaren720s-history-text">
+                O 720S representa a busca incessante da McLaren pela perfeição
+                em performance, engenharia e emoção ao dirigir.
+              </p>
+            </div>
+            <img
+              src="../assets/images/carros/mclaren_720s/mclaren_720s_historia.jpg"
+              alt="McLaren 720S História"
+              class="mclaren720s-history-img"
+            />
+          </div>
+        </section>
+        <!-- Galeria -->
+        <section class="mclaren720s-gallery">
+          <h2 class="mclaren720s-gallery-title">Galeria</h2>
+          <div class="mclaren720s-gallery-grid">
+            <img
+              src="../assets/images/carros/mclaren_720s/mclaren_720s_1.webp"
+              alt="McLaren 720S 1"
+              class="mclaren720s-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/mclaren_720s/mclaren_720s_2.png"
+              alt="McLaren 720S 2"
+              class="mclaren720s-gallery-img"
+            />
+            <img
+              src="../assets/images/carros/mclaren_720s/mclaren_720s_3.webp"
+              alt="McLaren 720S 3"
+              class="mclaren720s-gallery-img"
+            />
+          </div>
+        </section>
+      </main>
+      <style>
+        .mclaren-gallery {
+          padding: 6rem 2rem;
+          background: #0a0a0a;
+          position: relative;
+          overflow: hidden;
+        }
 
+        .mclaren-gallery::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent
+          );
+        }
+
+        .mclaren-gallery-title {
+          font-family: "IM FELL Double Pica SC", serif;
+          font-size: 2.5rem;
+          color: #ff0000;
+          text-align: center;
+          margin-bottom: 3rem;
+          text-shadow: 0 0 12px rgba(255, 0, 0, 0.3);
+        }
+
+        .mclaren-gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+          max-width: 1100px;
+          margin: 0 auto;
+        }
+
+        .mclaren-gallery-img {
+          width: 100%;
+          border-radius: 10px;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          object-fit: cover;
+          max-height: 220px;
+          background: #111;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mclaren-gallery-img:hover {
+          transform: translateY(-5px) scale(1.1);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+          .mclaren-gallery-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .mclaren-gallery-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
+      <footer class="main-footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Herculion. Todos os direitos reservados.</p>
+          <p>O melhor de um importado, é ter um Herculion.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/modal-3d.js"></script>
+  </body>
 </html>
