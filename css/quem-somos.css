@@ -116,7 +116,7 @@
   left: 0;
   top: 0;
   width: 2px;
-  height: 100%;
+  height: calc(100% + 10rem);
   background: linear-gradient(180deg, var(--secondary-color), transparent);
 }
 
@@ -137,10 +137,11 @@
 }
 
 .timeline-year {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 700;
   color: var(--secondary-color);
   margin-bottom: 1rem;
+  margin-top: -1rem;
   font-family: "Playfair Display", serif;
 }
 
@@ -150,6 +151,7 @@
   color: var(--text-color);
   margin-bottom: 1rem;
   font-family: "Playfair Display", serif;
+  font-size: 2rem;
 }
 
 .timeline-content p {
@@ -186,6 +188,17 @@
 .image:hover {
   border-color: var(--secondary-color);
   background: rgba(255, 255, 255, 0.05);
+}
+
+
+@media (max-width: 480px) {
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-item-left {
+    width: 100%;
+  }
 }
 
 /* Valores Section */
@@ -232,22 +245,18 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%);
   border-radius: 20px;
   transition: all 0.3s ease;
   z-index: -1;
 }
 
 .valor-item:hover::before {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
 }
 
 .valor-icon-placeholder {
@@ -429,11 +438,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%);
   border-radius: 20px;
   transition: all 0.3s ease;
   z-index: -1;
@@ -441,11 +448,9 @@
 
 .missao-card:hover::before,
 .visao-card:hover::before {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
 }
 
 .missao-card h2,
@@ -520,22 +525,18 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%);
   border-radius: 20px;
   transition: all 0.3s ease;
   z-index: -1;
 }
 
 .numero-item:hover::before {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
 }
 
 .numero {
@@ -602,6 +603,7 @@
 
 /* Responsividade */
 @media (max-width: 1200px) {
+
   .historia-content,
   .missao-visao-content {
     grid-template-columns: 1fr;
@@ -626,6 +628,7 @@
 }
 
 @media (max-width: 992px) {
+
   .historia-section,
   .valores-section,
   .equipe-section,
@@ -657,6 +660,7 @@
 }
 
 @media (max-width: 768px) {
+
   .historia-section,
   .valores-section,
   .equipe-section,
@@ -714,6 +718,7 @@
 }
 
 @media (max-width: 480px) {
+
   .historia-section,
   .valores-section,
   .equipe-section,
@@ -778,4 +783,41 @@
   .numero {
     font-size: 2rem;
   }
+}
+
+.segundaTimeline::before {
+  background: linear-gradient(180deg, #ddcdba, transparent);
+}
+
+.segundaTimeline::after {
+  background: linear-gradient(180deg, #ddcdba, transparent);
+  box-shadow: 0 0 20px rgba(221, 205, 186, 0.5);
+  background: #ddcdba;
+}
+
+
+/*----------------*/
+
+.terceiraTimeline::before {
+  background: linear-gradient(180deg, #eed494, transparent);
+}
+
+.terceiraTimeline::after {
+  background: linear-gradient(180deg, #eed494, transparent);
+  box-shadow: 0 0 20px rgba(221, 205, 186, 0.5);
+  background: #eed494;
+}
+
+
+
+/*----------------*/
+
+.quartaTimeline::before {
+  background: linear-gradient(180deg, #c0ae4a, transparent);
+}
+
+.quartaTimeline::after {
+  background: linear-gradient(180deg, #c0ae4a, transparent);
+  box-shadow: 0 0 20px rgba(221, 205, 186, 0.5);
+  background: #c0ae4a;
 }
