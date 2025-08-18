@@ -10,7 +10,7 @@ const formatDate = (dateString) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const ordersGrid = document.getElementById('orders-grid');
+  const ordersGrid = document.querySelector('.orders-grid');
   const filterBtns = document.querySelectorAll('.filter-btn');
   const userNameElement = document.getElementById('user-name');
   const logoutBtn = document.getElementById('logout-btn');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (!currentUser) {
     // Se não estiver logado, redirecionar para a página de login
-    window.location.href = 'login.html';
+    window.location.href = 'cadastro.html';
     return;
   }
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const userOrders = currentUser.orders || [];
 
   const renderOrders = (filter = 'all') => {
-    ordersGrid.innerHTML = '';
+    ordersGrid.innerHTML = '<p>Carregando pedidos...</p>';
     const filteredOrders = userOrders.filter(order => filter === 'all' || order.status === filter);
 
     if (filteredOrders.length === 0) {
@@ -50,29 +50,28 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    ordersGrid.innerHTML = '';
     filteredOrders.forEach(order => {
+      if (typeof todosCarros !== 'undefined' && Array.isArray(todosCarros)) {
+      // Buscar dados do carro pelo id salvo no pedido
+      const carro = todosCarros.find(c => c.id === order.carId);
+      if (!carro) return;
       const orderCard = document.createElement('div');
       orderCard.className = 'order-card';
-      // Formatar o preço para exibição
-      const formattedPrice = new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
-        currency: 'BRL',
-        minimumFractionDigits: 2
-      }).format(order.price);
-
+      const formattedPrice = carro.preco || '';
       orderCard.innerHTML = `
         <div class="order-card-image">
-          <img src="${order.image}" alt="${order.carName}" onerror="this.src='assets/images/car-placeholder.jpg'">
-          ${order.novo ? '<span class="new-badge">Novo</span>' : ''}
+          <img src="${carro.imagem}" alt="${carro.nome}" onerror="this.src='assets/images/car-placeholder.jpg'">
+          ${carro.novo ? '<span class="new-badge">Novo</span>' : ''}
         </div>
         <div class="order-card-content">
           <div class="order-card-header">
-            <h3 class="order-car-name">${order.carName}</h3>
+            <h3 class="order-car-name">${carro.nome}</h3>
             <span class="order-status status-${order.status}">
               ${order.status === 'processando' ? 'Em Processamento' : 
                 order.status === 'entregue' ? 'Entregue' : 
                 order.status === 'cancelado' ? 'Cancelado' : 
-                'Em Andamento'}
+                'Reservado'}
             </span>
           </div>
           <div class="order-details">
@@ -82,11 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
             ${order.paymentMethod ? `<p><i class="fas fa-credit-card"></i> <strong>Pagamento:</strong> ${order.paymentMethod}</p>` : ''}
           </div>
           <div class="order-card-footer">
-            <a href="${order.carLink || '#'}" class="details-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+            <a href="${carro.route || '#'}" class="details-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       `;
       ordersGrid.appendChild(orderCard);
+    }
     });
 
     gsap.from('.order-card', {

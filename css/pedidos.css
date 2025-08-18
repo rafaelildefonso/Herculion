@@ -266,3 +266,10 @@
     font-size: 2.5rem;
   }
 }
+
+.no-orders {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

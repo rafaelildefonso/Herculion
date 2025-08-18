@@ -11,8 +11,8 @@ function checkAuth() {
     // Se tentar acessar uma página restrita sem estar autenticado
     if (typeof auth !== 'undefined' && !auth.isAuthenticated()) {
         // Redireciona para a página de autenticação com o caminho de retorno
-        const returnUrl = encodeURIComponent(window.location.pathname + window.location.search);
-        window.location.href = `auth.html?returnUrl=${returnUrl}`;
+        // const returnUrl = encodeURIComponent(window.location.pathname + window.location.search);
+        // window.location.href = `auth.html?returnUrl=${returnUrl}`;
     }
 }
 

@@ -1,3 +1,18 @@
+  // Labels flutuantes: manter label acima se houver conteúdo
+  const textInputs = [fullName, email, password, confirmPassword];
+  textInputs.forEach(input => {
+    input.addEventListener('blur', () => {
+      if (input.value.trim() !== '') {
+        input.classList.add('has-content');
+      } else {
+        input.classList.remove('has-content');
+      }
+    });
+    // Garante o estado correto ao carregar a página
+    if (input.value.trim() !== '') {
+      input.classList.add('has-content');
+    }
+  });
 // Verificar se o usuário já está logado
 const checkLoggedInUser = () => {
   return JSON.parse(localStorage.getItem('herculionCurrentUser'));
@@ -9,6 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = 'pedidos.html';
   }
   const form = document.getElementById('registrationForm');
+  if (!form) {
+    console.error('Formulário de cadastro não encontrado!');
+    return;
+  }
   const fullName = document.getElementById('fullName');
   const email = document.getElementById('email');
   const password = document.getElementById('password');
@@ -19,8 +38,30 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('js-loaded');
 
   form.addEventListener('submit', (e) => {
+    console.log('Submit interceptado');
     e.preventDefault();
     if (validateForm()) {
+
+      const user = {
+        id: Date.now().toString(),
+        fullName: fullName.value.trim(),
+        email: email.value.trim(),
+        password: password.value, // Em uma aplicação real, isso seria criptografado
+        orders: []
+      };
+
+      // Obter usuários existentes ou criar um novo array
+      const existingUsers = JSON.parse(localStorage.getItem('herculionUsers')) || [];
+      // Verificar se o e-mail já está cadastrado
+      if (existingUsers.some(u => u.email === user.email)) {
+        alert('Este e-mail já está cadastrado. Por favor, faça login ou use outro e-mail.');
+        return;
+      }
+      // Adicionar novo usuário
+      existingUsers.push(user);
+      localStorage.setItem('herculionUsers', JSON.stringify(existingUsers));
+      // Definir usuário atual
+      localStorage.setItem('herculionCurrentUser', JSON.stringify(user));
       // Simula o envio do formulário
       showSuccessMessage();
     }
@@ -35,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     isValid &= validateField(terms, (value) => terms.checked, 'Você deve aceitar os termos de serviço.');
     return isValid;
   };
+
 
   const validateField = (field, validationFn, errorMessage) => {
     const value = field.type === 'checkbox' ? field.checked : field.value;
@@ -68,28 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const showSuccessMessage = () => {
-    // Salvar usuário no Local Storage
-    const user = {
-      id: Date.now().toString(),
-      fullName: fullName.value.trim(),
-      email: email.value.trim(),
-      password: password.value, // Em uma aplicação real, isso seria criptografado
-      orders: [] // Array para armazenar os pedidos do usuário
-    };
-
-    // Obter usuários existentes ou criar um novo array
-    const existingUsers = JSON.parse(localStorage.getItem('herculionUsers')) || [];
-    
-    // Verificar se o e-mail já está cadastrado
-    if (existingUsers.some(u => u.email === user.email)) {
-      alert('Este e-mail já está cadastrado. Por favor, faça login ou use outro e-mail.');
-      return;
-    }
-
-    // Adicionar novo usuário
-    existingUsers.push(user);
-    localStorage.setItem('herculionUsers', JSON.stringify(existingUsers));
-
     // Mostrar mensagem de sucesso
     const formWrapper = document.querySelector('.registration-form-wrapper');
     formWrapper.innerHTML = `
@@ -97,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <i class="fas fa-check-circle"></i>
         <h2>Cadastro Realizado!</h2>
         <p>Sua conta exclusiva foi criada com sucesso. Bem-vindo à Herculion.</p>
-        <a href="login.html" class="cta-button">Fazer Login</a>
+        <a href="index.html" class="cta-button">Voltar à pagina inicial</a>
       </div>
     `;
     gsap.from('.form-success', { opacity: 0, y: 20, duration: 0.8, ease: 'power3.out' });

@@ -1,3 +1,15 @@
+/* Mantém o label flutuante se o input tiver conteúdo */
+input.has-content + label,
+input:focus + label {
+  top: -18px;
+  font-size: 0.95em;
+  color: var(#f7d900);
+  background: #181a1c;
+  padding: 0 6px;
+  left: 10px;
+  z-index: 2;
+  transition: all 0.2s;
+}
 /* Estilos para a página de cadastro */
 
 :root {

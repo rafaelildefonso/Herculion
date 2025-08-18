@@ -9,7 +9,6 @@
 
   // URL base do modelo 3D - o ID será inserido dinamicamente
   const SKETCHFAB_BASE_URL = "https://sketchfab.com/models/{{model_id}}/embed?api_version=1.5.1&api_id=1_api-frame&annotations_visible=0&autospin=0.1&autostart=1&camera=0&double_click=0&internal=1&max_texture_size=1024&preload=1&scrollwheel=0&sound_enable=0&transparent=1&ui_animations=0&ui_annotations=0&ui_ar=1&ui_ar_help=0&ui_color=white&ui_fadeout=0&ui_fullscreen=0&ui_help=0&ui_infos=0&ui_inspector=0&ui_settings=0&ui_stop=0&ui_theatre=0&ui_vr=0&ui_watermark=0&dnt=1";
-
   // Função para obter o ID do modelo da página atual
   function getModelId() {
     return document.body.getAttribute('data-model-3d') || ''; // ID padrão se não especificado
