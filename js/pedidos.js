@@ -90,13 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     });
 
-    gsap.from('.order-card', {
-      duration: 0.8,
-      opacity: 0,
-      y: 50,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
   };
 
   filterBtns.forEach(btn => {
