@@ -190,7 +190,6 @@
   background: rgba(255, 255, 255, 0.05);
 }
 
-
 @media (max-width: 930px) {
   .timeline-item {
     flex-direction: column;
@@ -245,18 +244,22 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border-radius: 20px;
   transition: all 0.3s ease;
   z-index: -1;
 }
 
 .valor-item:hover::before {
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
 }
 
 .valor-icon-placeholder {
@@ -438,9 +441,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border-radius: 20px;
   transition: all 0.3s ease;
   z-index: -1;
@@ -448,9 +453,11 @@
 
 .missao-card:hover::before,
 .visao-card:hover::before {
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
 }
 
 .missao-card h2,
@@ -525,18 +532,22 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border-radius: 20px;
   transition: all 0.3s ease;
   z-index: -1;
 }
 
 .numero-item:hover::before {
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
 }
 
 .numero {
@@ -603,7 +614,6 @@
 
 /* Responsividade */
 @media (max-width: 1200px) {
-
   .historia-content,
   .missao-visao-content {
     grid-template-columns: 1fr;
@@ -628,7 +638,6 @@
 }
 
 @media (max-width: 992px) {
-
   .historia-section,
   .valores-section,
   .equipe-section,
@@ -660,7 +669,6 @@
 }
 
 @media (max-width: 768px) {
-
   .historia-section,
   .valores-section,
   .equipe-section,
@@ -718,7 +726,6 @@
 }
 
 @media (max-width: 480px) {
-
   .historia-section,
   .valores-section,
   .equipe-section,
@@ -795,7 +802,6 @@
   background: #ddcdba;
 }
 
-
 /*----------------*/
 
 .terceiraTimeline::before {
@@ -807,8 +813,6 @@
   box-shadow: 0 0 20px rgba(221, 205, 186, 0.5);
   background: #eed494;
 }
-
-
 
 /*----------------*/
 
