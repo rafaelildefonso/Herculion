@@ -21,7 +21,7 @@ const checkLoggedInUser = () => {
 document.addEventListener('DOMContentLoaded', () => {
   // Se já estiver logado, redirecionar para a página de pedidos
   if (checkLoggedInUser()) {
-    window.location.href = 'pedidos.html';
+    // window.location.href = 'pedidos.html';
   }
   const form = document.getElementById('registrationForm');
   if (!form) {

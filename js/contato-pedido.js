@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const currentUser = JSON.parse(localStorage.getItem('herculionCurrentUser'));
   
-  if (!currentUser) {
-    // Se não estiver logado, redirecionar para a página de login
-    window.location.href = 'cadastro.html';
-    return;
-  }
   // Preencher o campo de mensagem com o nome do carro, se vier na URL
   const urlParams = new URLSearchParams(window.location.search);
   const carName = urlParams.get('car');
   const carId = urlParams.get('id');
+  if (!currentUser && (carName | carId)) {
+    // Se não estiver logado, redirecionar para a página de login
+    window.location.href = 'cadastro.html';
+    return;
+  }
 
   if (carName) {
     // Opcional: preencher a mensagem ou adicionar campo oculto
