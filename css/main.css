@@ -1385,6 +1385,15 @@ h6::-moz-selection,
   z-index: 1;
 }
 
+@media (max-width: 730px) {
+  .experience-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+}
+
 .experience-text {
   flex: 1;
   max-width: 600px;
