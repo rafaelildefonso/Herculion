@@ -1292,7 +1292,7 @@ h6::-moz-selection,
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), transparent);
+  background: linear-gradient(90deg, #e8b54e, transparent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -1789,7 +1789,7 @@ button:hover,
   /* Menu em tela cheia para mobile */
   .side-menu ul li a {
     font-size: 1.8rem;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
   }
 
   .side-menu .close-btn {
@@ -1881,7 +1881,7 @@ button:hover,
 }
 .reveal-gold.reveal-visible {
   opacity: 1;
-  transform: translateY(0) scale(1.04);
+  transform: translateY(0) scale(1);
   filter: drop-shadow(0 2px 4px #999) brightness(1.1) grayscale(0);
   background: linear-gradient(90deg, var(--secondary-color) 30%, #fffbe6 100%);
   -webkit-background-clip: text;
@@ -2742,17 +2742,8 @@ button:hover,
     font-size: 1.1rem;
   }
 
-  .busca-input-group {
-    flex-direction: column;
-    border-radius: 12px;
-  }
-
   .busca-input {
     border-radius: 12px 12px 0 0;
-  }
-
-  .busca-button {
-    border-radius: 0 0 12px 12px;
   }
 
   .filtros-grid {

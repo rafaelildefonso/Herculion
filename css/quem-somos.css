@@ -234,8 +234,8 @@
 
 .valor-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border-color: var(--secondary-color);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+  border-color: #ffd700;
 }
 
 .valor-item::before {
@@ -347,8 +347,8 @@
 
 .membro-equipe:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border-color: var(--secondary-color);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+  border-color: #ffd700;
 }
 
 .membro-foto {
@@ -426,8 +426,8 @@
 .missao-card:hover,
 .visao-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border-color: var(--secondary-color);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+  border-color: #ffd700;
 }
 
 .missao-card::before,
@@ -514,8 +514,8 @@
 
 .numero-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border-color: var(--secondary-color);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+  border-color: #ffd700;
 }
 
 .numero-item::before {

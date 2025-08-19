@@ -78,7 +78,11 @@
   transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border-color);
+  border: 1px solid #ffd700;
+}
+
+.order-card i {
+  color: #ffd700;
 }
 
 .order-card:hover {
@@ -89,7 +93,7 @@
 
 .order-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
 }
 
 .order-card-image {
@@ -98,6 +102,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  margin: 0 1rem;
 }
 
 .order-card-image img {
@@ -105,10 +110,11 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+  transform: scale(0.95);
 }
 
 .order-card:hover .order-card-image img {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 
 .order-card-content {
@@ -152,13 +158,13 @@
   z-index: 2;
 }
 
-.available {
+.status-available {
   background-color: rgba(82, 196, 26, 0.2);
   color: #52c41a;
   border: 1px solid #52c41a;
 }
 
-.reserved {
+.status-reservado {
   background-color: rgba(250, 173, 20, 0.2);
   color: #faad14;
   border: 1px solid #faad14;
@@ -253,7 +259,7 @@
   transition: letter-spacing 0.3s ease;
 }
 
-.details-btn:hover {
+.order-card:hover .details-btn {
   letter-spacing: 1px;
 }
 

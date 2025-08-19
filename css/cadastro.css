@@ -31,6 +31,7 @@ input:focus + label {
   overflow: hidden;
   background-color: var(--dark-bg);
   box-sizing: border-box;
+  margin-top: var(--header-height);
 }
 
 .registration-container {

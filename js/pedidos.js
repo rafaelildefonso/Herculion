@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Buscar dados do carro pelo id salvo no pedido
       const carro = todosCarros.find(c => c.id === order.carId);
       if (!carro) return;
-      const orderCard = document.createElement('div');
+      const orderCard = document.createElement('a');
+      orderCard.href = carro.route || '#';
       orderCard.className = 'order-card';
       const formattedPrice = carro.preco || '';
       orderCard.innerHTML = `
